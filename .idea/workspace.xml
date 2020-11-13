@@ -19,18 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="109eed53-bb59-4524-bf51-57b0f2396249" name="Default Changelist" comment="sOSO">
-      <change afterPath="$PROJECT_DIR$/src/Movement/FixedPatrol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Movement/FixedPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Movement/ToTarget.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tactic/HighestDamageAttack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tactic/LowestHealthAttack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tactic/PriorityAttack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tactic/RandomAttack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tactic/Tactic.java" afterDir="false" />
+    <list default="true" id="109eed53-bb59-4524-bf51-57b0f2396249" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movement/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movement/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movement/ToBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movement/ToBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/utility/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/utility/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/utility/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/utility/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +41,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1k8Z3ylSfb3QpJ3Wo2Z8gwjluE0" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -83,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605084863615</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Some Fixes in Packaging">
+      <created>1605281936620</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605281936620</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,24 +100,30 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished Unit Class" />
     <MESSAGE value="sOSO" />
-    <option name="LAST_COMMIT_MESSAGE" value="sOSO" />
+    <MESSAGE value="Some Fixes in Packaging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some Fixes in Packaging" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1605280091134">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1605299560933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605280091134" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605299560933" />
+    <state x="-1343" y="0" key="CommitChangelistDialog2" timestamp="1605281934462">
+      <screen x="-1440" y="0" width="1440" height="860" />
+    </state>
+    <state x="-1343" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1440.0.1440.860@-1440.0.1440.860" timestamp="1605281934462" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605277811448">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605277811448" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605084880842">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="-1102" y="151" key="Vcs.Push.Dialog.v2" timestamp="1605281941275">
+      <screen x="-1440" y="0" width="1440" height="860" />
     </state>
+    <state x="-1102" y="151" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1440.0.1440.860@-1440.0.1440.860" timestamp="1605281941275" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605084880842" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605277636059">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605299262939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605277636059" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605299262939" />
   </component>
 </project>
