@@ -8,6 +8,8 @@ public class Main {
         //hello
 
         System.out.println("Hariri Here!!");
+
+        System.out.println("Are Yoy Ready?");
     }
 
 
