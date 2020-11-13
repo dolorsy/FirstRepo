@@ -1,4 +1,4 @@
-package Tactic;
+package com.destroyordefend.project.Tactic;
 
 public class RandomAttack implements Tactic {
 

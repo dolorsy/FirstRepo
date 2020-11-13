@@ -1,4 +1,4 @@
-package utility;
+package com.destroyordefend.project.utility;
 
 public class Point {
     int x,y;

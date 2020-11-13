@@ -1,6 +1,6 @@
-package Movement;
+package com.destroyordefend.project.Movement;
 
-import utility.Point;
+import com.destroyordefend.project.utility.Point;
 
 public class ToBase implements Movement{
 

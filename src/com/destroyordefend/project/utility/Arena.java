@@ -1,4 +1,4 @@
-package utility;
+package com.destroyordefend.project.utility;
 
 public class Arena {
     static Byte[][] arena = new Byte[10000][10000];
