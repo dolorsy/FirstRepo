@@ -19,7 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="109eed53-bb59-4524-bf51-57b0f2396249" name="Default Changelist" comment="sOSO" />
+    <list default="true" id="109eed53-bb59-4524-bf51-57b0f2396249" name="Default Changelist" comment="sOSO">
+      <change afterPath="$PROJECT_DIR$/src/Movement/FixedPatrol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movement/FixedPosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movement/ToTarget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tactic/HighestDamageAttack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tactic/LowestHealthAttack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tactic/PriorityAttack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tactic/RandomAttack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tactic/Tactic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movement/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movement/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movement/ToBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movement/ToBase.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +40,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -45,6 +58,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../University/Java Labs/Lab 2/Sol/Lab2 Ex 1&amp;2" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -82,6 +96,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished Unit Class" />
@@ -89,13 +104,21 @@
     <option name="LAST_COMMIT_MESSAGE" value="sOSO" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1605280091134">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605280091134" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605277811448">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605277811448" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605084880842">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605084880842" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605085141081">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605277636059">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605085141081" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605277636059" />
   </component>
 </project>
