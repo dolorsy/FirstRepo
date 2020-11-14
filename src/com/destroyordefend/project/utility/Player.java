@@ -1,6 +1,8 @@
 package com.destroyordefend.project.utility;
 
 
+import com.destroyordefend.project.Unit.Unit;
+
 import java.util.Map;
 
 enum PlayerRole{
@@ -11,12 +13,19 @@ public class Player {
     int Points;
     //Is he attacker or Defender
     PlayerRole role;
+    String id;
+    Map<Unit,Point> army;
 
-    //Todo: Here Integer (Key) Must Become Unit
-    Map<Integer,Point> army;
+    public Player() {
+    }
 
+    public Player(int points, PlayerRole role, String id) {
+        Points = points;
+        this.role = role;
+        this.id = id;
+    }
 
-    public Map<Integer, Point> getArmy() {
+    public Map<Unit, Point> getArmy() {
         return army;
     }
 
@@ -27,9 +36,14 @@ public class Player {
         }
         Points-=price;
     }
+    public void CreateArmy(){
+        //Todo:Here we will Shopping
 
 
-    public void BuyAnArmy(/*Unit unit,*/int price){
+
+    }
+
+    public void BuyAnArmy(Unit unit, int price){
         try{
             cutPrice(price);
             //army.add(Unit,Point);
