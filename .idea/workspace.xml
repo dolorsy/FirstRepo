@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="Hariri">
-      <change afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Damage/Damage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/MovemntAble/MovementAble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/TacticAble/TacticAble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="Hariri" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +43,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kEDFQxxmxTputOplZlwj6IPQMv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
