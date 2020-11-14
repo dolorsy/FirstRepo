@@ -19,7 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="Hariri" />
+    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="add set and get function to Unit Calss">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Movement/FixedPatrol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Movement/FixedPatrol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Movement/FixedPosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Movement/FixedPosition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Movement/ToBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Movement/ToTarget.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Movement/ToTarget.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$Damaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$Damaging.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$UnitValues.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$UnitValues.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/utility/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/utility/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/utility/NoEnoughPointsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/utility/NoEnoughPointsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/utility/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/utility/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/utility/PlayerRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/utility/PlayerRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/utility/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/utility/Shop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,6 +131,16 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -143,34 +170,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="551" y="307" width="436" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1605301248222" />
-    <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605343492444">
+    <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605372511737">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1605343492444" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605344361856">
+    <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1605372511737" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605369228499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605344361856" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1605344361856">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605369228499" />
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1605372451388">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605344361856" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1605344361856">
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605372451388" />
+    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1605372451388">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605344361856" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1605344361856">
+    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605372451388" />
+    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1605372451387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605344361856" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1605298733743">
+    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605372451387" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1605372451388">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605298733743" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1605298737728">
+    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605372451388" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1605363581880">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605298737728" />
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605363581880" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1605363581891">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605363581891" />
+    <state x="493" y="115" width="650" height="558" key="RollbackChangesDialog" timestamp="1605369106801">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="493" y="115" width="650" height="558" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605369106801" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1605258426609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -179,10 +214,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605258580988" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605298716991">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605372618841">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605298716991" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605372618841" />
     <state x="209" y="33" key="new project wizard" timestamp="1605280535057">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
