@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="Hariri" />
+    <list default="true" id="109eed53-bb59-4524-bf51-57b0f2396249" name="Default Changelist" comment="Movement And Tactic Done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/HighestDamageAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/HighestDamageAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/LowestHealthAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/LowestHealthAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/PriorityAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/PriorityAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/RandomAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/RandomAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/Tactic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/Tactic.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

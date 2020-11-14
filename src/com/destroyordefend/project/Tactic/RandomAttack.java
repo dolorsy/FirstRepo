@@ -1,9 +1,14 @@
 package com.destroyordefend.project.Tactic;
 
+import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.utility.Point;
+
+import java.util.Map;
+
 public class RandomAttack implements Tactic {
 
     @Override
-    public void SortMap() {
+    public void SortMap(Map<Unit, Point> OnArena) {
 
     }
 }
