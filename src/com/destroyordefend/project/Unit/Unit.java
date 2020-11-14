@@ -1,19 +1,19 @@
 package com.destroyordefend.project.Unit;
 
+import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.Unit.Damage.Damage;
-import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Unit.MovemntAble.MovementAble;
 import com.destroyordefend.project.Unit.TacticAble.TacticAble;
 
-public class Unit  implements  TacticAble , MovementAble {
+public class Unit implements TacticAble, MovementAble {
 
     int id;
     int count;//???
     Movement movement;
 
     //Constructor
-    public Unit(int id , int count , Movement movement){
+    public Unit(int id, int count, Movement movement) {
         this.id = id;
         this.count = count;
         this.movement = movement;
