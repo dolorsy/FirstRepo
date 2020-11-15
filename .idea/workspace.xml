@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="Hariri" />
+    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="Hariri">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,12 +99,54 @@
       <option name="presentableId" value="LOCAL؜٠٠٠٠٤" />
       <updated>1605298705951</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="First View of Game,Player,Shop">
+      <created>1605355444636</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605355444636</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -128,16 +158,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hariri" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hariri" />
+    <MESSAGE value="First View of Game,Player,Shop" />
+    <option name="LAST_COMMIT_MESSAGE" value="First View of Game,Player,Shop" />
   </component>
   <component name="WindowStateProjectService">
     <state x="520" y="236" key="#Notifications" timestamp="1605298430500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1605298430500" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1605337938486">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="-902" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1605353926970">
+      <screen x="-1440" y="0" width="1440" height="860" />
     </state>
+    <state x="-902" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1440.0.1440.860@-1440.0.1440.860" timestamp="1605353926970" />
     <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605337938486" />
     <state x="551" y="307" width="436" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605301248222">
       <screen x="0" y="0" width="1536" height="824" />
@@ -147,6 +179,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1605343492444" />
+    <state x="-1172" y="0" key="CommitChangelistDialog2" timestamp="1605369968463">
+      <screen x="-1440" y="0" width="1440" height="860" />
+    </state>
+    <state x="-1172" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1440.0.1440.860@-1440.0.1440.860" timestamp="1605369968463" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605344361856">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -175,13 +211,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605258426609" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605258580988">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="-1102" y="151" key="Vcs.Push.Dialog.v2" timestamp="1605355450962">
+      <screen x="-1440" y="0" width="1440" height="860" />
     </state>
+    <state x="-1102" y="151" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1440.0.1440.860@-1440.0.1440.860" timestamp="1605355450962" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605258580988" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605298716991">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="-1348" y="92" width="1256" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605368317363">
+      <screen x="-1440" y="0" width="1440" height="860" />
     </state>
+    <state x="-1348" y="92" width="1256" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824/-1440.0.1440.860@-1440.0.1440.860" timestamp="1605368317363" />
+    <state x="-891" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605368084941">
+      <screen x="-1440" y="0" width="1440" height="860" />
+    </state>
+    <state x="-891" y="340" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-1440.0.1440.860@-1440.0.1440.860" timestamp="1605368084941" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605298716991" />
     <state x="209" y="33" key="new project wizard" timestamp="1605280535057">
       <screen x="0" y="0" width="1536" height="824" />
