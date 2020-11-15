@@ -11,11 +11,11 @@ public class Shop {
     //Todo: Here static List<>Units
      ArrayList<Unit> ShopUnits = new ArrayList<>();
      HashMap<String,Integer> unitPrices = new HashMap<>();
-
-private Unit getUnitById(String id){
+     int lowestPrice = 0;
+private Unit getUnitByType(String type){
     for(Unit unit : this.ShopUnits){
         //Todo: getType
-        if(/*unit.getType()*/ "SS".equals(id)){
+        if(/*unit.getType()*/ "SS".equals(type)){
             return unit;
 
         }
@@ -23,11 +23,17 @@ private Unit getUnitById(String id){
     return null;
 }
 
-public int getUnitPrice(String id){
-    return unitPrices.get(id);
+public int getUnitPrice(String type){
+    return unitPrices.get(type);
 }
+
+    public int getLowestPrice() {
+        return this.lowestPrice;
+    }
+
     public void InitShop(){
         //Todo: Here We Should read from DataBase Or JSON To fill ShopUnits;
+        //Todo:Here We should init lowestPrice
 
     }
 

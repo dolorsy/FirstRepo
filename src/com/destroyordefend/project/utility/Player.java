@@ -3,7 +3,8 @@ package com.destroyordefend.project.utility;
 
 import com.destroyordefend.project.Unit.Unit;
 
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 enum PlayerRole{
     Attacker,Defender
@@ -14,9 +15,10 @@ public class Player {
     //Is he attacker or Defender
     PlayerRole role;
     String id;
-    Map<Unit,Point> army;
+    List<Unit> army;
 
     public Player() {
+        army = new ArrayList<>();
     }
 
     public Player(int points, PlayerRole role, String id) {
@@ -25,7 +27,7 @@ public class Player {
         this.id = id;
     }
 
-    public Map<Unit, Point> getArmy() {
+    public List<Unit> getArmy() {
         return army;
     }
 
@@ -39,17 +41,25 @@ public class Player {
     public void CreateArmy(){
         //Todo:Here we will Shopping
         //TODO:
+
         while (this.Points>0)
-            BuyAnArmy(Game.getShop().sellItem("SS"),Game.shop.getUnitPrice("SS") );
+            try{
+                BuyAnArmy(Game.getShop().sellItem("SS"),Game.shop.getUnitPrice("SS") );
+            }catch (PointsCantByuException ex){
+                System.err.println(ex);
+                break;
+            }
 
 
 
     }
 
-    public void BuyAnArmy(Unit unit, int price){
+    public void BuyAnArmy(Unit unit, int price) throws PointsCantByuException{
         try{
+            if(this.Points <Game.getShop().getLowestPrice())
+                throw new PointsCantByuException("You Have only " + this.Points + ", this cant buy anything!!");
             cutPrice(price);
-            //army.add(Unit,Point);
+            army.add(unit);
         }catch (NoEnoughPointsException ex){
             System.err.println(ex);
         }
@@ -58,6 +68,13 @@ public class Player {
 
 class NoEnoughPointsException extends Exception{
     NoEnoughPointsException(String message){
+        super(message);
+    }
+}
+
+
+class PointsCantByuException extends Exception{
+    PointsCantByuException(String message){
         super(message);
     }
 }

@@ -8,13 +8,14 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Game {
-static Map<Unit,Point> allUnits;
+static ArrayList<Unit> allUnits;
 Arena arena;
 static Shop shop = new Shop();
 List<Player> players;
 int initPoints =10000 ;
     public void StartAnewGame(){
         arena = new Arena();
+        allUnits = new ArrayList<>();
         //Todo:Here We Should get the number of Players
         players  = new ArrayList<>();
 
@@ -43,7 +44,19 @@ int initPoints =10000 ;
         players.add(new Player());
 
     }
+    protected  void StartPlacementStage(){
+        //Todo: x and y is Temporary Here
+        int x=10,y=10,r=5;
+        for(Player p : players){
+        for(Unit u : p.getArmy()){
+            arena.setUnitPlace(new Point(x,y),/*u.getRadius*/r) ;
+                    x+=10;y+=10;
+        }
+        }
+
+    }
     protected  void CreatePlayersStage(){
+
         /**
          * for the number of players we will call AddPlayer
          * inside the loop the Statement will be
@@ -56,6 +69,7 @@ int initPoints =10000 ;
     protected void StartShoppingStage(){
         for(Player player : players){
             player.CreateArmy();
+            allUnits.addAll(player.getArmy());
         }
 
     };
