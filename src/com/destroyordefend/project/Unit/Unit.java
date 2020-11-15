@@ -10,18 +10,25 @@ import com.destroyordefend.project.Unit.TacticAble.TacticAble;
 
 public class Unit  implements  TacticAble , MovementAble {
 
-    int id;
-    int count;//???
+    int id;//
+    String type;//type unit
     Movement movement;
 
     //Constructor Empty
     public Unit(){}
 
     //Constructor Values
-    public Unit(int id , int count , Movement movement){
+    public Unit(int id , String type , Movement movement){
         this.id = id;
-        this.count = count;
+        this.type = type;
         this.movement = movement;
+    }
+
+    //Constructor copy
+    public Unit(Unit unit){
+        this.id = unit.id;
+        this.type = unit.type;
+        this.movement = unit.movement;
     }
 
     //Set
@@ -29,8 +36,8 @@ public class Unit  implements  TacticAble , MovementAble {
         this.id = id;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public void setMovement(Movement movement) {
@@ -43,8 +50,8 @@ public class Unit  implements  TacticAble , MovementAble {
         return this.id;
     }
 
-    public int getCount() {
-        return this.count;
+    public String getType() {
+        return this.type;
     }
 
     public Movement getMovement() {
