@@ -1,6 +1,7 @@
 package com.destroyordefend.project;
 
 import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.utility.Point;
 
 import static com.destroyordefend.project.Unit.Unit.*;
 
@@ -15,7 +16,6 @@ public class Main {
         //hariri
 
         System.out.println("Are Yoy Ready?");
-
     }
 
 }

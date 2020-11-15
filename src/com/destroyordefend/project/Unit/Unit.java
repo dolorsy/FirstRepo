@@ -5,22 +5,26 @@ import com.destroyordefend.project.Unit.Damage.Damage;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Unit.MovemntAble.MovementAble;
 import com.destroyordefend.project.Unit.TacticAble.TacticAble;
+import com.destroyordefend.project.utility.Point;
 
 /*===========================================Unit Class============================================*/
 
 public class Unit  implements  TacticAble , MovementAble {
 
-    int id;//
+    int id;
     String type;//type unit
+    double radius;
     Movement movement;
+
 
     //Constructor Empty
     public Unit(){}
 
     //Constructor Values
-    public Unit(int id , String type , Movement movement){
+    public Unit(int id , String type , double radius, Movement movement){
         this.id = id;
         this.type = type;
+        this.radius = radius;
         this.movement = movement;
     }
 
@@ -28,6 +32,7 @@ public class Unit  implements  TacticAble , MovementAble {
     public Unit(Unit unit){
         this.id = unit.id;
         this.type = unit.type;
+        this.radius = unit.radius;
         this.movement = unit.movement;
     }
 
@@ -38,6 +43,10 @@ public class Unit  implements  TacticAble , MovementAble {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 
     public void setMovement(Movement movement) {
@@ -54,6 +63,10 @@ public class Unit  implements  TacticAble , MovementAble {
         return this.type;
     }
 
+    public double getRadius() {
+        return this.radius;
+    }
+
     public Movement getMovement() {
         return this.movement;
     }
@@ -66,7 +79,7 @@ public class Unit  implements  TacticAble , MovementAble {
 
     //Method MovementAble Class
     @Override
-    public MovementAble AcceptMovement(Movement movement) {
+    public MovementAble AcceptMovement(Movement movement, Point point) {
         return null;
     }
 
