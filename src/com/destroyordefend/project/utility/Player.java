@@ -38,6 +38,9 @@ public class Player {
     }
     public void CreateArmy(){
         //Todo:Here we will Shopping
+        //TODO:
+        while (this.Points>0)
+            BuyAnArmy(Game.getShop().sellItem("SS"),Game.shop.getUnitPrice("SS") );
 
 
 

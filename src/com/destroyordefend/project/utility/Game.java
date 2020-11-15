@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Game {
 static Map<Unit,Point> allUnits;
 Arena arena;
-
+static Shop shop = new Shop();
 List<Player> players;
 int initPoints =10000 ;
     public void StartAnewGame(){
@@ -33,6 +33,11 @@ int initPoints =10000 ;
 
 
     }
+
+    public static Shop getShop() {
+        return shop;
+    }
+
     protected void AddAnewPlayer(){
         //Todo:  we should Get The Name of Player and the Role (Attacker / Defender) and set In the following constructor
         players.add(new Player());
