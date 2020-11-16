@@ -31,7 +31,6 @@ public class Player {
         return army;
     }
 
-    //Todo: Here The Parameter should be a unit With its price to cut the Price From The Points
     void cutPrice(int price) throws NoEnoughPointsException {
         if(Points-price<0) {
             throw new NoEnoughPointsException("No Enough Points to buy; Your Points:" + Points + "; Price: " +  price );
@@ -40,8 +39,6 @@ public class Player {
     }
     public void CreateArmy(){
         //Todo:Here we will Shopping
-        //TODO:
-
         while (this.Points>0)
             try{
                 BuyAnArmy(Game.getShop().sellItem("SS"),Game.shop.getUnitPrice("SS") );

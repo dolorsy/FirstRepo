@@ -14,8 +14,7 @@ public class Shop {
      int lowestPrice = 0;
 private Unit getUnitByType(String type){
     for(Unit unit : this.ShopUnits){
-        //Todo: getType
-        if(/*unit.getType()*/ "SS".equals(type)){
+        if(unit.getType().equals(type)){
             return unit;
 
         }
@@ -37,11 +36,8 @@ public int getUnitPrice(String type){
 
     }
 
-    public Unit sellItem(String id){
-        //TODO: Get The Unit By the ID and Copy it and return
-        //Todo: the Code Will be return new Unit(allUnit ShopUnits.getById(id));
-        //Todo: the return Statement will be         return new Unit(getUnitById(id));
-        return new Unit();
+    public Unit sellItem(String type){
+        return new Unit(getUnitByType(type));
     }
 
 

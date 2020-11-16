@@ -10,7 +10,6 @@ public class Arena {
 
 
     boolean setUnitPlace(Point center,int radius){
-    //Todo: Here should proccess of placing Units on arena; return true if can ,or false to rechoose
         int i = radius/2;
         int startX, startY,endX,endY;
         startX = center.getX() - i;

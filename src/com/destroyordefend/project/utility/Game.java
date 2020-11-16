@@ -2,23 +2,19 @@ package com.destroyordefend.project.utility;
 
 import com.destroyordefend.project.Unit.Unit;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Game {
-static ArrayList<Unit> allUnits;
+static TreeSet<Unit> allUnits;
 Arena arena;
 static Shop shop = new Shop();
 List<Player> players;
 int initPoints =10000 ;
     public void StartAnewGame(){
         arena = new Arena();
-        allUnits = new ArrayList<>();
+        allUnits = new TreeSet<Unit>();
         //Todo:Here We Should get the number of Players
         players  = new ArrayList<>();
-
         players.add(new Player(initPoints,PlayerRole.Attacker,"attacker"));
         players.add(new Player(initPoints,PlayerRole.Defender,"defender"));
         this.StartShoppingStage();
@@ -49,7 +45,7 @@ int initPoints =10000 ;
         int x=10,y=10,r=5;
         for(Player p : players){
         for(Unit u : p.getArmy()){
-            arena.setUnitPlace(new Point(x,y),/*u.getRadius*/r) ;
+            arena.setUnitPlace(new Point(x,y),(int)u.getRadius()) ;
                     x+=10;y+=10;
         }
         }
