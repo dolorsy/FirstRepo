@@ -12,8 +12,8 @@ import com.destroyordefend.project.utility.Point;
 public class Unit  implements  TacticAble , MovementAble {
 
     int id;
+    int radius;
     String type;//type unit
-    double radius;
     Movement movement;
 
 
@@ -21,7 +21,7 @@ public class Unit  implements  TacticAble , MovementAble {
     public Unit(){}
 
     //Constructor Values
-    public Unit(int id , String type , double radius, Movement movement){
+    public Unit(int id , String type , int radius, Movement movement){
         this.id = id;
         this.type = type;
         this.radius = radius;
@@ -41,12 +41,12 @@ public class Unit  implements  TacticAble , MovementAble {
         this.id = id;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setRadius(int radius) {
+        this.radius = radius;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public void setMovement(Movement movement) {
@@ -59,12 +59,12 @@ public class Unit  implements  TacticAble , MovementAble {
         return this.id;
     }
 
-    public String getType() {
-        return this.type;
+    public int getRadius() {
+        return this.radius;
     }
 
-    public double getRadius() {
-        return this.radius;
+    public String getType() {
+        return this.type;
     }
 
     public Movement getMovement() {
