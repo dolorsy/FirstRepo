@@ -19,12 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="add constructor copy to Uint Calss">
+    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="Point object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/MovemntAble/MovementAble.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/MovemntAble/MovementAble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$Damaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$Damaging.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$UnitValues.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$UnitValues.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/MovemntAble/MovementAble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/MovemntAble/MovementAble.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/utility/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/utility/Point.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +144,31 @@
       <option name="presentableId" value="LOCAL؜٠٠٠٠٨" />
       <updated>1605462712958</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL؜٠٠٠٠٩" summary="add radius and geter it to Unit Calss">
+      <created>1605466798158</created>
+      <option name="number" value="LOCAL؜٠٠٠٠٩" />
+      <option name="presentableId" value="LOCAL؜٠٠٠٠٩" />
+      <updated>1605466798158</updated>
+    </task>
+    <task id="LOCAL؜٠٠٠١٠" summary="add radius and geter it to Unit Calss&#10;and set Point to AcceptMovement">
+      <created>1605467344060</created>
+      <option name="number" value="LOCAL؜٠٠٠١٠" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٠" />
+      <updated>1605467344060</updated>
+    </task>
+    <task id="LOCAL؜٠٠٠١١" summary="int raduis">
+      <created>1605540367009</created>
+      <option name="number" value="LOCAL؜٠٠٠١١" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١١" />
+      <updated>1605540367009</updated>
+    </task>
+    <task id="LOCAL؜٠٠٠١٢" summary="Point object">
+      <created>1605547029152</created>
+      <option name="number" value="LOCAL؜٠٠٠١٢" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٢" />
+      <updated>1605547029152</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -171,7 +198,11 @@
     <MESSAGE value="add set and get function to Unit Calss" />
     <MESSAGE value="Armashi11" />
     <MESSAGE value="add constructor copy to Uint Calss" />
-    <option name="LAST_COMMIT_MESSAGE" value="add constructor copy to Uint Calss" />
+    <MESSAGE value="add radius and geter it to Unit Calss" />
+    <MESSAGE value="add radius and geter it to Unit Calss&#10;and set Point to AcceptMovement" />
+    <MESSAGE value="int raduis" />
+    <MESSAGE value="Point object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Point object" />
   </component>
   <component name="WindowStateProjectService">
     <state x="520" y="236" key="#Notifications" timestamp="1605298430500">
@@ -194,34 +225,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605369228499" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605461781158">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605553692840">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605461781158" />
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1605465812149">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605553692840" />
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1605554378412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605465812149" />
-    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1605465812149">
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
+    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1605554378412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605465812149" />
-    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1605465812149">
+    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
+    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1605554378412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605465812149" />
-    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1605465812149">
+    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1605554378412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605465812149" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1605436002116">
+    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1605547095153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605436002116" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1605436005122">
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605547095153" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1605547095153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605436005122" />
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605547095153" />
     <state x="493" y="115" width="650" height="558" key="RollbackChangesDialog" timestamp="1605369106801">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -230,17 +261,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605258426609" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605462732135">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605540374119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605462732135" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605462684417">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605540374119" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605547040406">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605462684417" />
-    <state x="209" y="33" key="new project wizard" timestamp="1605430419371">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605547040406" />
+    <state x="209" y="33" key="new project wizard" timestamp="1605552703986">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1605430419371" />
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1605552703986" />
   </component>
 </project>

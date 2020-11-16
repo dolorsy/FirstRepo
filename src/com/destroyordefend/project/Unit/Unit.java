@@ -7,34 +7,41 @@ import com.destroyordefend.project.Unit.MovemntAble.MovementAble;
 import com.destroyordefend.project.Unit.TacticAble.TacticAble;
 import com.destroyordefend.project.Core.Point;
 
+import java.util.TreeSet;
+
 /*===========================================Unit Class============================================*/
 
 public class Unit  implements  TacticAble , MovementAble {
 
     int id;
     int radius;
+    int range;
     String type;//type unit
     Movement movement;
-
+    TreeSet<Unit> treeSetUnit;
 
 
     //Constructor Empty
     public Unit(){}
 
     //Constructor Values
-    public Unit(int id , String type , int radius, Movement movement){
+    public Unit(int id , int radius,int range,String type, Movement movement,TreeSet<Unit> treeSetUnit){
         this.id = id;
-        this.type = type;
         this.radius = radius;
+        this.range = range;
+        this.type = type;
         this.movement = movement;
+        this.treeSetUnit = treeSetUnit;
     }
 
     //Constructor copy
     public Unit(Unit unit){
         this.id = unit.id;
-        this.type = unit.type;
         this.radius = unit.radius;
+        this.range = unit.range;
+        this.type = unit.type;
         this.movement = unit.movement;
+        this.treeSetUnit = unit.treeSetUnit;
     }
 
     //Set
@@ -46,12 +53,20 @@ public class Unit  implements  TacticAble , MovementAble {
         this.radius = radius;
     }
 
+    public void setRange(int range) {
+        this.range = range;
+    }
+
     public void setType(String type) {
         this.type = type;
     }
 
     public void setMovement(Movement movement) {
         this.movement = movement;
+    }
+
+    public void setTreeSetUnit(TreeSet<Unit> treeSetUnit) {
+        this.treeSetUnit = treeSetUnit;
     }
 
     //Get
@@ -64,12 +79,20 @@ public class Unit  implements  TacticAble , MovementAble {
         return this.radius;
     }
 
+    public int getRange() {
+        return this.range;
+    }
+
     public String getType() {
         return this.type;
     }
 
     public Movement getMovement() {
         return this.movement;
+    }
+
+    public TreeSet<Unit> getTreeSetUnit() {
+        return this.treeSetUnit;
     }
 
     //Method TacticAble Class
