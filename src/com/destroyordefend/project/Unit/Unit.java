@@ -5,7 +5,7 @@ import com.destroyordefend.project.Unit.Damage.Damage;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Unit.MovemntAble.MovementAble;
 import com.destroyordefend.project.Unit.TacticAble.TacticAble;
-import com.destroyordefend.project.utility.Point;
+import com.destroyordefend.project.Core.Point;
 
 /*===========================================Unit Class============================================*/
 

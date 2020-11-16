@@ -1,6 +1,6 @@
 package com.destroyordefend.project.Movement;
 
-import com.destroyordefend.project.utility.Point;
+import com.destroyordefend.project.Core.Point;
 
 public interface Movement {
 

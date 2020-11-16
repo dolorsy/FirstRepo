@@ -1,11 +1,6 @@
 package com.destroyordefend.project;
 
-import com.destroyordefend.project.Unit.Unit;
-import com.destroyordefend.project.utility.Point;
-
-import static com.destroyordefend.project.Unit.Unit.*;
-
-public class Main {
+public class Main   {
 
     public static void main(String[] args) {
         System.out.println("First Commit");

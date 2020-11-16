@@ -1,10 +1,9 @@
 package com.destroyordefend.project.Tactic;
 
 import com.destroyordefend.project.Unit.Unit;
-import com.destroyordefend.project.utility.Point;
+import com.destroyordefend.project.Core.Point;
 
 import java.util.Map;
-import java.util.TreeMap;
 
 public class HighestDamageAttack implements Tactic{
 
