@@ -31,6 +31,10 @@ int initPoints =10000 ;
 
     }
 
+    public static TreeSet<Unit> getAllUnits() {
+        return allUnits;
+    }
+
     public static Shop getShop() {
         return shop;
     }
