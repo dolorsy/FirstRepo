@@ -17,6 +17,7 @@ public class Unit  implements  TacticAble , MovementAble {
     Movement movement;
 
 
+
     //Constructor Empty
     public Unit(){}
 
@@ -79,18 +80,18 @@ public class Unit  implements  TacticAble , MovementAble {
 
     //Method MovementAble Class
     @Override
-    public MovementAble AcceptMovement(Movement movement, Point point) {
+    public MovementAble AcceptMovement(Movement movement) {
         return null;
     }
 
     /*========================================== UnitValues Class =======================================*/
 
     //Inner Class Unit Values
-public static class UnitValues {
-    public static int speed;
-    public static int shot_speed;
-    public static int damage;
-    public static int health;
+public class UnitValues {
+    public int speed;
+    public int shot_speed;
+    public int damage;
+    public int health;
 
     //constructor Empty
     public UnitValues(){}
