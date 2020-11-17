@@ -72,7 +72,6 @@ public class Arena {
 
         return ((startX < startTX && endX > startTX) || (startX < endTX && endX > endTX))
                 && ((startY < startTY && endY > startTY) || (startY < endTY && endY > endTY));
-
     }
 
 
