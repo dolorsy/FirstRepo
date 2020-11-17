@@ -1,18 +1,13 @@
 package com.destroyordefend.project.utility;
 
 import java.util.PriorityQueue;
-import java.util.Queue;
 
-public class UpdateMapAsyncTask {
-    static PriorityQueue<Runnable> updatePositionQueue = new PriorityQueue<>();
+public class MainMethodAsyncTask {
 
-
+    static PriorityQueue<Runnable> doMainThingQueue = new PriorityQueue<>();
     public static void addMethod(Runnable methodCall) {
-        updatePositionQueue.add(methodCall);
-
-
+        doMainThingQueue.add(methodCall);
     }
-
     /**
      * From any Class We Will Store Methods Like The Following
      * Runnable methodCall = () ->  MyMethodCall;
@@ -23,12 +18,10 @@ public class UpdateMapAsyncTask {
      *         updatePositionQueue.add(method);
      */
 
-    public static void invokeUpdatePosition()
-    {
-        for(Runnable updatePosition : updatePositionQueue) {
+    public static void invokeMainMethods() {
+        for(Runnable updatePosition : doMainThingQueue) {
             updatePosition.run();
         }
     }
-
 
 }
