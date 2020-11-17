@@ -39,7 +39,7 @@ public class Arena {
 
 
         return true;
-    };
+    }
 
     public TreeSet<Unit> UpdateRange(Unit unit){
 
@@ -70,11 +70,8 @@ public class Arena {
         endTX = unitInRange.getPosition().getX() + unitInRange.getRadius();
         endTY = unitInRange.getPosition().getY() + unitInRange.getRadius();
 
-        if((  (startX < startTX  && endX > startTX) ||  (startX < endTX  && endX > endTX) )
-        && (  (startY < startTY  && endY > startTY) ||  (startY < endTY  && endY > endTY) )){
-            return true;
-        }
-        return false;
+        return ((startX < startTX && endX > startTX) || (startX < endTX && endX > endTX))
+                && ((startY < startTY && endY > startTY) || (startY < endTY && endY > endTY));
 
     }
 

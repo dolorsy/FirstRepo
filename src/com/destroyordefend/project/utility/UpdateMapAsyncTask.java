@@ -10,6 +10,7 @@ public class UpdateMapAsyncTask {
     public static void addMethod(Runnable methodCall) {
         updatePositionQueue.add(methodCall);
 
+
     }
 
     /**
@@ -17,6 +18,9 @@ public class UpdateMapAsyncTask {
      * Runnable methodCall = () ->  MyMethodCall;
      * UpdateMapAsyncTask.addMethod(methodCall);
      *
+     * Example:
+     * Runnable method = () -> invokeUpdatePosition();
+     *         updatePositionQueue.add(method);
      */
 
     public static void invokeUpdatePosition()
