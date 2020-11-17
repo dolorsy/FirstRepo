@@ -19,22 +19,24 @@ public class Unit  implements  TacticAble , MovementAble {
     String type;//type unit
     Movement movement;
     TreeSet<Unit> treeSetUnit;
+    Point point;
 
 
     //Constructor Empty
     public Unit(){}
 
     //Constructor Values
-    public Unit(int id , int radius,int range,String type, Movement movement,TreeSet<Unit> treeSetUnit){
+    public Unit(int id , int radius,int range,String type, Movement movement,TreeSet<Unit> treeSetUnit,Point point){
         this.id = id;
         this.radius = radius;
         this.range = range;
         this.type = type;
         this.movement = movement;
         this.treeSetUnit = treeSetUnit;
+        this.point = point;
     }
 
-    //Constructor copy
+    //Copy Constructor
     public Unit(Unit unit){
         this.id = unit.id;
         this.radius = unit.radius;
@@ -42,6 +44,7 @@ public class Unit  implements  TacticAble , MovementAble {
         this.type = unit.type;
         this.movement = unit.movement;
         this.treeSetUnit = unit.treeSetUnit;
+        this.point = unit.point;
     }
 
     //Set
@@ -69,8 +72,11 @@ public class Unit  implements  TacticAble , MovementAble {
         this.treeSetUnit = treeSetUnit;
     }
 
-    //Get
+    public void setPoint(Point point) {
+        this.point = point;
+    }
 
+    //Get
     public int getId() {
         return this.id;
     }
@@ -95,6 +101,11 @@ public class Unit  implements  TacticAble , MovementAble {
         return this.treeSetUnit;
     }
 
+    //Get Position Unit
+    public Point getPosition(){
+        return this.point;
+    }
+
     //Method TacticAble Class
     @Override
     public TacticAble AcceptTactic(Tactic tactic) {
@@ -111,21 +122,32 @@ public class Unit  implements  TacticAble , MovementAble {
 
     //Inner Class Unit Values
 public class UnitValues {
+
+    //Object for Singleton
+    private UnitValues unitValues = null;
+
     public int speed;
     public int shot_speed;
     public int damage;
     public int health;
 
     //constructor Empty
-    public UnitValues(){}
+    private UnitValues(){}
 
     //Constructor UnitValues Class
-    public UnitValues(int speed , int shot_speed , int damage , int health){
+    private UnitValues(int speed , int shot_speed , int damage , int health){
         this.speed = speed;
         this.shot_speed = shot_speed;
         this.damage = damage;
         this.health = health;
     }
+
+    //Singleton
+   public UnitValues getInstance(){
+    if(unitValues == null)
+        unitValues = new UnitValues();
+    return unitValues;
+   }
 
     //Set
     public void setSpeed(int speed){
