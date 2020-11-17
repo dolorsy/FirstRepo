@@ -1,5 +1,9 @@
 package com.destroyordefend.project.Core;
 
+import com.destroyordefend.project.Unit.Unit;
+
+import java.util.TreeSet;
+
 public class Arena {
     static Byte[][] arena ;
     static int x = 10000,y =10000;
@@ -36,6 +40,43 @@ public class Arena {
 
         return true;
     };
+
+    public TreeSet<Unit> UpdateRange(Unit unit){
+
+
+        TreeSet<Unit> newSetUpdate = new TreeSet<>();
+
+
+        for(Unit unitInRange : Game.getAllUnits()){
+            if(isInRange(unit,unitInRange)){
+                newSetUpdate.add(unitInRange);
+
+            }
+        }
+        return newSetUpdate;
+
+    }
+    private boolean isInRange(Unit unit,Unit unitInRange){
+
+        //Todo:Need To Check Math in a pepper
+        int startX,startY,endX,endY;
+        int startTX,startTY,endTX,endTY;
+        startX = unit.getPosition().getX() - unit.getRange() - unit.getRadius();
+        startY = unit.getPosition().getY() - unit.getRange() - unit.getRadius();
+        endX = unit.getPosition().getX() + unit.getRadius() + unit.getRange();
+        endY = unit.getPosition().getY() + unit.getRadius() +  unit.getRange();
+        startTX = unitInRange.getPosition().getX() - unitInRange.getRadius();
+        startTY = unitInRange.getPosition().getY() - unitInRange.getRadius();
+        endTX = unitInRange.getPosition().getX() + unitInRange.getRadius();
+        endTY = unitInRange.getPosition().getY() + unitInRange.getRadius();
+
+        if((  (startX < startTX  && endX > startTX) ||  (startX < endTX  && endX > endTX) )
+        && (  (startY < startTY  && endY > startTY) ||  (startY < endTY  && endY > endTY) )){
+            return true;
+        }
+        return false;
+
+    }
 
 
 }
