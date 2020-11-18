@@ -1,10 +1,12 @@
 package com.destroyordefend.project.utility;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class UpdateMapAsyncTask {
-    static PriorityQueue<Runnable> updatePositionQueue = new PriorityQueue<>();
+    static List<Runnable> updatePositionQueue = new ArrayList<>();
 
 
     public static void addMethod(Runnable methodCall) {
