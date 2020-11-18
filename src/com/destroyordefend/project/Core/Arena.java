@@ -70,8 +70,10 @@ public class Arena {
         endTX = unitInRange.getPosition().getX() + unitInRange.getRadius();
         endTY = unitInRange.getPosition().getY() + unitInRange.getRadius();
 
+
+        //Todo: We Can erase Role Condition To add all Units in Range Weather in the same Role Or Not
         return ((startX < startTX && endX > startTX) || (startX < endTX && endX > endTX))
-                && ((startY < startTY && endY > startTY) || (startY < endTY && endY > endTY));
+                && ((startY < startTY && endY > startTY) || (startY < endTY && endY > endTY)) && (unit.getRole() != unitInRange.getRole());
     }
 
 

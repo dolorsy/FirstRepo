@@ -1,6 +1,5 @@
-package com.destroyordefend.project.Unit.MovemntAble;
+package com.destroyordefend.project.Unit;
 
-import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Movement.Movement;
 
 

@@ -1,10 +1,7 @@
 package com.destroyordefend.project.Unit;
 
 import com.destroyordefend.project.Tactic.Tactic;
-import com.destroyordefend.project.Unit.Damage.Damage;
 import com.destroyordefend.project.Movement.Movement;
-import com.destroyordefend.project.Unit.MovemntAble.MovementAble;
-import com.destroyordefend.project.Unit.TacticAble.TacticAble;
 import com.destroyordefend.project.Core.Point;
 
 import java.util.TreeSet;
@@ -20,13 +17,21 @@ public class Unit  implements  TacticAble , MovementAble {
     Movement movement;
     TreeSet<Unit> treeSetUnit;
     Point point;
+    String role;
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     //Constructor Empty
     public Unit(){}
 
     //Constructor Values
-    public Unit(int id , int radius,int range,String type, Movement movement,TreeSet<Unit> treeSetUnit,Point point){
+    public Unit(int id , int radius,int range,String type, Movement movement,TreeSet<Unit> treeSetUnit,Point point,String role){
         this.id = id;
         this.radius = radius;
         this.range = range;
@@ -34,6 +39,7 @@ public class Unit  implements  TacticAble , MovementAble {
         this.movement = movement;
         this.treeSetUnit = treeSetUnit;
         this.point = point;
+        this.role = role;
     }
 
     //Copy Constructor
@@ -45,6 +51,7 @@ public class Unit  implements  TacticAble , MovementAble {
         this.movement = unit.movement;
         this.treeSetUnit = unit.treeSetUnit;
         this.point = unit.point;
+        this.role = unit.getRole();
     }
 
     //Set

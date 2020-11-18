@@ -15,8 +15,8 @@ int initPoints =10000 ;
         allUnits = new TreeSet<Unit>();
         //Todo:Here We Should get the number of Players
         players  = new ArrayList<>();
-        players.add(new Player(initPoints,PlayerRole.Attacker,"attacker"));
-        players.add(new Player(initPoints,PlayerRole.Defender,"defender"));
+        players.add(new Player(initPoints,TeamRole.Attacker,"attacker"));
+        players.add(new Player(initPoints,TeamRole.Defender,"defender"));
         this.StartShoppingStage();
 
         /**
