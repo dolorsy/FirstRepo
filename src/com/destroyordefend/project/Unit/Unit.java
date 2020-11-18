@@ -18,28 +18,24 @@ public class Unit  implements  TacticAble , MovementAble {
     TreeSet<Unit> treeSetUnit;
     Point point;
     String role;
+    UnitValues values;
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-    //Constructor Empty
-    public Unit(){}
-
-    //Constructor Values
-    public Unit(int id , int radius,int range,String type, Movement movement,TreeSet<Unit> treeSetUnit,Point point,String role){
+    //Constructor 1
+    public Unit(int id, int radius, int range, String type,int speed ,int shot_speed,int damage ,int health) {
         this.id = id;
         this.radius = radius;
         this.range = range;
         this.type = type;
-        this.movement = movement;
+        values =new UnitValues (speed,shot_speed,damage,health);
+    }
+    //Constructor 2
+    public Unit (int id, int radius, int range, String type, UnitValues values, TreeSet<Unit> treeSetUnit) {
+        this.id = id;
+        this.radius = radius;
+        this.range = range;
+        this.type = type;
+        this.values = values;
         this.treeSetUnit = treeSetUnit;
-        this.point = point;
-        this.role = role;
     }
 
     //Copy Constructor
@@ -52,6 +48,7 @@ public class Unit  implements  TacticAble , MovementAble {
         this.treeSetUnit = unit.treeSetUnit;
         this.point = unit.point;
         this.role = unit.getRole();
+        this.values = unit.values;
     }
 
     //Set
@@ -79,8 +76,16 @@ public class Unit  implements  TacticAble , MovementAble {
         this.treeSetUnit = treeSetUnit;
     }
 
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public void setPoint(Point point) {
         this.point = point;
+    }
+
+    public void setValues(UnitValues values) {
+        this.values = values;
     }
 
     //Get
@@ -108,6 +113,15 @@ public class Unit  implements  TacticAble , MovementAble {
         return this.treeSetUnit;
     }
 
+
+    public String getRole() {
+        return role;
+    }
+
+    public UnitValues getValues() {
+        return values;
+    }
+
     //Get Position Unit
     public Point getPosition(){
         return this.point;
@@ -128,21 +142,21 @@ public class Unit  implements  TacticAble , MovementAble {
     /*========================================== UnitValues Class =======================================*/
 
     //Inner Class Unit Values
-public class UnitValues {
+public static class UnitValues {
 
     //Object for Singleton
-    private UnitValues unitValues = null;
+    private static UnitValues unitValues = null;
 
-    public int speed;
-    public int shot_speed;
-    public int damage;
-    public int health;
+    int speed;
+    int shot_speed;
+    int damage;
+    int health;
 
     //constructor Empty
     private UnitValues(){}
 
     //Constructor UnitValues Class
-    private UnitValues(int speed , int shot_speed , int damage , int health){
+    public UnitValues(int speed, int shot_speed, int damage, int health){
         this.speed = speed;
         this.shot_speed = shot_speed;
         this.damage = damage;
@@ -150,9 +164,11 @@ public class UnitValues {
     }
 
     //Singleton
-   public UnitValues getInstance(){
+   private static UnitValues getInstance(){
     if(unitValues == null)
+    {
         unitValues = new UnitValues();
+    }
     return unitValues;
    }
 
@@ -203,7 +219,6 @@ public class Damaging implements Damage {
     //Method
     @Override
     public void DoDamage() {
-
     }
 
     @Override
