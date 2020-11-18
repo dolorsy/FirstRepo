@@ -12,6 +12,16 @@ public class ToTarget implements Movement {
 
     @Override
     public Point GetNextPoint(Point concurrent) {
-        return null;
+        int currentX = concurrent.getX();
+        int currentY = concurrent.getY();
+        int targetX = target.getPosition().getX();
+        int targetY = target.getPosition().getY();
+        if(currentX != targetX){
+            currentX+= currentX<targetX?1:-1;
+        }
+        if(currentY != targetY){
+            currentY += currentY<targetY?1:-1;
+        }
+        return new Point(currentX,currentY);
     }
 }
