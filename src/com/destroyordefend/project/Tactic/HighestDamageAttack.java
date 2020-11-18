@@ -1,5 +1,6 @@
 package com.destroyordefend.project.Tactic;
 
+import com.destroyordefend.project.Tactic.Comparators.DamageComparator;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.Core.Point;
 
@@ -13,16 +14,9 @@ public class HighestDamageAttack implements Tactic{
     @Override
     public void SortMap(TreeSet<Unit> OnArena ) {
 
-        // Map <Unit.UnitValues.getDamage(),Point> temp = new TreeMap<Unit,Point>(OnArena)
-      /*  OnArena.comparator(new Comparator<Unit>() {
-            @Override
-            public int compare(Unit o1, Unit o2) {
-                Unit.UnitValues unitValues=o1.getIn;
-                o1.g
-                return 0;
-            }
-        });
-*/
+        DamageComparator damageComparator = new DamageComparator();
+        TreeSet<Unit> temp = new TreeSet<Unit>(damageComparator);
+        OnArena = temp;
 
 
 

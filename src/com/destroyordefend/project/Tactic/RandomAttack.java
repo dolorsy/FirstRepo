@@ -10,6 +10,6 @@ public class RandomAttack implements Tactic {
 
     @Override
     public void SortMap( TreeSet<Unit> OnArena) {
-
+        // Don't need to do any think here
     }
 }

@@ -8,7 +8,7 @@ import java.util.TreeSet;
 
 /*===========================================Unit Class============================================*/
 
-public class Unit  implements  TacticAble , MovementAble {
+public class Unit implements TacticAble, MovementAble {
 
     int id;
     int radius;
@@ -21,15 +21,16 @@ public class Unit  implements  TacticAble , MovementAble {
     UnitValues values;
 
     //Constructor 1
-    public Unit(int id, int radius, int range, String type,int speed ,int shot_speed,int damage ,int health) {
+    public Unit(int id, int radius, int range, String type, int speed, int shot_speed, int damage, int health) {
         this.id = id;
         this.radius = radius;
         this.range = range;
         this.type = type;
-        values =new UnitValues (speed,shot_speed,damage,health);
+        values = new UnitValues(speed, shot_speed, damage, health);
     }
+
     //Constructor 2
-    public Unit (int id, int radius, int range, String type, UnitValues values, TreeSet<Unit> treeSetUnit) {
+    public Unit(int id, int radius, int range, String type, UnitValues values, TreeSet<Unit> treeSetUnit) {
         this.id = id;
         this.radius = radius;
         this.range = range;
@@ -39,7 +40,7 @@ public class Unit  implements  TacticAble , MovementAble {
     }
 
     //Copy Constructor
-    public Unit(Unit unit){
+    public Unit(Unit unit) {
         this.id = unit.id;
         this.radius = unit.radius;
         this.range = unit.range;
@@ -123,7 +124,7 @@ public class Unit  implements  TacticAble , MovementAble {
     }
 
     //Get Position Unit
-    public Point getPosition(){
+    public Point getPosition() {
         return this.point;
     }
 
@@ -142,90 +143,90 @@ public class Unit  implements  TacticAble , MovementAble {
     /*========================================== UnitValues Class =======================================*/
 
     //Inner Class Unit Values
-public static class UnitValues {
+    public static class UnitValues {
 
-    //Object for Singleton
-    private static UnitValues unitValues = null;
+        //Object for Singleton
+        private static UnitValues unitValues = null;
 
-    int speed;
-    int shot_speed;
-    int damage;
-    int health;
+        int speed;
+        int shot_speed;
+        int damage;
+        int health;
 
-    //constructor Empty
-    private UnitValues(){}
+        //constructor Empty
+        private UnitValues() {
+        }
 
-    //Constructor UnitValues Class
-    public UnitValues(int speed, int shot_speed, int damage, int health){
-        this.speed = speed;
-        this.shot_speed = shot_speed;
-        this.damage = damage;
-        this.health = health;
+        //Constructor UnitValues Class
+        public UnitValues(int speed, int shot_speed, int damage, int health) {
+            this.speed = speed;
+            this.shot_speed = shot_speed;
+            this.damage = damage;
+            this.health = health;
+        }
+
+        //Singleton
+        private static UnitValues getInstance() {
+            if (unitValues == null) {
+                unitValues = new UnitValues();
+            }
+            return unitValues;
+        }
+
+        //Set
+        public void setSpeed(int speed) {
+
+            this.speed = speed;
+        }
+
+        public void setShot_speed(int shot_speed) {
+
+            this.shot_speed = shot_speed;
+        }
+
+        public void setDamage(int damage) {
+
+            this.damage = damage;
+        }
+
+        public void setHealth(int health) {
+
+            this.health = health;
+        }
+
+        //Get
+        public int getSpeed() {
+
+            return this.speed;
+        }
+
+        public int getShot_speed() {
+            return this.shot_speed;
+        }
+
+        public int getDamage() {
+            return this.damage;
+        }
+
+        public int getHealth() {
+            return this.health;
+        }
     }
 
-    //Singleton
-   private static UnitValues getInstance(){
-    if(unitValues == null)
-    {
-        unitValues = new UnitValues();
-    }
-    return unitValues;
-   }
-
-    //Set
-    public void setSpeed(int speed){
-
-        this.speed = speed;
-    }
-
-    public void setShot_speed(int shot_speed){
-
-        this.shot_speed = shot_speed;
-    }
-
-    public void setDamage(int damage){
-
-        this.damage = damage;
-    }
-
-    public void setHealth(int health) {
-
-        this.health = health;
-    }
-
-    //Get
-    public int getSpeed(){
-
-        return this.speed;
-    }
-
-    public int getShot_speed() {
-        return this.shot_speed;
-    }
-
-    public int getDamage() {
-        return this.damage;
-    }
-
-    public int getHealth() {
-        return this.health;
-    }
-}
-
-/*========================================== Damaging Class ============================================*/
+    /*========================================== Damaging Class ============================================*/
 
     //Inner Class Damaging
-public class Damaging implements Damage {
-    //Method
-    @Override
-    public void DoDamage() {
-    }
+    public class Damaging implements Damage {
+        //Method
+        @Override
+        public void DoDamage() {
+        }
 
-    @Override
-    public Damage AcceptDamage() {
+        @Override
+        public Damage AcceptDamage() {
             return null;
         }
-}
-/*======================================================================================================*/
+    }
+    /*======================================================================================================*/
 
 }//Finish Class Unit
