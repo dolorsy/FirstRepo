@@ -11,7 +11,7 @@ import java.util.TreeSet;
 
 /*===========================================Unit Class============================================*/
 
-public class Unit implements TacticAble, MovementAble {
+public class Unit  implements  TacticAble , MovementAble {
 
     int id;
     int radius;
@@ -22,11 +22,10 @@ public class Unit implements TacticAble, MovementAble {
 
 
     //Constructor Empty
-    public Unit() {
-    }
+    public Unit(){}
 
     //Constructor Values
-    public Unit(int id, int radius, int range, String type, Movement movement, TreeSet<Unit> treeSetUnit) {
+    public Unit(int id , int radius,int range,String type, Movement movement,TreeSet<Unit> treeSetUnit){
         this.id = id;
         this.radius = radius;
         this.range = range;
@@ -36,7 +35,7 @@ public class Unit implements TacticAble, MovementAble {
     }
 
     //Constructor copy
-    public Unit(Unit unit) {
+    public Unit(Unit unit){
         this.id = unit.id;
         this.radius = unit.radius;
         this.range = unit.range;
@@ -111,79 +110,78 @@ public class Unit implements TacticAble, MovementAble {
     /*========================================== UnitValues Class =======================================*/
 
     //Inner Class Unit Values
-    public class UnitValues {
-        public int speed;
-        public int shot_speed;
-        public int damage;
-        public int health;
+public class UnitValues {
+    public int speed;
+    public int shot_speed;
+    public int damage;
+    public int health;
 
-        //constructor Empty
-        public UnitValues() {
-        }
+    //constructor Empty
+    public UnitValues(){}
 
-        //Constructor UnitValues Class
-        public UnitValues(int speed, int shot_speed, int damage, int health) {
-            this.speed = speed;
-            this.shot_speed = shot_speed;
-            this.damage = damage;
-            this.health = health;
-        }
-
-        //Set
-        public void setSpeed(int speed) {
-
-            this.speed = speed;
-        }
-
-        public void setShot_speed(int shot_speed) {
-
-            this.shot_speed = shot_speed;
-        }
-
-        public void setDamage(int damage) {
-
-            this.damage = damage;
-        }
-
-        public void setHealth(int health) {
-
-            this.health = health;
-        }
-
-        //Get
-        public int getSpeed() {
-
-            return this.speed;
-        }
-
-        public int getShot_speed() {
-            return this.shot_speed;
-        }
-
-        public int getDamage() {
-            return this.damage;
-        }
-
-        public int getHealth() {
-            return this.health;
-        }
+    //Constructor UnitValues Class
+    public UnitValues(int speed , int shot_speed , int damage , int health){
+        this.speed = speed;
+        this.shot_speed = shot_speed;
+        this.damage = damage;
+        this.health = health;
     }
 
-    /*========================================== Damaging Class ============================================*/
+    //Set
+    public void setSpeed(int speed){
+
+        this.speed = speed;
+    }
+
+    public void setShot_speed(int shot_speed){
+
+        this.shot_speed = shot_speed;
+    }
+
+    public void setDamage(int damage){
+
+        this.damage = damage;
+    }
+
+    public void setHealth(int health) {
+
+        this.health = health;
+    }
+
+    //Get
+    public int getSpeed(){
+
+        return this.speed;
+    }
+
+    public int getShot_speed() {
+        return this.shot_speed;
+    }
+
+    public int getDamage() {
+        return this.damage;
+    }
+
+    public int getHealth() {
+        return this.health;
+    }
+}
+
+/*========================================== Damaging Class ============================================*/
 
     //Inner Class Damaging
-    public class Damaging implements Damage {
-        //Method
-        @Override
-        public void DoDamage() {
+public class Damaging implements Damage {
+    //Method
+    @Override
+    public void DoDamage() {
 
-        }
+    }
 
-        @Override
-        public Damage AcceptDamage() {
+    @Override
+    public Damage AcceptDamage() {
             return null;
         }
-    }
-    /*======================================================================================================*/
+}
+/*======================================================================================================*/
 
 }//Finish Class Unit
