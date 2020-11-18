@@ -1,4 +1,4 @@
-package com.destroyordefend.project.Unit.Damage;
+package com.destroyordefend.project.Unit;
 
 public interface Damage {
 

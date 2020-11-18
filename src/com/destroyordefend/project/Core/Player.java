@@ -6,14 +6,14 @@ import com.destroyordefend.project.Unit.Unit;
 import java.util.ArrayList;
 import java.util.List;
 
-enum PlayerRole{
+enum TeamRole{
     Attacker,Defender
 }
 public class Player {
 
     int Points;
     //Is he attacker or Defender
-    PlayerRole role;
+    TeamRole role;
     String id;
     List<Unit> army;
 
@@ -21,7 +21,7 @@ public class Player {
         army = new ArrayList<>();
     }
 
-    public Player(int points, PlayerRole role, String id) {
+    public Player(int points, TeamRole role, String id) {
         Points = points;
         this.role = role;
         this.id = id;
@@ -56,6 +56,7 @@ public class Player {
             if(this.Points <Game.getShop().getLowestPrice())
                 throw new PointsCantByuException("You Have only " + this.Points + ", this cant buy anything!!");
             cutPrice(price);
+            unit.setRole(this.role.name());
             army.add(unit);
         }catch (NoEnoughPointsException ex){
             System.err.println(ex);

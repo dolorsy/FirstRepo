@@ -1,4 +1,4 @@
-package com.destroyordefend.project.Unit.TacticAble;
+package com.destroyordefend.project.Unit;
 
 import com.destroyordefend.project.Tactic.Tactic;
 

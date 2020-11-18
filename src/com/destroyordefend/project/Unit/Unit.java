@@ -1,10 +1,7 @@
 package com.destroyordefend.project.Unit;
 
 import com.destroyordefend.project.Tactic.Tactic;
-import com.destroyordefend.project.Unit.Damage.Damage;
 import com.destroyordefend.project.Movement.Movement;
-import com.destroyordefend.project.Unit.MovemntAble.MovementAble;
-import com.destroyordefend.project.Unit.TacticAble.TacticAble;
 import com.destroyordefend.project.Core.Point;
 
 import java.util.TreeSet;
@@ -19,22 +16,29 @@ public class Unit  implements  TacticAble , MovementAble {
     String type;//type unit
     Movement movement;
     TreeSet<Unit> treeSetUnit;
+    Point point;
+    String role;
+    UnitValues values;
 
-
-    //Constructor Empty
-    public Unit(){}
-
-    //Constructor Values
-    public Unit(int id , int radius,int range,String type, Movement movement,TreeSet<Unit> treeSetUnit){
+    //Constructor 1
+    public Unit(int id, int radius, int range, String type,int speed ,int shot_speed,int damage ,int health) {
         this.id = id;
         this.radius = radius;
         this.range = range;
         this.type = type;
-        this.movement = movement;
+        values =new UnitValues (speed,shot_speed,damage,health);
+    }
+    //Constructor 2
+    public Unit (int id, int radius, int range, String type, UnitValues values, TreeSet<Unit> treeSetUnit) {
+        this.id = id;
+        this.radius = radius;
+        this.range = range;
+        this.type = type;
+        this.values = values;
         this.treeSetUnit = treeSetUnit;
     }
 
-    //Constructor copy
+    //Copy Constructor
     public Unit(Unit unit){
         this.id = unit.id;
         this.radius = unit.radius;
@@ -42,6 +46,9 @@ public class Unit  implements  TacticAble , MovementAble {
         this.type = unit.type;
         this.movement = unit.movement;
         this.treeSetUnit = unit.treeSetUnit;
+        this.point = unit.point;
+        this.role = unit.getRole();
+        this.values = unit.values;
     }
 
     //Set
@@ -69,8 +76,19 @@ public class Unit  implements  TacticAble , MovementAble {
         this.treeSetUnit = treeSetUnit;
     }
 
-    //Get
+    public void setRole(String role) {
+        this.role = role;
+    }
 
+    public void setPoint(Point point) {
+        this.point = point;
+    }
+
+    public void setValues(UnitValues values) {
+        this.values = values;
+    }
+
+    //Get
     public int getId() {
         return this.id;
     }
@@ -95,6 +113,20 @@ public class Unit  implements  TacticAble , MovementAble {
         return this.treeSetUnit;
     }
 
+
+    public String getRole() {
+        return role;
+    }
+
+    public UnitValues getValues() {
+        return values;
+    }
+
+    //Get Position Unit
+    public Point getPosition(){
+        return this.point;
+    }
+
     //Method TacticAble Class
     @Override
     public TacticAble AcceptTactic(Tactic tactic) {
@@ -110,22 +142,35 @@ public class Unit  implements  TacticAble , MovementAble {
     /*========================================== UnitValues Class =======================================*/
 
     //Inner Class Unit Values
-public class UnitValues {
-    public int speed;
-    public int shot_speed;
-    public int damage;
-    public int health;
+public static class UnitValues {
+
+    //Object for Singleton
+    private static UnitValues unitValues = null;
+
+    int speed;
+    int shot_speed;
+    int damage;
+    int health;
 
     //constructor Empty
-    public UnitValues(){}
+    private UnitValues(){}
 
     //Constructor UnitValues Class
-    public UnitValues(int speed , int shot_speed , int damage , int health){
+    public UnitValues(int speed, int shot_speed, int damage, int health){
         this.speed = speed;
         this.shot_speed = shot_speed;
         this.damage = damage;
         this.health = health;
     }
+
+    //Singleton
+   private static UnitValues getInstance(){
+    if(unitValues == null)
+    {
+        unitValues = new UnitValues();
+    }
+    return unitValues;
+   }
 
     //Set
     public void setSpeed(int speed){
@@ -174,7 +219,6 @@ public class Damaging implements Damage {
     //Method
     @Override
     public void DoDamage() {
-
     }
 
     @Override
