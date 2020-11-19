@@ -9,7 +9,7 @@ import java.util.TreeSet;
 public class PriorityAttack implements Tactic{
 
     @Override
-    public void SortMap(TreeSet<Unit> OnArena) {
+    public void SortMap(Unit unit) {
 
     }
 }

@@ -12,11 +12,12 @@ import java.util.TreeSet;
 public class HighestDamageAttack implements Tactic{
 
     @Override
-    public void SortMap(TreeSet<Unit> OnArena ) {
+    public void SortMap(Unit unit ) {
 
         DamageComparator damageComparator = new DamageComparator();
         TreeSet<Unit> temp = new TreeSet<Unit>(damageComparator);
-        OnArena = temp;
+        temp = unit.getTreeSetUnit();
+        unit.setTreeSetUnit(temp);
 
 
 

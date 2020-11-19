@@ -10,10 +10,12 @@ import java.util.TreeSet;
 public class LowestHealthAttack implements Tactic {
 
     @Override
-    public void SortMap(TreeSet<Unit> OnArena) {
+    public void SortMap(Unit unit) {
 
         HealthComparator healthComparator = new HealthComparator();
-        TreeSet<Unit> temp = new TreeSet<Unit>(healthComparator);
-        OnArena = temp;
+        TreeSet<Unit> temp = new TreeSet<>(healthComparator);
+        temp = unit.getTreeSetUnit();
+        unit.setTreeSetUnit(temp);
+
     }
 }

@@ -8,5 +8,5 @@ import java.util.TreeSet;
 
 public interface Tactic {
 
-    void  SortMap (TreeSet<Unit> OnArena);
+    void  SortMap (Unit unit);
 }

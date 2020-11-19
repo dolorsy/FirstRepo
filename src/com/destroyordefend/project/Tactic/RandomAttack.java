@@ -9,7 +9,7 @@ import java.util.TreeSet;
 public class RandomAttack implements Tactic {
 
     @Override
-    public void SortMap( TreeSet<Unit> OnArena) {
+    public void SortMap( Unit unit) {
         // Don't need to do any think here
     }
 }
