@@ -16,7 +16,6 @@ int currentSecond = 0;
                 invokeUpdateRange();
                 invokeMainMethods();
                 Thread.sleep(1000);
-
             } catch (InterruptedException e) {
                 e.printStackTrace();
                 //Todo: Need To Implement

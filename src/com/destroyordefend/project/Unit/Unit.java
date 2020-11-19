@@ -131,95 +131,81 @@ public class Unit  implements  TacticAble , MovementAble {
     //Method TacticAble Class
     @Override
     public TacticAble AcceptTactic(Tactic tactic) {
-        return null;
+        return this;
     }
 
     //Method MovementAble Class
     @Override
     public MovementAble AcceptMovement(Movement movement) {
-        return null;
+        return this;
     }
 
-    /*========================================== UnitValues Class =======================================*/
+    public int getDamage(){
+        return this.values.damage;
+    }
+    public void setDamage(int damage){
 
-    //Inner Class Unit Values
-public static class UnitValues {
-
-    //Object for Singleton
-    private static UnitValues unitValues = null;
-
-    static int speed;
-    static int shot_speed;
-    static int damage;
-    static int health;
-
-    //constructor Empty
-    private UnitValues(){}
-
-    //Constructor UnitValues Class
-    public UnitValues(int speed, int shot_speed, int damage, int health){
-        this.speed = speed;
-        this.shot_speed = shot_speed;
-        this.damage = damage;
-        this.health = health;
+        this.values.damage = damage;
     }
 
-    //Singleton
-   private static UnitValues getInstance(){
-    if(unitValues == null)
-    {
-        unitValues = new UnitValues();
+    public int getHealth() {
+        return this.values.health;
     }
-    return unitValues;
-   }
 
-    //Set
+
     public void setSpeed(int speed){
 
-        this.speed = speed;
+        this.values.speed = speed;
     }
 
     public void setShot_speed(int shot_speed){
 
-        this.shot_speed = shot_speed;
+        this.values.shot_speed = shot_speed;
     }
 
-    public void setDamage(int damage){
 
-        this.damage = damage;
-    }
 
     public void setHealth(int health) {
 
-        this.health = health;
+        this.values.health = health;
     }
-
-        //Get
-        public int getSpeed() {
-
-        return this.speed;
-    }
-
-        public int getShot_speed() {
-            return this.shot_speed;
-        }
-
-        public int getDamage() {
-            return this.damage;
-        }
-
-        public int getHealth() {
-            return this.health;
-        }
-    }
-
-/*========================================== Damaging Class ============================================*/
-
-    //Inner Class Damaging
-public static class Damaging implements Damage {
-    int canShot = 0 ;
 
     //Get
+    public int getSpeed() {
+
+        return this.values.speed;
+    }
+
+    public int getShot_speed() {
+        return this.values.shot_speed;
+    }
+
+    class UnitValues {
+
+        //Object for Singleton
+
+        int speed;
+        int shot_speed;
+        int damage;
+        int health;
+
+        //constructor Empty
+        private UnitValues(){}
+
+        //Constructor UnitValues Class
+        public UnitValues(int speed, int shot_speed, int damage, int health){
+            this.speed = speed;
+            this.shot_speed = shot_speed;
+            this.damage = damage;
+            this.health = health;
+        }
+
+
+    }
+
+
+    public  class Damaging implements Damage {
+        int canShot = 0 ;
 
         public int getCanShot() {
             return canShot;
@@ -227,31 +213,38 @@ public static class Damaging implements Damage {
 
         //Method
 
-    @Override
-    public int DoDamage() {
-        if(canShot == 0){
-            canShot = 4;
-        }else {
-            decrease();
-        }
-        return UnitValues.damage;
-    }
+        @Override
+        public int DoDamage() {
+            if(canShot == 0){
+                canShot = 4;
+                return values.damage;
 
-    @Override
-    public void AcceptDamage(int damage) {
-
-        if( (UnitValues.health - damage ) <= 0 ){
-            UnitValues.health = 0;
-        }else {
-            UnitValues.health -= damage;
+            }else {
+                decrease();
+                return 0;
+            }
         }
+
+        @Override
+        public void AcceptDamage(int damage) {
+
+            if( (values.health - damage ) <= 0 ){
+                values.health = 0;
+            }else {
+                values.health -= damage;
+            }
         }
 
         @Override
         public void decrease() {
             canShot -= 1;
         }
-    }
-/*======================================================================================================*/
 
-}//Finish Class Unit
+    }
+
+}
+
+    //Inner Class Unit Values
+
+
+

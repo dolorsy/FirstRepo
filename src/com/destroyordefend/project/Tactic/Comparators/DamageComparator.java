@@ -9,11 +9,9 @@ public class DamageComparator implements Comparator<Unit> {
     @Override
     public int compare(Unit o1, Unit o2) {
 
-        Unit.UnitValues va1 = o1.getValues();
-        Unit.UnitValues va2 = o2.getValues();
 
-        if (va1.getDamage() == va2.getDamage())
+        if (o1.getDamage() == o2.getDamage())
             return 1;
-        return va2.getDamage() - va1.getDamage();
+        return o2.getDamage() - o1.getDamage();
     }
 }
