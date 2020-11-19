@@ -194,24 +194,24 @@ public static class UnitValues {
         this.health = health;
     }
 
-    //Get
-    public int getSpeed(){
+        //Get
+        public int getSpeed() {
 
-        return speed;
+        return this.speed;
     }
 
-    public int getShot_speed() {
-        return shot_speed;
-    }
+        public int getShot_speed() {
+            return this.shot_speed;
+        }
 
-    public int getDamage() {
-        return damage;
-    }
+        public int getDamage() {
+            return this.damage;
+        }
 
-    public int getHealth() {
-        return health;
+        public int getHealth() {
+            return this.health;
+        }
     }
-}
 
 /*========================================== Damaging Class ============================================*/
 

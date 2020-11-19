@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="add range and TreeSet to Unit class">
+    <list default="true" id="109eed53-bb59-4524-bf51-57b0f2396249" name="Default Changelist" comment="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done&#10;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&#10;tree set in unit sorted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$Damaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$Damaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$UnitValues.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$UnitValues.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/MovemntAble/MovementAble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/MovemntAble/MovementAble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +55,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/destroyordefend/project/Tactic/Comparators" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java Project\FirstRepo\src\com\destroyordefend\project\Tactic\Comparators" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -87,7 +88,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="" />
+      <changelist id="109eed53-bb59-4524-bf51-57b0f2396249" name="Default Changelist" comment="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done&#10;v2" />
       <created>1605256753010</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -165,13 +166,28 @@
       <option name="presentableId" value="LOCAL؜٠٠٠١٢" />
       <updated>1605547029152</updated>
     </task>
-    <task id="LOCAL؜٠٠٠١٣" summary="add range and TreeSet to Unit class">
-      <created>1605554741267</created>
-      <option name="number" value="LOCAL؜٠٠٠١٣" />
-      <option name="presentableId" value="LOCAL؜٠٠٠١٣" />
-      <updated>1605554741267</updated>
+    <task id="LOCAL-00013" summary="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done">
+      <created>1605721623236</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605721623236</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done&#10;v2">
+      <created>1605721636631</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1605721636631</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done&#10;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&#10;tree set in unit sorted">
+      <created>1605817163958</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1605817163958</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -205,8 +221,10 @@
     <MESSAGE value="add radius and geter it to Unit Calss&#10;and set Point to AcceptMovement" />
     <MESSAGE value="int raduis" />
     <MESSAGE value="Point object" />
-    <MESSAGE value="add range and TreeSet to Unit class" />
-    <option name="LAST_COMMIT_MESSAGE" value="add range and TreeSet to Unit class" />
+    <MESSAGE value="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done" />
+    <MESSAGE value="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done&#10;v2" />
+    <MESSAGE value="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done&#10;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&#10;tree set in unit sorted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done&#10;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&#10;tree set in unit sorted" />
   </component>
   <component name="WindowStateProjectService">
     <state x="520" y="236" key="#Notifications" timestamp="1605298430500">
@@ -229,34 +247,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605369228499" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605553692840">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605816659510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605553692840" />
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1605633222802">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605816659510" />
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1605554378412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605633222802" />
-    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1605633222802">
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
+    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1605554378412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605633222802" />
-    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1605633222802">
+    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
+    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1605554378412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605633222802" />
-    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1605633222802">
+    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1605554378412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605633222802" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1605547095153">
+    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
+    <state x="9" y="60" width="1379" height="764" key="MergeDialog" timestamp="1605818140693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605547095153" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1605547095153">
+    <state x="9" y="60" width="1379" height="764" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605818140693" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1605818140710">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605547095153" />
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605818140710" />
     <state x="493" y="115" width="650" height="558" key="RollbackChangesDialog" timestamp="1605369106801">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -265,14 +283,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605258426609" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605554749345">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605540374119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605554749345" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605547040406">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605540374119" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605817170674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605547040406" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605817170674" />
     <state x="209" y="33" key="new project wizard" timestamp="1605552703986">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

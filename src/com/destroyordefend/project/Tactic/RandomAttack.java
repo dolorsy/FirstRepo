@@ -4,11 +4,12 @@ import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.Core.Point;
 
 import java.util.Map;
+import java.util.TreeSet;
 
 public class RandomAttack implements Tactic {
 
     @Override
-    public void SortMap(Map<Unit, Point> OnArena) {
-
+    public void SortMap( Unit unit) {
+        // Don't need to do any think here
     }
 }
