@@ -2,7 +2,9 @@ package com.destroyordefend.project.Unit;
 
 public interface Damage {
 
-    void DoDamage();
+    void decrease();
 
-    Damage AcceptDamage();
+    int DoDamage();
+
+    void AcceptDamage(int damage);
 }

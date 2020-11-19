@@ -13,6 +13,7 @@ public class Unit  implements  TacticAble , MovementAble {
     int id;
     int radius;
     int range;
+    final int attackSpeed = 4;
     String type;//type unit
     Movement movement;
     TreeSet<Unit> treeSetUnit;
@@ -90,27 +91,27 @@ public class Unit  implements  TacticAble , MovementAble {
 
     //Get
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public int getRadius() {
-        return this.radius;
+        return radius;
     }
 
     public int getRange() {
-        return this.range;
+        return range;
     }
 
     public String getType() {
-        return this.type;
+        return type;
     }
 
     public Movement getMovement() {
-        return this.movement;
+        return movement;
     }
 
     public TreeSet<Unit> getTreeSetUnit() {
-        return this.treeSetUnit;
+        return treeSetUnit;
     }
 
 
@@ -124,7 +125,7 @@ public class Unit  implements  TacticAble , MovementAble {
 
     //Get Position Unit
     public Point getPosition(){
-        return this.point;
+        return point;
     }
 
     //Method TacticAble Class
@@ -147,10 +148,10 @@ public static class UnitValues {
     //Object for Singleton
     private static UnitValues unitValues = null;
 
-    int speed;
-    int shot_speed;
-    int damage;
-    int health;
+    static int speed;
+    static int shot_speed;
+    static int damage;
+    static int health;
 
     //constructor Empty
     private UnitValues(){}
@@ -196,36 +197,61 @@ public static class UnitValues {
     //Get
     public int getSpeed(){
 
-        return this.speed;
+        return speed;
     }
 
     public int getShot_speed() {
-        return this.shot_speed;
+        return shot_speed;
     }
 
     public int getDamage() {
-        return this.damage;
+        return damage;
     }
 
     public int getHealth() {
-        return this.health;
+        return health;
     }
 }
 
 /*========================================== Damaging Class ============================================*/
 
     //Inner Class Damaging
-public class Damaging implements Damage {
-    //Method
+public static class Damaging implements Damage {
+    int canShot = 0 ;
+
+    //Get
+
+        public int getCanShot() {
+            return canShot;
+        }
+
+        //Method
+
     @Override
-    public void DoDamage() {
+    public int DoDamage() {
+        if(canShot == 0){
+            canShot = 4;
+        }else {
+            decrease();
+        }
+        return UnitValues.damage;
     }
 
     @Override
-    public Damage AcceptDamage() {
-            return null;
+    public void AcceptDamage(int damage) {
+
+        if( (UnitValues.health - damage ) <= 0 ){
+            UnitValues.health = 0;
+        }else {
+            UnitValues.health -= damage;
         }
-}
+        }
+
+        @Override
+        public void decrease() {
+            canShot -= 1;
+        }
+    }
 /*======================================================================================================*/
 
 }//Finish Class Unit
