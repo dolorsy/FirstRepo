@@ -9,8 +9,6 @@ public class Main   {
     public static void main(String[] args)  {
         GameTimer gameTimer= new GameTimer(10);
 
-
-
     }
 
 }
