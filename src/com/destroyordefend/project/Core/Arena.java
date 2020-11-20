@@ -42,11 +42,7 @@ public class Arena {
     }
 
     public TreeSet<Unit> UpdateRange(Unit unit){
-
-
         TreeSet<Unit> newSetUpdate = new TreeSet<>();
-
-
         for(Unit unitInRange : Game.getAllUnits()){
             if(isInRange(unit,unitInRange)){
                 newSetUpdate.add(unitInRange);

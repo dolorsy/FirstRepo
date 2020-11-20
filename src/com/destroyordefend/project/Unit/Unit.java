@@ -6,9 +6,7 @@ import com.destroyordefend.project.Core.Point;
 
 import java.util.TreeSet;
 
-/*===========================================Unit Class============================================*/
-
-public class Unit  implements  TacticAble , MovementAble {
+public class Unit  extends Thread implements  TacticAble , MovementAble {
 
     int id;
     int radius;
@@ -20,6 +18,11 @@ public class Unit  implements  TacticAble , MovementAble {
     Point point;
     String role;
     UnitValues values;
+
+    public void Run(){
+        //Todo: Here We Should Implement Thread Behaviour
+    }
+
 
     //Constructor 1
     public Unit(int id, int radius, int range, String type,int speed ,int shot_speed,int damage ,int health) {
@@ -90,7 +93,7 @@ public class Unit  implements  TacticAble , MovementAble {
     }
 
     //Get
-    public int getId() {
+    public int geUnitId() {
         return id;
     }
 
@@ -245,6 +248,5 @@ public class Unit  implements  TacticAble , MovementAble {
 }
 
     //Inner Class Unit Values
-
 
 

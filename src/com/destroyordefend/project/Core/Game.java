@@ -4,19 +4,30 @@ import com.destroyordefend.project.Unit.Unit;
 
 import java.util.*;
 
+
+enum State{
+    NotRunning,
+    Running,
+    Paused,
+    AttackerWin,
+    DefenderWin,
+}
 public class Game {
 static TreeSet<Unit> allUnits;
+State GameState = State.NotRunning;
 Arena arena;
 static Shop shop = new Shop();
-List<Player> players;
+Team Attackers;
+Team Defenders;
 int initPoints =10000 ;
     public void StartAnewGame(){
+        Attackers = new Team();
+        Defenders =  new Team();
         arena = new Arena();
         allUnits = new TreeSet<Unit>();
         //Todo:Here We Should get the number of Players
-        players  = new ArrayList<>();
-        players.add(new Player(initPoints,TeamRole.Attacker,"attacker"));
-        players.add(new Player(initPoints,TeamRole.Defender,"defender"));
+        Attackers.addPlayer(new Player(initPoints,TeamRole.Attacker,"attacker"));
+        Defenders.addPlayer(new Player(initPoints,TeamRole.Defender,"defender"));
         this.StartShoppingStage();
 
         /**
@@ -31,6 +42,14 @@ int initPoints =10000 ;
 
     }
 
+    public void setGameState(State gameState) {
+        GameState = gameState;
+    }
+
+    public State getGameState() {
+        return GameState;
+    }
+
     public static TreeSet<Unit> getAllUnits() {
         return allUnits;
     }
@@ -41,21 +60,26 @@ int initPoints =10000 ;
 
     protected void AddAnewPlayer(){
         //Todo:  we should Get The Name of Player and the Role (Attacker / Defender) and set In the following constructor
-        players.add(new Player());
 
     }
     protected  void StartPlacementStage(){
         //Todo: x and y is Temporary Here
         int x=10,y=10,r=5;
-        for(Player p : players){
+        for(Player p : Defenders.getTeamPlayers()){
         for(Unit u : p.getArmy()){
             arena.setUnitPlace(new Point(x,y),(int)u.getRadius()) ;
                     x+=10;y+=10;
         }
         }
+        for(Player p : Attackers.getTeamPlayers()){
+            for(Unit u : p.getArmy()){
+                arena.setUnitPlace(new Point(x,y),(int)u.getRadius()) ;
+                x+=10;y+=10;
+            }
+        }
 
     }
-    protected  void CreatePlayersStage(){
+    protected  void CreateTeamsStage(){
 
         /**
          * for the number of players we will call AddPlayer
@@ -67,7 +91,12 @@ int initPoints =10000 ;
 
     }
     protected void StartShoppingStage(){
-        for(Player player : players){
+
+        for(Player player : Attackers.getTeamPlayers()){
+            player.CreateArmy();
+            allUnits.addAll(player.getArmy());
+        }
+        for(Player player : Defenders.getTeamPlayers()){
             player.CreateArmy();
             allUnits.addAll(player.getArmy());
         }
