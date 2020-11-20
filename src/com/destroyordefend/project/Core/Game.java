@@ -1,11 +1,12 @@
 package com.destroyordefend.project.Core;
 
 import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.utility.GameTimer;
 
 import java.util.*;
 
 
-enum State{
+enum States{
     NotRunning,
     Running,
     Paused,
@@ -13,13 +14,21 @@ enum State{
     DefenderWin,
 }
 public class Game {
-static TreeSet<Unit> allUnits;
-State GameState = State.NotRunning;
+    public static Game game;
+    TreeSet<Unit> allUnits;
+States GameState = States.NotRunning;
 Arena arena;
-static Shop shop = new Shop();
+ Shop shop = new Shop();
 Team Attackers;
 Team Defenders;
 int initPoints =10000 ;
+GameTimer gameTimer;
+ Game(){
+     //Todo:here The Round Length
+     gameTimer = new GameTimer(30);
+    if(game == null)
+        game = new Game();
+}
     public void StartAnewGame(){
         Attackers = new Team();
         Defenders =  new Team();
@@ -42,19 +51,29 @@ int initPoints =10000 ;
 
     }
 
-    public void setGameState(State gameState) {
+    public void UpdateUnits(){
+     //this method to Update AllUnits
+     allUnits = new TreeSet<>();
+     for(Player player : Attackers.getTeamPlayers()){
+         allUnits.addAll(player.getArmy());
+     }
+        for(Player player : Defenders.getTeamPlayers()){
+            allUnits.addAll(player.getArmy());
+        }
+    }
+    public void setGameState(States gameState) {
         GameState = gameState;
     }
 
-    public State getGameState() {
+    public States getGameState() {
         return GameState;
     }
 
-    public static TreeSet<Unit> getAllUnits() {
-        return allUnits;
+    public  TreeSet<Unit> getAllUnits() {
+        return this.allUnits;
     }
 
-    public static Shop getShop() {
+    public  Shop getShop() {
         return shop;
     }
 
@@ -102,5 +121,29 @@ int initPoints =10000 ;
         }
 
     };
+
+    public void UpdateState() {
+        boolean stillInGame = false;
+
+        for(Player player : Attackers.getTeamPlayers()){
+            if(player.getArmy().size() != 0){
+                stillInGame = true;
+            }
+            if(!stillInGame){
+                setGameState(States.DefenderWin);
+                return;
+            }
+        }
+       for(Unit unit : allUnits){
+           if(unit.getType() == "Base" && unit.getHealth() == 0){
+               setGameState(States.AttackerWin);
+               return;
+           }
+       }
+        if(gameTimer.onEnd()){
+            setGameState(States.DefenderWin);
+            return;
+        }
+    }
 
 }

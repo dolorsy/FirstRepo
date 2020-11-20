@@ -1,10 +1,12 @@
 package com.destroyordefend.project.Unit;
 
-import com.destroyordefend.project.Tactic.Tactic;
-import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Core.Point;
+import com.destroyordefend.project.Movement.Movement;
+import com.destroyordefend.project.Tactic.Tactic;
 
 import java.util.TreeSet;
+
+import static com.destroyordefend.project.Core.Game.game;
 
 public class Unit  extends Thread implements  TacticAble , MovementAble {
 
@@ -20,7 +22,7 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
     UnitValues values;
 
     public void Run(){
-        //Todo: Here We Should Implement Thread Behaviour
+        //Todo: Here We Should Implement Thread Behaviour if each Unit on Thread
     }
 
 
@@ -181,6 +183,13 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
 
     public int getShot_speed() {
         return this.values.shot_speed;
+    }
+
+    void onDestroy(){
+
+        game.UpdateState();
+
+
     }
 
     class UnitValues {

@@ -4,6 +4,8 @@ import com.destroyordefend.project.Unit.Unit;
 
 import java.util.TreeSet;
 
+import static com.destroyordefend.project.Core.Game.game;
+
 public class Arena {
     static Byte[][] arena ;
     static int x = 10000,y =10000;
@@ -43,7 +45,7 @@ public class Arena {
 
     public TreeSet<Unit> UpdateRange(Unit unit){
         TreeSet<Unit> newSetUpdate = new TreeSet<>();
-        for(Unit unitInRange : Game.getAllUnits()){
+        for(Unit unitInRange : game.getAllUnits()){
             if(isInRange(unit,unitInRange)){
                 newSetUpdate.add(unitInRange);
 
