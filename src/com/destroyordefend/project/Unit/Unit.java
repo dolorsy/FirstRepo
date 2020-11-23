@@ -20,6 +20,11 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
     Point point;
     String role;
     UnitValues values;
+    Tactic tactic;
+
+    public Tactic getTactic() {
+        return tactic;
+    }
 
     public void Run(){
         //Todo: Here We Should Implement Thread Behaviour if each Unit on Thread
@@ -33,6 +38,8 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
         this.range = range;
         this.type = type;
         values =new UnitValues (speed,shot_speed,damage,health);
+        this.point = new Point(0,0);
+
     }
     //Constructor 2
     public Unit (int id, int radius, int range, String type, UnitValues values, TreeSet<Unit> treeSetUnit) {
@@ -42,6 +49,7 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
         this.type = type;
         this.values = values;
         this.treeSetUnit = treeSetUnit;
+        this.point = new Point(0,0);
     }
 
     //Copy Constructor
@@ -111,8 +119,15 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
         return type;
     }
 
-    public Movement getMovement() {
-        return movement;
+    public void Move(){
+        Point p = this.movement.GetNextPoint(getPosition());
+        int factor = Movement.SetUnitPlace(p,this);
+        if (factor != 0) {
+            //TODO: For loop like Current speed to push invokable method in UpdateMapAsyncTask
+            values.currentSpeed = values.speed/factor;
+            this.setPoint(p);
+        }
+
     }
 
     public TreeSet<Unit> getTreeSetUnit() {
@@ -136,6 +151,8 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
     //Method TacticAble Class
     @Override
     public TacticAble AcceptTactic(Tactic tactic) {
+
+        this.tactic = tactic;
         return this;
     }
 
@@ -180,6 +197,9 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
 
         return this.values.speed;
     }
+    public int getCurrentSpeed(){
+        return  this.values.currentSpeed;
+    }
 
     public int getShot_speed() {
         return this.values.shot_speed;
@@ -192,6 +212,19 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
 
     }
 
+    public int getLeft(){
+        return point.getX() - this.radius;
+    }
+    public int getRight(){
+        return point.getX() + this.radius;
+    }
+    public int getUp(){
+        return point.getY() + this.radius;
+    }
+    public int getDown(){
+        return point.getY() - this.radius;
+    }
+
     class UnitValues {
 
         //Object for Singleton
@@ -200,7 +233,7 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
         int shot_speed;
         int damage;
         int health;
-
+        int currentSpeed;
         //constructor Empty
         private UnitValues(){}
 
@@ -210,9 +243,15 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
             this.shot_speed = shot_speed;
             this.damage = damage;
             this.health = health;
+            this.currentSpeed = speed;
         }
 
 
+    }
+    public void UpdateRange(){
+        Tactic.updateRange(this);
+        this.tactic.SortMap(this);
+        //Todo::Make sure the call by referance
     }
 
 
@@ -222,8 +261,6 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
         public int getCanShot() {
             return canShot;
         }
-
-        //Method
 
         @Override
         public int DoDamage() {
