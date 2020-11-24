@@ -15,9 +15,8 @@ int RoundLength = 30;
 int currentSecond = 0;
     public void run(){
         System.out.println("Here");
-        for(int i=1;i<=RoundLength;i++){
+        for(;currentSecond<=RoundLength;currentSecond++){
             try {
-                //Todo: Each tikTok we should do that game.allUnits = new List(attackersUnits + DefendersUnit);
 
 
                 //Todo: Be Careful About Time Of the Following Three Methods, it should be 0.9 Second For Them all Together
@@ -31,19 +30,27 @@ int currentSecond = 0;
                     Runnable method = () -> u.getDamaging().DoDamage();
                     MainMethodAsyncTask.addMethod(method);
 
-
                 }
                 /*
                   The PREVIOUS Code is a big Mistake
                   */
+                long current = System.currentTimeMillis();
+                System.out.println("1 Time: " + currentSecond  + "  " + String.valueOf((long)current));
 
                 invokeUpdatePosition();
                 invokeUpdateRange();
                 invokeMainMethods();
-                Thread.sleep(1000);
+
+
                 MainMethodAsyncTask.clearQueue();
                 UpdateMapAsyncTask.clearQueue();
                 UpdateRangeAsyncTask.clearQueue();
+
+
+                current = System.currentTimeMillis()-current;
+                System.out.println("2 Time: " + currentSecond +  "  " + String.valueOf((long)current));
+                Thread.sleep(1000 - current);
+
 
               //  Game.getGame().UpdateUnits();
             } catch (InterruptedException e) {
