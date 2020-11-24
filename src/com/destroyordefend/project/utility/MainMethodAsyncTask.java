@@ -23,5 +23,8 @@ public class MainMethodAsyncTask {
             updatePosition.run();
         }
     }
+    public static void clearQueue(){
+        doMainThingQueue.clear();
+    }
 
 }

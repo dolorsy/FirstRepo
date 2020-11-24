@@ -10,6 +10,10 @@ public class Point {
         this.y = y;
     }
 
+    public String asString(){
+       return String.valueOf('(' + String.valueOf(x) + ',' + String.valueOf(y) + ')');
+    }
+
     public int getX() {
         return x;
     }
