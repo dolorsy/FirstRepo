@@ -29,6 +29,7 @@ public class Game {
     public static Game game;
     static Unit unit;
     TreeSet<Unit> allUnits;
+    TreeSet<Terrain> terrains;
     States GameState = States.NotRunning;
     Shop shop = new Shop();
     Team Attackers;
@@ -43,6 +44,8 @@ public class Game {
         return game;
     }
     public void StartAnewGame() {
+        //Todo:: terrain need to add terrains
+        terrains = new TreeSet<Terrain>(new Terrain.TerrainComparator());
         gameTimer = new GameTimer(10);
         Attackers = new Team();
         Defenders = new Team();
@@ -101,9 +104,7 @@ public class Game {
             }
         }
         for (Player player : Defenders.getTeamPlayers()) {
-            for (Unit unit : player.getArmy()){
-                allUnits.add(unit);
-            }
+            allUnits.addAll(player.getArmy());
         }
         p(String.valueOf(allUnits.size()));
     }
@@ -156,7 +157,6 @@ public class Game {
          * for the number of players we will call AddPlayer
          * inside the loop the Statement will be
          * AddAnewPlayer();
-         *
          */
 
 
@@ -199,7 +199,6 @@ public class Game {
         }
         if (gameTimer.onEnd()) {
             setGameState(States.DefenderWin);
-            return;
         }
     }
 
