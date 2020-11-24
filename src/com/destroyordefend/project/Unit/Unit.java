@@ -1,14 +1,14 @@
 package com.destroyordefend.project.Unit;
 
-import com.destroyordefend.project.Tactic.Tactic;
-import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Core.Point;
+import com.destroyordefend.project.Movement.Movement;
+import com.destroyordefend.project.Tactic.Tactic;
 
 import java.util.TreeSet;
 
-/*===========================================Unit Class============================================*/
+import static com.destroyordefend.project.Core.Game.game;
 
-public class Unit  implements  TacticAble , MovementAble {
+public class Unit  extends Thread implements  TacticAble , MovementAble {
 
     int id;
     int radius;
@@ -20,6 +20,16 @@ public class Unit  implements  TacticAble , MovementAble {
     Point point;
     String role;
     UnitValues values;
+    Tactic tactic;
+
+    public Tactic getTactic() {
+        return tactic;
+    }
+
+    public void Run(){
+        //Todo: Here We Should Implement Thread Behaviour if each Unit on Thread
+    }
+
 
     //Constructor 1
     public Unit(int id, int radius, int range, String type,int speed ,int shot_speed,int damage ,int health) {
@@ -28,6 +38,8 @@ public class Unit  implements  TacticAble , MovementAble {
         this.range = range;
         this.type = type;
         values =new UnitValues (speed,shot_speed,damage,health);
+        this.point = new Point(0,0);
+
     }
     //Constructor 2
     public Unit (int id, int radius, int range, String type, UnitValues values, TreeSet<Unit> treeSetUnit) {
@@ -37,6 +49,7 @@ public class Unit  implements  TacticAble , MovementAble {
         this.type = type;
         this.values = values;
         this.treeSetUnit = treeSetUnit;
+        this.point = new Point(0,0);
     }
 
     //Copy Constructor
@@ -90,7 +103,7 @@ public class Unit  implements  TacticAble , MovementAble {
     }
 
     //Get
-    public int getId() {
+    public int geUnitId() {
         return id;
     }
 
@@ -106,8 +119,15 @@ public class Unit  implements  TacticAble , MovementAble {
         return type;
     }
 
-    public Movement getMovement() {
-        return movement;
+    public void Move(){
+        Point p = this.movement.GetNextPoint(getPosition());
+        int factor = Movement.SetUnitPlace(p,this);
+        if (factor != 0) {
+            //TODO: For loop like Current speed to push invokable method in UpdateMapAsyncTask
+            values.currentSpeed = values.speed/factor;
+            this.setPoint(p);
+        }
+
     }
 
     public TreeSet<Unit> getTreeSetUnit() {
@@ -131,6 +151,8 @@ public class Unit  implements  TacticAble , MovementAble {
     //Method TacticAble Class
     @Override
     public TacticAble AcceptTactic(Tactic tactic) {
+
+        this.tactic = tactic;
         return this;
     }
 
@@ -175,9 +197,32 @@ public class Unit  implements  TacticAble , MovementAble {
 
         return this.values.speed;
     }
+    public int getCurrentSpeed(){
+        return  this.values.currentSpeed;
+    }
 
     public int getShot_speed() {
         return this.values.shot_speed;
+    }
+
+    void onDestroy(){
+
+        game.UpdateState();
+
+
+    }
+
+    public int getLeft(){
+        return point.getX() - this.radius;
+    }
+    public int getRight(){
+        return point.getX() + this.radius;
+    }
+    public int getUp(){
+        return point.getY() + this.radius;
+    }
+    public int getDown(){
+        return point.getY() - this.radius;
     }
 
     class UnitValues {
@@ -188,7 +233,7 @@ public class Unit  implements  TacticAble , MovementAble {
         int shot_speed;
         int damage;
         int health;
-
+        int currentSpeed;
         //constructor Empty
         private UnitValues(){}
 
@@ -198,9 +243,15 @@ public class Unit  implements  TacticAble , MovementAble {
             this.shot_speed = shot_speed;
             this.damage = damage;
             this.health = health;
+            this.currentSpeed = speed;
         }
 
 
+    }
+    public void UpdateRange(){
+        Tactic.updateRange(this);
+        this.tactic.SortMap(this);
+        //Todo::Make sure the call by referance
     }
 
 
@@ -210,8 +261,6 @@ public class Unit  implements  TacticAble , MovementAble {
         public int getCanShot() {
             return canShot;
         }
-
-        //Method
 
         @Override
         public int DoDamage() {
@@ -245,6 +294,5 @@ public class Unit  implements  TacticAble , MovementAble {
 }
 
     //Inner Class Unit Values
-
 
 

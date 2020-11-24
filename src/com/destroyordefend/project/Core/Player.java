@@ -5,6 +5,9 @@ import com.destroyordefend.project.Unit.Unit;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeSet;
+
+import static com.destroyordefend.project.Core.Game.game;
 
 enum TeamRole{
     Attacker,Defender
@@ -15,10 +18,11 @@ public class Player {
     //Is he attacker or Defender
     TeamRole role;
     String id;
-    List<Unit> army;
+    TreeSet<Unit> army;
 
     public Player() {
-        army = new ArrayList<>();
+
+        army = new TreeSet<>();
     }
 
     public Player(int points, TeamRole role, String id) {
@@ -27,7 +31,7 @@ public class Player {
         this.id = id;
     }
 
-    public List<Unit> getArmy() {
+    public TreeSet<Unit> getArmy() {
         return army;
     }
 
@@ -41,7 +45,7 @@ public class Player {
         //Todo:Here we will Shopping
         while (this.Points>0)
             try{
-                BuyAnArmy(Game.getShop().sellItem("SS"),Game.shop.getUnitPrice("SS") );
+                BuyAnArmy(game.getShop().sellItem("SS"),game.shop.getUnitPrice("SS") );
             }catch (PointsCantByuException ex){
                 System.err.println(ex);
                 break;
@@ -53,13 +57,19 @@ public class Player {
 
     public void BuyAnArmy(Unit unit, int price) throws PointsCantByuException{
         try{
-            if(this.Points <Game.getShop().getLowestPrice())
+            if(this.Points <game.getShop().getLowestPrice())
                 throw new PointsCantByuException("You Have only " + this.Points + ", this cant buy anything!!");
             cutPrice(price);
             unit.setRole(this.role.name());
             army.add(unit);
         }catch (NoEnoughPointsException ex){
             System.err.println(ex);
+        }
+    }
+
+    public void updateArmyState(){
+        for(Unit unit : army){
+                army.removeIf(unit1 -> unit.getHealth()==0);
         }
     }
 }

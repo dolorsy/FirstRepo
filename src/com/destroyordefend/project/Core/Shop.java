@@ -16,7 +16,6 @@ private Unit getUnitByType(String type){
     for(Unit unit : this.ShopUnits){
         if(unit.getType().equals(type)){
             return unit;
-
         }
     }
     return null;
