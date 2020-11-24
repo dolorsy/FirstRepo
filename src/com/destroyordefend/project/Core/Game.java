@@ -3,6 +3,7 @@ package com.destroyordefend.project.Core;
 import com.destroyordefend.project.Main;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
+import com.destroyordefend.project.Movement.ToTarget;
 import com.destroyordefend.project.Tactic.LowestHealthAttack;
 import com.destroyordefend.project.Tactic.RandomAttack;
 import com.destroyordefend.project.Tactic.Tactic;
@@ -53,8 +54,10 @@ public class Game {
         unit = new Unit(5,5,5,"TT",5,5,5,50);
         unit.setTreeSetUnit(new TreeSet<>(new PointComparator()));
         p(unit.getTreeSetUnit().toString());
-        Attackers.getTeamPlayers().get(0).addArmy(new Unit(unit).AcceptTactic(new LowestHealthAttack()).AcceptMovement(new FixedPosition()));
-        Defenders.getTeamPlayers().get(0).addArmy( new Unit(unit).AcceptTactic(new RandomAttack()).AcceptMovement(new FixedPosition()));
+        Attackers.getTeamPlayers().get(0).addArmy(new Unit(unit)
+                .AcceptTactic(new LowestHealthAttack()).AcceptMovement(new FixedPosition()));
+        Defenders.getTeamPlayers().get(0).addArmy( new Unit(unit).AcceptTactic(new RandomAttack())
+                .AcceptMovement(new ToTarget(Attackers.getTeamPlayers().get(0).getArmy().first())));
 
         UpdateUnits();
         //this.StartShoppingStage();
@@ -93,6 +96,7 @@ public class Game {
         for (Player player : Attackers.getTeamPlayers()) {
             for (Unit unit : player.getArmy()){
                 unit.setId(7);
+                unit.setHealth(10);
                 allUnits.add(unit);
             }
         }

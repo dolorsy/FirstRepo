@@ -1,7 +1,9 @@
 package com.destroyordefend.project.utility;
 
 import com.destroyordefend.project.Core.Game;
+import com.destroyordefend.project.Unit.Unit;
 
+import static com.destroyordefend.project.Core.Game.game;
 import static com.destroyordefend.project.utility.MainMethodAsyncTask.clearQueue;
 import static com.destroyordefend.project.utility.MainMethodAsyncTask.invokeMainMethods;
 import static com.destroyordefend.project.utility.UpdateMapAsyncTask.invokeUpdatePosition;
@@ -21,6 +23,20 @@ int currentSecond = 0;
                 //Todo: Be Careful About Time Of the Following Three Methods, it should be 0.9 Second For Them all Together
                 //Todo:May Be You need Exception Handling
                 //Todo: We should invoke All Players UpdateArmy
+
+                for(Unit u: game.getAllUnits()){
+
+                    UpdateMapAsyncTask.addMethod(u::Move);
+                    UpdateRangeAsyncTask.addMethod(u::UpdateRange);
+                    Runnable method = () -> u.getDamaging().DoDamage();
+                    MainMethodAsyncTask.addMethod(method);
+
+
+                }
+                /*
+                  The PREVIOUS Code is a big Mistake
+                  */
+
                 invokeUpdatePosition();
                 invokeUpdateRange();
                 invokeMainMethods();

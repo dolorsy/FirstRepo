@@ -25,6 +25,13 @@ public class Unit  implements  TacticAble , MovementAble {
     String role;
     UnitValues values;
     Tactic tactic;
+    Damaging damaging;
+
+    public Damaging getDamaging() {
+        if(damaging ==null)
+            damaging = new Damaging();
+        return damaging;
+    }
 
     public int getId() {
         return id;
@@ -294,17 +301,24 @@ public class Unit  implements  TacticAble , MovementAble {
             return canShot;
         }
 
+
         @Override
-        public int DoDamage() {
+        public void DoDamage() {
+            treeSetUnit.first().getDamaging().AcceptDamage(this.getDamage());
+
+        }
+
+        @Override
+        public int getDamage() {
             if(canShot == 0){
+                p("Do damage id: " + getId());
                 canShot = 4;
                 return values.damage;
 
             }else {
                 decrease();
                 return 0;
-            }
-        }
+            }        }
 
         @Override
         public void AcceptDamage(int damage) {
@@ -314,6 +328,7 @@ public class Unit  implements  TacticAble , MovementAble {
             }else {
                 values.health -= damage;
             }
+            p("Accept Damage id: " + getId() + "new Helth: " +values.health );
         }
 
         @Override
