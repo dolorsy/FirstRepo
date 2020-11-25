@@ -1,10 +1,12 @@
 package com.destroyordefend.project.utility;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class MainMethodAsyncTask {
 
-    static PriorityQueue<Runnable> doMainThingQueue = new PriorityQueue<>();
+    static List<Runnable> doMainThingQueue = new ArrayList<>();
     public static void addMethod(Runnable methodCall) {
         doMainThingQueue.add(methodCall);
     }
@@ -22,6 +24,9 @@ public class MainMethodAsyncTask {
         for(Runnable updatePosition : doMainThingQueue) {
             updatePosition.run();
         }
+    }
+    public static void clearQueue(){
+        doMainThingQueue.clear();
     }
 
 }

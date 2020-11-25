@@ -1,18 +1,39 @@
 package com.destroyordefend.project.Core;
 
+
 import com.destroyordefend.project.Unit.Unit;
 
 import java.util.Comparator;
 
-import static com.destroyordefend.project.Main.p;
+public class Terrain {
 
-public class PointComparator implements Comparator<Unit> {
+
+    Point point;
+    int speedFactory;
+    String type;
+
+    public Point getPosition() {
+        return point;
+    }
+
+    public int getSpeedFactory() {
+        return speedFactory;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public Terrain(Point point, int speedFactory, String type) {
+        this.point = point;
+        this.speedFactory = speedFactory;
+        this.type = type;
+    }
+
+    public static class TerrainComparator implements Comparator<Terrain> {
         @Override
-        public int compare(Unit o1, Unit o2) {
-            if( o1.getId()!=o2.getId()){
-                //Todo: For Delete
-                return 1;
-            }
+        public int compare(Terrain o1, Terrain o2) {
+
             if (o1.getPosition().getX() > o2.getPosition().getX())
                 return 1;
 
@@ -28,4 +49,8 @@ public class PointComparator implements Comparator<Unit> {
             return -1;
 
         }
+    }
+
+
+
 }

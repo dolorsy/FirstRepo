@@ -1,14 +1,18 @@
 package com.destroyordefend.project.Unit;
 
+import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
+import com.destroyordefend.project.Core.PointComparator;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Tactic;
 
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Core.Game.game;
+import static com.destroyordefend.project.Main.p;
 
-public class Unit  extends Thread implements  TacticAble , MovementAble {
+
+public class Unit  implements  TacticAble , MovementAble {
 
     int id;
     int radius;
@@ -21,16 +25,27 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
     String role;
     UnitValues values;
     Tactic tactic;
+    Damaging damaging;
+
+    public Damaging getDamaging() {
+        if(damaging ==null)
+            damaging = new Damaging();
+        return damaging;
+    }
+
+    public int getId() {
+        return id;
+    }
 
     public Tactic getTactic() {
         return tactic;
     }
 
-    public void Run(){
-        //Todo: Here We Should Implement Thread Behaviour if each Unit on Thread
+
+
+     Unit(){
+    treeSetUnit = new TreeSet<>(new PointComparator());
     }
-
-
     //Constructor 1
     public Unit(int id, int radius, int range, String type,int speed ,int shot_speed,int damage ,int health) {
         this.id = id;
@@ -54,6 +69,7 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
 
     //Copy Constructor
     public Unit(Unit unit){
+        this.treeSetUnit = new TreeSet<>(new PointComparator());
         this.id = unit.id;
         this.radius = unit.radius;
         this.range = unit.range;
@@ -64,7 +80,19 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
         this.role = unit.getRole();
         this.values = unit.values;
     }
+    public void print(){
+        System.out.println(
+                "id: " + id
+                +"rad: "  + radius
+                 + "rang: " + range
+                +"type: " + type
+                +"Movement: " + movement.toString()
+                +"inRange: " + treeSetUnit.toString()
+                +"point: " + point.asString()
+                +"Role: " + role
+                +"valeus: " + values.asString());
 
+    }
     //Set
     public void setId(int id) {
         this.id = id;
@@ -120,7 +148,10 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
     }
 
     public void Move(){
+
+
         Point p = this.movement.GetNextPoint(getPosition());
+        p("Move id: "+getId() + " x,y " + p.asString());
         int factor = Movement.SetUnitPlace(p,this);
         if (factor != 0) {
             //TODO: For loop like Current speed to push invokable method in UpdateMapAsyncTask
@@ -150,15 +181,16 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
 
     //Method TacticAble Class
     @Override
-    public TacticAble AcceptTactic(Tactic tactic) {
-
+    public Unit AcceptTactic(Tactic tactic) {
+        p("Accept Tactic");
         this.tactic = tactic;
         return this;
     }
 
     //Method MovementAble Class
     @Override
-    public MovementAble AcceptMovement(Movement movement) {
+    public Unit AcceptMovement(Movement movement) {
+        this.movement = movement;
         return this;
     }
 
@@ -246,9 +278,16 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
             this.currentSpeed = speed;
         }
 
+        public String asString(){
+            return String.valueOf(
+                    "Speed: " + speed
+                    + "health" + health);
+
+        }
 
     }
     public void UpdateRange(){
+        p("Update Range id: " +getId());
         Tactic.updateRange(this);
         this.tactic.SortMap(this);
         //Todo::Make sure the call by referance
@@ -262,17 +301,24 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
             return canShot;
         }
 
+
         @Override
-        public int DoDamage() {
+        public void DoDamage() {
+            treeSetUnit.first().getDamaging().AcceptDamage(this.getDamage());
+
+        }
+
+        @Override
+        public int getDamage() {
             if(canShot == 0){
+                p("Do damage id: " + getId());
                 canShot = 4;
                 return values.damage;
 
             }else {
                 decrease();
                 return 0;
-            }
-        }
+            }        }
 
         @Override
         public void AcceptDamage(int damage) {
@@ -282,6 +328,7 @@ public class Unit  extends Thread implements  TacticAble , MovementAble {
             }else {
                 values.health -= damage;
             }
+            p("Accept Damage id: " + getId() + "new Helth: " +values.health );
         }
 
         @Override
