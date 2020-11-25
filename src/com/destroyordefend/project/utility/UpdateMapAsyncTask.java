@@ -33,7 +33,6 @@ public class UpdateMapAsyncTask {
     public static void invokeUpdatePosition()
     {
         for(Runnable updatePosition : updatePositionQueue) {
-
             updatePosition.run();
         }
     }

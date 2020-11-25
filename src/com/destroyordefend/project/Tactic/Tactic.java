@@ -7,17 +7,19 @@ import java.util.Map;
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Core.Game.game;
+import static com.destroyordefend.project.Main.p;
 
 public interface Tactic {
     static void updateRange(Unit t){
+        p("Update Range :" + t.getId() + " all : " + t.getTreeSetUnit().size());
         TreeSet<Unit> unitTreeSet = new TreeSet<>(game.getAllUnits());
         unitTreeSet.removeIf(
-                unit -> unit.getPosition().getX()-unit.getRadius() > t.getPosition().getX()+t.getRange() ||
-                        unit.getPosition().getX()+unit.getRadius() < t.getPosition().getX()-t.getRange()
+                unit -> unit.getLeft() > t.getRight()+t.getRange() ||
+                        unit.getRight() < t.getLeft() - t.getRange() || t.getPosition().equals(unit.getPosition())
         );
         unitTreeSet.removeIf(
-                unit -> unit.getPosition().getY()-unit.getRadius() > t.getPosition().getY()+t.getRange() ||
-                        unit.getPosition().getY()+unit.getRadius() < t.getPosition().getY()-t.getRange()
+                unit -> unit.getDown() > t.getUp()+t.getRange() ||
+                        unit.getUp() < t.getDown()-t.getRange()
         );
         t.setTreeSetUnit(unitTreeSet);
     }

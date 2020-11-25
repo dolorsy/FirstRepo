@@ -25,17 +25,22 @@ int currentSecond = 0;
 
                 for(Unit u: game.getAllUnits()){
 
+
+                    for(int i =0;i<u.getCurrentSpeed();i++)
                     UpdateMapAsyncTask.addMethod(u::Move);
                     UpdateRangeAsyncTask.addMethod(u::UpdateRange);
-                    Runnable method = () -> u.getDamaging().DoDamage();
-                    MainMethodAsyncTask.addMethod(method);
+                    if(!u.getTreeSetUnit().isEmpty()){
+                        Runnable method = () -> u.getDamaging().DoDamage();
+                        MainMethodAsyncTask.addMethod(method);
+                    }
+;
 
                 }
                 /*
                   The PREVIOUS Code is a big Mistake
                   */
+
                 long current = System.currentTimeMillis();
-                System.out.println("1 Time: " + currentSecond  + "  " + String.valueOf((long)current));
 
                 invokeUpdatePosition();
                 invokeUpdateRange();
@@ -48,7 +53,6 @@ int currentSecond = 0;
 
 
                 current = System.currentTimeMillis()-current;
-                System.out.println("2 Time: " + currentSecond +  "  " + String.valueOf((long)current));
                 Thread.sleep(1000 - current);
 
 

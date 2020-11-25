@@ -6,6 +6,7 @@ import com.destroyordefend.project.Core.PointComparator;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Tactic;
 
+import java.util.NoSuchElementException;
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Core.Game.game;
@@ -26,6 +27,11 @@ public class Unit  implements  TacticAble , MovementAble {
     UnitValues values;
     Tactic tactic;
     Damaging damaging;
+    String playerId;
+
+    public String getPlayerId() {
+        return playerId;
+    }
 
     public Damaging getDamaging() {
         if(damaging ==null)
@@ -35,6 +41,10 @@ public class Unit  implements  TacticAble , MovementAble {
 
     public int getId() {
         return id;
+    }
+
+    public void setPlayerId(String playerId) {
+        this.playerId = playerId;
     }
 
     public Tactic getTactic() {
@@ -238,10 +248,8 @@ public class Unit  implements  TacticAble , MovementAble {
     }
 
     void onDestroy(){
-
+        game.DeleteUnit(this);
         game.UpdateState();
-
-
     }
 
     public int getLeft(){
@@ -289,6 +297,7 @@ public class Unit  implements  TacticAble , MovementAble {
     public void UpdateRange(){
         p("Update Range id: " +getId());
         Tactic.updateRange(this);
+        p("in range id " +  getId() + "c: " + treeSetUnit.size());
         this.tactic.SortMap(this);
         //Todo::Make sure the call by referance
     }
@@ -304,7 +313,9 @@ public class Unit  implements  TacticAble , MovementAble {
 
         @Override
         public void DoDamage() {
-            treeSetUnit.first().getDamaging().AcceptDamage(this.getDamage());
+            if(treeSetUnit.size()!=0)
+                treeSetUnit.first().getDamaging().AcceptDamage(this.getDamage());
+
 
         }
 
@@ -325,10 +336,13 @@ public class Unit  implements  TacticAble , MovementAble {
 
             if( (values.health - damage ) <= 0 ){
                 values.health = 0;
+                p("Removed id: " + getId());
+                onDestroy();
+
             }else {
                 values.health -= damage;
             }
-            p("Accept Damage id: " + getId() + "new Helth: " +values.health );
+            p("Accept Damage id: " + getId() + " new Helth\n\n: " +values.health );
         }
 
         @Override
