@@ -43,7 +43,7 @@ public class Log {
     public static void m(Unit unit){
         File file = new File("logFile.txt");
        writeFile("time :"/*Game.getGame().getcurrentSecond()*/ +
-                 "id :" + unit.getId() +
+                      "Unit_id :" + unit.getId() +
                       " X :" + unit.getPosition().getX() +" "+
                       " Y :" + unit.getPosition().getY() + "\n"  + "---------------" + "\n",file);
     }
@@ -57,7 +57,7 @@ public class Log {
 
     public static void h(Unit unit){
         File file = new File("logFile.txt");
-        writeFile("time :"/*Game.getGame().getcurrentSecond()*/ +
+        writeFile("time :"/*Game.getGame().getcurrentSecond()*/+
                        "health :" + unit.getHealth() + "\n"  + "---------------" + "\n",file);
            }
 }
