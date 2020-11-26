@@ -36,7 +36,7 @@ public class Log {
             FileWriter myWriter = new FileWriter(file.getAbsoluteFile(),true);
             myWriter.write(text);
             myWriter.close();
-        //    System.out.println("Successfully wrote to the file.");
+            //   System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
@@ -44,22 +44,31 @@ public class Log {
     }
 
     public static void m(Unit unit){
-       writeFile("time :" + Game.getGame().getGameTimer().getCurrentSecond() +
-                      "  Unit_id :" + unit.getId() +
-                      "   X :" + unit.getPosition().getX() +" "+
-                      "   Y :" + unit.getPosition().getY() + "\n"  + "---------------" + "\n",logFile);
+        writeFile("time :" + Game.getGame().getGameTimer().getCurrentSecond() +
+                "  Unit_id :" + unit.getId() +
+                "   X :" + unit.getPosition().getX() +" "+
+                "   Y :" + unit.getPosition().getY() + "\n"  + "---------------" + "\n",logFile);
     }
 
     public static void d(Unit unit_One ,Unit unit_Two){
         File file = new File("logFile.txt");
         writeFile("Unit_id :" + unit_One.getId() +
-                       " Attack "  +
-                       "Unit_id :" + unit_Two.getId() + "\n" + "---------------" + "\n",file);
+                " Attack "  +
+                "Unit_id :" + unit_Two.getId() + "\n" + "---------------" + "\n",file);
     }
 
     public static void h(Unit unit){
         File file = new File("logFile.txt");
         writeFile("time :" + Game.getGame().getGameTimer().getCurrentSecond()+
-                       "health :" + unit.getHealth() + "\n"  + "---------------" + "\n",file);
-           }
+                "health :" + unit.getHealth() + "\n"  + "---------------" + "\n",file);
+    }
+    public static void four(){}
+
+    public static void five(){}
+
+    public static void six(){}
+
+    public static void seven(){}
+
 }
+

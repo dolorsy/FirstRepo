@@ -6,6 +6,7 @@ import com.destroyordefend.project.Core.PointComparator;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Tactic;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.TreeSet;
 
@@ -28,7 +29,15 @@ public class Unit  implements  TacticAble , MovementAble {
     Tactic tactic;
     Damaging damaging;
     String playerId;
+    List<String> SortMap;
 
+    public void setSortMap(List<String> sortMap) {
+        SortMap = sortMap;
+    }
+
+    public List<String> getSortMap() {
+        return SortMap;
+    }
     public String getPlayerId() {
         return playerId;
     }
