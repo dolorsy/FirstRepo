@@ -33,7 +33,7 @@ public class Log {
             FileWriter myWriter = new FileWriter(file.getAbsoluteFile(),true);
             myWriter.write(text);
             myWriter.close();
-        //    System.out.println("Successfully wrote to the file.");
+        //   System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
@@ -60,4 +60,13 @@ public class Log {
         writeFile("time :"/*Game.getGame().getcurrentSecond()*/+
                        "health :" + unit.getHealth() + "\n"  + "---------------" + "\n",file);
            }
+    public static void four(){}
+
+    public static void five(){}
+
+    public static void six(){}
+
+    public static void seven(){}
+
 }
+
