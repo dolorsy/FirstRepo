@@ -28,5 +28,8 @@ public class UpdateRangeAsyncTask {
             updateRange.run();
         }
     }
+    public static void clearQueue(){
+        updateRangeQueue.clear();
+    }
 
 }

@@ -9,6 +9,7 @@ import java.util.TreeSet;
 
 import static com.destroyordefend.project.Core.Game.game;
 
+
 enum TeamRole{
     Attacker,Defender
 }
@@ -20,12 +21,13 @@ public class Player {
     String id;
     TreeSet<Unit> army;
 
-    public Player() {
-
-        army = new TreeSet<>();
+    public String getId() {
+        return id;
     }
 
     public Player(int points, TeamRole role, String id) {
+        army = new TreeSet<>(new PointComparator());
+
         Points = points;
         this.role = role;
         this.id = id;
@@ -35,6 +37,9 @@ public class Player {
         return army;
     }
 
+    public void addArmy(Unit u){
+        army.add(u);
+    }
     void cutPrice(int price) throws NoEnoughPointsException {
         if(Points-price<0) {
             throw new NoEnoughPointsException("No Enough Points to buy; Your Points:" + Points + "; Price: " +  price );

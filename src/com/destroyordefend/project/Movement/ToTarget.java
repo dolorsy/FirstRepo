@@ -9,9 +9,12 @@ public class ToTarget implements Movement {
     public ToTarget(Unit target) {
         this.target = target;
     }
-
+    public  Unit getTarget(){
+        return target;
+    }
     @Override
     public Point GetNextPoint(Point concurrent) {
+
         int currentX = concurrent.getX();
         int currentY = concurrent.getY();
         int targetX = target.getPosition().getX();

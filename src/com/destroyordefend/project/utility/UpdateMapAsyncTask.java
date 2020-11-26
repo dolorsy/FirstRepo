@@ -11,7 +11,12 @@ public class UpdateMapAsyncTask {
 
     public static void addMethod(Runnable methodCall) {
         updatePositionQueue.add(methodCall);
+    }
 
+    public static void clearQueue(){
+        updatePositionQueue.clear();
+    }
+    public static void updateQueue(){
 
     }
 
@@ -28,7 +33,6 @@ public class UpdateMapAsyncTask {
     public static void invokeUpdatePosition()
     {
         for(Runnable updatePosition : updatePositionQueue) {
-
             updatePosition.run();
         }
     }

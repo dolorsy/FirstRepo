@@ -4,9 +4,15 @@ import com.destroyordefend.project.Unit.Unit;
 
 import java.util.Comparator;
 
+import static com.destroyordefend.project.Main.p;
+
 public class PointComparator implements Comparator<Unit> {
         @Override
         public int compare(Unit o1, Unit o2) {
+            if( o1.getId()!=o2.getId()){
+                //Todo: For Delete
+                return 1;
+            }
             if (o1.getPosition().getX() > o2.getPosition().getX())
                 return 1;
 
@@ -17,6 +23,7 @@ public class PointComparator implements Comparator<Unit> {
 
             if (o1.getPosition().getX() == o2.getPosition().getX() && o1.getPosition().getY() == o2.getPosition().getY())
                 return 0;
+
 
             return -1;
 

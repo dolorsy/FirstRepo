@@ -4,8 +4,7 @@ public interface Damage {
     int canShot = 0;
 
     void decrease();
-
-    int DoDamage();
-
+    void DoDamage();
+    int getDamage();
     void AcceptDamage(int damage);
 }

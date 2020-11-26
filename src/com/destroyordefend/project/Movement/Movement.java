@@ -12,10 +12,11 @@ public interface Movement {
         temp.setPoint(point);
         for(Unit u : game.getAllUnits()){
             if(!(u.getLeft()>=temp.getRight() || u.getRight()<=temp.getLeft()
-            || u.getUp()<=temp.getDown() || u.getDown()>=temp.getUp())){
+            || u.getUp()<=temp.getDown() || u.getDown()>=temp.getUp()) && u.getId() != temp.getId()){
                 return 0;
             }
         }
+        unit.setPoint(point);
         return 1;
         //Todo: if point on river return 2 else return 1
     }
