@@ -8,27 +8,30 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Log {
-    public Log(){
-        File file = new File("logFile.txt");
-        createFile(file);
-    }
-    //Create File
-    public static void createFile(File file){
-        try {
-            File myObj = new File("logFile.txt");
-            if (myObj.createNewFile()) {
-              //  System.out.println("File created: " + myObj.getName());
-            } else {
-                //System.out.println("File already exists.");
-            }
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
-    }
-    //Write File
-    public static void writeFile(String text , File file){
+    private static final File logFile = new File("logFile.txt");
 
+
+    private static void createFile (File file){
+        if(!logFile.exists()){
+            try {
+                boolean newFile = file.createNewFile();
+                if(newFile){
+                    //  System.out.println("File created: " + myObj.getName());
+
+                }else{
+                    //System.out.println("File already exists.");
+
+                }
+            } catch (IOException e) {
+                System.err.println("Cant create a log file!!");
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    public static void writeFile(String text , File file){
+        //todo: we send file as a parameter because maybe we ned to write in a specific file
         try {
             FileWriter myWriter = new FileWriter(file.getAbsoluteFile(),true);
             myWriter.write(text);
@@ -41,11 +44,10 @@ public class Log {
     }
 
     public static void m(Unit unit){
-        File file = new File("logFile.txt");
-       writeFile("time :"/*Game.getGame().getcurrentSecond()*/ +
-                      "Unit_id :" + unit.getId() +
-                      " X :" + unit.getPosition().getX() +" "+
-                      " Y :" + unit.getPosition().getY() + "\n"  + "---------------" + "\n",file);
+       writeFile("time :" + Game.getGame().getGameTimer().getCurrentSecond() +
+                      "  Unit_id :" + unit.getId() +
+                      "   X :" + unit.getPosition().getX() +" "+
+                      "   Y :" + unit.getPosition().getY() + "\n"  + "---------------" + "\n",logFile);
     }
 
     public static void d(Unit unit_One ,Unit unit_Two){
@@ -57,7 +59,7 @@ public class Log {
 
     public static void h(Unit unit){
         File file = new File("logFile.txt");
-        writeFile("time :"/*Game.getGame().getcurrentSecond()*/+
+        writeFile("time :" + Game.getGame().getGameTimer().getCurrentSecond()+
                        "health :" + unit.getHealth() + "\n"  + "---------------" + "\n",file);
            }
     public static void four(){}

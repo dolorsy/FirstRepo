@@ -43,18 +43,18 @@ public class Game {
             game = new Game();
         return game;
     }
+
     public void StartAnewGame() {
         //Todo:: terrain need to add terrains
         terrains = new TreeSet<Terrain>(new Terrain.TerrainComparator());
-        gameTimer = new GameTimer(10);
         Attackers = new Team();
         Defenders = new Team();
+        gameTimer  = new GameTimer(30);
         allUnits = new TreeSet<Unit>(new PointComparator());
-        gameTimer.start();
         //Todo:Here We Should get the number of Players
         Attackers.addPlayer(new Player(initPoints, TeamRole.Attacker, "attacker"));
         Defenders.addPlayer(new Player(initPoints, TeamRole.Defender, "defender"));
-        unit = new Unit(5,5,5,"TT",5,5,5,50);
+        unit = new Unit(5,5,2,"TT",5,5,5,50);
         unit.setTreeSetUnit(new TreeSet<>(new PointComparator()));
         p(unit.getTreeSetUnit().toString());
         Attackers.getTeamPlayers().get(0).addArmy(new Unit(unit)
@@ -77,7 +77,12 @@ public class Game {
 
     }
 
+    public GameTimer getGameTimer() {
+        return gameTimer;
+    }
+
     private void StartBattle() {
+        gameTimer.start();
 
         p("StartBattel");
         p(String.valueOf(allUnits.size()));
@@ -100,6 +105,7 @@ public class Game {
             for (Unit unit : player.getArmy()){
                 unit.setId(7);
                 unit.setHealth(10);
+                unit.setRole(player.role.name());
                 allUnits.add(unit);
             }
         }
@@ -137,8 +143,8 @@ public class Game {
             for (Unit u : p.getArmy()) {
                 p("PS " + u.getId());
                 Movement.SetUnitPlace(new Point(x, y),u);
-                x += 10;
-                y += 10;
+                x += 100;
+                y += 100;
             }
         }
         for (Player p : Attackers.getTeamPlayers()) {
@@ -182,6 +188,7 @@ public class Game {
     public void UpdateState() {
         boolean stillInGame = false;
 
+        //Todo: should be a variable in Team count how many unit in all team players
         for (Player player : Attackers.getTeamPlayers()) {
             if (player.getArmy().size() != 0) {
                 stillInGame = true;
@@ -200,6 +207,26 @@ public class Game {
         if (gameTimer.onEnd()) {
             setGameState(States.DefenderWin);
         }
+    }
+
+    public void DeleteUnit(Unit unit){
+        p("Removed id " + unit.getId() );
+        p(unit.getRole());
+        if(unit.getRole().equals("Attacker")){
+            for(Player player : Attackers.getTeamPlayers()){
+                if(player.getId().equals(unit.getPlayerId())){
+                    player.getArmy().remove(unit);
+                }
+            }
+        }else{
+            for(Player player : Defenders.getTeamPlayers()){
+                if(player.getId().equals(unit.getPlayerId())){
+                    player.getArmy().remove(unit);
+                }
+            }
+        }
+        this.allUnits.remove(unit);
+
     }
 
 
