@@ -16,11 +16,34 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="109eed53-bb59-4524-bf51-57b0f2396249" name="Default Changelist" comment="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done&#10;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&#10;tree set in unit sorted">
+    <list default="true" id="14178459-a9b3-47e6-8223-7b424729cd89" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Barrier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at________Default_Changelist_6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Core/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Core/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Core/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Core/Terrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Terrain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Movement/FixedPatrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Movement/FixedPatrol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Movement/FixedPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Movement/FixedPosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Movement/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Movement/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Movement/ToTarget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Movement/ToTarget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -43,6 +66,7 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1kEDFQxxmxTputOplZlwj6IPQMv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -88,7 +112,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="109eed53-bb59-4524-bf51-57b0f2396249" name="Default Changelist" comment="Add comparator for health and damage &#10;HighestDamageAttack.java &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;LowestHealthAttack.java  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done &#10;RandomAttack.java        &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; done&#10;v2" />
+      <changelist id="14178459-a9b3-47e6-8223-7b424729cd89" name="Default Changelist" comment="" />
       <created>1605256753010</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -205,7 +229,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -231,10 +267,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1605298430500" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1605337938486">
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1606427853293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605337938486" />
+    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606427853292" />
     <state x="551" y="307" width="436" height="216" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605301248222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -243,30 +279,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1605372511737" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1605369228499">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1606426450673">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605369228499" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1606426450673" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605816659510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605816659510" />
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1605554378412">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1606427043731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
-    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1605554378412">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606427043731" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1606427043731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
-    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1605554378412">
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606427043731" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1606427043731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
-    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1605554378412">
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606427043731" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1606427043731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605554378412" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606427043731" />
     <state x="9" y="60" width="1379" height="764" key="MergeDialog" timestamp="1605818140693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -275,10 +311,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605818140710" />
-    <state x="493" y="115" width="650" height="558" key="RollbackChangesDialog" timestamp="1605369106801">
+    <state x="493" y="115" width="650" height="558" key="RollbackChangesDialog" timestamp="1606427212513">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="493" y="115" width="650" height="558" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605369106801" />
+    <state x="493" y="115" width="650" height="558" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606427212513" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1605258426609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -287,13 +323,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605540374119" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605817170674">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606426501988">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605817170674" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1606426501988" />
+    <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1606426584168">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="478" y="145" width="579" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606426584168" />
     <state x="209" y="33" key="new project wizard" timestamp="1605552703986">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1605552703986" />
+    <state x="193" y="163" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1606427296740">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="193" y="163" key="vcs.ApplyPatchDifferentiatedDialog/0.0.1536.824@0.0.1536.824" timestamp="1606427296740" />
   </component>
 </project>

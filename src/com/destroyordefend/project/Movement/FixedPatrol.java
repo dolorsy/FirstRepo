@@ -1,6 +1,7 @@
 package com.destroyordefend.project.Movement;
 
 import com.destroyordefend.project.Core.Point;
+import com.destroyordefend.project.Unit.Unit;
 
 /**
  * the movement will be up right left down
@@ -15,10 +16,10 @@ public class FixedPatrol implements Movement {
     int lastDirection = -1;
 
     @Override
-    public Point GetNextPoint(Point concurrent) {
+    public Point GetNextPoint(Unit unit) {
         if (lastDirection == -1 || lastDirection > nextArr.length)
             lastDirection = 0;
-        return nextArr[lastDirection++].getNext(concurrent);
+        return nextArr[lastDirection++].getNext(unit.getPosition());
     }
 
     private interface next {

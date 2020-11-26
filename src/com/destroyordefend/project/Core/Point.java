@@ -1,5 +1,7 @@
 package com.destroyordefend.project.Core;
 
+import java.util.Objects;
+
 public class Point {
     int x,y;
    public Point(){
@@ -21,5 +23,15 @@ public class Point {
     public int getY() {
         return y;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Point)) return false;
+        Point point = (Point) o;
+        return getX() == point.getX() &&
+                getY() == point.getY();
+    }
+
 
 }
