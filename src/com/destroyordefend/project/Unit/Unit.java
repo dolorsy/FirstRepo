@@ -27,7 +27,12 @@ public class Unit  implements  TacticAble , MovementAble {
     UnitValues values;
     Tactic tactic;
     Damaging damaging;
+    String playerId;
     List<String> SortMap;
+
+    public String getPlayerId() {
+        return playerId;
+    }
 
     public void setSortMap(List<String> sortMap) {
         SortMap = sortMap;
