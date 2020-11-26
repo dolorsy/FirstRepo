@@ -19,8 +19,6 @@ public class Main   {
         Game game = Game.getGame();
         game.StartAnewGame();
 
-        Log log = new Log();
-        log.m(new Unit(2,2,2,"mm",2,2,2,2));
     }
 
 }
