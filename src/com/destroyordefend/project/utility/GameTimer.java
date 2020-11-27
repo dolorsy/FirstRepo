@@ -57,7 +57,7 @@ public static ExecutorService executorService = Executors.newFixedThreadPool(5);
 
 
                 current = System.currentTimeMillis()-current;
-                System.out.println("Spended Time" + current);
+                System.out.println("Spended Time" + current + "  " + currentSecond);
                 Thread.sleep(1000 - current);
 
             } catch (InterruptedException e) {
@@ -68,6 +68,7 @@ public static ExecutorService executorService = Executors.newFixedThreadPool(5);
 
         }
 
+        executorService.shutdown();
 
     }
 
