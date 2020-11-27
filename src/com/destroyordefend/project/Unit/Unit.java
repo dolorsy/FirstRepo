@@ -1,6 +1,5 @@
 package com.destroyordefend.project.Unit;
 
-import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Core.PointComparator;
 import com.destroyordefend.project.Movement.Movement;
@@ -13,7 +12,7 @@ import static com.destroyordefend.project.Core.Game.game;
 import static com.destroyordefend.project.Main.p;
 
 
-public class Unit  implements  TacticAble , MovementAble {
+public class Unit  implements  TacticAble , MovementAble , Barrier{
 
     int id;
     int radius;
@@ -30,6 +29,13 @@ public class Unit  implements  TacticAble , MovementAble {
     String playerId;
     List<String> SortMap;
 
+    public void setSortMap(List<String> sortMap) {
+        SortMap = sortMap;
+    }
+
+    public List<String> getSortMap() {
+        return SortMap;
+    }
     public String getPlayerId() {
         return playerId;
     }
@@ -149,7 +155,7 @@ public class Unit  implements  TacticAble , MovementAble {
     public int geUnitId() {
         return id;
     }
-
+    @Override
     public int getRadius() {
         return radius;
     }
@@ -165,15 +171,17 @@ public class Unit  implements  TacticAble , MovementAble {
     public void Move(){
 
 
-        Point p = this.movement.GetNextPoint(getPosition());
+        Point p = this.movement.GetNextPoint(this);
         p("Move id: "+getId() + " x,y " + p.asString());
-        int factor = Movement.SetUnitPlace(p,this);
-        if (factor != 0) {
-            //TODO: For loop like Current speed to push invokable method in UpdateMapAsyncTask
-            values.currentSpeed = values.speed/factor;
-            this.setPoint(p);
+        Barrier factor = Movement.canSetUnitPlace(p,this);
+        if(factor.getClass().getName().equals(Terrain.class.getName())) {
+            Terrain terrain = (Terrain)factor;
+            if (terrain.getSpeedFactory() != 0) {
+                //TODO: For loop like Current speed to push invokable method in UpdateMapAsyncTask
+                values.currentSpeed = values.speed / terrain.getSpeedFactory();
+                this.setPoint(p);
+            }
         }
-
     }
 
     public TreeSet<Unit> getTreeSetUnit() {
@@ -190,6 +198,7 @@ public class Unit  implements  TacticAble , MovementAble {
     }
 
     //Get Position Unit
+    @Override
     public Point getPosition(){
         return point;
     }
@@ -221,6 +230,10 @@ public class Unit  implements  TacticAble , MovementAble {
         return this.values.health;
     }
 
+    @Override
+    public boolean isAlive() {
+        return getHealth()>0;
+    }
 
     public void setSpeed(int speed){
 
@@ -259,18 +272,7 @@ public class Unit  implements  TacticAble , MovementAble {
 
     }
 
-    public int getLeft(){
-        return point.getX() - this.radius;
-    }
-    public int getRight(){
-        return point.getX() + this.radius;
-    }
-    public int getUp(){
-        return point.getY() + this.radius;
-    }
-    public int getDown(){
-        return point.getY() - this.radius;
-    }
+
 
     class UnitValues {
 

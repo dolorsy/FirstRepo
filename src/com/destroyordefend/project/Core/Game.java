@@ -1,12 +1,11 @@
 package com.destroyordefend.project.Core;
 
-import com.destroyordefend.project.Main;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Movement.ToTarget;
 import com.destroyordefend.project.Tactic.LowestHealthAttack;
 import com.destroyordefend.project.Tactic.RandomAttack;
-import com.destroyordefend.project.Tactic.Tactic;
+import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
 import com.destroyordefend.project.utility.UpdateMapAsyncTask;
@@ -77,6 +76,14 @@ public class Game {
 
     }
 
+    public TreeSet<Terrain> getTerrains() {
+        return terrains;
+    }
+
+    public Unit getBase(){
+        //Todo: return base
+        return null;
+    }
     public GameTimer getGameTimer() {
         return gameTimer;
     }
@@ -142,14 +149,14 @@ public class Game {
         for (Player p : Defenders.getTeamPlayers()) {
             for (Unit u : p.getArmy()) {
                 p("PS " + u.getId());
-                Movement.SetUnitPlace(new Point(x, y),u);
+                Movement.canSetUnitPlace(new Point(x, y),u);
                 x += 100;
                 y += 100;
             }
         }
         for (Player p : Attackers.getTeamPlayers()) {
             for (Unit u : p.getArmy()) {
-                Movement.SetUnitPlace(new Point(x, y),u);
+                Movement.canSetUnitPlace(new Point(x, y),u);
                 x += 10;
                 y += 10;
             }
