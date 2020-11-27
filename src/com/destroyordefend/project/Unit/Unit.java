@@ -29,13 +29,6 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     String playerId;
     List<String> SortMap;
 
-    public void setSortMap(List<String> sortMap) {
-        SortMap = sortMap;
-    }
-
-    public List<String> getSortMap() {
-        return SortMap;
-    }
     public String getPlayerId() {
         return playerId;
     }
@@ -61,7 +54,6 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     public Tactic getTactic() {
         return tactic;
     }
-
 
 
      Unit(){
