@@ -2,24 +2,56 @@ package com.destroyordefend.project.Movement;
 
 
 import com.destroyordefend.project.Core.Point;
+import com.destroyordefend.project.Unit.Barrier;
 import com.destroyordefend.project.Unit.Unit;
 
 import static com.destroyordefend.project.Core.Game.game;
 
 public interface Movement {
-    static int SetUnitPlace(Point point, Unit unit){
+
+    Point GetNextPoint (Unit unit);
+
+    static Barrier canSetUnitPlace(Point point, Unit unit){
         Unit temp = new Unit(unit);
         temp.setPoint(point);
         for(Unit u : game.getAllUnits()){
-            if(!(u.getLeft()>=temp.getRight() || u.getRight()<=temp.getLeft()
-            || u.getUp()<=temp.getDown() || u.getDown()>=temp.getUp()) && u.getId() != temp.getId()){
-                return 0;
+            if(!(u.isSharedWith(temp)) && u.getId() != temp.getId()){
+                return u;
             }
         }
-        unit.setPoint(point);
-        return 1;
+        for(Barrier u : game.getTerrains()){
+            if(!(u.isSharedWith(temp)) && !u.getPosition().equals(temp.getPosition())){
+                return u;
+            }
+        }
+        return null;
         //Todo: if point on river return 2 else return 1
     }
-    Point GetNextPoint (Point concurrent);
 
+    static Point straightMove(Point src,Point dis){
+        int currentX = src.getX();
+        int currentY = src.getY();
+        int targetX = dis.getX();
+        int targetY = dis.getY();
+        if(currentX != targetX){
+            currentX+= currentX<targetX?1:-1;
+        }
+        if(currentY != targetY){
+            currentY += currentY<targetY?1:-1;
+        }
+        return new Point(currentX,currentY);
+    }
+
+     static Barrier getBarrierBetween(Unit src,Point dis){
+        Point p = src.getPosition();
+
+        Barrier barrier = null;
+        while(!p.equals(dis)){
+            p = straightMove(p,dis);
+            barrier = canSetUnitPlace(p,src);
+            if(barrier != null)
+                break;
+        }
+        return barrier;
+    }
 }

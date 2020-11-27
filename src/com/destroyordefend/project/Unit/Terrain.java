@@ -1,20 +1,33 @@
-package com.destroyordefend.project.Core;
+package com.destroyordefend.project.Unit;
 
 
-import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.Core.Point;
 
 import java.util.Comparator;
 
-public class Terrain {
+public class Terrain implements Barrier{
 
 
     Point point;
     int speedFactory;
+    int radius;
+    int health;
     String type;
+
+    @Override
+    public boolean isAlive() {
+        return health != 0;
+    }
 
     public Point getPosition() {
         return point;
     }
+
+    @Override
+    public int getRadius() {
+        return radius;
+    }
+
 
     public int getSpeedFactory() {
         return speedFactory;

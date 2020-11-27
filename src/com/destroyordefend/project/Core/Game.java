@@ -1,12 +1,11 @@
 package com.destroyordefend.project.Core;
 
-import com.destroyordefend.project.Main;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Movement.ToTarget;
 import com.destroyordefend.project.Tactic.LowestHealthAttack;
 import com.destroyordefend.project.Tactic.RandomAttack;
-import com.destroyordefend.project.Tactic.Tactic;
+import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
 import com.destroyordefend.project.utility.UpdateMapAsyncTask;
@@ -43,18 +42,18 @@ public class Game {
             game = new Game();
         return game;
     }
+
     public void StartAnewGame() {
         //Todo:: terrain need to add terrains
         terrains = new TreeSet<Terrain>(new Terrain.TerrainComparator());
-        gameTimer = new GameTimer(10);
         Attackers = new Team();
         Defenders = new Team();
+        gameTimer  = new GameTimer(30);
         allUnits = new TreeSet<Unit>(new PointComparator());
-        gameTimer.start();
         //Todo:Here We Should get the number of Players
         Attackers.addPlayer(new Player(initPoints, TeamRole.Attacker, "attacker"));
         Defenders.addPlayer(new Player(initPoints, TeamRole.Defender, "defender"));
-        unit = new Unit(5,5,5,"TT",5,5,5,50);
+        unit = new Unit(5,5,2,"TT",5,5,5,50);
         unit.setTreeSetUnit(new TreeSet<>(new PointComparator()));
         p(unit.getTreeSetUnit().toString());
         Attackers.getTeamPlayers().get(0).addArmy(new Unit(unit)
@@ -77,7 +76,20 @@ public class Game {
 
     }
 
+    public TreeSet<Terrain> getTerrains() {
+        return terrains;
+    }
+
+    public Unit getBase(){
+        //Todo: return base
+        return null;
+    }
+    public GameTimer getGameTimer() {
+        return gameTimer;
+    }
+
     private void StartBattle() {
+        gameTimer.start();
 
         p("StartBattel");
         p(String.valueOf(allUnits.size()));
@@ -100,6 +112,7 @@ public class Game {
             for (Unit unit : player.getArmy()){
                 unit.setId(7);
                 unit.setHealth(10);
+                unit.setRole(player.role.name());
                 allUnits.add(unit);
             }
         }
@@ -136,14 +149,14 @@ public class Game {
         for (Player p : Defenders.getTeamPlayers()) {
             for (Unit u : p.getArmy()) {
                 p("PS " + u.getId());
-                Movement.SetUnitPlace(new Point(x, y),u);
-                x += 10;
-                y += 10;
+                Movement.canSetUnitPlace(new Point(x, y),u);
+                x += 100;
+                y += 100;
             }
         }
         for (Player p : Attackers.getTeamPlayers()) {
             for (Unit u : p.getArmy()) {
-                Movement.SetUnitPlace(new Point(x, y),u);
+                Movement.canSetUnitPlace(new Point(x, y),u);
                 x += 10;
                 y += 10;
             }
@@ -182,6 +195,7 @@ public class Game {
     public void UpdateState() {
         boolean stillInGame = false;
 
+        //Todo: should be a variable in Team count how many unit in all team players
         for (Player player : Attackers.getTeamPlayers()) {
             if (player.getArmy().size() != 0) {
                 stillInGame = true;
@@ -200,6 +214,26 @@ public class Game {
         if (gameTimer.onEnd()) {
             setGameState(States.DefenderWin);
         }
+    }
+
+    public void DeleteUnit(Unit unit){
+        p("Removed id " + unit.getId() );
+        p(unit.getRole());
+        if(unit.getRole().equals("Attacker")){
+            for(Player player : Attackers.getTeamPlayers()){
+                if(player.getId().equals(unit.getPlayerId())){
+                    player.getArmy().remove(unit);
+                }
+            }
+        }else{
+            for(Player player : Defenders.getTeamPlayers()){
+                if(player.getId().equals(unit.getPlayerId())){
+                    player.getArmy().remove(unit);
+                }
+            }
+        }
+        this.allUnits.remove(unit);
+
     }
 
 

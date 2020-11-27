@@ -21,6 +21,9 @@ public class Player {
     String id;
     TreeSet<Unit> army;
 
+    public String getId() {
+        return id;
+    }
 
     public Player(int points, TeamRole role, String id) {
         army = new TreeSet<>(new PointComparator());
