@@ -6,6 +6,7 @@ public interface Barrier {
     boolean isAlive();
     Point getPosition();
     int getRadius();
+    String getType();
     default boolean isSharedWith(Barrier b){
         return getLeft()>=b.getRight() || getRight()<=b.getLeft()
                 || getUp()<=b.getDown() || getDown()>=b.getUp();

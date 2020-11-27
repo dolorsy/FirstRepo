@@ -44,8 +44,10 @@ public interface Movement {
         }
         return new Point(currentX,currentY);
     }
+
      static Barrier getBarrierBetween(Unit src,Barrier dis){
         Point p = src.getPosition();
+
         Barrier barrier = null;
         while(!p.equals(dis.getPosition())){
             p = straightMove(p,dis.getPosition());

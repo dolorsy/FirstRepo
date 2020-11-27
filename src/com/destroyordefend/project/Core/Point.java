@@ -1,7 +1,5 @@
 package com.destroyordefend.project.Core;
 
-import java.util.Objects;
-
 public class Point {
     int x,y;
    public Point(){
@@ -24,6 +22,9 @@ public class Point {
         return y;
     }
 
+    public double distance(Point point){
+       return Math.sqrt(Math.pow(x-point.x,2)+Math.pow(y-point.y,2));
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
