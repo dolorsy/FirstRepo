@@ -220,6 +220,7 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     }
     public void setDamage(int damage){
 
+
         this.values.damage = damage;
     }
 
