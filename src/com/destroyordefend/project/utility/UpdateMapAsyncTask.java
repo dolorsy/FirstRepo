@@ -32,6 +32,7 @@ public class UpdateMapAsyncTask {
 
     public static void invokeUpdatePosition()
     {
+        System.out.println("dddd" + updatePositionQueue.size());
         for(Runnable updatePosition : updatePositionQueue) {
             updatePosition.run();
         }
