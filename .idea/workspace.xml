@@ -19,15 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="add Log class">
+    <list default="true" id="39205202-a095-4dcb-8466-72e09ac27dcd" name="Default Changelist" comment="hi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$Damaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$Damaging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$UnitValues.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit$UnitValues.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Semenestar Project/com/destroyordefend/project/Unit/Unit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/Unit/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/destroyordefend/project/utility/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/destroyordefend/project/utility/Log.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +180,37 @@
       <option name="presentableId" value="LOCAL؜٠٠٠١٥" />
       <updated>1606313072339</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL؜٠٠٠١٦" summary="add List to Unit Class">
+      <created>1606419101073</created>
+      <option name="number" value="LOCAL؜٠٠٠١٦" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٦" />
+      <updated>1606419101073</updated>
+    </task>
+    <task id="LOCAL؜٠٠٠١٧" summary="add List to Unit Class">
+      <created>1606419214243</created>
+      <option name="number" value="LOCAL؜٠٠٠١٧" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٧" />
+      <updated>1606419214243</updated>
+    </task>
+    <task id="LOCAL؜٠٠٠١٨" summary="add List to Unit Class">
+      <created>1606419468952</created>
+      <option name="number" value="LOCAL؜٠٠٠١٨" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٨" />
+      <updated>1606419468952</updated>
+    </task>
+    <task id="LOCAL؜٠٠٠١٩" summary="ignore">
+      <created>1606422754844</created>
+      <option name="number" value="LOCAL؜٠٠٠١٩" />
+      <option name="presentableId" value="LOCAL؜٠٠٠١٩" />
+      <updated>1606422754844</updated>
+    </task>
+    <task id="LOCAL؜٠٠٠٢٠" summary="hi">
+      <created>1606422984538</created>
+      <option name="number" value="LOCAL؜٠٠٠٢٠" />
+      <option name="presentableId" value="LOCAL؜٠٠٠٢٠" />
+      <updated>1606422984538</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -222,13 +246,16 @@
     <MESSAGE value="Point object" />
     <MESSAGE value="add range and TreeSet to Unit class" />
     <MESSAGE value="add Log class" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Log class" />
+    <MESSAGE value="add List to Unit Class" />
+    <MESSAGE value="ignore" />
+    <MESSAGE value="hi" />
+    <option name="LAST_COMMIT_MESSAGE" value="hi" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="520" y="236" key="#Notifications" timestamp="1605298430500">
+    <state x="520" y="236" key="#Notifications" timestamp="1606420593603">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="520" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1605298430500" />
+    <state x="520" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1606420593603" />
     <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1605337938486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -249,30 +276,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605553692840" />
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom" timestamp="1606374648579">
+    <state width="1493" height="639" key="GridCell.Tab.0.bottom" timestamp="1606423393426">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606374648579" />
-    <state width="1493" height="146" key="GridCell.Tab.0.center" timestamp="1606374648578">
+    <state width="1493" height="639" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606423393426" />
+    <state width="1493" height="639" key="GridCell.Tab.0.center" timestamp="1606423393426">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606374648578" />
-    <state width="1493" height="146" key="GridCell.Tab.0.left" timestamp="1606374648578">
+    <state width="1493" height="639" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606423393426" />
+    <state width="1493" height="639" key="GridCell.Tab.0.left" timestamp="1606423393426">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606374648578" />
-    <state width="1493" height="146" key="GridCell.Tab.0.right" timestamp="1606374648578">
+    <state width="1493" height="639" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606423393426" />
+    <state width="1493" height="639" key="GridCell.Tab.0.right" timestamp="1606423393426">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606374648578" />
+    <state width="1493" height="639" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606423393426" />
     <state x="147" y="65" key="MergeDialog" timestamp="1605547095153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605547095153" />
-    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1605547095153">
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1606422926011">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605547095153" />
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1606422926011" />
     <state x="493" y="115" width="650" height="558" key="RollbackChangesDialog" timestamp="1605369106801">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -281,22 +308,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605258426609" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606313080278">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606419604571">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606313080278" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606313051629">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606419604571" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606423309320">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1606313051629" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1606423309320" />
     <state x="315" y="148" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1606310214771">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="315" y="148" width="905" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1606310214771" />
-    <state x="209" y="33" key="new project wizard" timestamp="1606287720566">
+    <state x="209" y="33" key="new project wizard" timestamp="1606430319570">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1606287720566" />
+    <state x="209" y="33" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1606430319570" />
     <state x="611" y="170" key="refactoring.ChangeSignatureDialog" timestamp="1606288497831">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
