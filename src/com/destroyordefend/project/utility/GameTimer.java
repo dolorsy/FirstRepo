@@ -1,18 +1,22 @@
 package com.destroyordefend.project.utility;
 
 import com.destroyordefend.project.Core.Game;
+import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.Unit.Unit;
 
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import static com.destroyordefend.project.Core.Game.game;
-import static com.destroyordefend.project.utility.MainMethodAsyncTask.clearQueue;
 import static com.destroyordefend.project.utility.MainMethodAsyncTask.invokeMainMethods;
 import static com.destroyordefend.project.utility.UpdateMapAsyncTask.invokeUpdatePosition;
-import static com.destroyordefend.project.utility.UpdateMapAsyncTask.updatePositionQueue;
 import static com.destroyordefend.project.utility.UpdateRangeAsyncTask.invokeUpdateRange;
 
 public class GameTimer extends Thread {
 int RoundLength = 30;
 int currentSecond = 0;
+public static ExecutorService executorService = Executors.newFixedThreadPool(5);
     public void run(){
         System.out.println("Here");
         for(;currentSecond<=RoundLength;currentSecond++){
@@ -22,43 +26,43 @@ int currentSecond = 0;
                 //Todo: Be Careful About Time Of the Following Three Methods, it should be 0.9 Second For Them all Together
                 //Todo:May Be You need Exception Handling
                 //Todo: We should invoke All Players UpdateArmy
-
-                for(Unit u: game.getAllUnits()){
-
-
-                    for(int i =0;i<u.getCurrentSpeed();i++)
-                    UpdateMapAsyncTask.addMethod(u::Move);
-                    UpdateRangeAsyncTask.addMethod(u::UpdateRange);
-                    if(!u.getTreeSetUnit().isEmpty()){
-                        Runnable method = () -> u.getDamaging().DoDamage();
-                        MainMethodAsyncTask.addMethod(method);
-                    }
-;
-
-                }
+//
+//                for(Unit u: game.getAllUnits()){
+//
+//
+//                    for(int i =0;i<u.getCurrentSpeed();i++)
+//                    UpdateMapAsyncTask.addMethod(u::Move);
+//                    UpdateRangeAsyncTask.addMethod(u::UpdateRange);
+//                    if(!u.getTreeSetUnit().isEmpty()){
+//                        Runnable method = () -> u.getDamaging().DoDamage();
+//                        MainMethodAsyncTask.addMethod(method);
+//                    }
+//;
+//
+//                }
                 /*
                   The PREVIOUS Code is a big Mistake
                   */
+                System.out.println("Here");
+
 
                 long current = System.currentTimeMillis();
 
-                invokeUpdatePosition();
-                invokeUpdateRange();
-                invokeMainMethods();
+                 executorService.submit(UpdateMapAsyncTask::invokeUpdatePosition);
+                executorService.submit(UpdateRangeAsyncTask::invokeUpdateRange);
+                executorService.submit(MainMethodAsyncTask::invokeMainMethods);
+                executorService.submit(this::reFill);
 
-
-                MainMethodAsyncTask.clearQueue();
-                UpdateMapAsyncTask.clearQueue();
-                UpdateRangeAsyncTask.clearQueue();
+                //todo: try invoke all , or set a time out for the above methods
 
 
                 current = System.currentTimeMillis()-current;
+                System.out.println("Spended Time" + current);
                 Thread.sleep(1000 - current);
 
-
-              //  Game.getGame().UpdateUnits();
             } catch (InterruptedException e) {
                 e.printStackTrace();
+
                 //Todo: Need To Implement
             }
 
@@ -77,6 +81,14 @@ int currentSecond = 0;
 
     public int getCurrentSecond() {
         return currentSecond;
+    }
+
+    void reFill(){
+        for(Unit unit: game.getAllUnits()){
+            UpdateMapAsyncTask.addMethod(unit::Move);
+            UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
+            MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());
+        }
     }
 }
 
