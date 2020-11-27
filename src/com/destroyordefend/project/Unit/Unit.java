@@ -171,9 +171,10 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
             if (terrain.getSpeedFactory() != 0) {
                 //TODO: For loop like Current speed to push invokable method in UpdateMapAsyncTask
                 values.currentSpeed = values.speed / terrain.getSpeedFactory();
-                this.setPoint(p);
+
             }
         }
+        this.setPoint(p);
     }
 
     public TreeSet<Unit> getTreeSetUnit() {
@@ -214,6 +215,7 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
         return this.values.damage;
     }
     public void setDamage(int damage){
+
 
         this.values.damage = damage;
     }

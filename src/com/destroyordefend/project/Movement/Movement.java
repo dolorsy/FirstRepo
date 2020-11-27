@@ -15,18 +15,15 @@ public interface Movement {
         Unit temp = new Unit(unit);
         temp.setPoint(point);
         for(Unit u : game.getAllUnits()){
-            // why >= , I think it should be >
             if(!(u.isSharedWith(temp)) && u.getId() != temp.getId()){
                 return u;
             }
         }
         for(Barrier u : game.getTerrains()){
-            // why >= , I think it should be >
             if(!(u.isSharedWith(temp)) && !u.getPosition().equals(temp.getPosition())){
                 return u;
             }
         }
-        // unit.setPoint(point); why we set point here , it should set at unit.Move();
         return null;
         //Todo: if point on river return 2 else return 1
     }
@@ -45,12 +42,12 @@ public interface Movement {
         return new Point(currentX,currentY);
     }
 
-     static Barrier getBarrierBetween(Unit src,Barrier dis){
+     static Barrier getBarrierBetween(Unit src,Point dis){
         Point p = src.getPosition();
 
         Barrier barrier = null;
-        while(!p.equals(dis.getPosition())){
-            p = straightMove(p,dis.getPosition());
+        while(!p.equals(dis)){
+            p = straightMove(p,dis);
             barrier = canSetUnitPlace(p,src);
             if(barrier != null)
                 break;
