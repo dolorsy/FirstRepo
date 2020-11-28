@@ -16,13 +16,13 @@ public class Main   {
         System.out.println(s);
     }
     public static void main(String[] args)  {
-        GameTimer gameTimer= new GameTimer(10);
-        gameTimer.start();
-    /*   Game game = Game.getGame();
+/*
+       Game game = Game.getGame();
         game.StartAnewGame();
         Log log = new Log();
         log.m(new Unit(2,2,2,"mm",2,2,2,2));
 */
+     //   Game.CreateTeamsStage();
     }
 
 }

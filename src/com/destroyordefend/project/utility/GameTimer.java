@@ -14,7 +14,7 @@ import static com.destroyordefend.project.utility.UpdateMapAsyncTask.invokeUpdat
 import static com.destroyordefend.project.utility.UpdateRangeAsyncTask.invokeUpdateRange;
 
 public class GameTimer extends Thread {
-int RoundLength = 30;
+int RoundLength ;
 int currentSecond = 0;
 public static ExecutorService executorService = Executors.newFixedThreadPool(5);
     public void run(){
@@ -44,11 +44,9 @@ public static ExecutorService executorService = Executors.newFixedThreadPool(5);
                   The PREVIOUS Code is a big Mistake
                   */
                 System.out.println("Here");
-
-
                 long current = System.currentTimeMillis();
 
-                 executorService.submit(UpdateMapAsyncTask::invokeUpdatePosition);
+                executorService.submit(UpdateMapAsyncTask::invokeUpdatePosition);
                 executorService.submit(UpdateRangeAsyncTask::invokeUpdateRange);
                 executorService.submit(MainMethodAsyncTask::invokeMainMethods);
                 executorService.submit(this::reFill);
@@ -67,6 +65,7 @@ public static ExecutorService executorService = Executors.newFixedThreadPool(5);
             }
 
         }
+
 
         executorService.shutdown();
 
