@@ -10,7 +10,15 @@ import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
 import com.destroyordefend.project.utility.UpdateMapAsyncTask;
 import com.destroyordefend.project.utility.UpdateRangeAsyncTask;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 import static com.destroyordefend.project.Main.p;
@@ -58,6 +66,7 @@ public class Game {
         p(unit.getTreeSetUnit().toString());
         Attackers.getTeamPlayers().get(0).addArmy(new Unit(unit)
                 .AcceptTactic(new LowestHealthAttack()).AcceptMovement(new FixedPosition()));
+
         Defenders.getTeamPlayers().get(0).addArmy( new Unit(unit).AcceptTactic(new RandomAttack())
                 .AcceptMovement(new ToTarget(Attackers.getTeamPlayers().get(0).getArmy().first())));
 
@@ -164,7 +173,7 @@ public class Game {
 
     }
 
-    protected void CreateTeamsStage() {
+    public  void CreateTeamsStage() {
 
         /**
          * for the number of players we will call AddPlayer
@@ -172,7 +181,31 @@ public class Game {
          * AddAnewPlayer();
          */
 
+        try {
+            FileReader reader = new FileReader("Teams");
+            JSONParser jsonParser = new JSONParser();
 
+
+            JSONObject obj = (JSONObject) jsonParser.parse(reader);
+            JSONArray jsonArray = (JSONArray) obj.get("Players");
+            for(Object jsonObject : jsonArray ){
+                JSONObject player = (JSONObject) jsonObject;
+                Player p = new Player().setRole( (String) player.get("role")).setId((String) player.get("id"));
+            if(TeamRole.Attacker.equals(p.role)){
+                Attackers.addPlayer(p);
+                }else{
+                Defenders.addPlayer(p);
+            }
+                System.out.println(p.id +"  " +  p.role);
+
+            }
+
+
+
+
+        } catch (ParseException | IOException e) {
+            e.printStackTrace();
+        }
 
 
     }

@@ -24,6 +24,9 @@ public class Player {
     public String getId() {
         return id;
     }
+    public Player(){
+
+    }
 
     public Player(int points, TeamRole role, String id) {
         army = new TreeSet<>(new PointComparator());
@@ -31,6 +34,24 @@ public class Player {
         Points = points;
         this.role = role;
         this.id = id;
+    }
+
+    public void setPoints(int points) {
+        Points = points;
+    }
+
+    public Player setRole(String role) {
+        this.role = TeamRole.valueOf(role);
+        return this;
+    }
+
+    public Player setId(String id) {
+        this.id = id;
+        return this;
+    }
+
+    public void setArmy(TreeSet<Unit> army) {
+        this.army = army;
     }
 
     public TreeSet<Unit> getArmy() {
