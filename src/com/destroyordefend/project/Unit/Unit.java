@@ -4,8 +4,16 @@ import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Core.PointComparator;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Tactic;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
+import java.util.SortedMap;
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Core.Game.game;
@@ -29,6 +37,53 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     String playerId;
     List<String> SortMap;
 
+/*read from Json File*/
+    public static  void readJSonFile(Unit unit){
+        String path = "src\\com\\destroyordefend\\project\\Shop.json";
+        JSONParser jsonParser = new JSONParser();
+        try {
+            JSONObject obj = (JSONObject) jsonParser.parse(new FileReader(path));
+            JSONArray shop = (JSONArray) obj.get("Shop");
+
+           for (Object a : shop) {
+                JSONObject unit1 = (JSONObject) a;
+                String type = (String)  unit1.get("type");
+                unit.setType(type);
+
+                JSONArray sMap = (JSONArray) unit1.get("SortMap");
+               List<String> sn = (List<String>) unit1.get("SortMap");
+               unit.setSortMap(sn);
+
+                String range = (String) unit1.get("range");
+                unit.setRange(Integer.parseInt(range));
+
+                String radius = (String) unit1.get("radius");
+                unit.setRadius(Integer.parseInt(radius));
+
+                String damage = (String) unit1.get("damage");
+                unit.setDamage(Integer.parseInt(damage));
+
+                String shot_speed = (String) unit1.get("shot_speed");
+                unit.setShot_speed(Integer.parseInt(shot_speed));
+
+                String speed = (String) unit1.get("speed");
+                unit.setSpeed(Integer.parseInt(speed));
+
+                String health = (String) unit1.get("health");
+                unit.setHealth(Integer.parseInt(health));
+
+            }
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+/*End jsonFile*/
     public String getPlayerId() {
         return playerId;
     }
@@ -96,15 +151,14 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     public void print(){
         System.out.println(
                 "id: " + id
-                +"rad: "  + radius
-                 + "rang: " + range
-                +"type: " + type
-                +"Movement: " + movement.toString()
-                +"inRange: " + treeSetUnit.toString()
-                +"point: " + point.asString()
-                +"Role: " + role
-                +"valeus: " + values.asString());
-
+                +"\nrad: "  + radius
+                +"\nrang: " + range
+                +"\ntype: " + type
+                +"\nMovement: " + movement.toString()
+                +"\ninRange: " + treeSetUnit.toString()
+                +"\npoint: " + point.asString()
+                +"\nRole: " + role
+                +"\nvaleus: " + values.asString());
     }
     //Set
     public void setId(int id) {
@@ -277,6 +331,7 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
         int damage;
         int health;
         int currentSpeed;
+
         //constructor Empty
         private UnitValues(){}
 
