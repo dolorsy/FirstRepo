@@ -9,6 +9,8 @@ import static com.destroyordefend.project.Main.p;
 public class PointComparator implements Comparator<Unit> {
         @Override
         public int compare(Unit o1, Unit o2) {
+            if(o1 == null || o2 == null)
+                return 1;
             if( o1.getId()!=o2.getId()){
                 //Todo: For Delete
                 return 1;

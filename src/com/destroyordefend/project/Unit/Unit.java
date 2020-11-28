@@ -58,12 +58,9 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
         return tactic;
     }
 
+    public Unit(){
 
-
-     Unit(){
-    treeSetUnit = new TreeSet<>(new PointComparator());
     }
-    //Constructor 1
     public Unit(int id, int radius, int range, String type,int speed ,int shot_speed,int damage ,int health) {
         this.id = id;
         this.radius = radius;
@@ -140,6 +137,8 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     }
 
     public void setPoint(Point point) {
+        if(treeSetUnit == null || treeSetUnit.size()==0)
+            treeSetUnit = new TreeSet<>(new PointComparator());
         this.point = point;
     }
 
@@ -180,6 +179,7 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
         }
         this.setPoint(p);
     }
+
 
     public TreeSet<Unit> getTreeSetUnit() {
         return treeSetUnit;

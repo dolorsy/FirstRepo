@@ -59,11 +59,13 @@ public class Game {
         gameTimer  = new GameTimer(30);
         allUnits = new TreeSet<Unit>(new PointComparator());
         //Todo:Here We Should get the number of Players
-        Attackers.addPlayer(new Player(initPoints, TeamRole.Attacker, "attacker"));
-        Defenders.addPlayer(new Player(initPoints, TeamRole.Defender, "defender"));
+       /* Attackers.addPlayer(new Player(initPoints, TeamRole.Attacker, "attacker"));
+        Defenders.addPlayer(new Player(initPoints, TeamRole.Defender, "defender"));*/
+        CreateTeamsStage();
+        this.StartShoppingStage();
+
         unit = new Unit(5,5,2,"TT",5,5,5,50);
         unit.setTreeSetUnit(new TreeSet<>(new PointComparator()));
-        p(unit.getTreeSetUnit().toString());
         Attackers.getTeamPlayers().get(0).addArmy(new Unit(unit)
                 .AcceptTactic(new LowestHealthAttack()).AcceptMovement(new FixedPosition()));
 
@@ -71,7 +73,7 @@ public class Game {
                 .AcceptMovement(new ToTarget(Attackers.getTeamPlayers().get(0).getArmy().first())));
 
         UpdateUnits();
-        //this.StartShoppingStage();
+
         this.StartPlacementStage();
 
         this.StartBattle();
@@ -214,10 +216,18 @@ public class Game {
 
         for (Player player : Attackers.getTeamPlayers()) {
             player.CreateArmy();
+
+            //Todo: it's just a test
+            player.getArmy().first().AcceptTactic(new LowestHealthAttack()).AcceptMovement(new FixedPosition());
+
             allUnits.addAll(player.getArmy());
         }
         for (Player player : Defenders.getTeamPlayers()) {
             player.CreateArmy();
+
+            //Todo: it's just a test
+            player.getArmy().first().AcceptTactic(new RandomAttack()).AcceptMovement(new ToTarget(Attackers.getTeamPlayers().get(0).getArmy().first()));
+
             allUnits.addAll(player.getArmy());
         }
 
