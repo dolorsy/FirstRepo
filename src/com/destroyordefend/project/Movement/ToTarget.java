@@ -19,13 +19,10 @@ public class ToTarget implements Movement {
     @Override
     public Point GetNextPoint(Unit unit) {
         getNextTarget();
-        if (unit.getType().startsWith("air")) {//air unit
+        if (unit.getType().equals("Airplane")) {//air unit
             return Movement.straightMove(unit.getPosition(), target);
         } else {//ground unit
-            /*if(goal.is("vally")){
-                Point p = Movement.straightMove(unit.getPosition(),target);
-                return p;
-            }*/
+
             Barrier barrier = Movement.getBarrierBetween(unit, target);
 
             if (barrier!= null) {
@@ -44,7 +41,6 @@ public class ToTarget implements Movement {
                         //todo: tank of sad
                     }
                 }
-                //this condition means new vally target is set
                 if (target.equals(goal.getPosition())) {
                     //determine the closest corner
                     Point[] corners = new Point[]{

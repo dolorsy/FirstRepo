@@ -4,6 +4,7 @@ import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Movement.ToTarget;
 import com.destroyordefend.project.Tactic.Comparators.AriDefenceComparator;
+import com.destroyordefend.project.Tactic.Comparators.emptyComprator;
 import com.destroyordefend.project.Tactic.LowestHealthAttack;
 import com.destroyordefend.project.Tactic.RandomAttack;
 import com.destroyordefend.project.Unit.Barrier;
@@ -36,6 +37,7 @@ enum States {
 
 public class Game {
     public static Game game;
+    static UnitSet unitSet;
     static Unit unit;
     TreeSet<Unit> allUnits;
     TreeSet<Terrain> terrains;
@@ -46,6 +48,14 @@ public class Game {
     int initPoints = 10000;
     GameTimer gameTimer;
 
+
+    public static UnitSet getUnitSet() {
+        return unitSet;
+    }
+
+    public static void setUnitSet(UnitSet unitSet) {
+        Game.unitSet = unitSet;
+    }
 
     public static Game getGame(){
         if (game == null)
@@ -120,7 +130,7 @@ public class Game {
     public void UpdateUnits() {
         //this method to Update AllUnits
         //Todo: should be PointComparator
-        allUnits = new TreeSet<>(new AriDefenceComparator());
+        allUnits = new TreeSet<>(new emptyComprator());
 
         for (Player player : Attackers.getTeamPlayers()) {
             for (Unit unit : player.getArmy()){
@@ -134,6 +144,20 @@ public class Game {
             allUnits.addAll(player.getArmy());
         }
         p(String.valueOf(allUnits.size()));
+    }
+    public void SetNavigationForUnit(){
+        Unit left,right,curr;
+        curr = allUnits.first();
+        left = null;
+        right = allUnits.iterator().next();
+        //Todo:need to check
+        for (int i=1;i<allUnits.size();i++){
+            curr.setRightUnit(right);
+            right = allUnits.iterator().next();
+            left = curr;
+            curr = allUnits.iterator().next();
+            curr.setLeftUnit(left);
+        }
     }
 
     public void setGameState(States gameState) {

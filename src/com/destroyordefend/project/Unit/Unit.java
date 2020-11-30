@@ -12,7 +12,7 @@ import static com.destroyordefend.project.Core.Game.game;
 import static com.destroyordefend.project.Main.p;
 
 
-public class Unit  implements  TacticAble , MovementAble , Barrier{
+public class Unit  implements  TacticAble , MovementAble , Barrier,UnitSetHelper{
 
     int id;
     int radius;
@@ -177,6 +177,7 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
             }
         }
         this.setPoint(p);
+        this.updateLeftAndRight();
     }
 
     public TreeSet<Unit> getTreeSetUnit() {
@@ -271,6 +272,73 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
 
     }
 
+    @Override
+    public void setLeftUnit(Unit unit) {
+        leftAndRight.put("left",unit);
+    }
+
+    @Override
+    public void setRightUnit(Unit unit) {
+        leftAndRight.put("right",unit);
+    }
+
+    @Override
+    public Unit getLeftUnit() {
+        return leftAndRight.get("left");
+    }
+
+    @Override
+    public Unit getRightUnit() {
+        return leftAndRight.get("right");
+    }
+
+    @Override
+    public void updateLeftAndRight(){
+        //Todo: need to check;
+
+        if(needSwapWithLeft()){
+            swapWithLeft();
+        }else if(needSwapWithRight()){
+            swapWithRight();
+        }
+
+    }
+    @Override
+    public boolean needSwapWithLeft(){
+        //Todo: need to check;
+
+        return (getLeft()==getLeftUnit().getRight() && getDown()<getLeftUnit().getUp()) ||
+                this.getLeft() < getLeftUnit().getRight();
+    }
+    @Override
+    public boolean needSwapWithRight(){
+        //Todo: need to check;
+
+        return  (getRight()==getRightUnit().getLeft() && getUp()<getRightUnit().getDown())||
+                getRight() > getRightUnit().getLeft();
+    }
+
+    @Override
+    public void swapWithLeft() {
+        //Todo: need to check;
+
+        Unit temp = getLeftUnit();
+        setLeftUnit(getLeftUnit().getLeftUnit());
+        temp.setRightUnit(getRightUnit());
+        setRightUnit(temp);
+        temp.setLeftUnit(this);
+    }
+
+    @Override
+    public void swapWithRight() {
+        //Todo: need to check;
+
+        Unit temp = getRightUnit();
+        setRightUnit(getRightUnit().getRightUnit());
+        temp.setLeftUnit(getLeftUnit());
+        setLeftUnit(temp);
+        temp.setRightUnit(this);
+    }
 
 
     public static class UnitValues {
@@ -348,6 +416,7 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
             }
             p("Accept Damage id: " + getId() + "new Helth: " +values.health );
         }
+
 
         @Override
         public void decrease() {

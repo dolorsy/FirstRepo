@@ -46,6 +46,7 @@ public int getUnitPrice(String type){
     }
 
      void InitShop(){
+         /*
         //Todo: Here We Should read from DataBase Or JSON To fill ShopUnits;
         //Todo:Here We should init lowestPrice
 
@@ -91,10 +92,14 @@ public int getUnitPrice(String type){
          } catch (ParseException | IOException e) {
              e.printStackTrace();
          }
+
+          */
     }
 
     public Unit sellItem(String type){
         return new Unit(Objects.requireNonNull(getUnitByType(type)));
+
+
     }
 
 
