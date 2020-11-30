@@ -8,6 +8,8 @@ public interface Barrier {
     int getRadius();
     String getType();
     default boolean isSharedWith(Barrier b){
+        if(getPosition() == null)
+            return false;
         return getLeft()>=b.getRight() || getRight()<=b.getLeft()
                 || getUp()<=b.getDown() || getDown()>=b.getUp();
     }

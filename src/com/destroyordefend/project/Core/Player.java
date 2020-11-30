@@ -1,6 +1,7 @@
 package com.destroyordefend.project.Core;
 
 
+import com.destroyordefend.project.Tactic.Comparators.AriDefenceComparator;
 import com.destroyordefend.project.Unit.Unit;
 
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.List;
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Core.Game.game;
+import static com.destroyordefend.project.Main.p;
 
 
 enum TeamRole{
@@ -25,7 +27,7 @@ public class Player {
         return id;
     }
     public Player(){
-
+     army = new TreeSet<>(new AriDefenceComparator());
     }
 
     public Player(int points, TeamRole role, String id) {
@@ -68,10 +70,16 @@ public class Player {
         Points-=price;
     }
     public void CreateArmy(){
+        p("First Time");
+
+        //Todo: it's just a test
+
+        this.army.add(game.getShop().ShopUnits.get(0));
+
         //Todo:Here we will Shopping
         while (this.Points>0)
             try{
-                BuyAnArmy(game.getShop().sellItem("SS"),game.shop.getUnitPrice("SS") );
+                BuyAnArmy(game.getShop().sellItem("TANK"),game.shop.getUnitPrice("TANK") );
             }catch (PointsCantByuException ex){
                 System.err.println(ex);
                 break;
@@ -82,6 +90,7 @@ public class Player {
     }
 
     public void BuyAnArmy(Unit unit, int price) throws PointsCantByuException{
+
         try{
             if(this.Points <game.getShop().getLowestPrice())
                 throw new PointsCantByuException("You Have only " + this.Points + ", this cant buy anything!!");

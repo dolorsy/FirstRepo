@@ -9,9 +9,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import static com.destroyordefend.project.Core.Game.game;
+import static com.destroyordefend.project.utility.MainMethodAsyncTask.doMainThingQueue;
 import static com.destroyordefend.project.utility.MainMethodAsyncTask.invokeMainMethods;
 import static com.destroyordefend.project.utility.UpdateMapAsyncTask.invokeUpdatePosition;
+import static com.destroyordefend.project.utility.UpdateMapAsyncTask.updatePositionQueue;
 import static com.destroyordefend.project.utility.UpdateRangeAsyncTask.invokeUpdateRange;
+import static com.destroyordefend.project.utility.UpdateRangeAsyncTask.updateRangeQueue;
 
 public class GameTimer extends Thread {
 int RoundLength ;
@@ -84,7 +87,11 @@ public static ExecutorService executorService = Executors.newFixedThreadPool(5);
     }
 
     void reFill(){
+        updatePositionQueue.clear();
+        updateRangeQueue.clear();
+        doMainThingQueue.clear();
         for(Unit unit: game.getAllUnits()){
+            unit.Move();
             UpdateMapAsyncTask.addMethod(unit::Move);
             UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
             MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());

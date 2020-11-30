@@ -3,8 +3,11 @@ package com.destroyordefend.project.Core;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Movement.ToTarget;
+import com.destroyordefend.project.Tactic.Comparators.AriDefenceComparator;
+import com.destroyordefend.project.Tactic.Comparators.emptyComprator;
 import com.destroyordefend.project.Tactic.LowestHealthAttack;
 import com.destroyordefend.project.Tactic.RandomAttack;
+import com.destroyordefend.project.Unit.Barrier;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
@@ -34,6 +37,7 @@ enum States {
 
 public class Game {
     public static Game game;
+    static UnitSet unitSet;
     static Unit unit;
     TreeSet<Unit> allUnits;
     TreeSet<Terrain> terrains;
@@ -44,6 +48,14 @@ public class Game {
     int initPoints = 10000;
     GameTimer gameTimer;
 
+
+    public static UnitSet getUnitSet() {
+        return unitSet;
+    }
+
+    public static void setUnitSet(UnitSet unitSet) {
+        Game.unitSet = unitSet;
+    }
 
     public static Game getGame(){
         if (game == null)
@@ -56,14 +68,16 @@ public class Game {
         terrains = new TreeSet<Terrain>(new Terrain.TerrainComparator());
         Attackers = new Team();
         Defenders = new Team();
-        gameTimer  = new GameTimer(30);
-        allUnits = new TreeSet<Unit>(new PointComparator());
+        gameTimer  = new GameTimer(5);
+        allUnits = new TreeSet<Unit>(new AriDefenceComparator());
         //Todo:Here We Should get the number of Players
-        Attackers.addPlayer(new Player(initPoints, TeamRole.Attacker, "attacker"));
-        Defenders.addPlayer(new Player(initPoints, TeamRole.Defender, "defender"));
+       /* Attackers.addPlayer(new Player(initPoints, TeamRole.Attacker, "attacker"));
+        Defenders.addPlayer(new Player(initPoints, TeamRole.Defender, "defender"));*/
+        CreateTeamsStage();
+        this.StartShoppingStage();
+
         unit = new Unit(5,5,2,"TT",5,5,5,50);
         unit.setTreeSetUnit(new TreeSet<>(new PointComparator()));
-        p(unit.getTreeSetUnit().toString());
         Attackers.getTeamPlayers().get(0).addArmy(new Unit(unit)
                 .AcceptTactic(new LowestHealthAttack()).AcceptMovement(new FixedPosition()));
 
@@ -71,7 +85,7 @@ public class Game {
                 .AcceptMovement(new ToTarget(Attackers.getTeamPlayers().get(0).getArmy().first())));
 
         UpdateUnits();
-        //this.StartShoppingStage();
+
         this.StartPlacementStage();
 
         this.StartBattle();
@@ -115,7 +129,8 @@ public class Game {
 
     public void UpdateUnits() {
         //this method to Update AllUnits
-        allUnits = new TreeSet<>(new PointComparator());
+        //Todo: should be PointComparator
+        allUnits = new TreeSet<>(new emptyComprator());
 
         for (Player player : Attackers.getTeamPlayers()) {
             for (Unit unit : player.getArmy()){
@@ -129,6 +144,20 @@ public class Game {
             allUnits.addAll(player.getArmy());
         }
         p(String.valueOf(allUnits.size()));
+    }
+    public void SetNavigationForUnit(){
+        Unit left,right,curr;
+        curr = allUnits.first();
+        left = null;
+        right = allUnits.iterator().next();
+        //Todo:need to check
+        for (int i=1;i<allUnits.size();i++){
+            curr.setRightUnit(right);
+            right = allUnits.iterator().next();
+            left = curr;
+            curr = allUnits.iterator().next();
+            curr.setLeftUnit(left);
+        }
     }
 
     public void setGameState(States gameState) {
@@ -158,15 +187,18 @@ public class Game {
         for (Player p : Defenders.getTeamPlayers()) {
             for (Unit u : p.getArmy()) {
                 p("PS " + u.getId());
-                Movement.canSetUnitPlace(new Point(x, y),u);
+                Barrier b = Movement.canSetUnitPlace(new Point(x, y),u);
+                if(b == null)
+                    u.setPoint(new Point(x,y));
                 x += 100;
                 y += 100;
             }
         }
         for (Player p : Attackers.getTeamPlayers()) {
             for (Unit u : p.getArmy()) {
-                Movement.canSetUnitPlace(new Point(x, y),u);
-                x += 10;
+                Barrier b = Movement.canSetUnitPlace(new Point(x, y),u);
+                if(b == null)
+                    u.setPoint(new Point(x,y));                x += 10;
                 y += 10;
             }
         }
@@ -214,10 +246,18 @@ public class Game {
 
         for (Player player : Attackers.getTeamPlayers()) {
             player.CreateArmy();
+
+            //Todo: it's just a test
+            player.getArmy().first().AcceptTactic(new LowestHealthAttack()).AcceptMovement(new FixedPosition());
+
             allUnits.addAll(player.getArmy());
         }
         for (Player player : Defenders.getTeamPlayers()) {
             player.CreateArmy();
+
+            //Todo: it's just a test
+            player.getArmy().first().AcceptTactic(new RandomAttack()).AcceptMovement(new ToTarget(Attackers.getTeamPlayers().get(0).getArmy().first()));
+
             allUnits.addAll(player.getArmy());
         }
 
