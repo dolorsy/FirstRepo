@@ -4,6 +4,7 @@ import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Core.PointComparator;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Tactic;
+import com.destroyordefend.project.utility.Log;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -22,6 +23,7 @@ import static com.destroyordefend.project.Main.p;
 
 public class Unit  implements  TacticAble , MovementAble , Barrier{
 
+
     int id;
     int radius;
     int range;
@@ -36,9 +38,9 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     Damaging damaging;
     String playerId;
     List<String> SortMap;
-
+    UnitValues unitValues;
 /*read from Json File*/
-    public static  void readJSonFile(Unit unit){
+    public void readJSonFile(Unit unit){
         String path = "src\\com\\destroyordefend\\project\\Shop.json";
         JSONParser jsonParser = new JSONParser();
         try {
@@ -62,16 +64,18 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
 
                 String damage = (String) unit1.get("damage");
                 unit.setDamage(Integer.parseInt(damage));
+               // unitValues.setDamage(Integer.parseInt(damage));
 
                 String shot_speed = (String) unit1.get("shot_speed");
                 unit.setShot_speed(Integer.parseInt(shot_speed));
-
+                //unit.unitValues.shot_speed = Integer.parseInt(shot_speed);
                 String speed = (String) unit1.get("speed");
                 unit.setSpeed(Integer.parseInt(speed));
 
+              // unit.unitValues.speed = Integer.parseInt(speed);
                 String health = (String) unit1.get("health");
-                unit.setHealth(Integer.parseInt(health));
-
+               unit.setHealth(Integer.parseInt(health));
+                //unit.unitValues.health = Integer.parseInt(health);
             }
 
         } catch (ParseException e) {
@@ -154,11 +158,12 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
                 +"\nrad: "  + radius
                 +"\nrang: " + range
                 +"\ntype: " + type
-                +"\nMovement: " + movement.toString()
-                +"\ninRange: " + treeSetUnit.toString()
-                +"\npoint: " + point.asString()
+                //+"\nMovement: " + movement.toString()
+                //+"\ninRange: " + treeSetUnit.toString()
+                //+"\npoint: " + point.asString()
                 +"\nRole: " + role
-                +"\nvaleus: " + values.asString());
+                //+"\nvaleus: " + values.asString()
+                );
     }
     //Set
     public void setId(int id) {
@@ -322,7 +327,7 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
 
 
 
-    class UnitValues {
+    public  class UnitValues {
 
         //Object for Singleton
 
@@ -388,7 +393,7 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
 
         @Override
         public void AcceptDamage(int damage) {
-
+            Log log = new Log();
             if( (values.health - damage ) <= 0 ){
                 values.health = 0;
             }else {
