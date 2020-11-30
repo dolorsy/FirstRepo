@@ -4,8 +4,16 @@ import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Core.PointComparator;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Tactic;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
+import java.util.SortedMap;
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Core.Game.game;
@@ -29,15 +37,63 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     String playerId;
     List<String> SortMap;
 
+/*read from Json File*/
+    public static  void readJSonFile(Unit unit){
+        String path = "src\\com\\destroyordefend\\project\\Shop.json";
+        JSONParser jsonParser = new JSONParser();
+        try {
+            JSONObject obj = (JSONObject) jsonParser.parse(new FileReader(path));
+            JSONArray shop = (JSONArray) obj.get("Shop");
+
+           for (Object a : shop) {
+                JSONObject unit1 = (JSONObject) a;
+                String type = (String)  unit1.get("type");
+                unit.setType(type);
+
+                JSONArray sMap = (JSONArray) unit1.get("SortMap");
+               List<String> sn = (List<String>) unit1.get("SortMap");
+               unit.setSortMap(sn);
+
+                String range = (String) unit1.get("range");
+                unit.setRange(Integer.parseInt(range));
+
+                String radius = (String) unit1.get("radius");
+                unit.setRadius(Integer.parseInt(radius));
+
+                String damage = (String) unit1.get("damage");
+                unit.setDamage(Integer.parseInt(damage));
+
+                String shot_speed = (String) unit1.get("shot_speed");
+                unit.setShot_speed(Integer.parseInt(shot_speed));
+
+                String speed = (String) unit1.get("speed");
+                unit.setSpeed(Integer.parseInt(speed));
+
+                String health = (String) unit1.get("health");
+                unit.setHealth(Integer.parseInt(health));
+
+            }
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+/*End jsonFile*/
+    public String getPlayerId() {
+        return playerId;
+    }
+
     public void setSortMap(List<String> sortMap) {
         SortMap = sortMap;
     }
 
     public List<String> getSortMap() {
         return SortMap;
-    }
-    public String getPlayerId() {
-        return playerId;
     }
 
     public Damaging getDamaging() {
@@ -50,17 +106,15 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
         return id;
     }
 
-    public void setPlayerId(String playerId) {
-        this.playerId = playerId;
-    }
-
     public Tactic getTactic() {
         return tactic;
     }
 
-    public Unit(){
 
+     Unit(){
+    treeSetUnit = new TreeSet<>(new PointComparator());
     }
+    //Constructor 1
     public Unit(int id, int radius, int range, String type,int speed ,int shot_speed,int damage ,int health) {
         this.id = id;
         this.radius = radius;
@@ -97,15 +151,14 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     public void print(){
         System.out.println(
                 "id: " + id
-                +"rad: "  + radius
-                 + "rang: " + range
-                +"type: " + type
-                +"Movement: " + movement.toString()
-                +"inRange: " + treeSetUnit.toString()
-                +"point: " + point.asString()
-                +"Role: " + role
-                +"valeus: " + values.asString());
-
+                +"\nrad: "  + radius
+                +"\nrang: " + range
+                +"\ntype: " + type
+                +"\nMovement: " + movement.toString()
+                +"\ninRange: " + treeSetUnit.toString()
+                +"\npoint: " + point.asString()
+                +"\nRole: " + role
+                +"\nvaleus: " + values.asString());
     }
     //Set
     public void setId(int id) {
@@ -137,8 +190,6 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     }
 
     public void setPoint(Point point) {
-        if(treeSetUnit == null || treeSetUnit.size()==0)
-            treeSetUnit = new TreeSet<>(new PointComparator());
         this.point = point;
     }
 
@@ -179,7 +230,6 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
         }
         this.setPoint(p);
     }
-
 
     public TreeSet<Unit> getTreeSetUnit() {
         return treeSetUnit;
@@ -264,8 +314,10 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     }
 
     void onDestroy(){
-        game.DeleteUnit(this);
+
         game.UpdateState();
+
+
     }
 
 
@@ -279,6 +331,7 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
         int damage;
         int health;
         int currentSpeed;
+
         //constructor Empty
         private UnitValues(){}
 
@@ -302,7 +355,6 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
     public void UpdateRange(){
         p("Update Range id: " +getId());
         Tactic.updateRange(this);
-        p("in range id " +  getId() + "c: " + treeSetUnit.size());
         this.tactic.SortMap(this);
         //Todo::Make sure the call by referance
     }
@@ -318,9 +370,7 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
 
         @Override
         public void DoDamage() {
-            if(treeSetUnit.size()!=0)
-                treeSetUnit.first().getDamaging().AcceptDamage(this.getDamage());
-
+            treeSetUnit.first().getDamaging().AcceptDamage(this.getDamage());
 
         }
 
@@ -341,13 +391,10 @@ public class Unit  implements  TacticAble , MovementAble , Barrier{
 
             if( (values.health - damage ) <= 0 ){
                 values.health = 0;
-                p("Removed id: " + getId());
-                onDestroy();
-
             }else {
                 values.health -= damage;
             }
-            p("Accept Damage id: " + getId() + " new Helth\n\n: " +values.health );
+            p("Accept Damage id: " + getId() + "new Helth: " +values.health );
         }
 
         @Override
