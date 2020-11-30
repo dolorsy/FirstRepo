@@ -14,7 +14,6 @@ public class ToTarget implements Movement {
 
     public ToTarget(Unit target) {
         this.targetStack.push(target);
-        goal = target;
     }
 
     @Override
@@ -80,9 +79,10 @@ public class ToTarget implements Movement {
                 }
                 targetStack.pop();
             }
-            if (target == null)
-                target = Game.getGame().getBase().getPosition();
-
+            if (target == null) {
+                goal = Game.getGame().getBase();
+                target = goal.getPosition();
+            }
         }else if(!goal.isAlive()){
             target = null;
             getNextTarget();

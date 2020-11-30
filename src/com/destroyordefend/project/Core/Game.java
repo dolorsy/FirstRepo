@@ -3,8 +3,10 @@ package com.destroyordefend.project.Core;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Movement.ToTarget;
+import com.destroyordefend.project.Tactic.Comparators.AriDefenceComparator;
 import com.destroyordefend.project.Tactic.LowestHealthAttack;
 import com.destroyordefend.project.Tactic.RandomAttack;
+import com.destroyordefend.project.Unit.Barrier;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
@@ -56,8 +58,8 @@ public class Game {
         terrains = new TreeSet<Terrain>(new Terrain.TerrainComparator());
         Attackers = new Team();
         Defenders = new Team();
-        gameTimer  = new GameTimer(30);
-        allUnits = new TreeSet<Unit>(new PointComparator());
+        gameTimer  = new GameTimer(5);
+        allUnits = new TreeSet<Unit>(new AriDefenceComparator());
         //Todo:Here We Should get the number of Players
        /* Attackers.addPlayer(new Player(initPoints, TeamRole.Attacker, "attacker"));
         Defenders.addPlayer(new Player(initPoints, TeamRole.Defender, "defender"));*/
@@ -117,7 +119,8 @@ public class Game {
 
     public void UpdateUnits() {
         //this method to Update AllUnits
-        allUnits = new TreeSet<>(new PointComparator());
+        //Todo: should be PointComparator
+        allUnits = new TreeSet<>(new AriDefenceComparator());
 
         for (Player player : Attackers.getTeamPlayers()) {
             for (Unit unit : player.getArmy()){
@@ -160,15 +163,18 @@ public class Game {
         for (Player p : Defenders.getTeamPlayers()) {
             for (Unit u : p.getArmy()) {
                 p("PS " + u.getId());
-                Movement.canSetUnitPlace(new Point(x, y),u);
+                Barrier b = Movement.canSetUnitPlace(new Point(x, y),u);
+                if(b == null)
+                    u.setPoint(new Point(x,y));
                 x += 100;
                 y += 100;
             }
         }
         for (Player p : Attackers.getTeamPlayers()) {
             for (Unit u : p.getArmy()) {
-                Movement.canSetUnitPlace(new Point(x, y),u);
-                x += 10;
+                Barrier b = Movement.canSetUnitPlace(new Point(x, y),u);
+                if(b == null)
+                    u.setPoint(new Point(x,y));                x += 10;
                 y += 10;
             }
         }

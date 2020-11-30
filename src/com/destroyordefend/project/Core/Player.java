@@ -1,6 +1,7 @@
 package com.destroyordefend.project.Core;
 
 
+import com.destroyordefend.project.Tactic.Comparators.AriDefenceComparator;
 import com.destroyordefend.project.Unit.Unit;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class Player {
         return id;
     }
     public Player(){
-     army = new TreeSet<>(new PointComparator());
+     army = new TreeSet<>(new AriDefenceComparator());
     }
 
     public Player(int points, TeamRole role, String id) {
