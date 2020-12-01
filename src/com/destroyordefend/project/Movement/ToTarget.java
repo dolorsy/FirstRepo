@@ -10,11 +10,9 @@ import java.util.Stack;
 public class ToTarget implements Movement {
     private Point target;
     private Barrier goal;
-    private final Stack<Barrier> targetStack = new Stack<>();
     private final Stack<Point> track = new Stack<>();
 
     public ToTarget(Unit target) {
-        this.targetStack.push(target);
         track.push(target.getPosition());
     }
 
@@ -22,32 +20,19 @@ public class ToTarget implements Movement {
     public Point GetNextPoint(Unit unit) {
         return null;
     }
-     Point makeAnewPoint(Unit unit){
 
-         Point p = unit.getPosition();
-         Point t = track.peek();
-         int x = p.getX();
-         int y = p.getY();
-         if(t.getX()>x)
-             x++;
-         else if(t.getX() <x)
-             x--;
-         if(t.getY() > y)
-             y++;
-         else if(t.getY() < y)
-             y--;
-
-         return new Point(x,y);
-
-     }
 
     @Override
-    public void SetNextPoint(Unit unit) {
+    public boolean SetNextPoint(Unit unit) {
 
-        Point n = makeAnewPoint(unit);
+        Point n = makeAnewPoint(unit,track.peek());
 
         Barrier barrier = Movement.canSetUnitPlace(n,unit);
         if(barrier != null){
+            if(barrier.getType().equals("river")) {
+                unit.getPosition().setPoint(n);
+                return true;
+            }
             Point[] corners = {barrier.getDownLeftCorner(),barrier.getDownRightCorner(),barrier.getUpRightCorner(),barrier.getUpLeftCorner()};
             int min = 0;
             int nextp = 1 ;
@@ -71,43 +56,51 @@ public class ToTarget implements Movement {
 
             }
             switch (min) {
-                case 1 -> {
+                case 1 : {
                     corners[min].setX(corners[min].getX() - unit.getRadius());
                     corners[min].setY(corners[min].getY() - unit.getRadius());
+                    break;
                 }
-                case 2 -> {
+                case 2 : {
                     corners[min].setX(corners[min].getX() + unit.getRadius());
                     corners[min].setY(corners[min].getY() - unit.getRadius());
+                    break;
                 }
-                case 3 -> {
+                case 3 : {
                     corners[min].setX(corners[min].getX() + unit.getRadius());
                     corners[min].setY(corners[min].getY() + unit.getRadius());
+                    break;
                 }
-                case 4 -> {
+                case 4 : {
                     corners[min].setX(corners[min].getX() - unit.getRadius());
                     corners[min].setY(corners[min].getY() + unit.getRadius());
+                    break;
                 }
-                default -> throw new IllegalStateException("Unexpected value: " + min);
+                default : throw new IllegalStateException("Unexpected value: " + min);
             }
 
             switch (nextp) {
-                case 1 -> {
+                case 1: {
                     corners[nextp].setX(corners[nextp].getX() - unit.getRadius());
                     corners[nextp].setY(corners[nextp].getY() - unit.getRadius());
+                    break;
                 }
-                case 2 -> {
+                case 2 : {
                     corners[nextp].setX(corners[nextp].getX() + unit.getRadius());
                     corners[nextp].setY(corners[nextp].getY() - unit.getRadius());
+                    break;
                 }
-                case 3 -> {
+                case 3 : {
                     corners[nextp].setX(corners[nextp].getX() + unit.getRadius());
                     corners[nextp].setY(corners[nextp].getY() + unit.getRadius());
+                    break;
                 }
-                case 4 -> {
+                case 4 : {
                     corners[nextp].setX(corners[nextp].getX() - unit.getRadius());
                     corners[nextp].setY(corners[nextp].getY() + unit.getRadius());
+                    break;
                 }
-                default -> throw new IllegalStateException("Unexpected value: " + min);
+                default : throw new IllegalStateException("Unexpected value: " + min);
             }
 
             track.push(corners[nextp]);
@@ -117,8 +110,7 @@ public class ToTarget implements Movement {
 
         //Todo: Should Update n here? n = makeAnewPoint(unit); ????
         unit.getPosition().setPoint(n);
-
-
+        return false;
     }
 
 

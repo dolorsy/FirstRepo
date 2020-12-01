@@ -166,18 +166,10 @@ public class Unit  implements  TacticAble , MovementAble , Barrier,UnitSetHelper
      public void Move(){
         p("Move id: "+getId() + " x,y " );
 
-        Point p = this.movement.GetNextPoint(this);
+        boolean river = movement.SetNextPoint(this);
 
-        p("Move id: "+getId() + " x,y " + p.asString());
-        Barrier factor = Movement.canSetUnitPlace(p,this);
-        if(factor.getClass().getName().equals(Terrain.class.getName())) {
-            Terrain terrain = (Terrain)factor;
-            if (terrain.getSpeedFactory() != 0) {
-                //TODO: For loop like Current speed to push invokable method in UpdateMapAsyncTask
-                values.currentSpeed = values.speed / terrain.getSpeedFactory();
-            }
-        }
-        this.setPoint(p);
+        p("Move id: "+getId() + " x,y " + getPosition().asString());
+
         this.updateLeftAndRight();
     }
 

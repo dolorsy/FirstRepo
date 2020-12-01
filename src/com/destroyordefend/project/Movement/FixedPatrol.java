@@ -7,6 +7,7 @@ import com.destroyordefend.project.Unit.Unit;
  * the movement will be up right left down
  */
 public class FixedPatrol implements Movement {
+    //Todo: need to apply new Movement
     public final static int STEP_SIZE = 4;
     private static final next[] nextArr = new next[]{
             (p) -> new Point(p.getX(), p.getY() - STEP_SIZE),//up
@@ -20,6 +21,11 @@ public class FixedPatrol implements Movement {
         if (lastDirection == -1 || lastDirection > nextArr.length)
             lastDirection = 0;
         return nextArr[lastDirection++].getNext(unit.getPosition());
+    }
+
+    @Override
+    public boolean SetNextPoint(Unit unit) {
+        return false;
     }
 
     private interface next {

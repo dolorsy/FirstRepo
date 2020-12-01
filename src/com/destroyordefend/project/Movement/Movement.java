@@ -5,12 +5,14 @@ import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Barrier;
 import com.destroyordefend.project.Unit.Unit;
 
+import java.util.Stack;
+
 import static com.destroyordefend.project.Core.Game.game;
 
 public interface Movement {
 
     Point GetNextPoint (Unit unit);
-    void SetNextPoint(Unit unit);
+    boolean SetNextPoint(Unit unit);
     static Barrier canSetUnitPlace(Point point, Unit unit){
         Unit temp = new Unit(unit);
         temp.setPoint(point);
@@ -60,5 +62,24 @@ public interface Movement {
                 break;
         }
         return barrier;
+    }
+
+    default Point makeAnewPoint(Unit unit, Point t){
+
+        Point p = unit.getPosition();
+
+        int x = p.getX();
+        int y = p.getY();
+        if(t.getX()>x)
+            x++;
+        else if(t.getX() <x)
+            x--;
+        if(t.getY() > y)
+            y++;
+        else if(t.getY() < y)
+            y--;
+
+        return new Point(x,y);
+
     }
 }
