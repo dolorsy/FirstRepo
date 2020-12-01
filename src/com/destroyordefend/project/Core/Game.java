@@ -37,7 +37,6 @@ enum States {
 
 public class Game {
     public static Game game;
-    static UnitSet unitSet;
     static Unit unit;
     TreeSet<Unit> allUnits;
     TreeSet<Terrain> terrains;
@@ -48,14 +47,6 @@ public class Game {
     int initPoints = 10000;
     GameTimer gameTimer;
 
-
-    public static UnitSet getUnitSet() {
-        return unitSet;
-    }
-
-    public static void setUnitSet(UnitSet unitSet) {
-        Game.unitSet = unitSet;
-    }
 
     public static Game getGame(){
         if (game == null)

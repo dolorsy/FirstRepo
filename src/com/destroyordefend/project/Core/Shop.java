@@ -22,7 +22,7 @@ public class Shop {
      HashMap<String,Integer> unitPrices = new HashMap<>();
      int lowestPrice = 0;
 
-     Shop(){
+     public Shop(){
 
          this.ShopUnits = new ArrayList<>();
          this.InitShop();
@@ -45,55 +45,67 @@ public int getUnitPrice(String type){
         return this.lowestPrice;
     }
 
-     void InitShop(){
-         /*
+     public void InitShop(){
+
         //Todo: Here We Should read from DataBase Or JSON To fill ShopUnits;
         //Todo:Here We should init lowestPrice
 
-         String path = "src\\com\\destroyordefend\\project\\Shop.json";
-         Unit.UnitValues  unitValues = new Unit.UnitValues();
+         String path = "src\\com\\destroyordefend\\project\\UnitslnShop.json";
+
          JSONParser jsonParser = new JSONParser();
          try {
              JSONObject obj = (JSONObject) jsonParser.parse(new FileReader(path));
-             JSONArray shop = (JSONArray) obj.get("Shop");
+             JSONArray shop = (JSONArray) obj.get("shop");
 
              for (Object a : shop) {
                  JSONObject unit1 = (JSONObject) a;
                  String type = (String)  unit1.get("type");
-                 unitValues.setType(type);
 
-                 JSONArray sMap = (JSONArray) unit1.get("SortMap");
-                 List<String> sn = (List<String>) unit1.get("SortMap");
-                 unitValues.setSortMap(sn);
-
-                 String range = (String) unit1.get("range");
-                 unitValues.setRange(Integer.parseInt(range));
-
-                 String radius = (String) unit1.get("radius");
-                 unitValues.setRadius(Integer.parseInt(radius));
-
-                 String damage = (String) unit1.get("damage");
-                 unitValues.setDamage(Integer.parseInt(damage));
-
-                 String shot_speed = (String) unit1.get("shot_speed");
-                 unitValues.setShot_speed(Integer.parseInt(shot_speed));
-
-                 String speed = (String) unit1.get("speed");
-                 unitValues.setSpeed(Integer.parseInt(speed));
+                 String name = (String)  unit1.get("name");
 
                  String health = (String) unit1.get("health");
-                 unitValues.setHealth(Integer.parseInt(health));
 
+                 String armor = (String) unit1.get("armor");
+
+                 String damage = (String) unit1.get("damage");
+
+                 String range = (String) unit1.get("range");
+
+                 String shot_speed = (String) unit1.get("shot_speed");
+
+                 String radius = (String) unit1.get("radius");
+
+                 String speed = (String) unit1.get("speed");
+
+                 List<String> SortMap =new ArrayList<>();
+
+                 JSONArray sMap = (JSONArray) unit1.get("SortMap");
+                 System.out.println(sMap);
+                 for(Object c : sMap){
+                     String s = (String) c.toString();
+                     SortMap.add(s);
+                 }
+                 String price = (String) unit1.get("price");
+
+                 Unit.UnitValues  unitValues = new Unit.UnitValues(
+                         type ,
+                         name ,
+                         Integer.parseInt(health) ,
+                         Double.parseDouble(armor) ,
+                         Integer.parseInt(damage) ,
+                         Integer.parseInt(range) ,
+                         Double.parseDouble(shot_speed) ,
+                         Integer.parseInt(radius) ,
+                         Integer.parseInt(speed) ,
+                        ((List<String>) SortMap),
+                         Integer.parseInt(price));
                  this.ShopUnits.add(new Unit(unitValues));
-
-
              }
 
          } catch (ParseException | IOException e) {
              e.printStackTrace();
          }
 
-          */
     }
 
     public Unit sellItem(String type){
