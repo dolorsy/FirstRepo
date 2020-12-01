@@ -91,7 +91,7 @@ public static ExecutorService executorService = Executors.newFixedThreadPool(5);
         updateRangeQueue.clear();
         doMainThingQueue.clear();
         for(Unit unit: game.getAllUnits()){
-            unit.Move();
+
             UpdateMapAsyncTask.addMethod(unit::Move);
             UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
             MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());

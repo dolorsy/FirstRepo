@@ -137,7 +137,9 @@ public class Unit  implements  TacticAble , MovementAble , Barrier,UnitSetHelper
     }
 
     public void setPoint(Point point) {
-        this.point = point;
+
+        this.point.setX(point.getX());
+        this.point.setY(point.getY());
     }
 
     public void setValues(UnitValues values) {
@@ -173,7 +175,6 @@ public class Unit  implements  TacticAble , MovementAble , Barrier,UnitSetHelper
             if (terrain.getSpeedFactory() != 0) {
                 //TODO: For loop like Current speed to push invokable method in UpdateMapAsyncTask
                 values.currentSpeed = values.speed / terrain.getSpeedFactory();
-
             }
         }
         this.setPoint(p);

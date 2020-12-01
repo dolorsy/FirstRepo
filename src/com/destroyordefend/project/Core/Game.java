@@ -37,7 +37,6 @@ enum States {
 
 public class Game {
     public static Game game;
-    static UnitSet unitSet;
     static Unit unit;
     TreeSet<Unit> allUnits;
     TreeSet<Terrain> terrains;
@@ -49,13 +48,6 @@ public class Game {
     GameTimer gameTimer;
 
 
-    public static UnitSet getUnitSet() {
-        return unitSet;
-    }
-
-    public static void setUnitSet(UnitSet unitSet) {
-        Game.unitSet = unitSet;
-    }
 
     public static Game getGame(){
         if (game == null)
@@ -220,6 +212,7 @@ public class Game {
 
             JSONObject obj = (JSONObject) jsonParser.parse(reader);
             JSONArray jsonArray = (JSONArray) obj.get("Players");
+
             for(Object jsonObject : jsonArray ){
                 JSONObject player = (JSONObject) jsonObject;
                 Player p = new Player().setRole( (String) player.get("role")).setId((String) player.get("id"));
