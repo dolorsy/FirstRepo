@@ -212,7 +212,6 @@ public class Game {
 
             JSONObject obj = (JSONObject) jsonParser.parse(reader);
             JSONArray jsonArray = (JSONArray) obj.get("Players");
-
             for(Object jsonObject : jsonArray ){
                 JSONObject player = (JSONObject) jsonObject;
                 Player p = new Player().setRole( (String) player.get("role")).setId((String) player.get("id"));
