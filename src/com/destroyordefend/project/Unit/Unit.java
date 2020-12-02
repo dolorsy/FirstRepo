@@ -138,7 +138,9 @@ public class Unit  implements  TacticAble , MovementAble , Barrier,UnitSetHelper
     }
 
     public void setPoint(Point point) {
-        this.point = point;
+
+        this.point.setX(point.getX());
+        this.point.setY(point.getY());
     }
 
     public void setValues(UnitValues values) {
@@ -182,19 +184,10 @@ public class Unit  implements  TacticAble , MovementAble , Barrier,UnitSetHelper
     public void Move(){
         p("Move id: "+getId() + " x,y " );
 
-        Point p = this.movement.GetNextPoint(this);
+        boolean river = movement.SetNextPoint(this);
 
-        p("Move id: "+getId() + " x,y " + p.asString());
-        Barrier factor = Movement.canSetUnitPlace(p,this);
-        if(factor.getClass().getName().equals(Terrain.class.getName())) {
-            Terrain terrain = (Terrain)factor;
-            if (terrain.getSpeedFactory() != 0) {
-                //TODO: For loop like Current speed to push invokable method in UpdateMapAsyncTask
-                values.currentSpeed = values.speed / terrain.getSpeedFactory();
+        p("Move id: "+getId() + " x,y " + getPosition().asString());
 
-            }
-        }
-        this.setPoint(p);
         this.updateLeftAndRight();
     }
 

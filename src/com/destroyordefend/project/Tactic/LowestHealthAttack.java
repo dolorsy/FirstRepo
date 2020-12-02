@@ -10,7 +10,7 @@ public class LowestHealthAttack implements Tactic {
 
     @Override
     public void SortMap(Unit unit) {
-
+        Tactic.updateRange(unit);
         List<String> types = unit.getSortMap();
 
         HealthComparator healthComparator = new HealthComparator();

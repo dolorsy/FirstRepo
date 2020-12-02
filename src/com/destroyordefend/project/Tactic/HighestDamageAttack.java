@@ -11,6 +11,8 @@ public class HighestDamageAttack implements Tactic {
     @Override
     public void SortMap(Unit unit) {
 
+        Tactic.updateRange(unit);
+
         List<String> types = unit.getSortMap();
 
         DamageComparator damageComparator = new DamageComparator();

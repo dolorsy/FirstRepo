@@ -13,6 +13,18 @@ public class Point {
     public String asString(){
        return String.valueOf('(' + String.valueOf(x) + ',' + String.valueOf(y) + ')');
     }
+    public void setPoint(Point n){
+       this.x= n.getX() ;
+       this.y= n.getY();
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
 
     public int getX() {
         return x;

@@ -28,4 +28,9 @@ public interface Barrier {
     default int getDown(){
         return getPosition().getY() - this.getRadius();
     }
+    default Point getDownRightCorner(){return new Point(this.getRight(),this.getDown());}
+    default Point getDownLeftCorner(){return new Point(this.getLeft(),this.getDown());}
+    default Point getUpRightCorner(){return new Point(this.getRight(),this.getUp());}
+    default Point getUpLeftCorner(){return new Point(this.getLeft(),this.getUp());}
+
 }
