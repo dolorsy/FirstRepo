@@ -10,10 +10,8 @@ import org.json.simple.parser.ParseException;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.lang.reflect.Array;
+import java.util.*;
 
 
 public class Shop {
@@ -51,8 +49,7 @@ public int getUnitPrice(String type){
         //Todo:Here We should init lowestPrice
 
          String path = "src\\com\\destroyordefend\\project\\UnitslnShop.json";
-
-         JSONParser jsonParser = new JSONParser();
+        JSONParser jsonParser = new JSONParser();
          try {
              JSONObject obj = (JSONObject) jsonParser.parse(new FileReader(path));
              JSONArray shop = (JSONArray) obj.get("shop");
@@ -77,18 +74,12 @@ public int getUnitPrice(String type){
 
                  String speed = (String) unit1.get("speed");
 
-                 List<String> SortMap =new ArrayList<>();
-
                  JSONArray sMap = (JSONArray) unit1.get("SortMap");
-                 System.out.println(sMap);
-                 for(Object c : sMap){
-                     String s = (String) c.toString();
-                     SortMap.add(s);
-                 }
-                 String price = (String) unit1.get("price");
+                 List<String> SortMap = (List<String>) unit1.get("SortMap");
 
-                 Unit.UnitValues  unitValues = new Unit.UnitValues(
-                         type ,
+                 String price = (String) unit1.get("price");
+                 Unit unit = new Unit(
+                         type,
                          name ,
                          Integer.parseInt(health) ,
                          Double.parseDouble(armor) ,
@@ -98,22 +89,46 @@ public int getUnitPrice(String type){
                          Integer.parseInt(radius) ,
                          Integer.parseInt(speed) ,
                         ((List<String>) SortMap),
-                         Integer.parseInt(price));
-                 this.ShopUnits.add(new Unit(unitValues));
+                         Integer.parseInt(price)
+                 );
+
+                  this.ShopUnits.add(new Unit(unit));
+
              }
+
+             //Test read Json
+             /*
+            for (int i = 0 ; i < ShopUnits.size() ; i++){
+                System.out.println(
+                        ShopUnits.get(i).getType()+"\n"+
+                        ShopUnits.get(i).getName()+"\n"+
+                        ShopUnits.get(i).getHealth()+"\n"+
+                        ShopUnits.get(i).getArmor()+"\n"+
+                        ShopUnits.get(i).getDamage()+"\n"+
+                        ShopUnits.get(i).getRange()+"\n"+
+                        ShopUnits.get(i).getShot_speed()+"\n"+
+                        ShopUnits.get(i).getRadius()+"\n"+
+                        ShopUnits.get(i).getSpeed()+"\n"+
+                        ShopUnits.get(i).getSortMap()+"\n"+
+                        ShopUnits.get(i).getPrice()+"\n"+
+                        "=================================="
+
+                );
+            }
+              */
 
          } catch (ParseException | IOException e) {
              e.printStackTrace();
+
          }
 
-    }
+
+     }
 
     public Unit sellItem(String type){
         return new Unit(Objects.requireNonNull(getUnitByType(type)));
 
 
     }
-
-
 
 }

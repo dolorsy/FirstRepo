@@ -31,8 +31,8 @@ public class Main {
         Log log = new Log();
         log.m(new Unit(2,2,2,"mm",2,2,2,2));
 */
-        Shop shop = new Shop();
-        Unit.UnitValues unitValues = new Unit.UnitValues("mm","ss",90,8.9,20,4,40.2,10,20, Collections.singletonList("mnmnbm"),200);
-        shop.InitShop();
+     Shop shop = new Shop();
+
+
     }
 }
