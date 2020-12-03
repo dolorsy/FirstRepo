@@ -10,7 +10,7 @@ import java.util.Stack;
 import static com.destroyordefend.project.Core.Game.game;
 
 public class AircraftMovement implements Movement {
-    PriorityQueue<Point> track = new PriorityQueue<>();
+    private PriorityQueue<Point> track = new PriorityQueue<>();
 
 
     public AircraftMovement(Unit airport){
@@ -28,7 +28,7 @@ public class AircraftMovement implements Movement {
             Point temp = track.poll();
             track.add(temp);
         }
-        unit.getPosition().setPoint(makeAnewPoint(unit,track.peek()));
+        unit.setPosition(Movement.straightMove(unit.getPosition(), track.peek()));
         return false;
     }
 }

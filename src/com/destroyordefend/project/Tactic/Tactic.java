@@ -14,15 +14,15 @@ public interface Tactic {
     static void updateRange(Unit t){
 
         TreeSet<Unit> temp = new TreeSet<>(new PointComparator());
-        Unit tempUnit = t.getLeftUnit();
+        Unit tempUnit = t.getNeighbourUnit("left");
         while(isInRange(t,tempUnit)){
             temp.add(tempUnit);
-            tempUnit = tempUnit.getLeftUnit();
+            tempUnit = tempUnit.getNeighbourUnit("left");
         }
-        tempUnit = t.getRightUnit();
+        tempUnit = t.getNeighbourUnit("right");
         while(isInRange(t,tempUnit)){
             temp.add(tempUnit);
-            tempUnit = tempUnit.getRightUnit();
+            tempUnit = tempUnit.getNeighbourUnit("right");
         }
         t.setTreeSetUnit(temp);
         /*

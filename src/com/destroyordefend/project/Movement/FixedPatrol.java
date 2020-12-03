@@ -23,10 +23,6 @@ public class FixedPatrol implements Movement {
         return nextArr[lastDirection++].getNext(unit.getPosition());
     }
 
-    @Override
-    public boolean SetNextPoint(Unit unit) {
-        return false;
-    }
 
     private interface next {
         Point getNext(Point p);

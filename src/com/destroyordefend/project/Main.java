@@ -31,8 +31,6 @@ public class Main {
         Log log = new Log();
         log.m(new Unit(2,2,2,"mm",2,2,2,2));
 */
-     Shop shop = new Shop();
-
 
     }
 }
