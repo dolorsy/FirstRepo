@@ -14,7 +14,7 @@ public interface Barrier {
     String getName();
 
     default boolean isSharedWith(Barrier b) {
-        if (getPosition() == null)
+        if (getPosition() == null || b == null)
             return false;
         return !(
                 this.getUp() < b.getDown() ||

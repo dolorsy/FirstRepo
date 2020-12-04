@@ -1,5 +1,9 @@
 package com.destroyordefend.project.Core;
 
+import com.destroyordefend.project.Movement.FixedPatrol;
+import com.destroyordefend.project.Movement.FixedPosition;
+import com.destroyordefend.project.Movement.ToTarget;
+import com.destroyordefend.project.Tactic.RandomAttack;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
@@ -33,6 +37,9 @@ public class Game {
     int attackerNumber, defenderNumber;
     GameTimer gameTimer;
     private Game(){
+        attackers = new Team();
+        defenders = new Team();
+
         base = new Unit(Shop.getInstance().getBaseValues());
         base.setTreeSetUnit(new TreeSet<>(new PointComparator()));
         allUnits.add(base);
@@ -44,9 +51,37 @@ public class Game {
     }
 
     public void StartAnewGame() {
+/*
+        Terrain t = new Terrain(new Point(30,100),2,"river");
+
+
+        terrains.add(t );*/
         //Todo:: terrain need to add terrains
-        gameTimer = new GameTimer(5);
-        CreateTeamsStage();
+        gameTimer = new GameTimer(10);
+       // CreateTeamsStage();
+        Unit defndUnit = new Unit(55);
+        defndUnit.setRole(Player.TeamRole.Defender);
+        defndUnit.setPosition(new Point(200,23));
+        defndUnit.setHealth(200);
+        defndUnit.setName("Main Base");
+        defndUnit.setShot_speed(0);
+        defndUnit.setSpeed(0);
+        defndUnit = defndUnit.AcceptMovement(new FixedPosition());
+        defndUnit = defndUnit.AcceptTactic(new RandomAttack());
+        Unit attackUnit = new Unit(77);
+
+        Unit.UnitValues values = Shop.getInstance().getUnitByName("TeslaTank");
+        attackUnit.setRole(Player.TeamRole.Attacker);
+        attackUnit.setPosition(new Point(20,20));
+        attackUnit.setValues(values);
+
+        attackUnit = attackUnit.AcceptMovement(new /*ToTarget(defndUnit)*/ FixedPatrol(80));
+        attackUnit = attackUnit.AcceptTactic(new RandomAttack());
+        Player attacker = new Player();
+        attacker.addArmy(attackUnit);
+
+        attackers.addPlayer(attacker);
+        UpdateUnits();
         //Todo:Here We Should get the number of Players
       //  this.StartShoppingStage();
 
@@ -130,10 +165,11 @@ public class Game {
             curr.setLeftUnit(left);
         }*/
         //TOdo :need to check
-        Unit left, right, cur;
+        Unit left, right = null, cur;
         Iterator<Unit> unitIterator = allUnits.iterator();
         left = null;
         cur = unitIterator.next();
+        if(unitIterator.hasNext())
         right = unitIterator.next();
         while (unitIterator.hasNext()) {
             cur.setNeighbourUnit("left",left);
@@ -169,8 +205,7 @@ public class Game {
         String path = "src\\com\\destroyordefend\\project\\Teams.json";
         JSONParser jsonParser = new JSONParser();
         try {
-            FileReader reader = new FileReader(path);
-            JSONObject obj = (JSONObject) jsonParser.parse(reader);
+            JSONObject obj = (JSONObject) jsonParser.parse(new FileReader(path));
             JSONArray jsonArray = (JSONArray) obj.get("Players");
             for (Object jsonObject : jsonArray) {
                 JSONObject player = (JSONObject) jsonObject;

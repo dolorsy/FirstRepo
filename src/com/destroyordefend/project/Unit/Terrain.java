@@ -48,5 +48,7 @@ public class Terrain implements Barrier{
         this.point = point;
         this.speedFactory = speedFactory;
         this.name = name;
+        this.radius=10;
     }
+
 }

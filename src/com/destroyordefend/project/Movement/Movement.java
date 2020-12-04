@@ -16,8 +16,8 @@ public interface Movement {
         temp.setPosition(point);
         if (temp.isSharedWith(temp.getNeighbourUnit("left")))
             return temp.getNeighbourUnit("left");
-        else if (temp.isSharedWith(temp.getNeighbourUnit("left")))
-            return temp.getNeighbourUnit("left");
+        else if (temp.isSharedWith(temp.getNeighbourUnit("right")))
+            return temp.getNeighbourUnit("right");
         else {
             //Todo: need to change
             for (Barrier u : game.getTerrains()) {

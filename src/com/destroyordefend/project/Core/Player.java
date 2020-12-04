@@ -13,13 +13,20 @@ public class Player {
     private TeamRole role;    //Is he attacker or Defender
     private String name;
     private TreeSet<Unit> army;
-    public Player(){id = IdGenerator.generate(this);}
+    public Player(){id = IdGenerator.generate(this);
+        army = new TreeSet<>(new PointComparator());//todo:need to check if it is work for point comparator
+
+    }
     public Player(int points, TeamRole role, String name) {
         this();
         army = new TreeSet<>(new PointComparator());//todo:need to check if it is work for point comparator
         Points = points;
         this.role = role;
         this.name = name;
+    }
+    public void addArmy(Unit unit){
+        army.add(unit);
+
     }
 
     public TeamRole getRole() {

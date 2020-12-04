@@ -21,7 +21,6 @@ int RoundLength ;
 int currentSecond = 0;
 //public static ExecutorService executorService = Executors.newFixedThreadPool(5);
     public void run(){
-        System.out.println("Here");
         for(;currentSecond<=RoundLength;currentSecond++){
             try {
 
@@ -46,7 +45,6 @@ int currentSecond = 0;
                 /*
                   The PREVIOUS Code is a big Mistake
                   */
-                System.out.println("Here");
                 long current = System.currentTimeMillis();
 /*
                 executorService.submit(UpdateMapAsyncTask::invokeUpdatePosition);
@@ -57,14 +55,15 @@ int currentSecond = 0;
 
                 Runnable method = UpdateMapAsyncTask::invokeUpdatePosition;
                 new Thread(method).start();
-                method = UpdateRangeAsyncTask::invokeUpdateRange;
+               /* method = UpdateRangeAsyncTask::invokeUpdateRange;
                 new Thread(method).start();
                 method = MainMethodAsyncTask::invokeMainMethods;
-                new Thread(method);
+                new Thread(method);*/
 
                 current = System.currentTimeMillis()-current;
-                System.out.println("Spended Time" + current + "  " + currentSecond);
+                System.out.println("Spended Time " + current + "  " + currentSecond);
                 Thread.sleep(1000 - current);
+                reFill();
 
             } catch (InterruptedException e) {
                 e.printStackTrace();

@@ -22,6 +22,7 @@ public class Shop {
         this.shopUnits = new ArrayList<>();
         shopUnits.add(null);
         this.InitShop();
+
     }
 
     public static Shop getInstance() {

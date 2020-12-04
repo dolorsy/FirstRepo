@@ -17,7 +17,14 @@ public class ToTarget implements Movement {
 
     @Override
     public Point GetNextPoint(Unit unit) {
-        return null;
+        System.out.println(track.size());
+        if(unit.getPosition().equals(track.peek())){
+            track.pop();
+        }
+        if(track.empty())
+            return unit.getPosition();
+        Point p =Movement.straightMove(unit.getPosition(),track.peek());
+        return p;
     }
 
 
