@@ -325,10 +325,10 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         public UnitValues(JSONObject unit) {
             name = (String) unit.get("name");
             health = Integer.parseInt((String) unit.get("health"));
-            armor = Integer.parseInt((String) unit.get("armor"));
+            armor = Double.parseDouble((String) unit.get("armor"));
             damage =Integer.parseInt ((String) unit.get("damage"));
             range = Integer.parseInt((String) unit.get("range"));
-            shot_speed = Integer.parseInt((String) unit.get("shot_speed"));
+            shot_speed = Double.parseDouble((String) unit.get("shot_speed"));
             radius = Integer.parseInt((String) unit.get("radius"));
             speed = Integer.parseInt((String) unit.get("speed"));
             price = Integer.parseInt((String) unit.get("price"));

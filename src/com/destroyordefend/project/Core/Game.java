@@ -46,9 +46,10 @@ public class Game {
     public void StartAnewGame() {
         //Todo:: terrain need to add terrains
         gameTimer = new GameTimer(5);
+        CreateTeamsStage();
         //Todo:Here We Should get the number of Players
       //  this.StartShoppingStage();
-        UpdateUnits();
+
         this.StartBattle();
     }
 
@@ -165,9 +166,10 @@ public class Game {
     }
 
     public void CreateTeamsStage() {
+        String path = "src\\com\\destroyordefend\\project\\Teams.json";
+        JSONParser jsonParser = new JSONParser();
         try {
-            FileReader reader = new FileReader("Teams");
-            JSONParser jsonParser = new JSONParser();
+            FileReader reader = new FileReader(path);
             JSONObject obj = (JSONObject) jsonParser.parse(reader);
             JSONArray jsonArray = (JSONArray) obj.get("Players");
             for (Object jsonObject : jsonArray) {

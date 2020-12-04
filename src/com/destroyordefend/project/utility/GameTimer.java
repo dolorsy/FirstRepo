@@ -19,7 +19,7 @@ import static com.destroyordefend.project.utility.UpdateRangeAsyncTask.updateRan
 public class GameTimer extends Thread {
 int RoundLength ;
 int currentSecond = 0;
-public static ExecutorService executorService = Executors.newFixedThreadPool(5);
+//public static ExecutorService executorService = Executors.newFixedThreadPool(5);
     public void run(){
         System.out.println("Here");
         for(;currentSecond<=RoundLength;currentSecond++){
@@ -48,14 +48,19 @@ public static ExecutorService executorService = Executors.newFixedThreadPool(5);
                   */
                 System.out.println("Here");
                 long current = System.currentTimeMillis();
-
+/*
                 executorService.submit(UpdateMapAsyncTask::invokeUpdatePosition);
                 executorService.submit(UpdateRangeAsyncTask::invokeUpdateRange);
                 executorService.submit(MainMethodAsyncTask::invokeMainMethods);
                 executorService.submit(this::reFill);
+*/
 
-                //todo: try invoke all , or set a time out for the above methods
-
+                Runnable method = UpdateMapAsyncTask::invokeUpdatePosition;
+                new Thread(method).start();
+                method = UpdateRangeAsyncTask::invokeUpdateRange;
+                new Thread(method).start();
+                method = MainMethodAsyncTask::invokeMainMethods;
+                new Thread(method);
 
                 current = System.currentTimeMillis()-current;
                 System.out.println("Spended Time" + current + "  " + currentSecond);
@@ -70,7 +75,7 @@ public static ExecutorService executorService = Executors.newFixedThreadPool(5);
         }
 
 
-        executorService.shutdown();
+       // executorService.shutdown();
 
     }
 
@@ -96,6 +101,20 @@ public static ExecutorService executorService = Executors.newFixedThreadPool(5);
             UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
             MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());
         }
+    }
+
+     public boolean pause(){
+        try {
+            this.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean resumee(){
+        this.notify();
+        return false;
     }
 }
 
