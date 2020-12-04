@@ -301,6 +301,18 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         return values.name;
     }
 
+    public int getRange() {
+        return values.range;
+    }
+
+    public int getDamage() {
+        return values.damage;
+    }
+
+    public void setName(String main_base) {
+        this.values.name = main_base;
+    }
+
     public static class UnitValues {
         String name;
         int health;
