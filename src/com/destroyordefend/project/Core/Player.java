@@ -32,6 +32,10 @@ public class Player {
 
     }
 
+    public void setRole(TeamRole role) {
+        this.role = role;
+    }
+
     public TeamRole getRole() {
         return role;
     }

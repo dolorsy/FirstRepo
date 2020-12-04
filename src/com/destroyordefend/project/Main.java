@@ -8,6 +8,7 @@ public class Main {
         System.out.println(s);
     }
 
+    //Todo:: After A WW3 with git
     public static void main(String[] args) {
 //        GameTimer gameTimer= new GameTimer(10);
 //        gameTimer.start();

@@ -53,11 +53,11 @@ int currentSecond = 0;
                 executorService.submit(this::reFill);
 */
 
-                Runnable method = UpdateMapAsyncTask::invokeUpdatePosition;
+             /*   Runnable method = UpdateMapAsyncTask::invokeUpdatePosition;
+                new Thread(method).start();*/
+                Runnable method = UpdateRangeAsyncTask::invokeUpdateRange;
                 new Thread(method).start();
-               /* method = UpdateRangeAsyncTask::invokeUpdateRange;
-                new Thread(method).start();
-                method = MainMethodAsyncTask::invokeMainMethods;
+              /*  method = MainMethodAsyncTask::invokeMainMethods;
                 new Thread(method);*/
 
                 current = System.currentTimeMillis()-current;
@@ -96,8 +96,11 @@ int currentSecond = 0;
         doMainThingQueue.clear();
         for(Unit unit: game.getAllUnits()){
 
+            if(unit.getSpeed() != 0 )
             UpdateMapAsyncTask.addMethod(unit::Move);
+        if(!unit.getName().equals("Main Base"))
             UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
+            if(unit.getDamage() == 0)
             MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());
         }
     }
