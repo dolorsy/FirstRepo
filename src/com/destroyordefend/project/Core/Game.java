@@ -60,6 +60,7 @@ Todo:: terrain need to add terrains
         // CreateTeamsStage();
         autoInitGame();
         UpdateUnits();
+
         this.StartBattle();
     }
 
@@ -83,15 +84,11 @@ Todo:: terrain need to add terrains
     }
 
     private void StartBattle() {
+        System.out.println("SizeSize : " + allUnits.size());
         gameTimer.start();
         p("Start Battle");
         p(String.valueOf(allUnits.size()));
-        for (Unit unit : allUnits) {
-            p(unit.toString());
-            UpdateMapAsyncTask.addMethod(unit::Move);
-            UpdateRangeAsyncTask.addMethod(unit::UpdateRange);
-            //Todo:Main method add to it Async Task
-        }
+
     }
 
     public boolean oneMore() {
@@ -113,7 +110,6 @@ Todo:: terrain need to add terrains
 
         for (Player player : attackers.getTeamPlayers()) {
             for (Unit unit : player.getArmy()) {
-                unit.setHealth(10);//todo : I think this should be removed
                 unit.setRole(player.getRole());
                 allUnits.add(unit);
             }
@@ -143,15 +139,21 @@ Todo:: terrain need to add terrains
         Iterator<Unit> unitIterator = allUnits.iterator();
         left = null;
         cur = unitIterator.next();
-        if (unitIterator.hasNext())
-            right = unitIterator.next();
-        while (unitIterator.hasNext()) {
+
+         do{
+             if (unitIterator.hasNext())
+                 right = unitIterator.next();
+
             cur.setNeighbourUnit("left", left);
             cur.setNeighbourUnit("right", right);
             left = cur;
             cur = right;
-            right = unitIterator.next();
-        }
+             System.out.println("fuckin id " + cur.getId());
+
+             //  right = unitIterator.next();
+        }while (unitIterator.hasNext());
+        cur.setNeighbourUnit("left", left);
+        cur.setNeighbourUnit("right", null);
     }
 
     public void setGameState(States gameState) {
@@ -218,23 +220,31 @@ Todo:: terrain need to add terrains
     private void autoInitGame() {
         Unit defndUnit = new Unit();
         defndUnit.setRole(Player.TeamRole.Defender);
-        defndUnit.setPosition(new Point(200, 23));
+        defndUnit.setPosition(new Point(30, 30));
         defndUnit.setHealth(200);
         defndUnit.setName("Main Base");
+        defndUnit.getValues().setType("Structure");
         defndUnit.setShot_speed(0);
         defndUnit.setSpeed(0);
         defndUnit.AcceptMovement(new FixedPosition());
         defndUnit.AcceptTactic(new RandomAttack());
+        defndUnit.setRole(Player.TeamRole.Defender);
+        Player p = new Player();
+        p.setRole(Player.TeamRole.Defender);
+        p.addArmy(defndUnit);
+
+        defenders.addPlayer(p);
         Unit attackUnit = new Unit();
 
-        Unit.UnitValues values = Shop.getInstance().getUnitByName("TeslaTank");
+        Unit.UnitValues values = Shop.getInstance().getUnitByName("Mirage tank");
         attackUnit.setRole(Player.TeamRole.Attacker);
         attackUnit.setPosition(new Point(20, 20));
         attackUnit.setValues(values);
 
-        attackUnit.AcceptMovement(new /*ToTarget(defndUnit)*/ FixedPatrol(80));
+        attackUnit.AcceptMovement(new  FixedPatrol(80));
         attackUnit.AcceptTactic(new RandomAttack());
         Player attacker = new Player();
+        attacker.setRole(Player.TeamRole.Attacker);
         attacker.addArmy(attackUnit);
 
         attackers.addPlayer(attacker);

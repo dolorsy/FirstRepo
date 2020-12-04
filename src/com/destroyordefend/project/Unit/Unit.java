@@ -27,7 +27,6 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     private UnitValues values;
     private Tactic tactic;
     private Damaging damaging;
-    private List<String> SortMap;
     private HashMap<String, Unit> leftAndRight = new HashMap<>();
 
 
@@ -51,10 +50,14 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         this.values = new UnitValues(unitValues);
     }
 
-    public List<String> getSortMap() {
-        return SortMap;
+    public ArrayList<String> getSortMap() {
+
+        return values.sortMap;
     }
 
+    public String getType(){
+        return values.Type;
+    }
     public Damaging getDamaging() {
         if (damaging == null)
             damaging = new Damaging();
@@ -76,12 +79,15 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
                 ", values=" + values + "\n" +
                 ", tactic=" + tactic + "\n" +
                 ", damaging=" + damaging + "\n" +
-                ", SortMap=" + SortMap + "\n" +
+                ", SortMap=" + values.sortMap + "\n" +
                 '}';
     }
 
     public void setTreeSetUnit(TreeSet<Unit> treeSetUnit) {
+        System.out.println("thisssssss: " + "id: " + getId() + this.treeSetUnit.size());
         this.treeSetUnit = treeSetUnit;
+        System.out.println("thisssssss: " + this.treeSetUnit.size());
+
     }
 
     public void setDamage(int damage){
@@ -328,12 +334,14 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         double shot_speed;
         int radius;
         int speed;
-        List<String> sortMap;
+        ArrayList<String> sortMap;
         int price;
+        String Type;
         int currentSpeed;//11
 
-        public UnitValues(String name, int health, double armor, int damage, int range, double shot_speed, int radius, int speed, List<String> SortMap, int price) {
+        public UnitValues(String name, String Type,int health, double armor, int damage, int range, double shot_speed, int radius, int speed, ArrayList<String> SortMap, int price) {
             this.name = name;
+            this.Type = Type;
             this.health = health;
             this.armor = armor;
             this.damage = damage;
@@ -346,12 +354,18 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
             currentSpeed = speed;
         }
 
+        //Todo: for Debuging
+        public void setType(String type) {
+            Type = type;
+        }
+
         public  UnitValues(){
 
         }
         public UnitValues(UnitValues unitValues) {
             this(
                     unitValues.name,
+                    unitValues.Type,
                     unitValues.health,
                     unitValues.armor,
                     unitValues.damage,
@@ -365,6 +379,8 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
         public UnitValues(JSONObject unit) {
             name = (String) unit.get("name");
+            Type = (String) unit.get("type");
+
             health = Integer.parseInt((String) unit.get("health"));
             armor = Double.parseDouble((String) unit.get("armor"));
             damage =Integer.parseInt ((String) unit.get("damage"));
@@ -379,6 +395,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
                 String s = c.toString();
                 sortMap.add(s);
             }
+
         }
         public boolean is(String name){
             return this.name.equalsIgnoreCase(name);

@@ -13,14 +13,16 @@ import static com.destroyordefend.project.Main.p;
 public interface Tactic {
     static void updateRange(Unit t){
 
-        TreeSet<Unit> temp = new TreeSet<>(new PointComparator());
+        TreeSet<Unit> temp = new TreeSet<>((o1,o2) -> 1);
         Unit tempUnit = t.getNeighbourUnit("left");
-        while(isInRange(t,tempUnit)){
+        while( tempUnit != null && isInRange(t,tempUnit) ){
+            System.out.println("Lefttt" + tempUnit.getName());
             temp.add(tempUnit);
             tempUnit = tempUnit.getNeighbourUnit("left");
         }
         tempUnit = t.getNeighbourUnit("right");
-        while(isInRange(t,tempUnit)){
+        System.out.println("aaaaaaaaaaaaaaaaaaaaaa " + isInRange(t,tempUnit));
+        while( tempUnit != null && isInRange(t,tempUnit) ){
             temp.add(tempUnit);
             tempUnit = tempUnit.getNeighbourUnit("right");
         }
@@ -41,10 +43,11 @@ public interface Tactic {
         */
     }
     static boolean isInRange(Unit radar,Unit target){
-        return !(target.getLeft() > radar.getRight() + radar.getRange() ||
+
+        return !(target != null && ((target.getLeft() > radar.getRight() + radar.getRange() ||
                 target.getRight() < radar.getLeft() - radar.getRange() || radar.getPosition().equals(target.getPosition())) ||
-                !(target.getDown() > radar.getUp() + radar.getRange() ||
-                        target.getUp() < radar.getDown() - radar.getRange());
+                target.getDown() > radar.getUp() + radar.getRange() ||
+                        target.getUp() < radar.getDown() - radar.getRange()));
     }
     void  SortMap (Unit unit);
 }

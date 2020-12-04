@@ -18,10 +18,12 @@ public class LowestHealthAttack implements Tactic {
         TreeSet<Unit> filtered = new TreeSet<Unit>(healthComparator);
         for (String type : types) {
             for (Unit u : temp) {
-                if (u.getName().equals(type))
+                if (u.getType().equals(type))
                     filtered.add(u);
             }
         }
         unit.setTreeSetUnit(filtered);
+        System.out.println("in Range id : " + unit.getId() + unit.getTreeSetUnit().size());
+
     }
 }
