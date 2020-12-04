@@ -9,13 +9,14 @@ import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
 
 
 public class Shop {
     private static Shop ins;
+    private Unit.UnitValues baseUnitValues;
     private ArrayList<Unit.UnitValues> shopUnits;
-    private int lowestPrice = 1<<30;
+    private int lowestPrice = 1 << 30;
 
     private Shop() {
         this.shopUnits = new ArrayList<>();
@@ -38,7 +39,7 @@ public class Shop {
     }
 
     public Unit.UnitValues getBaseValues() {
-        return shopUnits.get(0);
+        return baseUnitValues;
     }
 
     public Unit.UnitValues getUnitByName(String type) {
@@ -49,35 +50,31 @@ public class Shop {
         }
         return null;
     }
+
     public int getLowestPrice() {
         return this.lowestPrice;
     }
 
-     public void InitShop() {
+    public void InitShop() {
 
-         String path = "src\\com\\destroyordefend\\project\\UnitslnShop.json";
-         JSONParser jsonParser = new JSONParser();
-         try {
-             JSONObject obj = (JSONObject) jsonParser.parse(new FileReader(path));
-             JSONArray shop = (JSONArray) obj.get("shop");
+        String path = "src\\com\\destroyordefend\\project\\UnitslnShop.json";
+        JSONParser jsonParser = new JSONParser();
+        try {
+            JSONObject obj = (JSONObject) jsonParser.parse(new FileReader(path));
+            JSONArray shop = (JSONArray) obj.get("shop");
 
-             for (Object a : shop) {
-                 JSONObject unit1 = (JSONObject) a;
-                 lowestPrice = Math.min(lowestPrice,Integer.parseInt((String)unit1.get("price")));
-                 Unit.UnitValues unitValues = new Unit.UnitValues(unit1);
-                 if (unitValues.is("main base"))
-                     shopUnits.set(0,unitValues);
-                 else
-                     this.shopUnits.add(unitValues);
-             }
-         } catch (ParseException | IOException e) {
-             e.printStackTrace();
-         }
-     }
-
-    public Unit sellItem(String name){
-       // return new Unit(Objects.requireNonNull(getUnitByName(name)));
-        //what is that
-        return null;
+            for (Object a : shop) {
+                JSONObject unit1 = (JSONObject) a;
+                Unit.UnitValues unitValues = new Unit.UnitValues(unit1);
+                if (unitValues.is("main base"))
+                    baseUnitValues = unitValues;
+                else {
+                    this.shopUnits.add(unitValues);
+                    lowestPrice = Math.min(lowestPrice, Integer.parseInt((String) unit1.get("price")));
+                }
+            }
+        } catch (ParseException | IOException e) {
+            e.printStackTrace();
+        }
     }
 }
