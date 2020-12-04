@@ -416,6 +416,30 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
             return range;
         }
 
+        public double getShot_speed() {
+            return shot_speed;
+        }
+
+        public int getRadius() {
+            return radius;
+        }
+
+        public int getSpeed() {
+            return speed;
+        }
+
+        public ArrayList<String> getSortMap() {
+            return sortMap;
+        }
+
+        public String getType() {
+            return Type;
+        }
+
+        public int getCurrentSpeed() {
+            return currentSpeed;
+        }
+
         @Override
         public String toString() {
             return "UnitValues{" +
