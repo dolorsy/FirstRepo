@@ -15,22 +15,22 @@ import static com.destroyordefend.project.Main.p;
 public class Unit  implements  TacticAble , MovementAble , Barrier,UnitSetHelper{
 
     int id;
+    String playerId;
     final int attackSpeed = 4;
+    String type;
+    String name;
+    String role;
+    double armor;
+    int range;
+    int price;
+    int radius;
+    List<String> SortMap;
     Movement movement;
     TreeSet<Unit> treeSetUnit;
     Point point;
-    String role;
     UnitValues values;
     Tactic tactic;
     Damaging damaging;
-    String playerId;
-    List<String> SortMap;
-    int price;
-    String type;
-    String name;
-    double armor;
-    int range;
-    int radius;
 
 
     public String getPlayerId() {

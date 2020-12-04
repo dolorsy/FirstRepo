@@ -93,7 +93,6 @@ public int getUnitPrice(String type){
                  );
 
                   this.ShopUnits.add(new Unit(unit));
-
              }
 
              //Test read Json
