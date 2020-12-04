@@ -393,7 +393,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
             } else {
                 values.health -= damage;
             }
-            p("Accept Damage id: " + id + "new Helth: " + values.health);
+            p("Accept Damage id: " + id + "new Health: " + values.health);
         }
         @Override
         public void decrease() {
