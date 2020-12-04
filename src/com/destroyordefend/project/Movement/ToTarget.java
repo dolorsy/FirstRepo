@@ -27,11 +27,16 @@ public class ToTarget implements Movement {
         return p;
     }
 
+    @Override
+    public Stack<Point> getTruck() {
+        return track;
+    }
+
 
     @Override
     public boolean SetNextPoint(Unit unit) {
 
-        Point n = Movement.straightMove(unit.getPosition(),track.peek());
+       Point n = Movement.straightMove(unit.getPosition(),track.peek());
         Barrier barrier = Movement.canSetUnitPlace(n,unit);
         if(barrier != null){
             if(barrier.getName().equals("river")) {

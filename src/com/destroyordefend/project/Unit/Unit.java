@@ -103,24 +103,50 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         this.values = new UnitValues(values);
     }
 
+    public Movement getMovement() {
+        return movement;
+    }
+
     public void Move() {
-        for(int i =0 ;i<values.speed;i++) {
+        System.out.println("Current "  + getCurrentSpeed() );
+        System.out.println("x,y : " + getPosition());
+        for(int i =0 ;i<values.currentSpeed;i++) {
             Point p = this.movement.GetNextPoint(this);
             if(p.equals(getPosition())){
                 continue;
             }
-            p("Move id: " + id + " x,y " + p.toString());
+            boolean f = Movement.setNext(this,p);
+
+           if(f){
+               values.currentSpeed = values.speed / 2;
+
+           }else{
+               values.currentSpeed = values.speed ;
+
+           }
+
+
+           //Todo::The Following Code will used if we have many speed factors
+  /*
             Barrier factor = Movement.canSetUnitPlace(p, this);
+            if(factor != null)
+            System.out.println("Terrain :" + factor.getName());
             if (factor != null && factor.getClass().getName().equals(Terrain.class.getName())) {
                 Terrain terrain = (Terrain) factor;
                 if (terrain.getSpeedFactory() != 0) {
                     //TODO: For loop like Current speed to push invokable method in UpdateMapAsyncTask
                     values.currentSpeed = values.speed / terrain.getSpeedFactory();
                 }
-            }
+            }else{
+                values.currentSpeed = values.speed ;
+                continue;
+            }*/
             this.setPosition(p);
             this.updateLeftAndRight();
         }
+        System.out.println("x,y : " + getPosition());
+
+        System.out.println("Devider\n\n");
     }
 
     public TreeSet<Unit> getTreeSetUnit() {
@@ -142,12 +168,12 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
     @Override
     public int getId() {
-        return 0;
+        return id;
     }
 
     @Override
     public int getRadius() {
-        return 0;
+        return values.radius;
     }
 
     //Method TacticAble Class

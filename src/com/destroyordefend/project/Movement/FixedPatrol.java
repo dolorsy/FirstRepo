@@ -12,7 +12,8 @@ import java.util.Stack;
  */
 public class FixedPatrol implements Movement {
     //Todo: need to apply new Movement
-    LinkedList<Point> track ;
+    Stack<Point> track ;
+    LinkedList<Point> FixedTrack;
      int stepSize = 4;
      int currentTarget = 1;
     public FixedPatrol(int stepSize){
@@ -21,29 +22,30 @@ public class FixedPatrol implements Movement {
 
 
     private  void initQeueu(Point point){
-        track = new LinkedList<>();
-        track.add(new Point(point.getX(),point.getY()));
-        track.add(new Point(point.getX(),point.getY() + stepSize));
-        track.add(new Point(point.getX() + stepSize,point.getY() + stepSize));
-        track.add(new Point(point.getX()+stepSize,point.getY()));
-
+        track = new Stack<>();
+        FixedTrack.add(new Point(point.getX(),point.getY()));
+        track.push(FixedTrack.get(0));
+        FixedTrack.add(new Point(point.getX(),point.getY() + stepSize));track.push(FixedTrack.get(0));
+        track.push(FixedTrack.get(1));
+        FixedTrack.add(new Point(point.getX() + stepSize,point.getY() + stepSize));
+        track.push(FixedTrack.get(2));
+        FixedTrack.add(new Point(point.getX()+stepSize,point.getY()));
+        track.push(FixedTrack.get(3));
     }
     @Override
     public Point GetNextPoint(Unit unit) {
-        if(track == null)
+        if(track == null || track.empty())
             initQeueu(unit.getPosition());
-        if(unit.getPosition().equals(track.get(currentTarget))){
-            if(currentTarget == 3)
-                currentTarget =0;
-            else
-                currentTarget++;
+        if(track.peek().equals(unit.getPosition()))
+            track.pop();
 
-            Point temp = track.get(currentTarget);
-            System.out.println(temp);
-
-        }
-        Point p =Movement.straightMove(unit.getPosition(),track.get(currentTarget));
+        Point p =Movement.straightMove(unit.getPosition(),track.peek());
         return p;
+    }
+
+    @Override
+    public Stack<Point> getTruck() {
+        return track;
     }
 
 

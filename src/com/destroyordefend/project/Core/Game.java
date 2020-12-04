@@ -1,5 +1,6 @@
 package com.destroyordefend.project.Core;
 
+import com.destroyordefend.project.Movement.AircraftMovement;
 import com.destroyordefend.project.Movement.FixedPatrol;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.ToTarget;
@@ -51,17 +52,17 @@ public class Game {
     }
 
     public void StartAnewGame() {
-/*
-        Terrain t = new Terrain(new Point(30,100),2,"river");
+
+        Terrain t = new Terrain(new Point(140,140),2,"vally");
 
 
-        terrains.add(t );*/
+        terrains.add(t );
         //Todo:: terrain need to add terrains
         gameTimer = new GameTimer(10);
        // CreateTeamsStage();
         Unit defndUnit = new Unit(55);
         defndUnit.setRole(Player.TeamRole.Defender);
-        defndUnit.setPosition(new Point(200,23));
+        defndUnit.setPosition(new Point(400,200));
         defndUnit.setHealth(200);
         defndUnit.setName("Main Base");
         defndUnit.setShot_speed(0);
@@ -70,12 +71,14 @@ public class Game {
         defndUnit = defndUnit.AcceptTactic(new RandomAttack());
         Unit attackUnit = new Unit(77);
 
-        Unit.UnitValues values = Shop.getInstance().getUnitByName("TeslaTank");
+        Unit.UnitValues values = Shop.getInstance().getUnitByName("Black Eagle");
         attackUnit.setRole(Player.TeamRole.Attacker);
         attackUnit.setPosition(new Point(20,20));
         attackUnit.setValues(values);
-
-        attackUnit = attackUnit.AcceptMovement(new /*ToTarget(defndUnit)*/ FixedPatrol(80));
+        base = defndUnit;
+        Unit u = new Unit();
+        u.setPosition(new Point(3,3));
+        attackUnit = attackUnit.AcceptMovement(new AircraftMovement(u));
         attackUnit = attackUnit.AcceptTactic(new RandomAttack());
         Player attacker = new Player();
         attacker.addArmy(attackUnit);
