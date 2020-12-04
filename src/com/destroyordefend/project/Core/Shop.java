@@ -20,7 +20,6 @@ public class Shop {
 
     private Shop() {
         this.shopUnits = new ArrayList<>();
-        shopUnits.add(null);
         this.InitShop();
     }
 
