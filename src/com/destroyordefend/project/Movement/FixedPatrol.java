@@ -13,12 +13,11 @@ import java.util.Stack;
 public class FixedPatrol implements Movement {
     //Todo: need to apply new Movement
     LinkedList<Point> track ;
-     int stepSize = 4;
+     int stepSize ;
      int currentTarget = 1;
     public FixedPatrol(int stepSize){
      this.stepSize = stepSize;
     }
-
 
     private  void initQeueu(Point point){
         track = new LinkedList<>();
@@ -40,14 +39,8 @@ public class FixedPatrol implements Movement {
 
             Point temp = track.get(currentTarget);
             System.out.println(temp);
-
         }
         Point p =Movement.straightMove(unit.getPosition(),track.get(currentTarget));
         return p;
-    }
-
-
-    private interface next {
-        Point getNext(Point p);
     }
 }

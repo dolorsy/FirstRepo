@@ -19,7 +19,7 @@ public interface Movement {
         else if (temp.isSharedWith(temp.getNeighbourUnit("right")))
             return temp.getNeighbourUnit("right");
         else {
-            //Todo: need to change
+            //Todo: need to change // we should check left/right/up down shouldn't we?
             for (Barrier u : game.getTerrains()) {
                 if (!(u.isSharedWith(temp)) && !u.getPosition().equals(temp.getPosition())) {
                     return u;

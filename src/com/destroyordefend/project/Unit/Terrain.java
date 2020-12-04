@@ -7,7 +7,7 @@ import com.destroyordefend.project.utility.IdGenerator;
 public class Terrain implements Barrier{
 
     private Point point;
-    public final int id;
+    private final int id;
     private int speedFactory;
     private int radius;
     private int health;

@@ -12,12 +12,12 @@ import static com.destroyordefend.project.Core.Game.game;
 public class AircraftMovement implements Movement {
     private PriorityQueue<Point> track = new PriorityQueue<>();
 
-
     public AircraftMovement(Unit airport){
         track.add(airport.getPosition());
         track.add(game.getBase().getPosition());
     }
-    @Override
+    @Override // todo: you should use this to get next point then in unit.move() set the next point
+    //todo: according to the terrain
     public Point GetNextPoint(Unit unit) {
         return null;
     }

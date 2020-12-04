@@ -15,14 +15,12 @@ import java.util.*;
 public class Shop {
     private static Shop ins;
     private ArrayList<Unit.UnitValues> shopUnits;
-    private int lowestPrice = 0;
+    private int lowestPrice = 1<<30;
 
     private Shop() {
-
         this.shopUnits = new ArrayList<>();
         shopUnits.add(null);
         this.InitShop();
-
     }
 
     public static Shop getInstance() {
@@ -57,9 +55,6 @@ public class Shop {
 
      public void InitShop() {
 
-         //Todo: Here We Should read from DataBase Or JSON To fill ShopUnits;
-         //Todo:Here We should init lowestPrice
-
          String path = "src\\com\\destroyordefend\\project\\UnitslnShop.json";
          JSONParser jsonParser = new JSONParser();
          try {
@@ -68,6 +63,7 @@ public class Shop {
 
              for (Object a : shop) {
                  JSONObject unit1 = (JSONObject) a;
+                 lowestPrice = Math.min(lowestPrice,Integer.parseInt((String)unit1.get("price")));
                  Unit.UnitValues unitValues = new Unit.UnitValues(unit1);
                  if (unitValues.is("main base"))
                      shopUnits.set(0,unitValues);

@@ -10,5 +10,4 @@ public class FixedPosition implements Movement {
         return unit.getPosition();
     }
 
-
 }
