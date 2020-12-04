@@ -220,7 +220,7 @@ Todo:: terrain need to add terrains
         defndUnit.setRole(Player.TeamRole.Defender);
         defndUnit.setPosition(new Point(200, 23));
         defndUnit.setHealth(200);
-        defndUnit.setName("Main Base");
+        defndUnit.getValues().setName("Main Base");
         defndUnit.setShot_speed(0);
         defndUnit.setSpeed(0);
         defndUnit.AcceptMovement(new FixedPosition());

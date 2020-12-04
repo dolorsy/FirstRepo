@@ -295,30 +295,6 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         return values.name;
     }
 
-    public void setName(String name) {
-        this.values.name = name;
-    }
-
-    public int getPrice() {
-        return values.price;
-    }
-
-    public int getHealth() {
-        return values.health;
-    }
-
-    public double getArmor() {
-        return values.armor;
-    }
-
-    public int getDamage() {
-        return values.damage;
-    }
-
-    public int getRange() {
-        return values.range;
-    }
-
     public static class UnitValues {
         String name;
         int health;
@@ -382,6 +358,33 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         }
         public boolean is(String name){
             return this.name.equalsIgnoreCase(name);
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name){
+            this.name = name;
+        }
+        public int getPrice() {
+            return price;
+        }
+
+        public int getHealth() {
+            return health;
+        }
+
+        public double getArmor() {
+            return armor;
+        }
+
+        public int getDamage() {
+            return damage;
+        }
+
+        public int getRange() {
+            return range;
         }
 
         @Override

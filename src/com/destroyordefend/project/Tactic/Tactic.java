@@ -41,10 +41,10 @@ public interface Tactic {
         */
     }
     static boolean isInRange(Unit radar,Unit target){
-        return !(target.getLeft() > radar.getRight() + radar.getRange() ||
-                target.getRight() < radar.getLeft() - radar.getRange() || radar.getPosition().equals(target.getPosition())) ||
-                !(target.getDown() > radar.getUp() + radar.getRange() ||
-                        target.getUp() < radar.getDown() - radar.getRange());
+        return !(target.getLeft() > radar.getRight() + radar.getValues().getRange() ||
+                target.getRight() < radar.getLeft() - radar.getValues().getRange() || radar.getPosition().equals(target.getPosition())) ||
+                !(target.getDown() > radar.getUp() + radar.getValues().getRange() ||
+                        target.getUp() < radar.getDown() - radar.getValues().getRange());
     }
     void  SortMap (Unit unit);
 }
