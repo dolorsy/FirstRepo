@@ -1,6 +1,5 @@
 package com.destroyordefend.project.Movement;
 
-import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Barrier;
 import com.destroyordefend.project.Unit.Unit;
@@ -25,12 +24,11 @@ public class ToTarget implements Movement {
     @Override
     public boolean SetNextPoint(Unit unit) {
 
-        Point n = makeAnewPoint(unit,track.peek());
-
+        Point n = Movement.straightMove(unit.getPosition(),track.peek());
         Barrier barrier = Movement.canSetUnitPlace(n,unit);
         if(barrier != null){
-            if(barrier.getType().equals("river")) {
-                unit.getPosition().setPoint(n);
+            if(barrier.getName().equals("river")) {
+                unit.setPosition(n);
                 return true;
             }
             Point[] corners = {barrier.getDownLeftCorner(),barrier.getDownRightCorner(),barrier.getUpRightCorner(),barrier.getUpLeftCorner()};
@@ -50,10 +48,8 @@ public class ToTarget implements Movement {
                     else
                         nextp = 1;
 
-
                     curDist = curAns;
                 }
-
             }
             switch (min) {
                 case 1 : {
@@ -76,7 +72,8 @@ public class ToTarget implements Movement {
                     corners[min].setY(corners[min].getY() + unit.getRadius());
                     break;
                 }
-                default : throw new IllegalStateException("Unexpected value: " + min);
+                default :
+                    throw new IllegalStateException("Unexpected value: " + min);
             }
 
             switch (nextp) {
@@ -100,21 +97,17 @@ public class ToTarget implements Movement {
                     corners[nextp].setY(corners[nextp].getY() + unit.getRadius());
                     break;
                 }
-                default : throw new IllegalStateException("Unexpected value: " + min);
+                default :
+                    throw new IllegalStateException("Unexpected value: " + min);
             }
 
             track.push(corners[nextp]);
             track.push(corners[min]);
-
         }
-
-        //Todo: Should Update n here? n = makeAnewPoint(unit); ????
-        unit.getPosition().setPoint(n);
+        //Todo: Should Update n here? n = makeAnewPoint(unit); ???? no it should be in unit.move();
+        unit.setPosition(n);
         return false;
     }
-
-
-
 }
 
 

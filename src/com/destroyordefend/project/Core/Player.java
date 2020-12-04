@@ -1,123 +1,73 @@
 package com.destroyordefend.project.Core;
 
 
-import com.destroyordefend.project.Tactic.Comparators.AriDefenceComparator;
 import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.utility.IdGenerator;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.TreeSet;
 
-import static com.destroyordefend.project.Core.Game.game;
-import static com.destroyordefend.project.Main.p;
 
-
-enum TeamRole{
-    Attacker,Defender
-}
 public class Player {
-
-    int Points;
-    //Is he attacker or Defender
-    TeamRole role;
-    String id;
-    TreeSet<Unit> army;
-
-    public String getId() {
-        return id;
-    }
-    public Player(){
-     army = new TreeSet<>(new AriDefenceComparator());
-    }
-
-    public Player(int points, TeamRole role, String id) {
-        army = new TreeSet<>(new PointComparator());
-
+    private int Points;
+    public final int id;
+    private TeamRole role;    //Is he attacker or Defender
+    private String name;
+    private TreeSet<Unit> army;
+    public Player(){id = IdGenerator.generate(this);}
+    public Player(int points, TeamRole role, String name) {
+        this();
+        army = new TreeSet<>(new PointComparator());//todo:need to check if it is work for point comparator
         Points = points;
         this.role = role;
-        this.id = id;
+        this.name = name;
     }
 
-    public void setPoints(int points) {
-        Points = points;
+    public TeamRole getRole() {
+        return role;
     }
 
-    public Player setRole(String role) {
-        this.role = TeamRole.valueOf(role);
-        return this;
-    }
-
-    public Player setId(String id) {
-        this.id = id;
-        return this;
-    }
-
-    public void setArmy(TreeSet<Unit> army) {
-        this.army = army;
+    public String getName() {
+        return name;
     }
 
     public TreeSet<Unit> getArmy() {
         return army;
     }
 
-    public void addArmy(Unit u){
-        army.add(u);
+    public int getId() {
+        return id;
     }
-    void cutPrice(int price) throws NoEnoughPointsException {
-        if(Points-price<0) {
-            throw new NoEnoughPointsException("No Enough Points to buy; Your Points:" + Points + "; Price: " +  price );
+
+    public int getPoints() {
+        return Points;
+    }
+
+    public void cutPrice(int price) throws NoEnoughPointsException {
+        if (Points - price < 0) {
+            throw new NoEnoughPointsException("No Enough Points to buy; Your Points:" + Points + "; Price: " + price);
         }
-        Points-=price;
-    }
-    public void CreateArmy(){
-        p("First Time");
-
-        //Todo: it's just a test
-
-        this.army.add(game.getShop().ShopUnits.get(0));
-
-        //Todo:Here we will Shopping
-        while (this.Points>0)
-            try{
-                BuyAnArmy(game.getShop().sellItem("TANK"),game.shop.getUnitPrice("TANK") );
-            }catch (PointsCantByuException ex){
-                System.err.println(ex);
-                break;
-            }
-
-
-
+        Points -= price;
     }
 
-    public void BuyAnArmy(Unit unit, int price) throws PointsCantByuException{
+    public void BuyAnArmy(Unit unit) throws  NoEnoughPointsException {
+        cutPrice(unit.getPrice());
+        unit.setRole(this.role);
+        army.add(unit);
+    }
 
-        try{
-            if(this.Points <game.getShop().getLowestPrice())
-                throw new PointsCantByuException("You Have only " + this.Points + ", this cant buy anything!!");
-            cutPrice(price);
-            unit.setRole(this.role.name());
-            army.add(unit);
-        }catch (NoEnoughPointsException ex){
-            System.err.println(ex);
+    public void updateArmyState() {
+        for (Unit unit : army) {
+            army.removeIf(unit1 -> !unit.isAlive());
         }
     }
 
-    public void updateArmyState(){
-        for(Unit unit : army){
-                army.removeIf(unit1 -> unit.getHealth()==0);
-        }
+    public enum TeamRole {
+        Attacker, Defender
     }
 }
 
-class NoEnoughPointsException extends Exception{
-    NoEnoughPointsException(String message){
-        super(message);
-    }
-}
-
-
-class PointsCantByuException extends Exception{
-    PointsCantByuException(String message){
+class NoEnoughPointsException extends Exception {
+    NoEnoughPointsException(String message) {
         super(message);
     }
 }

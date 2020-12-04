@@ -10,8 +10,5 @@ public class FixedPosition implements Movement {
         return unit.getPosition();
     }
 
-    @Override
-    public boolean SetNextPoint(Unit unit) {
-        return false;
-    }
+
 }
