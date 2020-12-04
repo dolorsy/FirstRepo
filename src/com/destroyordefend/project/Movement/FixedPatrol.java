@@ -17,12 +17,14 @@ public class FixedPatrol implements Movement {
      int stepSize = 4;
      int currentTarget = 1;
     public FixedPatrol(int stepSize){
+
      this.stepSize = stepSize;
     }
 
 
     private  void initQeueu(Point point){
         track = new Stack<>();
+        FixedTrack = new LinkedList<>();
         FixedTrack.add(new Point(point.getX(),point.getY()));
         track.push(FixedTrack.get(0));
         FixedTrack.add(new Point(point.getX(),point.getY() + stepSize));track.push(FixedTrack.get(0));
@@ -34,11 +36,14 @@ public class FixedPatrol implements Movement {
     }
     @Override
     public Point GetNextPoint(Unit unit) {
-        if(track == null || track.empty())
+        if(track == null)
             initQeueu(unit.getPosition());
         if(track.peek().equals(unit.getPosition()))
             track.pop();
+        if(track.size() == 0)
+            initQeueu(unit.getPosition());
 
+        System.out.println("Stack size : " + track.size());
         Point p =Movement.straightMove(unit.getPosition(),track.peek());
         return p;
     }
