@@ -19,7 +19,7 @@ import static com.destroyordefend.project.Main.p;
 
 public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
-    public final int id;
+    private final int id;
     private Movement movement;
     private TreeSet<Unit> treeSetUnit = new TreeSet<>(new PointComparator());
     private Point point = new Point();
@@ -32,17 +32,10 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
 
     public Unit() {
-        treeSetUnit = new TreeSet<>(new PointComparator());
-        this.id = IdGenerator.generate(this);
+       id = IdGenerator.generate(this);
     }
 
-    public Unit(int id) {
-        this.id = id;
-    }
 
-    public void setDamage(int damage){
-        this.values.damage = damage;
-    }
     //Copy Constructor
     public Unit(Unit unit) {
         this();
@@ -89,6 +82,10 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
     public void setTreeSetUnit(TreeSet<Unit> treeSetUnit) {
         this.treeSetUnit = treeSetUnit;
+    }
+
+    public void setDamage(int damage){
+        this.values.damage = damage;
     }
 
     public void setRole(Player.TeamRole role) {
