@@ -60,7 +60,7 @@ public class Log {
     public static void h(Unit unit){
         File file = new File("logFile.txt");
         writeFile("time :" + Game.getGame().getGameTimer().getCurrentSecond()+
-                "health :" + unit.getHealth() + "\n"  + "---------------" + "\n",file);
+                "health :" + unit.getValues().getHealth() + "\n"  + "---------------" + "\n",file);
     }
     public static void four(){}
 

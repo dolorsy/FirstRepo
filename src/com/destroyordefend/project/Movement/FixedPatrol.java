@@ -52,9 +52,4 @@ public class FixedPatrol implements Movement {
     public Stack<Point> getTruck() {
         return track;
     }
-
-
-    private interface next {
-        Point getNext(Point p);
-    }
 }

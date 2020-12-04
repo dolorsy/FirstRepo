@@ -60,7 +60,7 @@ public class Player {
     }
 
     public void BuyAnArmy(Unit unit) throws NoEnoughPointsException {
-        cutPrice(unit.getPrice());
+        cutPrice(unit.getValues().getPrice());
         unit.setRole(this.role);
         army.add(unit);
     }
