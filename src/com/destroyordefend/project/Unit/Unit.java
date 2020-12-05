@@ -474,6 +474,9 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         }
         @Override
         public void DoDamage() {
+            if(treeSetUnit.size() ==0)
+                return;
+            //Todo: here a big mistake
             Unit.this.getTreeSetUnit().first().getDamaging().AcceptDamage(this.getDamage());
             Log.doDamage(Unit.this,treeSetUnit.first());
             accumulator-=1.0;

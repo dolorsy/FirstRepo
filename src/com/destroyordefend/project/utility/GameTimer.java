@@ -6,6 +6,7 @@ import com.destroyordefend.project.Unit.Unit;
 import java.util.Observable;
 import java.util.Observer;
 import static com.destroyordefend.project.Core.Game.game;
+import static com.destroyordefend.project.Core.Game.getGame;
 import static com.destroyordefend.project.utility.MainMethodAsyncTask.doMainThingQueue;
 import static com.destroyordefend.project.utility.UpdateMapAsyncTask.updatePositionQueue;
 import static com.destroyordefend.project.utility.UpdateRangeAsyncTask.updateRangeQueue;
@@ -26,13 +27,7 @@ Thread updateRangeThread = new Thread();
                 //Todo:May Be You need Exception Handling
                 //Todo: We should invoke All Players UpdateArmy
 
-/*
-                executorService.submit(UpdateMapAsyncTask::invokeUpdatePosition);
-                executorService.submit(UpdateRangeAsyncTask::invokeUpdateRange);
-                executorService.submit(MainMethodAsyncTask::invokeMainMethods);
-                executorService.submit(this::reFill);
-*/
-                System.out.println(game.getGameStateName());
+
                 if(game.getGameStateName().equals("Running")) {
                     long current = System.currentTimeMillis();
 
@@ -108,11 +103,9 @@ Thread updateRangeThread = new Thread();
         this.notify();
         return false;
     }
-    LiveData<String> state;
-
     @Override
     public void update(Observable o, Object arg) {
-        state = (LiveData<String>) o;
+        //Todo:: its not used
     }
 }
 

@@ -2,22 +2,18 @@ package com.destroyordefend.project.Core;
 
 import com.destroyordefend.project.Movement.FixedPatrol;
 import com.destroyordefend.project.Movement.FixedPosition;
-import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.RandomAttack;
 import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
 import com.destroyordefend.project.utility.LiveData;
-import com.destroyordefend.project.utility.UpdateMapAsyncTask;
-import com.destroyordefend.project.utility.UpdateRangeAsyncTask;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Main.p;
@@ -31,12 +27,11 @@ import static com.destroyordefend.project.Main.p;
 }
 
 public class Game {
-     LiveData<String> liveData = new LiveData<>("Running") ;
+     LiveData<States>  GameState = new LiveData<>(States.NotRunning) ;
     public static Game game;
     private Unit base;
     private TreeSet<Unit> allUnits = new TreeSet<>((v1, v2) -> 1);
     private TreeSet<Terrain> terrains = new TreeSet<>(new PointComparator());
-    private States GameState = States.NotRunning;
     private Team attackers, defenders;
     int attackerNumber, defenderNumber;
     GameTimer gameTimer;
@@ -63,7 +58,7 @@ Todo:: terrain need to add terrains
         Terrain t = new Terrain(new Point(30,100),2,"river");
         terrains.add(t );*/
         gameTimer = new GameTimer(10);
-        liveData.addObserver(gameTimer);
+        GameState.addObserver(gameTimer);
        //  CreateTeamsStage();
 
         autoInitGame();
@@ -164,14 +159,13 @@ Todo:: terrain need to add terrains
     }
 
     public void setGameState(States gameState) {
-        GameState = gameState;
+        GameState.setData(gameState);
     }
     public void setGameState(String state){
-        liveData.setData(state);
-        GameState = States.valueOf(liveData.getData());
+        GameState.setData(States.valueOf(state));
     }
 
-    public States getGameState() {
+    public LiveData<States> getGameState() {
         return GameState;
     }
 
@@ -230,13 +224,13 @@ Todo:: terrain need to add terrains
 
     public void UpdateState() {
         if (!attackers.isAlive()) {
-            liveData.setData(States.DefenderWin.name());
+            GameState.setData(States.DefenderWin);
             setGameState(States.DefenderWin);
         } else if (!base.isAlive()) {
-            liveData.setData(States.AttackerWin.name());
+            GameState.setData(States.AttackerWin);
             setGameState(States.AttackerWin);
         } else if (gameTimer.onEnd()) {
-            liveData.setData(States.DefenderWin.name());
+            GameState.setData(States.DefenderWin);
             setGameState(States.DefenderWin);
         }
 
@@ -296,7 +290,7 @@ Todo:: terrain need to add terrains
 
     public String getGameStateName() {
 
-        return liveData.getData();
+        return GameState.getData().name();
     }
 
     class PlayerIterator implements Iterator<Player> {
