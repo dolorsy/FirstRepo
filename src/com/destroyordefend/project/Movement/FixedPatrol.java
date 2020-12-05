@@ -51,4 +51,11 @@ public class FixedPatrol implements Movement {
     public Stack<Point> getTruck() {
         return track;
     }
+
+    @Override
+    public String toString() {
+        return "FixedPatrol{" +
+                ", stepSize=" + stepSize +
+                '}';
+    }
 }

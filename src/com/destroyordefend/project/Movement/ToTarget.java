@@ -7,8 +7,7 @@ import com.destroyordefend.project.Unit.Unit;
 import java.util.Stack;
 
 public class ToTarget implements Movement {
-    private Point target;
-    private Barrier goal;
+
     private final Stack<Point> track = new Stack<>();
 
     public ToTarget(Unit target) {
@@ -118,6 +117,11 @@ public class ToTarget implements Movement {
         //Todo: Should Update n here? n = makeAnewPoint(unit); ???? no it should be in unit.move();
         unit.setPosition(n);
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "ToTarget";
     }
 }
 

@@ -6,6 +6,7 @@ import com.destroyordefend.project.Core.PointComparator;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.utility.IdGenerator;
+import com.destroyordefend.project.utility.Log;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -143,6 +144,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
             this.setPosition(p);
             this.updateLeftAndRight();
         }
+        Log.move(this);
 
     }
 
@@ -472,6 +474,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         @Override
         public void DoDamage() {
             treeSetUnit.first().getDamaging().AcceptDamage(this.getDamage());
+            Log.doDamage(Unit.this,treeSetUnit.first());
             accumulator-=1.0;
         }
         @Override
@@ -480,9 +483,11 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
             if ((valueresulte) <= 0) {
 
                 values.health = 0;
+                Log.onDestroy(Unit.this);
                 onDestroy();
             } else {
                 values.health -= valueresulte;
+                Log.acceptDamage(Unit.this);
             }
             p("Accept Damage id: " + id + " new Health: " + values.health);
         }

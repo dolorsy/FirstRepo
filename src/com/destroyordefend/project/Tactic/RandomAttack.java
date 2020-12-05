@@ -26,4 +26,9 @@ public class RandomAttack implements Tactic {
         unit.setTreeSetUnit(filtered);
 
     }
+
+    @Override
+    public String toString() {
+        return "RandomAttack";
+    }
 }

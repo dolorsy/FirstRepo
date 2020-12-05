@@ -46,7 +46,7 @@ Thread updateRangeThread = new Thread();
                     Thread.sleep(1000 - current);
                     reFill();
                 }else if(game.getGameStateName().equals("AttackerWin") || game.getGameStateName().equals("DefenderWin")){
-                    System.out.println( "Game Over, " + game.getGameStateName());
+                    Log.GameOver("GameOver, "  + game.getGameStateName());
                     this.interrupt();
                     break;
                 }else{

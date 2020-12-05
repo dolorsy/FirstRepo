@@ -12,6 +12,7 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 //        GameTimer gameTimer= new GameTimer(10);
 //        gameTimer.start();
+
        Game game = Game.getGame();
         game.StartAnewGame();
 

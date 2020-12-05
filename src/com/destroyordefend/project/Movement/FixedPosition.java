@@ -17,5 +17,8 @@ public class FixedPosition implements Movement {
         return null;
     }
 
-
+    @Override
+    public String toString() {
+        return "FixedPosition";
+    }
 }

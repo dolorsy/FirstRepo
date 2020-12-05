@@ -46,4 +46,11 @@ public class AircraftMovement implements Movement {
 
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "AircraftMovement{" +
+                "airport=" + airport +
+                '}';
+    }
 }

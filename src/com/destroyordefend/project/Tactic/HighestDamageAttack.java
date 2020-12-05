@@ -29,4 +29,9 @@ public class HighestDamageAttack implements Tactic {
         }
         unit.setTreeSetUnit(filtered);
     }
+
+    @Override
+    public String toString() {
+        return "HighestDamage";
+    }
 }

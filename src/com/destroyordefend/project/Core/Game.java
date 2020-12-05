@@ -87,6 +87,7 @@ Todo:: terrain need to add terrains
     }
 
     private void StartBattle() {
+
         for(Unit unit : allUnits)
             System.out.println(unit);
         setGameState(States.Running);

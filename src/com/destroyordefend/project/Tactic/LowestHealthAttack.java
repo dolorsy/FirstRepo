@@ -25,4 +25,9 @@ public class LowestHealthAttack implements Tactic {
         unit.setTreeSetUnit(filtered);
 
     }
+
+    @Override
+    public String toString() {
+        return "LowestHealth";
+    }
 }
