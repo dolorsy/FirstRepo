@@ -1,15 +1,34 @@
 package com.destroyordefend.project.Movement;
 
 
+import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Barrier;
 import com.destroyordefend.project.Unit.Unit;
+import org.json.simple.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 import static com.destroyordefend.project.Core.Game.game;
 
 public interface Movement {
+
+    static Movement getSuitableMovment(JSONObject movement) {
+        System.out.println(String.valueOf(movement.get("stepSize")) );
+        switch (String.valueOf(movement.get("type")) ){
+            case"FixedPatrol":
+                return new FixedPatrol(Integer.parseInt((String) movement.get("stepSize")));
+            case"ToTarget":
+                return new ToTarget(Game.getGame().getBase());
+            case"AircraftMovement":
+                return new AircraftMovement();
+            default:
+                return new FixedPosition();
+
+        }
+    }
 
     Point GetNextPoint(Unit unit);
     public Stack<Point> getTruck();

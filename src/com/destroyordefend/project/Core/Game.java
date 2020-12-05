@@ -2,7 +2,9 @@ package com.destroyordefend.project.Core;
 
 import com.destroyordefend.project.Movement.FixedPatrol;
 import com.destroyordefend.project.Movement.FixedPosition;
+import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.RandomAttack;
+import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
@@ -15,6 +17,7 @@ import org.json.simple.parser.JSONParser;
 
 import java.io.FileReader;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Main.p;
@@ -54,17 +57,19 @@ public class Game {
     }
 
     public void StartAnewGame() {
-/*
+
+        /*
 Todo:: terrain need to add terrains
         Terrain t = new Terrain(new Point(30,100),2,"river");
         terrains.add(t );*/
         gameTimer = new GameTimer(10);
         liveData.addObserver(gameTimer);
-        // CreateTeamsStage();
+       //  CreateTeamsStage();
+
         autoInitGame();
         UpdateUnits();
-
         this.StartBattle();
+
     }
 
     public void addPlayer(Player p) {
@@ -164,7 +169,8 @@ Todo:: terrain need to add terrains
         GameState = gameState;
     }
     public void setGameState(String state){
-        GameState = States.valueOf(state);
+        liveData.setData(state);
+        GameState = States.valueOf(liveData.getData());
     }
 
     public States getGameState() {
@@ -186,7 +192,6 @@ Todo:: terrain need to add terrains
 
     public void CreateTeamsStage() {
         String path = "src\\com\\destroyordefend\\project\\Teams.json";
-        Unit unit = new Unit();
         TreeSet<Unit> al = new TreeSet<>();
         JSONParser jsonParser = new JSONParser();
         try {
@@ -194,17 +199,26 @@ Todo:: terrain need to add terrains
             JSONArray jsonArray = (JSONArray) obj.get("Players");
             for (Object jsonObject : jsonArray) {
                 JSONObject player = (JSONObject) jsonObject;
-                Player p = new Player((int) player.get("Points")
+                Player p = new Player(Integer.parseInt( player.get("Points").toString())
                         , Player.TeamRole.valueOf((String) player.get("role"))
                         , (String) player.get("id"));
+                System.out.println(p.getRole().name());
                 JSONArray Army = (JSONArray) player.get("army");
+                System.out.println("Army : " + Army.toJSONString());
                 for(Object a : Army){
                     JSONObject jsonObject1 = (JSONObject) a;
-                    String movement = (String) jsonObject1.get("movement");
-                    String name = (String) jsonObject1.get("name");
-                    String positionX = (String) jsonObject1.get("positionX");//int
-                    String positionY = (String) jsonObject1.get("positionY");//int
-                    String tactic = (String) jsonObject1.get("tactic");
+                    System.out.println((String) jsonObject1.get("name"));
+                    Unit unit = new Unit(new Unit.UnitValues (Shop.getInstance()
+                            .getUnitByName((String) jsonObject1.get("name"))));
+
+                    unit.setPosition(new Point(Integer.parseInt((String) jsonObject1.get("positionX")),
+                            Integer.parseInt((String) jsonObject1.get("positionY"))));
+                    unit.AcceptTactic(Tactic.getSuitableTactic((String) jsonObject1.get("tactic")));
+                    System.out.println(jsonObject1.toJSONString());
+                    System.out.println("test" + jsonObject1.get("movement"));
+                   // unit.AcceptMovement(Movement.getSuitableMovment( jsonObject1.get("movement")));
+                    unit.setRole(p.getRole());
+                    p.addArmy(unit);
 
                 }
                 addPlayer(p);
@@ -280,6 +294,7 @@ Todo:: terrain need to add terrains
     }
 
     public String getGameStateName() {
+
         return GameState.name();
     }
 
@@ -309,4 +324,5 @@ Todo:: terrain need to add terrains
             }
         }
     }
+
 }

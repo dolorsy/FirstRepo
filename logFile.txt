@@ -74,4 +74,28 @@ time: 4	Unit id: 3	Destroyed
 ---------------
 time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
 ---------------
-GameOver, DefenderWin
+GameOver, DefenderWintime: 3	Unit id: 2	new health :700
+---------------
+time: 3	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+---------------
+time: 3	Unit id: 3	new health :10
+---------------
+time: 3	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+time: 4	Unit id: 3	Destroyed 
+---------------
+time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+GameOver, DefenderWintime: 3	Unit id: 2	new health :700
+---------------
+time: 3	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+---------------
+time: 3	Unit id: 3	new health :10
+---------------
+time: 3	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+time: 4	Unit id: 3	Destroyed 
+---------------
+time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+GameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWin

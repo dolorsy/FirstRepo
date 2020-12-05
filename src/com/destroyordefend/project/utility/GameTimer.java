@@ -26,7 +26,6 @@ Thread updateRangeThread = new Thread();
                 //Todo:May Be You need Exception Handling
                 //Todo: We should invoke All Players UpdateArmy
 
-                long current = System.currentTimeMillis();
 /*
                 executorService.submit(UpdateMapAsyncTask::invokeUpdatePosition);
                 executorService.submit(UpdateRangeAsyncTask::invokeUpdateRange);
@@ -34,9 +33,10 @@ Thread updateRangeThread = new Thread();
                 executorService.submit(this::reFill);
 */
                 if(game.getGameStateName().equals("Running")) {
+                    long current = System.currentTimeMillis();
 
-           /*  updatePositionsThread = new Thread(UpdateMapAsyncTask::invokeUpdatePosition);
-             updatePositionsThread.start();*/
+            updatePositionsThread = new Thread(UpdateMapAsyncTask::invokeUpdatePosition);
+             updatePositionsThread.start();
              updateRangeThread = new Thread(UpdateRangeAsyncTask::invokeUpdateRange);
              updateRangeThread.start();
              updateMainThread = new Thread(MainMethodAsyncTask::invokeMainMethods);
@@ -89,6 +89,7 @@ Thread updateRangeThread = new Thread();
             UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
 
         //Todo: here we can make damaging more real
+            System.out.println("first ::: "  + unit.getTreeSetUnit().size());
             if(unit.getDamage() != 0 && unit.getTreeSetUnit().size() !=0 && unit.getDamaging().CanShot())
             MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());
         }

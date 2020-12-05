@@ -21,6 +21,11 @@ public class AircraftMovement implements Movement {
         this.airport = airport.getPosition();
     }
 
+    public AircraftMovement() {
+        //Todo:: A big Mistake
+        airport = new Point(50,50);
+    }
+
     public void updateTrack(){
         track.add(airport);
         track.add(game.getBase().getPosition());
