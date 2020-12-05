@@ -373,6 +373,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
             radius = Integer.parseInt((String) unit.get("radius"));
             speed = Integer.parseInt((String) unit.get("speed"));
             price = Integer.parseInt((String) unit.get("price"));
+
             sortMap = new ArrayList<>();
             JSONArray sMap = (JSONArray) unit.get("SortMap");
             for (Object c : sMap) {

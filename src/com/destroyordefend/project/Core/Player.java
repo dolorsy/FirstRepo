@@ -36,6 +36,10 @@ public class Player {
         this.role = role;
     }
 
+    public void setArmy(TreeSet<Unit> army) {
+        this.army = army;
+    }
+
     public TeamRole getRole() {
         return role;
     }

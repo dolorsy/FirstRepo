@@ -4,13 +4,12 @@
       "Points":0,
       "role": "Attacker",
       "id":"AT007",
-      army:[
+      "army":[
         {
           "movement": "ToTarget",
           "name": "TeslaTank",
-
-          "positionX": 10,
-          "positionY": 10,
+          "positionX": "10",
+          "positionY": "10",
           "tactic": "LowestHealthAttack"
         },
       ],
@@ -20,12 +19,12 @@
       "Points":0,
       "role": "Defender",
       "id":"DE006",
-      army:[
+      "army":[
         {
           "movement": "FixedPosition",
           "name": "MAIN BASE",
-          "positionX": 100,
-          "positionY": 150,
+          "positionX": "100",
+          "positionY": "150",
           "tactic": "RandomAttack"
         },
       ],

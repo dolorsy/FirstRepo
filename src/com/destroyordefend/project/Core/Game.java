@@ -186,6 +186,8 @@ Todo:: terrain need to add terrains
 
     public void CreateTeamsStage() {
         String path = "src\\com\\destroyordefend\\project\\Teams.json";
+        Unit unit = new Unit();
+        TreeSet<Unit> al = new TreeSet<>();
         JSONParser jsonParser = new JSONParser();
         try {
             JSONObject obj = (JSONObject) jsonParser.parse(new FileReader(path));
@@ -195,6 +197,16 @@ Todo:: terrain need to add terrains
                 Player p = new Player((int) player.get("Points")
                         , Player.TeamRole.valueOf((String) player.get("role"))
                         , (String) player.get("id"));
+                JSONArray Army = (JSONArray) player.get("army");
+                for(Object a : Army){
+                    JSONObject jsonObject1 = (JSONObject) a;
+                    String movement = (String) jsonObject1.get("movement");
+                    String name = (String) jsonObject1.get("name");
+                    String positionX = (String) jsonObject1.get("positionX");//int
+                    String positionY = (String) jsonObject1.get("positionY");//int
+                    String tactic = (String) jsonObject1.get("tactic");
+
+                }
                 addPlayer(p);
             }
         } catch (Exception e) {
