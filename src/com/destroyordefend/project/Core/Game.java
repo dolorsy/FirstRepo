@@ -93,8 +93,6 @@ Todo:: terrain need to add terrains
 
     private void StartBattle() {
 
-        for(Unit unit : allUnits)
-            System.out.println(unit);
         setGameState(States.Running);
         gameTimer.start();
         p("Start Battle");
@@ -191,7 +189,7 @@ Todo:: terrain need to add terrains
     }
 
     public void CreateTeamsStage() {
-        String path = "src\\com\\destroyordefend\\project\\Teams.json";
+        String path = "src\\com\\destroyordefendfirst\\project\\Teams.json";
         TreeSet<Unit> al = new TreeSet<>();
         JSONParser jsonParser = new JSONParser();
         try {
@@ -232,10 +230,13 @@ Todo:: terrain need to add terrains
 
     public void UpdateState() {
         if (!attackers.isAlive()) {
+            liveData.setData(States.DefenderWin.name());
             setGameState(States.DefenderWin);
         } else if (!base.isAlive()) {
+            liveData.setData(States.AttackerWin.name());
             setGameState(States.AttackerWin);
         } else if (gameTimer.onEnd()) {
+            liveData.setData(States.DefenderWin.name());
             setGameState(States.DefenderWin);
         }
 
@@ -295,7 +296,7 @@ Todo:: terrain need to add terrains
 
     public String getGameStateName() {
 
-        return GameState.name();
+        return liveData.getData();
     }
 
     class PlayerIterator implements Iterator<Player> {

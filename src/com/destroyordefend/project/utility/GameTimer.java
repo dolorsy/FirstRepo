@@ -32,6 +32,7 @@ Thread updateRangeThread = new Thread();
                 executorService.submit(MainMethodAsyncTask::invokeMainMethods);
                 executorService.submit(this::reFill);
 */
+                System.out.println(game.getGameStateName());
                 if(game.getGameStateName().equals("Running")) {
                     long current = System.currentTimeMillis();
 
@@ -89,7 +90,6 @@ Thread updateRangeThread = new Thread();
             UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
 
         //Todo: here we can make damaging more real
-            System.out.println("first ::: "  + unit.getTreeSetUnit().size());
             if(unit.getDamage() != 0 && unit.getTreeSetUnit().size() !=0 && unit.getDamaging().CanShot())
             MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());
         }
