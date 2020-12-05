@@ -53,7 +53,6 @@ public interface Movement {
 
         // Point n = Movement.straightMove(unit.getPosition(),track.peek());
         Barrier barrier = Movement.canSetUnitPlace(n,unit);
-         System.out.println("uni : " + unit.getPosition() + " r: " + unit.getRadius() + " next: " + n) ;
         if(barrier != null){
             if(barrier.getName().equals("river")) {
                 unit.setPosition(n);

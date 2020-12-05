@@ -17,7 +17,6 @@ public class ToTarget implements Movement {
 
     @Override
     public Point GetNextPoint(Unit unit) {
-        System.out.println(track.size());
         if(unit.getPosition().equals(track.peek())){
             track.pop();
         }

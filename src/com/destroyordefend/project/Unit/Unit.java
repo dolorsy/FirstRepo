@@ -84,9 +84,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     }
 
     public void setTreeSetUnit(TreeSet<Unit> treeSetUnit) {
-        System.out.println("thisssssss: " + "id: " + getId() + this.treeSetUnit.size());
         this.treeSetUnit = treeSetUnit;
-        System.out.println("thisssssss: " + this.treeSetUnit.size());
 
     }
 
@@ -111,8 +109,6 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     }
 
     public void Move() {
-        System.out.println("Current "  + getCurrentSpeed() );
-        System.out.println("x,y : " + getPosition());
         for(int i =0 ;i<values.currentSpeed;i++) {
             Point p = this.movement.GetNextPoint(this);
             if(p.equals(getPosition())){
@@ -147,9 +143,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
             this.setPosition(p);
             this.updateLeftAndRight();
         }
-        System.out.println("x,y : " + getPosition());
 
-        System.out.println("Devider\n\n");
     }
 
     public TreeSet<Unit> getTreeSetUnit() {
@@ -459,42 +453,42 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     }
 
     public class Damaging implements Damage {
-        int canShot = 0;
+        double accumulator = 0;
 
-        public int getCanShot() {
-            return canShot;
+        public boolean CanShot() {
+            if(accumulator>=1.0)
+                return true;
+            else{
+                accumulator+=1/getShot_speed();
+                return false;
+            }
+
         }
 
+        @Override
+        public int getDamage() {
+            return values.damage;
+        }
         @Override
         public void DoDamage() {
             treeSetUnit.first().getDamaging().AcceptDamage(this.getDamage());
+            accumulator-=1.0;
         }
-        @Override
-        public int getDamage() {
-            if (canShot == 0) {
-                p("Do damage id: " + id);
-                canShot = 4;
-                return values.damage;
-            } else {
-                decrease();
-                return 0;
-            }
-        }
-
         @Override
         public void AcceptDamage(int damage) {
-            //Todo:: use Armore Here
             int valueresulte = values.health - (int) (damage* getValues().armor);
             if ((valueresulte) <= 0) {
+
                 values.health = 0;
+                onDestroy();
             } else {
                 values.health -= valueresulte;
             }
-            p("Accept Damage id: " + id + "new Health: " + values.health);
+            p("Accept Damage id: " + id + " new Health: " + values.health);
         }
         @Override
         public void decrease() {
-            canShot -= 1;
+            accumulator -= 1.0;
         }
     }
 }

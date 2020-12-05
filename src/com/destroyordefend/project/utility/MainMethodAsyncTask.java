@@ -21,7 +21,6 @@ public class MainMethodAsyncTask {
      */
 
     public static void invokeMainMethods() {
-        System.out.println("Main Meth Thread name: " + Thread.currentThread().getName());
         for(Runnable updatePosition : doMainThingQueue) {
             updatePosition.run();
         }

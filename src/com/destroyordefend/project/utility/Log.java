@@ -16,10 +16,8 @@ public class Log {
             try {
                 boolean newFile = file.createNewFile();
                 if(newFile){
-                    //  System.out.println("File created: " + myObj.getName());
 
                 }else{
-                    //System.out.println("File already exists.");
 
                 }
             } catch (IOException e) {
@@ -36,7 +34,6 @@ public class Log {
             FileWriter myWriter = new FileWriter(file.getAbsoluteFile(),true);
             myWriter.write(text);
             myWriter.close();
-            //   System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();

@@ -43,7 +43,6 @@ public class FixedPatrol implements Movement {
         if(track.size() == 0)
             initQeueu(unit.getPosition());
 
-        System.out.println("Stack size : " + track.size());
         Point p =Movement.straightMove(unit.getPosition(),track.peek());
         return p;
     }
