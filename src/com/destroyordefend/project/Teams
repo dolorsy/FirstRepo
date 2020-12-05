@@ -6,11 +6,7 @@
       "id":"AT007",
       "army":[
         {
-          "movement":
-            {
-              "type": "ToTarget",
-             "targetId": 1
-            },
+          "movement":"ToTarget",
           "name": "TeslaTank",
           "positionX": 10,
           "positionY": 10,
@@ -27,10 +23,8 @@
           army: [
 
             {
-              "movement": {
-                "type":"FixedPatrol",
-                "stepSize": 60
-              },
+              "movement": "FixedPatrol",
+                "stepSize": 60,
               "name": "TeslaTank",
               "positionX": 200,
               "positionY": 200,

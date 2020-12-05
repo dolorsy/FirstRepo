@@ -2,6 +2,7 @@ package com.destroyordefend.project.Core;
 
 import com.destroyordefend.project.Movement.FixedPatrol;
 import com.destroyordefend.project.Movement.FixedPosition;
+import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.RandomAttack;
 import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.Unit.Terrain;
@@ -11,7 +12,6 @@ import com.destroyordefend.project.utility.LiveData;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
 import java.io.FileReader;
 import java.util.Iterator;
 import java.util.TreeSet;
@@ -40,7 +40,11 @@ public class Game {
         attackers = new Team();
         defenders = new Team();
 
+        //Todo:: what about that
         base = new Unit(Shop.getInstance().getBaseValues());
+        base.setRole(Player.TeamRole.Defender);
+        base.setId(1);
+        base.setPosition(new Point(9000,9000));
         base.setTreeSetUnit(new TreeSet<>(new PointComparator()));
         allUnits.add(base);
     }
@@ -59,9 +63,9 @@ Todo:: terrain need to add terrains
         terrains.add(t );*/
         gameTimer = new GameTimer(10);
         GameState.addObserver(gameTimer);
-       //  CreateTeamsStage();
+         CreateTeamsStage();
 
-        autoInitGame();
+       // autoInitGame();
         UpdateUnits();
         this.StartBattle();
 
@@ -139,6 +143,8 @@ Todo:: terrain need to add terrains
         }*/
         //TOdo :need to check
         Unit left, right = null, cur;
+        if(allUnits.size() ==0)
+            return;
         Iterator<Unit> unitIterator = allUnits.iterator();
         left = null;
         cur = unitIterator.next();
@@ -183,7 +189,7 @@ Todo:: terrain need to add terrains
     }
 
     public void CreateTeamsStage() {
-        String path = "src\\com\\destroyordefendfirst\\project\\Teams.json";
+        String path = "src\\com\\destroyordefend\\project\\Teams.json";
         TreeSet<Unit> al = new TreeSet<>();
         JSONParser jsonParser = new JSONParser();
         try {
@@ -208,7 +214,7 @@ Todo:: terrain need to add terrains
                     unit.AcceptTactic(Tactic.getSuitableTactic((String) jsonObject1.get("tactic")));
                     System.out.println(jsonObject1.toJSONString());
                     System.out.println("test" + jsonObject1.get("movement"));
-                   // unit.AcceptMovement(Movement.getSuitableMovment( jsonObject1.get("movement")));
+                    unit.AcceptMovement(Movement.getSuitableMovment(jsonObject1));
                     unit.setRole(p.getRole());
                     p.addArmy(unit);
 

@@ -15,10 +15,10 @@ public class AircraftMovement implements Movement {
 
 
 
-    public AircraftMovement(Unit airport){
-        track.add(airport.getPosition());
+    public AircraftMovement(Point airport){
+        track.add(airport);
         track.add(game.getBase().getPosition());
-        this.airport = airport.getPosition();
+        this.airport = airport;
     }
 
     public AircraftMovement() {

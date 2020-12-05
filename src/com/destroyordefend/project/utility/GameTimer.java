@@ -22,14 +22,13 @@ Thread updateRangeThread = new Thread();
         for(;currentSecond<=RoundLength;currentSecond++){
             try {
 
-
                 //Todo: Be Careful About Time Of the Following Three Methods, it should be 0.9 Second For Them all Together
                 //Todo:May Be You need Exception Handling
                 //Todo: We should invoke All Players UpdateArmy
 
-
                 if(game.getGameStateName().equals("Running")) {
                     long current = System.currentTimeMillis();
+
 
             updatePositionsThread = new Thread(UpdateMapAsyncTask::invokeUpdatePosition);
              updatePositionsThread.start();
@@ -56,13 +55,16 @@ Thread updateRangeThread = new Thread();
 
         }
 
-
+        GoodEnd();
        // executorService.shutdown();
 
     }
 
     public GameTimer(int roundLength) {
         RoundLength = roundLength;
+
+    }
+    private void GoodEnd(){
 
     }
     public boolean onEnd(){
@@ -78,10 +80,12 @@ Thread updateRangeThread = new Thread();
         updateRangeQueue.clear();
         doMainThingQueue.clear();
         for(Unit unit: game.getAllUnits()){
+            if(unit.getName().equals("Main Base"))
+                continue;
 
             if(unit.getSpeed() != 0 )
             UpdateMapAsyncTask.addMethod(unit::Move);
-        if(!unit.getName().equals("Main Base"))
+
             UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
 
         //Todo: here we can make damaging more real

@@ -84,7 +84,7 @@ public class ConsoleZoomUI {
         myFrame.setVisible(true);
 
         zoomFiled.addActionListener(e -> {
-
+            Log.initZoom(Integer.parseInt(username.getText()),Integer.parseInt(password.getText()),Integer.parseInt(zoomFiled.getText()));
         });
         pauseBtn.addActionListener(e -> {
             Game.getGame().setGameState(pauseBtn.getText() == "Pause"?"Paused":"Running");

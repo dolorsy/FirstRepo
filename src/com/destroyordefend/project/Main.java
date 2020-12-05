@@ -11,7 +11,6 @@ public class Main {
     public static void p(String s) {
         System.out.println(s);
     }
-
     //Todo:: After A WW3 with git
     public static void main(String[] args) throws InterruptedException {
 //        GameTimer gameTimer= new GameTimer(10);

@@ -16,14 +16,13 @@ import static com.destroyordefend.project.Core.Game.game;
 public interface Movement {
 
     static Movement getSuitableMovment(JSONObject movement) {
-        System.out.println(String.valueOf(movement.get("stepSize")) );
-        switch (String.valueOf(movement.get("type")) ){
+        switch (String.valueOf(movement.get("movement")) ){
             case"FixedPatrol":
                 return new FixedPatrol(Integer.parseInt((String) movement.get("stepSize")));
             case"ToTarget":
                 return new ToTarget(Game.getGame().getBase());
             case"AircraftMovement":
-                return new AircraftMovement();
+                return new AircraftMovement(new Point(Integer.parseInt((String)movement.get("airportX")),Integer.parseInt((String)movement.get("airportY"))));
             default:
                 return new FixedPosition();
 
