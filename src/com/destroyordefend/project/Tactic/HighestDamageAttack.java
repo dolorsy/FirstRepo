@@ -28,6 +28,5 @@ public class HighestDamageAttack implements Tactic {
             }
         }
         unit.setTreeSetUnit(filtered);
-        System.out.println("in Range id : " + unit.getId() + unit.getTreeSetUnit());
     }
 }

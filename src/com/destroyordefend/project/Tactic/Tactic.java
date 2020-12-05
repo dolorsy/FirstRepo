@@ -16,12 +16,10 @@ public interface Tactic {
         TreeSet<Unit> temp = new TreeSet<>((o1,o2) -> 1);
         Unit tempUnit = t.getNeighbourUnit("left");
         while( tempUnit != null && isInRange(t,tempUnit) ){
-            System.out.println("Lefttt" + tempUnit.getName());
             temp.add(tempUnit);
             tempUnit = tempUnit.getNeighbourUnit("left");
         }
         tempUnit = t.getNeighbourUnit("right");
-        System.out.println("aaaaaaaaaaaaaaaaaaaaaa " + isInRange(t,tempUnit));
         while( tempUnit != null && isInRange(t,tempUnit) ){
             temp.add(tempUnit);
             tempUnit = tempUnit.getNeighbourUnit("right");

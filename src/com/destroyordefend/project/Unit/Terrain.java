@@ -36,7 +36,6 @@ public class Terrain implements Barrier{
     }
 
     public int getSpeedFactory() {
-        System.out.println("Factory " + speedFactory);
         return speedFactory;
     }
 

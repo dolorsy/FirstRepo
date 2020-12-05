@@ -6,6 +6,7 @@ import com.destroyordefend.project.Tactic.RandomAttack;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
+import com.destroyordefend.project.utility.LiveData;
 import com.destroyordefend.project.utility.UpdateMapAsyncTask;
 import com.destroyordefend.project.utility.UpdateRangeAsyncTask;
 import org.json.simple.JSONArray;
@@ -18,7 +19,7 @@ import java.util.TreeSet;
 
 import static com.destroyordefend.project.Main.p;
 
-enum States {
+ enum States {
     NotRunning,
     Running,
     Paused,
@@ -27,6 +28,7 @@ enum States {
 }
 
 public class Game {
+     LiveData<String> liveData = new LiveData<>("Running") ;
     public static Game game;
     private Unit base;
     private TreeSet<Unit> allUnits = new TreeSet<>((v1, v2) -> 1);
@@ -57,6 +59,7 @@ Todo:: terrain need to add terrains
         Terrain t = new Terrain(new Point(30,100),2,"river");
         terrains.add(t );*/
         gameTimer = new GameTimer(10);
+        liveData.addObserver(gameTimer);
         // CreateTeamsStage();
         autoInitGame();
         UpdateUnits();
@@ -84,10 +87,11 @@ Todo:: terrain need to add terrains
     }
 
     private void StartBattle() {
-        System.out.println("SizeSize : " + allUnits.size());
+        for(Unit unit : allUnits)
+            System.out.println(unit);
+        setGameState(States.Running);
         gameTimer.start();
         p("Start Battle");
-        p(String.valueOf(allUnits.size()));
 
     }
 
@@ -148,7 +152,6 @@ Todo:: terrain need to add terrains
             cur.setNeighbourUnit("right", right);
             left = cur;
             cur = right;
-             System.out.println("fuckin id " + cur.getId());
 
              //  right = unitIterator.next();
         }while (unitIterator.hasNext());
@@ -158,6 +161,9 @@ Todo:: terrain need to add terrains
 
     public void setGameState(States gameState) {
         GameState = gameState;
+    }
+    public void setGameState(String state){
+        GameState = States.valueOf(state);
     }
 
     public States getGameState() {
@@ -201,7 +207,6 @@ Todo:: terrain need to add terrains
 
                 }
                 addPlayer(p);
-                System.out.println(p.getId() + "  " + p.getRole());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -218,6 +223,7 @@ Todo:: terrain need to add terrains
         } else if (gameTimer.onEnd()) {
             setGameState(States.DefenderWin);
         }
+
     }
 
     public void DeleteUnit(Unit unit) {
@@ -226,18 +232,18 @@ Todo:: terrain need to add terrains
         (unit.getRole().equals(Player.TeamRole.Attacker) ?
                 attackers :
                 defenders).removeUnit(unit);
+
         allUnits.remove(unit);
+
     }
 
     private void autoInitGame() {
         Unit defndUnit = new Unit();
+        base.setPosition(new Point(30,0));
+        Unit.UnitValues valuess = Shop.getInstance().getUnitByName("Prism Tower");
         defndUnit.setRole(Player.TeamRole.Defender);
-        defndUnit.setPosition(new Point(30, 30));
-        defndUnit.setHealth(200);
-        defndUnit.setName("Main Base");
-        defndUnit.getValues().setType("Structure");
-        defndUnit.setShot_speed(0);
-        defndUnit.setSpeed(0);
+        defndUnit.setPosition(new Point(25, 35));
+        defndUnit.setValues(valuess);
         defndUnit.AcceptMovement(new FixedPosition());
         defndUnit.AcceptTactic(new RandomAttack());
         defndUnit.setRole(Player.TeamRole.Defender);
@@ -266,6 +272,14 @@ Todo:: terrain need to add terrains
         if (temp == null)
             return temp = new PlayerIterator();
         return temp;
+    }
+
+    public States getAstate(String state) {
+        return States.valueOf(state);
+    }
+
+    public String getGameStateName() {
+        return GameState.name();
     }
 
     class PlayerIterator implements Iterator<Player> {

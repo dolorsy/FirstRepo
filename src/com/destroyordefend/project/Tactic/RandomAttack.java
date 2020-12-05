@@ -13,20 +13,17 @@ public class RandomAttack implements Tactic {
     @Override
     public void SortMap( Unit unit) {
         Tactic.updateRange(unit);
-        ArrayList<String> types ;
+        ArrayList<String> types;
         types = unit.getSortMap();
-        System.out.println(types);
         TreeSet<Unit> temp = unit.getTreeSetUnit();
         TreeSet<Unit> filtered = new TreeSet<>(new PointComparator());
         for (String type : types) {
             for (Unit u : temp) {
-                System.out.println(u.getType() + "  "  + type);
                 if (u.getType().equals(type))
                     filtered.add(u);
             }
         }
         unit.setTreeSetUnit(filtered);
-        System.out.println("in Range id : " + unit.getId() + unit.getTreeSetUnit());
 
     }
 }
