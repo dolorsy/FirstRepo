@@ -92,10 +92,15 @@ public class Log extends ConsoleZoomingFilter{
                 p.getY() > ZoomCenter.getY()+ ZoomedArenaWidth/2 ||
                 p.getY() < ZoomCenter.getY() -  ZoomedArenaWidth/2);
     }
+    public static void z(){
+        writeFile("Zoom Center: " + ZoomCenter + " Zoom Width: " + ZoomedArenaWidth ,logFile);
+    }
 
     public static void initZoom(int x, int y, int zoomedArenaWidth) {
         ZoomCenter = new Point(x,y);
         ZoomedArenaWidth=zoomedArenaWidth;
+        Log.z();
+        System.out.println("Zoom Center ");
     }
 }
 

@@ -19,6 +19,7 @@ Thread updateRangeThread = new Thread();
     Thread updateMainThread = new Thread();
 //public static ExecutorService executorService = Executors.newFixedThreadPool(5);
     public void run(){
+
         for(;currentSecond<=RoundLength;currentSecond++){
             try {
 
@@ -65,6 +66,8 @@ Thread updateRangeThread = new Thread();
 
     }
     private void GoodEnd(){
+        game.setGameState("DefenderWin");
+        System.out.println(game.getGameStateName());
 
     }
     public boolean onEnd(){
@@ -94,19 +97,7 @@ Thread updateRangeThread = new Thread();
         }
     }
 
-     public boolean pause(){
-        try {
-            this.wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
 
-    public boolean resumee(){
-        this.notify();
-        return false;
-    }
     @Override
     public void update(Observable o, Object arg) {
         //Todo:: its not used

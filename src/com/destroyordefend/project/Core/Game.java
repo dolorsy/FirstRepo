@@ -26,7 +26,7 @@ import static com.destroyordefend.project.Main.p;
     DefenderWin,
 }
 
-public class Game {
+public class Game implements GameManger {
      LiveData<States>  GameState = new LiveData<>(States.NotRunning) ;
     public static Game game;
     private Unit base;
@@ -297,6 +297,27 @@ Todo:: terrain need to add terrains
     public String getGameStateName() {
 
         return GameState.getData().name();
+    }
+
+    @Override
+    public void pause() {
+        try {
+           synchronized (gameTimer){
+               gameTimer.wait();
+           }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void resume() {
+        synchronized (gameTimer){
+            gameTimer.notify();
+
+        }
+
     }
 
     class PlayerIterator implements Iterator<Player> {
