@@ -29,7 +29,8 @@ public interface Movement {
         }
     }
 
-    Point GetNextPoint(Unit unit);
+     void addTarget(Point p,Unit u);
+        Point GetNextPoint(Unit unit);
     public Stack<Point> getTruck();
     static Barrier canSetUnitPlace(Point point, Unit unit) {
         Unit temp = new Unit(unit);
@@ -153,6 +154,7 @@ public interface Movement {
         unit.setPosition(n);
         return false;
     }
+    Point getTarget();
     @Override
      String toString();
 }

@@ -328,3 +328,23 @@ time: 9	Unit_id :2 Moved to :	X :280,Y :280
 ---------------
 time: 10	Unit_id :2 Moved to :	X :310,Y :310
 ---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
+---------------

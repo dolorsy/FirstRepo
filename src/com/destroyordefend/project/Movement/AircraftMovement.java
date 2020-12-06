@@ -32,6 +32,11 @@ public class AircraftMovement implements Movement {
     }
 
     @Override
+    public void addTarget(Point p, Unit u) {
+
+    }
+
+    @Override
     public Point GetNextPoint(Unit unit) {
         if(track.peek().equals(unit.getPosition()))
             track.pop();
@@ -50,6 +55,11 @@ public class AircraftMovement implements Movement {
     public boolean SetNextPoint(Unit unit) {
 
         return false;
+    }
+
+    @Override
+    public Point getTarget() {
+        return track.peek();
     }
 
     @Override
