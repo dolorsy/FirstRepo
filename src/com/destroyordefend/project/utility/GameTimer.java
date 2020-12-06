@@ -67,7 +67,7 @@ Thread updateRangeThread = new Thread();
     }
     private void GoodEnd(){
         game.setGameState("DefenderWin");
-        System.out.println(game.getGameStateName());
+        System.out.println("Times up " + game.getGameStateName());
 
     }
     public boolean onEnd(){
