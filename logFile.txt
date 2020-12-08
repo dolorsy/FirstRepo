@@ -74,4 +74,79 @@ time: 4	Unit id: 3	Destroyed
 ---------------
 time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
 ---------------
-GameOver, DefenderWin
+GameOver, DefenderWintime: 3	Unit id: 2	new health :700
+---------------
+time: 3	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+---------------
+time: 3	Unit id: 3	new health :10
+---------------
+time: 3	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+time: 4	Unit id: 3	Destroyed 
+---------------
+time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+GameOver, DefenderWintime: 3	Unit id: 2	new health :700
+---------------
+time: 3	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+---------------
+time: 3	Unit id: 3	new health :10
+---------------
+time: 3	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+time: 4	Unit id: 3	Destroyed 
+---------------
+time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+GameOver, DefenderWintime: 3	Unit id: 2	new health :700
+---------------
+time: 3	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+---------------
+time: 3	Unit id: 3	new health :10
+---------------
+time: 3	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+time: 4	Unit id: 3	Destroyed 
+---------------
+time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+GameOver, DefenderWintime: 3	Unit id: 2	new health :3300
+---------------
+time: 3	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+---------------
+time: 3	Unit id: 3	new health :740
+---------------
+time: 3	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+time: 4	Unit id: 3	new health :730
+---------------
+time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+time: 5	Unit id: 2	new health :2600
+---------------
+time: 5	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+---------------
+time: 6	Unit id: 3	new health :720
+---------------
+time: 6	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+time: 7	Unit id: 2	new health :1900
+---------------
+time: 7	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+---------------
+time: 7	Unit id: 3	new health :710
+---------------
+time: 7	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+time: 9	Unit id: 2	new health :1200
+---------------
+time: 9	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+---------------
+time: 9	Unit id: 3	new health :700
+---------------
+time: 9	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------
+time: 10	Unit id: 3	new health :690
+---------------
+time: 10	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+---------------

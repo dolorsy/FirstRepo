@@ -5,20 +5,22 @@ import com.destroyordefend.project.Unit.Unit;
 
 import java.util.Observable;
 import java.util.Observer;
+
 import static com.destroyordefend.project.Core.Game.game;
 import static com.destroyordefend.project.utility.MainMethodAsyncTask.doMainThingQueue;
 import static com.destroyordefend.project.utility.UpdateMapAsyncTask.updatePositionQueue;
 import static com.destroyordefend.project.utility.UpdateRangeAsyncTask.updateRangeQueue;
 
 public class GameTimer extends Thread implements Observer {
-int RoundLength ;
-int currentSecond = 0;
-Thread updatePositionsThread = new Thread();
-Thread updateRangeThread = new Thread();
+    int RoundLength;
+    int currentSecond = 0;
+    Thread updatePositionsThread = new Thread();
+    Thread updateRangeThread = new Thread();
     Thread updateMainThread = new Thread();
-//public static ExecutorService executorService = Executors.newFixedThreadPool(5);
-    public void run(){
-        for(;currentSecond<=RoundLength;currentSecond++){
+
+    //public static ExecutorService executorService = Executors.newFixedThreadPool(5);
+    public void run() {
+        for (; currentSecond <= RoundLength; currentSecond++) {
             try {
 
 
@@ -33,23 +35,23 @@ Thread updateRangeThread = new Thread();
                 executorService.submit(MainMethodAsyncTask::invokeMainMethods);
                 executorService.submit(this::reFill);
 */
-                if(game.getGameStateName().equals("Running")) {
+                if (game.getGameStateName().equals("Running")) {
 
            /*  updatePositionsThread = new Thread(UpdateMapAsyncTask::invokeUpdatePosition);
              updatePositionsThread.start();*/
-             updateRangeThread = new Thread(UpdateRangeAsyncTask::invokeUpdateRange);
-             updateRangeThread.start();
-             updateMainThread = new Thread(MainMethodAsyncTask::invokeMainMethods);
+                    updateRangeThread = new Thread(UpdateRangeAsyncTask::invokeUpdateRange);
+                    updateRangeThread.start();
+                    updateMainThread = new Thread(MainMethodAsyncTask::invokeMainMethods);
                     updateMainThread.start();
 
                     current = System.currentTimeMillis() - current;
                     Thread.sleep(1000 - current);
                     reFill();
-                }else if(game.getGameStateName().equals("AttackerWin") || game.getGameStateName().equals("DefenderWin")){
-                    Log.GameOver("GameOver, "  + game.getGameStateName());
+                } else if (game.getGameStateName().equals("AttackerWin") || game.getGameStateName().equals("DefenderWin")) {
+                    Log.GameOver("GameOver, " + game.getGameStateName());
                     this.interrupt();
                     break;
-                }else{
+                } else {
                     currentSecond--;
                 }
             } catch (InterruptedException e) {
@@ -61,7 +63,7 @@ Thread updateRangeThread = new Thread();
         }
 
 
-       // executorService.shutdown();
+        // executorService.shutdown();
 
     }
 
@@ -69,7 +71,8 @@ Thread updateRangeThread = new Thread();
         RoundLength = roundLength;
 
     }
-    public boolean onEnd(){
+
+    public boolean onEnd() {
         return currentSecond == RoundLength;
     }
 
@@ -77,24 +80,24 @@ Thread updateRangeThread = new Thread();
         return currentSecond;
     }
 
-    void reFill(){
+    void reFill() {
         updatePositionQueue.clear();
         updateRangeQueue.clear();
         doMainThingQueue.clear();
-        for(Unit unit: game.getAllUnits()){
+        for (Unit unit : game.getAllUnits()) {
 
-            if(unit.getSpeed() != 0 )
-            UpdateMapAsyncTask.addMethod(unit::Move);
-        if(!unit.getName().equals("Main Base"))
-            UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
+            if (unit.getSpeed() != 0)
+                UpdateMapAsyncTask.addMethod(unit::Move);
+            if (!unit.getName().equals("Main Base"))
+                UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
 
-        //Todo: here we can make damaging more real
-            if(unit.getDamage() != 0 && unit.getTreeSetUnit().size() !=0 && unit.getDamaging().CanShot())
-            MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());
+            //Todo: here we can make damaging more real
+            if (unit.getDamage() != 0 && unit.getTreeSetUnit().size() != 0 && unit.getDamaging().CanShot())
+                MainMethodAsyncTask.addMethod(() -> unit.getDamaging().DoDamage());
         }
     }
 
-     public boolean pause(){
+    public boolean pause() {
         try {
             this.wait();
         } catch (InterruptedException e) {
@@ -103,10 +106,11 @@ Thread updateRangeThread = new Thread();
         return false;
     }
 
-    public boolean resumee(){
+    public boolean resumee() {
         this.notify();
         return false;
     }
+
     LiveData<String> state;
 
     @Override

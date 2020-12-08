@@ -487,7 +487,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
                 Log.onDestroy(Unit.this);
                 onDestroy();
             } else {
-                values.health -= valueresulte;
+                values.health = valueresulte;
                 Log.acceptDamage(Unit.this);
             }
             p("Accept Damage id: " + id + " new Health: " + values.health);

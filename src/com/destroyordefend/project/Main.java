@@ -21,7 +21,7 @@ public class Main {
 //        GameTimer gameTimer= new GameTimer(10);
 //        gameTimer.start();
 
-       Game game = Game.getGame();
+        Game game = Game.getGame();
         game.StartAnewGame();
     }
 }
