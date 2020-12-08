@@ -1,17 +1,36 @@
 package com.destroyordefend.project.Movement;
 
 
+import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Barrier;
 import com.destroyordefend.project.Unit.Unit;
+import org.json.simple.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 import static com.destroyordefend.project.Core.Game.game;
 
 public interface Movement {
 
-    Point GetNextPoint(Unit unit);
+    static Movement getSuitableMovment(JSONObject movement) {
+        switch (String.valueOf(movement.get("movement")) ){
+            case"FixedPatrol":
+                return new FixedPatrol(Integer.parseInt((String) movement.get("stepSize")));
+            case"ToTarget":
+                return new ToTarget(Game.getGame().getBase());
+            case"AircraftMovement":
+                return new AircraftMovement(new Point(Integer.parseInt((String)movement.get("airportX")),Integer.parseInt((String)movement.get("airportY"))));
+            default:
+                return new FixedPosition();
+
+        }
+    }
+
+     void addTarget(Point p,Unit u);
+        Point GetNextPoint(Unit unit);
     public Stack<Point> getTruck();
     static Barrier canSetUnitPlace(Point point, Unit unit) {
         Unit temp = new Unit(unit);
@@ -135,6 +154,7 @@ public interface Movement {
         unit.setPosition(n);
         return false;
     }
+    Point getTarget();
     @Override
      String toString();
 }

@@ -15,15 +15,25 @@ public class AircraftMovement implements Movement {
 
 
 
-    public AircraftMovement(Unit airport){
-        track.add(airport.getPosition());
+    public AircraftMovement(Point airport){
+        track.add(airport);
         track.add(game.getBase().getPosition());
-        this.airport = airport.getPosition();
+        this.airport = airport;
+    }
+
+    public AircraftMovement() {
+        //Todo:: A big Mistake
+        airport = new Point(50,50);
     }
 
     public void updateTrack(){
         track.add(airport);
         track.add(game.getBase().getPosition());
+    }
+
+    @Override
+    public void addTarget(Point p, Unit u) {
+
     }
 
     @Override
@@ -45,6 +55,11 @@ public class AircraftMovement implements Movement {
     public boolean SetNextPoint(Unit unit) {
 
         return false;
+    }
+
+    @Override
+    public Point getTarget() {
+        return track.peek();
     }
 
     @Override

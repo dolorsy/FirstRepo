@@ -15,6 +15,8 @@ public class Point implements Comparable<Point> {
         this(p.x, p.y);
     }
 
+
+
     @Override
     public String toString() {
         return "" + '(' + x + ',' + y + ')';

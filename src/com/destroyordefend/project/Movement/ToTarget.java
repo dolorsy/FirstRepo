@@ -1,5 +1,6 @@
 package com.destroyordefend.project.Movement;
 
+import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Barrier;
 import com.destroyordefend.project.Unit.Unit;
@@ -14,6 +15,13 @@ public class ToTarget implements Movement {
         track.push(target.getPosition());
     }
 
+    public void addTarget(Point p,Unit u){
+        track.clear();
+        if(u.getRole().name().equals("Attacker"))
+            track.push(Game.getGame().getBase().getPosition());
+        track.push(p);
+    }
+
     @Override
     public Point GetNextPoint(Unit unit) {
         if(unit.getPosition().equals(track.peek())){
@@ -25,11 +33,11 @@ public class ToTarget implements Movement {
         return p;
     }
 
+
     @Override
     public Stack<Point> getTruck() {
         return track;
     }
-
 
     @Override
     public boolean SetNextPoint(Unit unit) {
@@ -117,6 +125,11 @@ public class ToTarget implements Movement {
         //Todo: Should Update n here? n = makeAnewPoint(unit); ???? no it should be in unit.move();
         unit.setPosition(n);
         return false;
+    }
+
+    @Override
+    public Point getTarget() {
+        return track.peek();
     }
 
     @Override

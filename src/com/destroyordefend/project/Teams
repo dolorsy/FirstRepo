@@ -1,0 +1,38 @@
+{
+  "Players":[
+    {
+      "Points":0,
+      "role": "Attacker",
+      "id":"AT007",
+      "army":[
+        {
+          "movement":"ToTarget",
+          "name": "TeslaTank",
+          "positionX": 10,
+          "positionY": 10,
+          "tactic": "LowestHealthAttack",
+          "id": 5
+        },
+      ],
+    },
+
+    {
+      "Points":0,
+      "role": "Defender",
+      "id":"DE006",
+          army: [
+
+            {
+              "movement": "FixedPatrol",
+                "stepSize": 60,
+              "name": "TeslaTank",
+              "positionX": 200,
+              "positionY": 200,
+              "tactic": "RandomAttack",
+              "id": 2
+            }
+            //TODO:For AircraftMovement we need target amd air port
+          ],
+    }
+  ]
+}

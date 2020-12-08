@@ -41,9 +41,11 @@ public class Shop {
         return baseUnitValues;
     }
 
-    public Unit.UnitValues getUnitByName(String type) {
+    public Unit.UnitValues getUnitByName(String name) {
+        if(name.equalsIgnoreCase("Main Base"))
+            return getBaseValues();
         for (Unit.UnitValues unitValues : this.shopUnits) {
-            if (unitValues.is(type)) {
+            if (unitValues.is(name)) {
                 return unitValues;
             }
         }

@@ -8,12 +8,27 @@ import java.util.Stack;
 public class FixedPosition implements Movement {
 
     @Override
+    public void addTarget(Point p, Unit u) {
+
+    }
+
+    @Override
     public Point GetNextPoint(Unit unit) {
         return unit.getPosition();
     }
 
     @Override
     public Stack<Point> getTruck() {
+        return null;
+    }
+
+    @Override
+    public boolean SetNextPoint(Unit unit) {
+        return false;
+    }
+
+    @Override
+    public Point getTarget() {
         return null;
     }
 

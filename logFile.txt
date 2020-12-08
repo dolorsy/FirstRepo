@@ -98,55 +98,313 @@ time: 4	Unit id: 3	Destroyed
 ---------------
 time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
 ---------------
-GameOver, DefenderWintime: 3	Unit id: 2	new health :700
+GameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWinGameOver, DefenderWintime: 1	Unit_id :2 Moved to :	X :40,Y :40
 ---------------
-time: 3	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
 ---------------
-time: 3	Unit id: 3	new health :10
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
 ---------------
-time: 3	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
 ---------------
-time: 4	Unit id: 3	Destroyed 
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
 ---------------
-time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
 ---------------
-GameOver, DefenderWintime: 3	Unit id: 2	new health :3300
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
 ---------------
-time: 3	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
 ---------------
-time: 3	Unit id: 3	new health :740
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
 ---------------
-time: 3	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
 ---------------
-time: 4	Unit id: 3	new health :730
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
 ---------------
-time: 4	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
 ---------------
-time: 5	Unit id: 2	new health :2600
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
 ---------------
-time: 5	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
 ---------------
-time: 6	Unit id: 3	new health :720
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
 ---------------
-time: 6	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
 ---------------
-time: 7	Unit id: 2	new health :1900
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
 ---------------
-time: 7	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
 ---------------
-time: 7	Unit id: 3	new health :710
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
 ---------------
-time: 7	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
 ---------------
-time: 9	Unit id: 2	new health :1200
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
 ---------------
-time: 9	Unit_id: 3	 Attack 	Unit_id: 2 By Damage: 1000
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
 ---------------
-time: 9	Unit id: 3	new health :700
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
 ---------------
-time: 9	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
 ---------------
-time: 10	Unit id: 3	new health :690
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
 ---------------
-time: 10	Unit_id: 2	 Attack 	Unit_id: 3 By Damage: 100
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+Zoom Center: (1000,10000) Zoom Width: 1000Zoom Center: (100000,1000000) Zoom Width: 1000000time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+Zoom Center: (1000000,100000) Zoom Width: 1Zoom Center: (1000000,100000) Zoom Width: 10000000time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
+---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
 ---------------

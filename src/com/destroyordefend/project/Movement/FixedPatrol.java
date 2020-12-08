@@ -34,6 +34,12 @@ public class FixedPatrol implements Movement {
         FixedTrack.add(new Point(point.getX()+stepSize,point.getY()));
         track.push(FixedTrack.get(3));
     }
+
+    @Override
+    public void addTarget(Point p, Unit u) {
+
+    }
+
     @Override
     public Point GetNextPoint(Unit unit) {
         if(track == null)
@@ -50,6 +56,11 @@ public class FixedPatrol implements Movement {
     @Override
     public Stack<Point> getTruck() {
         return track;
+    }
+
+    @Override
+    public Point getTarget() {
+        return track.peek();
     }
 
     @Override

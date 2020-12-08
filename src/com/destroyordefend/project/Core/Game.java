@@ -2,17 +2,16 @@ package com.destroyordefend.project.Core;
 
 import com.destroyordefend.project.Movement.FixedPatrol;
 import com.destroyordefend.project.Movement.FixedPosition;
+import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.RandomAttack;
+import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
 import com.destroyordefend.project.utility.LiveData;
-import com.destroyordefend.project.utility.UpdateMapAsyncTask;
-import com.destroyordefend.project.utility.UpdateRangeAsyncTask;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
 import java.io.FileReader;
 import java.util.Iterator;
 import java.util.TreeSet;
@@ -27,13 +26,12 @@ import static com.destroyordefend.project.Main.p;
     DefenderWin,
 }
 
-public class Game {
-     LiveData<String> liveData = new LiveData<>("Running") ;
+public class Game implements GameManger {
+     LiveData<States>  GameState = new LiveData<>(States.NotRunning) ;
     public static Game game;
     private Unit base;
     private TreeSet<Unit> allUnits = new TreeSet<>((v1, v2) -> 1);
     private TreeSet<Terrain> terrains = new TreeSet<>(new PointComparator());
-    private States GameState = States.NotRunning;
     private Team attackers, defenders;
     int attackerNumber, defenderNumber;
     GameTimer gameTimer;
@@ -42,7 +40,11 @@ public class Game {
         attackers = new Team();
         defenders = new Team();
 
+        //Todo:: what about that
         base = new Unit(Shop.getInstance().getBaseValues());
+        base.setRole(Player.TeamRole.Defender);
+        base.setId(1);
+        base.setPosition(new Point(9000,9000));
         base.setTreeSetUnit(new TreeSet<>(new PointComparator()));
         allUnits.add(base);
     }
@@ -54,17 +56,19 @@ public class Game {
     }
 
     public void StartAnewGame() {
-/*
+
+        /*
 Todo:: terrain need to add terrains
         Terrain t = new Terrain(new Point(30,100),2,"river");
         terrains.add(t );*/
         gameTimer = new GameTimer(10);
-        liveData.addObserver(gameTimer);
-        // CreateTeamsStage();
-        autoInitGame();
-        UpdateUnits();
+        GameState.addObserver(gameTimer);
+         CreateTeamsStage();
 
+       // autoInitGame();
+        UpdateUnits();
         this.StartBattle();
+
     }
 
     public void addPlayer(Player p) {
@@ -88,8 +92,6 @@ Todo:: terrain need to add terrains
 
     private void StartBattle() {
 
-        for(Unit unit : allUnits)
-            System.out.println(unit);
         setGameState(States.Running);
         gameTimer.start();
         p("Start Battle");
@@ -141,6 +143,8 @@ Todo:: terrain need to add terrains
         }*/
         //TOdo :need to check
         Unit left, right = null, cur;
+        if(allUnits.size() ==0)
+            return;
         Iterator<Unit> unitIterator = allUnits.iterator();
         left = null;
         cur = unitIterator.next();
@@ -161,13 +165,13 @@ Todo:: terrain need to add terrains
     }
 
     public void setGameState(States gameState) {
-        GameState = gameState;
+        GameState.setData(gameState);
     }
     public void setGameState(String state){
-        GameState = States.valueOf(state);
+        GameState.setData(States.valueOf(state));
     }
 
-    public States getGameState() {
+    public LiveData<States> getGameState() {
         return GameState;
     }
 
@@ -186,7 +190,6 @@ Todo:: terrain need to add terrains
 
     public void CreateTeamsStage() {
         String path = "src\\com\\destroyordefend\\project\\Teams.json";
-        Unit unit = new Unit();
         TreeSet<Unit> al = new TreeSet<>();
         JSONParser jsonParser = new JSONParser();
         try {
@@ -194,17 +197,26 @@ Todo:: terrain need to add terrains
             JSONArray jsonArray = (JSONArray) obj.get("Players");
             for (Object jsonObject : jsonArray) {
                 JSONObject player = (JSONObject) jsonObject;
-                Player p = new Player((int) player.get("Points")
+                Player p = new Player(Integer.parseInt( player.get("Points").toString())
                         , Player.TeamRole.valueOf((String) player.get("role"))
                         , (String) player.get("id"));
+                System.out.println(p.getRole().name());
                 JSONArray Army = (JSONArray) player.get("army");
+                System.out.println("Army : " + Army.toJSONString());
                 for(Object a : Army){
                     JSONObject jsonObject1 = (JSONObject) a;
-                    String movement = (String) jsonObject1.get("movement");
-                    String name = (String) jsonObject1.get("name");
-                    String positionX = (String) jsonObject1.get("positionX");//int
-                    String positionY = (String) jsonObject1.get("positionY");//int
-                    String tactic = (String) jsonObject1.get("tactic");
+                    System.out.println((String) jsonObject1.get("name"));
+                    Unit unit = new Unit(new Unit.UnitValues (Shop.getInstance()
+                            .getUnitByName((String) jsonObject1.get("name"))));
+
+                    unit.setPosition(new Point(Integer.parseInt((String) jsonObject1.get("positionX")),
+                            Integer.parseInt((String) jsonObject1.get("positionY"))));
+                    unit.AcceptTactic(Tactic.getSuitableTactic((String) jsonObject1.get("tactic")));
+                    System.out.println(jsonObject1.toJSONString());
+                    System.out.println("test" + jsonObject1.get("movement"));
+                    unit.AcceptMovement(Movement.getSuitableMovment(jsonObject1));
+                    unit.setRole(p.getRole());
+                    p.addArmy(unit);
 
                 }
                 addPlayer(p);
@@ -218,10 +230,13 @@ Todo:: terrain need to add terrains
 
     public void UpdateState() {
         if (!attackers.isAlive()) {
+            GameState.setData(States.DefenderWin);
             setGameState(States.DefenderWin);
         } else if (!base.isAlive()) {
+            GameState.setData(States.AttackerWin);
             setGameState(States.AttackerWin);
         } else if (gameTimer.onEnd()) {
+            GameState.setData(States.DefenderWin);
             setGameState(States.DefenderWin);
         }
 
@@ -280,7 +295,29 @@ Todo:: terrain need to add terrains
     }
 
     public String getGameStateName() {
-        return GameState.name();
+
+        return GameState.getData().name();
+    }
+
+    @Override
+    public void pause() {
+        try {
+           synchronized (gameTimer){
+               gameTimer.wait();
+           }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void resume() {
+        synchronized (gameTimer){
+            gameTimer.notify();
+
+        }
+
     }
 
     class PlayerIterator implements Iterator<Player> {
@@ -309,4 +346,5 @@ Todo:: terrain need to add terrains
             }
         }
     }
+
 }

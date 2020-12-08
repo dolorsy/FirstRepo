@@ -1,6 +1,7 @@
 package com.destroyordefend.project.utility;
 
 import com.destroyordefend.project.Core.Game;
+import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Unit;
 
 import java.io.File;
@@ -9,7 +10,7 @@ import java.io.IOException;
 
 import static com.destroyordefend.project.Core.Game.game;
 
-public class Log {
+public class Log extends ConsoleZoomingFilter{
     private static final File logFile = new File("logFile.txt");
 
 
@@ -44,6 +45,8 @@ public class Log {
     }
 
     public static void move(Unit unit){
+        if(!inRange(unit.getPosition()))
+            return;
         writeFile("time: " + Game.getGame().getGameTimer().getCurrentSecond() +
                 "\tUnit_id :" + unit.getId() +
                 " Moved to :"+
@@ -52,6 +55,9 @@ public class Log {
     }
 
     public static void doDamage(Unit unit_One ,Unit unit_Two){
+        if(!(inRange(unit_One.getPosition()) || inRange(unit_Two.getPosition())))
+            return;
+
         writeFile("time: " + Game.getGame().getGameTimer().getCurrentSecond() +
                 "\tUnit_id: " + unit_One.getId() +
                 "\t Attack "  +
@@ -59,6 +65,8 @@ public class Log {
     }
 
     public static void acceptDamage(Unit unit){
+        if(!inRange(unit.getPosition()))
+            return;
         writeFile("time: " + Game.getGame().getGameTimer().getCurrentSecond()+
                 "\tUnit id: " + unit.getId() +
                 "\tnew health :" + unit.getValues().getHealth() + "\n"  + "---------------" + "\n",logFile);
@@ -66,6 +74,8 @@ public class Log {
 
 
     public static void onDestroy(Unit unit) {
+        if(!inRange(unit.getPosition()))
+            return;
         writeFile("time: " + Game.getGame().getGameTimer().getCurrentSecond()+
                 "\tUnit id: " + unit.getId() +
                 "\tDestroyed "+ "\n"  + "---------------" + "\n",logFile);
@@ -73,6 +83,24 @@ public class Log {
 
     public static void GameOver(String gameStateName) {
         writeFile(gameStateName,logFile);
+    }
+
+    protected static  boolean inRange(Point p) {
+
+        return !(p.getX() > ZoomCenter.getX()+ ZoomedArenaWidth/2 ||
+                p.getX() < ZoomCenter.getX() -  ZoomedArenaWidth/2 ||
+                p.getY() > ZoomCenter.getY()+ ZoomedArenaWidth/2 ||
+                p.getY() < ZoomCenter.getY() -  ZoomedArenaWidth/2);
+    }
+    public static void z(){
+        writeFile("Zoom Center: " + ZoomCenter + " Zoom Width: " + ZoomedArenaWidth ,logFile);
+    }
+
+    public static void initZoom(int x, int y, int zoomedArenaWidth) {
+        ZoomCenter = new Point(x,y);
+        ZoomedArenaWidth=zoomedArenaWidth;
+        Log.z();
+        System.out.println("Zoom Center ");
     }
 }
 

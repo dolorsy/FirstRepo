@@ -47,5 +47,19 @@ public interface Tactic {
                 target.getDown() > radar.getUp() + radar.getRange() ||
                         target.getUp() < radar.getDown() - radar.getRange()));
     }
+
+    static Tactic getSuitableTactic(String tactic) {
+    switch (tactic){
+        case "LowestHealthAttack" :
+            return new LowestHealthAttack();
+        case "HighestDamageAttack":
+            return new HighestDamageAttack();
+        case"PriorityAttack":
+            return new PriorityAttack();
+        default:
+            return new RandomAttack();
+    }
+    }
+
     void  SortMap (Unit unit);
 }

@@ -4,6 +4,7 @@ import com.destroyordefend.project.Core.Player;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Core.PointComparator;
 import com.destroyordefend.project.Movement.Movement;
+import com.destroyordefend.project.Tactic.Plan;
 import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.utility.IdGenerator;
 import com.destroyordefend.project.utility.Log;
@@ -20,7 +21,7 @@ import static com.destroyordefend.project.Main.p;
 
 public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
-    private final int id;
+    private  int id;
     private Movement movement;
     private TreeSet<Unit> treeSetUnit = new TreeSet<>(new PointComparator());
     private Point point = new Point();
@@ -29,12 +30,17 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     private Tactic tactic;
     private Damaging damaging;
     private HashMap<String, Unit> leftAndRight = new HashMap<>();
+    private Plan plan;
+    private HashMap<Plan,Integer> plans = new HashMap<Plan, Integer>() ;
 
 
     public Unit() {
        id = IdGenerator.generate(this);
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
     //Copy Constructor
     public Unit(Unit unit) {
@@ -110,6 +116,15 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     }
 
     public void Move() {
+
+        if(this.plans.size() != 0 ) {
+            if (this.plan.isInPlace(this)){
+                this.plans.put(plan,this.plans.get(plan)-1);
+                return;
+            }
+
+        }
+
         for(int i =0 ;i<values.currentSpeed;i++) {
             Point p = this.movement.GetNextPoint(this);
             if(p.equals(getPosition())){
@@ -187,6 +202,18 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     @Override
     public Unit AcceptMovement(Movement movement) {
         this.movement = movement;
+        return this;
+    }
+
+    @Override
+    public void addTarget(Point point) {
+        this.movement.addTarget(point,this);
+    }
+
+    @Override
+    public Unit AcceptPlan(Plan plan) {
+        this.plans.put(plan,plan.getTime());
+        this.plan = plan;
         return this;
     }
 
@@ -373,7 +400,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
             radius = Integer.parseInt((String) unit.get("radius"));
             speed = Integer.parseInt((String) unit.get("speed"));
             price = Integer.parseInt((String) unit.get("price"));
-
+            currentSpeed = speed;
             sortMap = new ArrayList<>();
             JSONArray sMap = (JSONArray) unit.get("SortMap");
             for (Object c : sMap) {
@@ -474,7 +501,10 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         }
         @Override
         public void DoDamage() {
-            treeSetUnit.first().getDamaging().AcceptDamage(this.getDamage());
+            if(treeSetUnit.size() ==0)
+                return;
+            //Todo: here a big mistake
+            Unit.this.getTreeSetUnit().first().getDamaging().AcceptDamage(this.getDamage());
             Log.doDamage(Unit.this,treeSetUnit.first());
             accumulator-=1.0;
         }
