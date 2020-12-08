@@ -50,6 +50,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         this.point = new Point(unit.point);
         this.role = unit.getRole();
         this.values = new UnitValues(unit.values);
+        this.tactic =unit.tactic;
     }
 
     public Unit(UnitValues unitValues) {
@@ -125,6 +126,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
         }
 
+        System.out.println(getId());
         for(int i =0 ;i<values.currentSpeed;i++) {
             Point p = this.movement.GetNextPoint(this);
             if(p.equals(getPosition())){
@@ -201,6 +203,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     //Method MovementAble Class
     @Override
     public Unit AcceptMovement(Movement movement) {
+        System.out.println("Accept Movment id" + getId());
         this.movement = movement;
         return this;
     }
@@ -505,7 +508,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
                 return;
             //Todo: here a big mistake
             Unit.this.getTreeSetUnit().first().getDamaging().AcceptDamage(this.getDamage());
-            Log.doDamage(Unit.this,treeSetUnit.first());
+            Log.doDamage(Unit.this,Unit.this.getTreeSetUnit().first());
             accumulator-=1.0;
         }
         @Override

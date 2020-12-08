@@ -3,6 +3,7 @@ package com.destroyordefend.project.Core;
 import com.destroyordefend.project.Movement.FixedPatrol;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
+import com.destroyordefend.project.Movement.ToTarget;
 import com.destroyordefend.project.Tactic.RandomAttack;
 import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.Unit.Terrain;
@@ -12,13 +13,14 @@ import com.destroyordefend.project.utility.LiveData;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+
 import java.io.FileReader;
 import java.util.Iterator;
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Main.p;
 
- enum States {
+enum States {
     NotRunning,
     Running,
     Paused,
@@ -27,7 +29,7 @@ import static com.destroyordefend.project.Main.p;
 }
 
 public class Game implements GameManger {
-     LiveData<States>  GameState = new LiveData<>(States.NotRunning) ;
+    LiveData<States> GameState = new LiveData<>(States.NotRunning);
     public static Game game;
     private Unit base;
     private TreeSet<Unit> allUnits = new TreeSet<>((v1, v2) -> 1);
@@ -44,7 +46,7 @@ public class Game implements GameManger {
         base = new Unit(Shop.getInstance().getBaseValues());
         base.setRole(Player.TeamRole.Defender);
         base.setId(1);
-        base.setPosition(new Point(9000,9000));
+        base.setPosition(new Point(9000, 9000));
         base.setTreeSetUnit(new TreeSet<>(new PointComparator()));
         allUnits.add(base);
     }
@@ -61,11 +63,11 @@ public class Game implements GameManger {
 Todo:: terrain need to add terrains
         Terrain t = new Terrain(new Point(30,100),2,"river");
         terrains.add(t );*/
-        gameTimer = new GameTimer(10);
+        gameTimer = new GameTimer(50);
         GameState.addObserver(gameTimer);
-         CreateTeamsStage();
+        // CreateTeamsStage();
 
-       // autoInitGame();
+        autoInitGame();
         UpdateUnits();
         this.StartBattle();
 
@@ -103,6 +105,7 @@ Todo:: terrain need to add terrains
                 attackers.getTeamPlayers().size() +
                         defenders.getTeamPlayers().size();
     }
+
     public boolean fullAttackers() {
         return attackerNumber == attackers.getTeamPlayers().size();
     }
@@ -143,23 +146,23 @@ Todo:: terrain need to add terrains
         }*/
         //TOdo :need to check
         Unit left, right = null, cur;
-        if(allUnits.size() ==0)
+        if (allUnits.size() == 0)
             return;
         Iterator<Unit> unitIterator = allUnits.iterator();
         left = null;
         cur = unitIterator.next();
 
-         do{
-             if (unitIterator.hasNext())
-                 right = unitIterator.next();
+        do {
+            if (unitIterator.hasNext())
+                right = unitIterator.next();
 
             cur.setNeighbourUnit("left", left);
             cur.setNeighbourUnit("right", right);
             left = cur;
             cur = right;
 
-             //  right = unitIterator.next();
-        }while (unitIterator.hasNext());
+            //  right = unitIterator.next();
+        } while (unitIterator.hasNext());
         cur.setNeighbourUnit("left", left);
         cur.setNeighbourUnit("right", null);
     }
@@ -167,7 +170,8 @@ Todo:: terrain need to add terrains
     public void setGameState(States gameState) {
         GameState.setData(gameState);
     }
-    public void setGameState(String state){
+
+    public void setGameState(String state) {
         GameState.setData(States.valueOf(state));
     }
 
@@ -197,16 +201,16 @@ Todo:: terrain need to add terrains
             JSONArray jsonArray = (JSONArray) obj.get("Players");
             for (Object jsonObject : jsonArray) {
                 JSONObject player = (JSONObject) jsonObject;
-                Player p = new Player(Integer.parseInt( player.get("Points").toString())
+                Player p = new Player(Integer.parseInt(player.get("Points").toString())
                         , Player.TeamRole.valueOf((String) player.get("role"))
                         , (String) player.get("id"));
                 System.out.println(p.getRole().name());
                 JSONArray Army = (JSONArray) player.get("army");
                 System.out.println("Army : " + Army.toJSONString());
-                for(Object a : Army){
+                for (Object a : Army) {
                     JSONObject jsonObject1 = (JSONObject) a;
                     System.out.println((String) jsonObject1.get("name"));
-                    Unit unit = new Unit(new Unit.UnitValues (Shop.getInstance()
+                    Unit unit = new Unit(new Unit.UnitValues(Shop.getInstance()
                             .getUnitByName((String) jsonObject1.get("name"))));
 
                     unit.setPosition(new Point(Integer.parseInt((String) jsonObject1.get("positionX")),
@@ -254,7 +258,209 @@ Todo:: terrain need to add terrains
     }
 
     private void autoInitGame() {
-        Unit defndUnit = new Unit();
+
+        Player Defender = new Player();
+        Defender.setRole(Player.TeamRole.Defender);
+
+        Player Attacker = new Player();
+        Attacker.setRole(Player.TeamRole.Attacker);
+
+        attackers.addPlayer(Attacker);
+        defenders.addPlayer(Defender);
+
+        //p.addArmy(defndUnit);
+        //p.addArmy(defndUnit);
+
+        // Adding Pateriot
+        Unit unitDefender = new Unit();
+        base.setPosition(new Point(9000, 9000));
+        Unit.UnitValues values = Shop.getInstance().getUnitByName("Patriot Missile");
+        unitDefender.setRole(Player.TeamRole.Defender);
+        unitDefender.setPosition(new Point(9000, 9090));
+        unitDefender.setValues(values);
+        unitDefender.AcceptMovement(new FixedPosition());
+        unitDefender.AcceptTactic(new RandomAttack());
+
+        Defender.addArmy(unitDefender);
+        Defender.addArmy(base);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9000, 8910));
+
+        Defender.addArmy(unitDefender);
+
+        // Adding Pillbox
+        unitDefender = new Unit(unitDefender);
+        values = Shop.getInstance().getUnitByName("Pillbox");
+        unitDefender.setPosition(new Point(9200, 9000));
+        unitDefender.setValues(values);
+
+        Defender.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8800, 9000));
+
+        Defender.addArmy(unitDefender);
+
+        //Adding Prism Tawer
+        unitDefender = new Unit(unitDefender);
+        values = Shop.getInstance().getUnitByName("Prism Tower");
+        unitDefender.setPosition(new Point(9200, 9200));
+        unitDefender.setValues(values);
+
+        Defender.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8800, 9200));
+
+        Defender.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8800, 8800));
+
+        Defender.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9200, 8800));
+
+        Defender.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9200, 8800));
+
+        Defender.addArmy(unitDefender);
+        //adding Mirage Patrol
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8300, 8500));
+        values = Shop.getInstance().getUnitByName("Mirage tank");
+        unitDefender.setValues(values);
+        unitDefender.AcceptMovement(new FixedPatrol(1200));
+
+        Defender.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8200, 8500));
+        values = Shop.getInstance().getUnitByName("Mirage tank");
+        unitDefender.setValues(values);
+        unitDefender.AcceptMovement(new FixedPatrol(1500));
+
+        Defender.addArmy(unitDefender);
+
+/*
+
+        //adding Attacker
+        //adding miraga
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8800, 9200));
+        values = Shop.getInstance().getUnitByName("Mirage tank");
+        unitDefender.setValues(values);
+        unitDefender.AcceptMovement(new ToTarget(base));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8900, 9200));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9000, 9200));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9100, 9200));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9200, 9200));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8900, 8950));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9000, 8950));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8500, 8500));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8700, 8500));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(8800, 8500));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9100, 8500));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9200, 8500));
+
+        Attacker.addArmy(unitDefender);
+
+        //adding tesla for Attaker
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(7800, 9100));
+        values = Shop.getInstance().getUnitByName("TeslaTank");
+        unitDefender.setValues(values);
+        unitDefender.AcceptMovement(new ToTarget(base));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(7800, 9050));
+
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(7800, 8950));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(7800, 8900));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9100, 8950));
+
+        Attacker.addArmy(unitDefender);
+
+        unitDefender = new Unit(unitDefender);
+        unitDefender.setPosition(new Point(9150, 8950));
+
+        Attacker.addArmy(unitDefender);
+
+        //Adding
+
+*/
+
+
+
+
+
+
+
+        /*Unit defndUnit = new Unit();
         base.setPosition(new Point(30,0));
         Unit.UnitValues valuess = Shop.getInstance().getUnitByName("Prism Tower");
         defndUnit.setRole(Player.TeamRole.Defender);
@@ -281,7 +487,7 @@ Todo:: terrain need to add terrains
         attacker.setRole(Player.TeamRole.Attacker);
         attacker.addArmy(attackUnit);
 
-        attackers.addPlayer(attacker);
+        attackers.addPlayer(attacker);*/
     }
 
     public PlayerIterator playerIterator() {
@@ -302,9 +508,9 @@ Todo:: terrain need to add terrains
     @Override
     public void pause() {
         try {
-           synchronized (gameTimer){
-               gameTimer.wait();
-           }
+            synchronized (gameTimer) {
+                gameTimer.wait();
+            }
 
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -313,7 +519,7 @@ Todo:: terrain need to add terrains
 
     @Override
     public void resume() {
-        synchronized (gameTimer){
+        synchronized (gameTimer) {
             gameTimer.notify();
 
         }

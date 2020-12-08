@@ -408,3 +408,4649 @@ time: 9	Unit_id :2 Moved to :	X :280,Y :280
 ---------------
 time: 10	Unit_id :2 Moved to :	X :310,Y :310
 ---------------
+time: 1	Unit_id :2 Moved to :	X :40,Y :40
+---------------
+time: 2	Unit_id :2 Moved to :	X :70,Y :70
+---------------
+time: 3	Unit_id :2 Moved to :	X :100,Y :100
+---------------
+time: 4	Unit_id :2 Moved to :	X :130,Y :130
+---------------
+time: 5	Unit_id :2 Moved to :	X :160,Y :160
+---------------
+time: 6	Unit_id :2 Moved to :	X :190,Y :190
+---------------
+time: 7	Unit_id :2 Moved to :	X :220,Y :220
+---------------
+time: 8	Unit_id :2 Moved to :	X :250,Y :250
+---------------
+time: 9	Unit_id :2 Moved to :	X :280,Y :280
+---------------
+time: 10	Unit_id :2 Moved to :	X :310,Y :310
+---------------
+Zoom Center: (40,40) Zoom Width: 10Zoom Center: (40,40) Zoom Width: 10time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+time: 14	Unit_id :11 Moved to :	X :9140,Y :8500
+---------------
+time: 15	Unit_id :11 Moved to :	X :9200,Y :8500
+---------------
+time: 16	Unit_id :11 Moved to :	X :9260,Y :8500
+---------------
+time: 17	Unit_id :11 Moved to :	X :9320,Y :8500
+---------------
+time: 18	Unit_id :11 Moved to :	X :9380,Y :8500
+---------------
+time: 19	Unit_id :11 Moved to :	X :9440,Y :8500
+---------------
+time: 20	Unit_id :11 Moved to :	X :9500,Y :8500
+---------------
+time: 21	Unit_id :11 Moved to :	X :9500,Y :8560
+---------------
+time: 22	Unit_id :11 Moved to :	X :9500,Y :8620
+---------------
+time: 23	Unit_id :11 Moved to :	X :9500,Y :8680
+---------------
+time: 24	Unit_id :11 Moved to :	X :9500,Y :8740
+---------------
+time: 25	Unit_id :11 Moved to :	X :9500,Y :8800
+---------------
+time: 26	Unit_id :11 Moved to :	X :9500,Y :8860
+---------------
+time: 27	Unit_id :11 Moved to :	X :9500,Y :8920
+---------------
+time: 28	Unit_id :11 Moved to :	X :9500,Y :8980
+---------------
+time: 29	Unit_id :11 Moved to :	X :9500,Y :9040
+---------------
+time: 30	Unit_id :11 Moved to :	X :9500,Y :9100
+---------------
+time: 31	Unit_id :11 Moved to :	X :9500,Y :9160
+---------------
+time: 32	Unit_id :11 Moved to :	X :9500,Y :9220
+---------------
+time: 33	Unit_id :11 Moved to :	X :9500,Y :9280
+---------------
+time: 34	Unit_id :11 Moved to :	X :9500,Y :9340
+---------------
+time: 35	Unit_id :11 Moved to :	X :9500,Y :9400
+---------------
+time: 36	Unit_id :11 Moved to :	X :9500,Y :9460
+---------------
+time: 37	Unit_id :11 Moved to :	X :9500,Y :9520
+---------------
+time: 38	Unit_id :11 Moved to :	X :9500,Y :9580
+---------------
+time: 39	Unit_id :11 Moved to :	X :9500,Y :9640
+---------------
+time: 40	Unit_id :11 Moved to :	X :9500,Y :9700
+---------------
+time: 41	Unit_id :11 Moved to :	X :9440,Y :9700
+---------------
+time: 42	Unit_id :11 Moved to :	X :9380,Y :9700
+---------------
+time: 43	Unit_id :11 Moved to :	X :9320,Y :9700
+---------------
+time: 44	Unit_id :11 Moved to :	X :9260,Y :9700
+---------------
+time: 45	Unit_id :11 Moved to :	X :9200,Y :9700
+---------------
+time: 46	Unit_id :11 Moved to :	X :9140,Y :9700
+---------------
+time: 47	Unit_id :11 Moved to :	X :9080,Y :9700
+---------------
+time: 48	Unit_id :11 Moved to :	X :9020,Y :9700
+---------------
+time: 49	Unit_id :11 Moved to :	X :8960,Y :9700
+---------------
+time: 50	Unit_id :11 Moved to :	X :8900,Y :9700
+---------------
+Zoom Center: (8300,8500) Zoom Width: 100time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+Zoom Center: (9500,8500) Zoom Width: 70time: 20	Unit_id :11 Moved to :	X :9500,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+Zoom Center: (9500,8500) Zoom Width: 500time: 16	Unit_id :11 Moved to :	X :9260,Y :8500
+---------------
+time: 17	Unit_id :11 Moved to :	X :9320,Y :8500
+---------------
+time: 18	Unit_id :11 Moved to :	X :9380,Y :8500
+---------------
+time: 19	Unit_id :11 Moved to :	X :9440,Y :8500
+---------------
+time: 20	Unit_id :11 Moved to :	X :9500,Y :8500
+---------------
+time: 21	Unit_id :11 Moved to :	X :9500,Y :8560
+---------------
+time: 22	Unit_id :11 Moved to :	X :9500,Y :8620
+---------------
+time: 23	Unit_id :11 Moved to :	X :9500,Y :8680
+---------------
+time: 24	Unit_id :11 Moved to :	X :9500,Y :8740
+---------------
+time: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit id: 28	new health :850
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 28	new health :700
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 28	new health :550
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit id: 28	new health :850
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit id: 28	new health :700
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit id: 28	new health :550
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 26	new health :250
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 28	new health :400
+---------------
+time: 8	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit id: 16	new health :630
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 8	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 8	Unit id: 29	new health :400
+---------------
+time: 8	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 26	new health :100
+---------------
+time: 9	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 28	new health :250
+---------------
+time: 9	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 16	new health :600
+---------------
+time: 9	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 29	new health :250
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 27	new health :850
+---------------
+time: 11	Unit_id: 28	 Attack 	Unit_id: 27 By Damage: 300
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 28	new health :100
+---------------
+time: 11	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 16	new health :570
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 11	Unit id: 29	new health :100
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 11	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 12	Unit id: 19	new health :250
+---------------
+time: 12	Unit_id :28 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :27 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :26 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :25 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :12 Moved to :	X :8920,Y :8500
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 13	Unit_id :28 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 26	Destroyed 
+---------------
+time: 13	Unit_id :27 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id :26 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 13	Unit id: 28	Destroyed 
+---------------
+time: 13	Unit_id :25 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 13	Unit_id :12 Moved to :	X :8980,Y :8500
+---------------
+time: 13	Unit id: 20	new health :680
+---------------
+time: 13	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+time: 13	Unit id: 16	new health :540
+---------------
+time: 13	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 13	Unit id: 29	Destroyed 
+---------------
+time: 13	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit id: 25	new health :700
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit id: 28	new health :850
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 28	new health :700
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit id: 26	new health :250
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 28	new health :550
+---------------
+time: 8	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit id: 16	new health :630
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 8	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 8	Unit id: 29	new health :400
+---------------
+time: 8	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 26	new health :100
+---------------
+time: 9	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 28	new health :400
+---------------
+time: 9	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 16	new health :600
+---------------
+time: 9	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 9	Unit id: 29	new health :250
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 11	Unit id: 26	Destroyed 
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 28	new health :250
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 11	Unit id: 16	new health :570
+---------------
+time: 11	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 11	Unit id: 29	new health :100
+---------------
+time: 11	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit id: 28	new health :850
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 28	new health :700
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 28	new health :550
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 26	new health :250
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 28	new health :400
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit id: 16	new health :630
+---------------
+time: 8	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 8	Unit id: 29	new health :400
+---------------
+time: 8	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit id: 16	new health :600
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 29	new health :250
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 26	new health :100
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 28	new health :250
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 11	Unit id: 16	new health :570
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 11	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 11	Unit id: 29	new health :100
+---------------
+time: 11	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 12	Unit_id :28 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :27 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :26 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :25 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :12 Moved to :	X :8920,Y :8500
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 13	Unit id: 26	Destroyed 
+---------------
+time: 13	Unit_id :28 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id :27 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id :26 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id :25 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id :12 Moved to :	X :8980,Y :8500
+---------------
+time: 13	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+time: 13	Unit id: 28	new health :100
+---------------
+time: 13	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 13	Unit id: 20	new health :680
+---------------
+time: 13	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 13	Unit id: 16	new health :540
+---------------
+time: 13	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 13	Unit id: 29	Destroyed 
+---------------
+time: 13	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 27	new health :850
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit id: 28	new health :850
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 27	new health :700
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 27 By Damage: 300
+---------------
+time: 5	Unit id: 28	new health :700
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 6	Unit id: 26	new health :700
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 28	new health :550
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit id: 26	new health :550
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 28	new health :400
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit id: 16	new health :630
+---------------
+time: 8	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 8	Unit id: 29	new health :400
+---------------
+time: 8	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit id: 26	new health :400
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 16	new health :600
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 10	Unit id: 29	new health :250
+---------------
+time: 10	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 26	new health :250
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 28	new health :250
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 12	Unit_id :28 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit id: 16	new health :570
+---------------
+time: 12	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 12	Unit_id :27 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit id: 29	new health :100
+---------------
+time: 12	Unit_id :26 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 12	Unit_id :25 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :12 Moved to :	X :8920,Y :8500
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 13	Unit_id :28 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 26	new health :100
+---------------
+time: 13	Unit_id :27 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 13	Unit_id :26 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 28	new health :100
+---------------
+time: 13	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 13	Unit_id :25 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 20	new health :680
+---------------
+time: 13	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 13	Unit_id :12 Moved to :	X :8980,Y :8500
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+time: 14	Unit_id :28 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit id: 20	new health :670
+---------------
+time: 14	Unit_id :27 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 14	Unit_id :26 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit id: 16	new health :540
+---------------
+time: 14	Unit_id :25 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 14	Unit id: 29	Destroyed 
+---------------
+time: 14	Unit_id :12 Moved to :	X :9040,Y :8500
+---------------
+time: 14	Unit_id :11 Moved to :	X :9140,Y :8500
+---------------
+time: 14	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit id: 25	new health :700
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 28	new health :850
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 28	new health :700
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit id: 16	new health :630
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit id: 29	new health :400
+---------------
+time: 8	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 16	new health :600
+---------------
+time: 9	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 29	new health :250
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 26	new health :250
+---------------
+time: 11	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 28	new health :550
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit id: 16	new health :570
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 11	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 11	Unit id: 29	new health :100
+---------------
+time: 11	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 12	Unit_id :28 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit id: 26	new health :100
+---------------
+time: 12	Unit_id :27 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 12	Unit id: 28	new health :400
+---------------
+time: 12	Unit_id :26 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 12	Unit_id :25 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :12 Moved to :	X :8920,Y :8500
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 13	Unit_id :28 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 20	new health :680
+---------------
+time: 13	Unit_id :27 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 13	Unit_id :26 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 16	new health :540
+---------------
+time: 13	Unit_id :25 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 13	Unit id: 29	Destroyed 
+---------------
+time: 13	Unit_id :12 Moved to :	X :8980,Y :8500
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+time: 13	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit id: 28	new health :850
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 28	new health :700
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit id: 28	new health :550
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 26	new health :250
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 28	new health :400
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit id: 16	new health :630
+---------------
+time: 8	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 8	Unit id: 29	new health :400
+---------------
+time: 8	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 26	new health :100
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit id: 16	new health :600
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 10	Unit id: 29	new health :250
+---------------
+time: 10	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 12	Unit_id :28 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit id: 26	Destroyed 
+---------------
+time: 12	Unit_id :27 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :26 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :25 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :12 Moved to :	X :8920,Y :8500
+---------------
+time: 12	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 12	Unit id: 28	new health :250
+---------------
+time: 12	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 12	Unit id: 16	new health :570
+---------------
+time: 12	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 12	Unit id: 29	new health :100
+---------------
+time: 12	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 13	Unit_id :28 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 20	new health :680
+---------------
+time: 13	Unit_id :26 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 13	Unit_id :25 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id :12 Moved to :	X :8980,Y :8500
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+time: 14	Unit_id :28 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit id: 27	new health :850
+---------------
+time: 14	Unit_id: 28	 Attack 	Unit_id: 27 By Damage: 300
+---------------
+time: 14	Unit_id :26 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit id: 28	new health :100
+---------------
+time: 14	Unit_id :25 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 14	Unit_id :12 Moved to :	X :9040,Y :8500
+---------------
+time: 14	Unit id: 20	new health :670
+---------------
+time: 14	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 14	Unit_id :11 Moved to :	X :9140,Y :8500
+---------------
+time: 14	Unit id: 16	new health :540
+---------------
+time: 14	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 14	Unit id: 29	Destroyed 
+---------------
+time: 14	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit id: 28	new health :850
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit id: 28	new health :700
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 28	new health :550
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 26	new health :250
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 28	new health :400
+---------------
+time: 8	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit id: 16	new health :630
+---------------
+time: 8	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit id: 29	new health :400
+---------------
+time: 8	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 26	new health :100
+---------------
+time: 9	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 28	new health :250
+---------------
+time: 9	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 16	new health :600
+---------------
+time: 9	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 29	new health :250
+---------------
+time: 9	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 26	Destroyed 
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 28	new health :100
+---------------
+time: 11	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 11	Unit id: 16	new health :570
+---------------
+time: 11	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 11	Unit id: 29	new health :100
+---------------
+time: 11	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 12	Unit id: 19	new health :250
+---------------
+time: 12	Unit_id :28 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :26 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :25 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :12 Moved to :	X :8920,Y :8500
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 13	Unit_id :28 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 27	new health :850
+---------------
+time: 13	Unit_id: 28	 Attack 	Unit_id: 27 By Damage: 300
+---------------
+time: 13	Unit_id :26 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 27	new health :700
+---------------
+time: 13	Unit_id: 26	 Attack 	Unit_id: 27 By Damage: 300
+---------------
+time: 13	Unit_id :25 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 20	new health :680
+---------------
+time: 13	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 13	Unit_id :12 Moved to :	X :8980,Y :8500
+---------------
+time: 13	Unit id: 16	new health :540
+---------------
+time: 13	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 13	Unit id: 29	Destroyed 
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+time: 13	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :700
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit id: 28	new health :850
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 28	new health :700
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 26	new health :250
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 28	new health :550
+---------------
+time: 8	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit id: 16	new health :630
+---------------
+time: 8	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit id: 29	new health :400
+---------------
+time: 8	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 26	new health :100
+---------------
+time: 9	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 9	Unit id: 28	new health :400
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 9	Unit id: 16	new health :600
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 9	Unit id: 29	new health :250
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 11	Unit id: 26	Destroyed 
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 11	Unit id: 28	new health :250
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit id: 16	new health :570
+---------------
+time: 11	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 11	Unit id: 29	new health :100
+---------------
+time: 11	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 12	Unit id: 19	new health :250
+---------------
+time: 12	Unit_id :28 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :26 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :25 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :12 Moved to :	X :8920,Y :8500
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 13	Unit id: 26	Destroyed 
+---------------
+time: 13	Unit_id :28 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id: 28	 Attack 	Unit_id: 27 By Damage: 300
+---------------
+time: 13	Unit id: 27	new health :850
+---------------
+time: 13	Unit_id :26 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id: 26	 Attack 	Unit_id: 27 By Damage: 300
+---------------
+time: 13	Unit id: 20	new health :680
+---------------
+time: 13	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 13	Unit_id :25 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 16	new health :540
+---------------
+time: 13	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 13	Unit id: 29	Destroyed 
+---------------
+time: 13	Unit_id :12 Moved to :	X :8980,Y :8500
+---------------
+time: 13	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 28	new health :850
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit id: 28	new health :700
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit id: 26	new health :250
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit id: 28	new health :550
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit id: 16	new health :630
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 8	Unit id: 29	new health :400
+---------------
+time: 8	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 26	new health :100
+---------------
+time: 9	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 16	new health :600
+---------------
+time: 9	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 9	Unit id: 29	new health :250
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit id: 28	new health :400
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :13 Moved to :	X :8860,Y :9140
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit id: 28	new health :850
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 16	new health :720
+---------------
+time: 3	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 3	Unit id: 29	new health :850
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit id: 28	new health :700
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit id: 16	new health :690
+---------------
+time: 5	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 29	new health :700
+---------------
+time: 5	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit id: 28	new health :550
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit id: 16	new health :660
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 6	Unit id: 29	new health :550
+---------------
+time: 6	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit id: 26	new health :250
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 28	new health :400
+---------------
+time: 8	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit id: 16	new health :630
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 8	Unit id: 29	new health :400
+---------------
+time: 8	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 9	Unit id: 16	new health :600
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 9	Unit id: 29	new health :250
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 11	Unit id: 26	new health :100
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 28	new health :250
+---------------
+time: 11	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 11	Unit id: 16	new health :570
+---------------
+time: 11	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 29	new health :100
+---------------
+time: 11	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 12	Unit id: 19	new health :250
+---------------
+time: 12	Unit_id :28 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :27 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :26 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :25 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :12 Moved to :	X :8920,Y :8500
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 13	Unit id: 26	Destroyed 
+---------------
+time: 13	Unit_id :28 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id :27 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id :26 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 13	Unit_id :25 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 28	new health :100
+---------------
+time: 13	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 13	Unit id: 20	new health :680
+---------------
+time: 13	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 13	Unit_id :12 Moved to :	X :8980,Y :8500
+---------------
+time: 13	Unit id: 16	new health :540
+---------------
+time: 13	Unit_id: 29	 Attack 	Unit_id: 16 By Damage: 300
+---------------
+time: 13	Unit id: 29	Destroyed 
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+time: 13	Unit_id: 30	 Attack 	Unit_id: 29 By Damage: 300
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :13 Moved to :	X :8860,Y :9140
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit id: 28	new health :850
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit id: 28	new health :700
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit id: 28	new health :550
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit id: 26	new health :250
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 26	new health :100
+---------------
+time: 9	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit id: 28	new health :400
+---------------
+time: 9	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit id: 28	new health :250
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 11	Unit id: 26	Destroyed 
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :13 Moved to :	X :8860,Y :9140
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 27	new health :850
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit id: 28	new health :850
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit id: 26	new health :700
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit id: 28	new health :700
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit id: 26	new health :550
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit id: 28	new health :550
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit id: 26	new health :400
+---------------
+time: 8	Unit_id :28 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 8	Unit id: 28	new health :400
+---------------
+time: 8	Unit_id :27 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 8	Unit id: 20	new health :710
+---------------
+time: 8	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 8	Unit_id :26 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit id: 19	new health :450
+---------------
+time: 8	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 8	Unit_id :25 Moved to :	X :8040,Y :9000
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 9	Unit id: 26	new health :250
+---------------
+time: 9	Unit_id :28 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 9	Unit id: 28	new health :250
+---------------
+time: 9	Unit_id :27 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 9	Unit_id :26 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :25 Moved to :	X :8070,Y :9000
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit id: 20	new health :700
+---------------
+time: 10	Unit_id :28 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 10	Unit id: 19	new health :350
+---------------
+time: 10	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 10	Unit_id :27 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :26 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :25 Moved to :	X :8100,Y :9000
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 11	Unit id: 20	new health :690
+---------------
+time: 11	Unit_id :28 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 11	Unit_id :27 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :26 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :25 Moved to :	X :8130,Y :9000
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 12	Unit id: 19	new health :250
+---------------
+time: 12	Unit_id :28 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :27 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :26 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :25 Moved to :	X :8160,Y :9000
+---------------
+time: 12	Unit_id :12 Moved to :	X :8920,Y :8500
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 13	Unit_id :28 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 26	new health :100
+---------------
+time: 13	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 13	Unit id: 28	new health :100
+---------------
+time: 13	Unit_id :27 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 13	Unit_id :26 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit id: 20	new health :680
+---------------
+time: 13	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 13	Unit_id :25 Moved to :	X :8190,Y :9000
+---------------
+time: 13	Unit_id :12 Moved to :	X :8980,Y :8500
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+time: 14	Unit id: 20	new health :670
+---------------
+time: 14	Unit_id :28 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 14	Unit_id :27 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit_id :26 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit_id :25 Moved to :	X :8220,Y :9000
+---------------
+time: 14	Unit_id :12 Moved to :	X :9040,Y :8500
+---------------
+time: 14	Unit_id :11 Moved to :	X :9140,Y :8500
+---------------
+time: 15	Unit id: 26	Destroyed 
+---------------
+time: 15	Unit_id :28 Moved to :	X :8250,Y :9000
+---------------
+time: 15	Unit_id :27 Moved to :	X :8250,Y :9000
+---------------
+time: 15	Unit_id :26 Moved to :	X :8250,Y :9000
+---------------
+time: 15	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 15	Unit id: 28	Destroyed 
+---------------
+time: 15	Unit_id :25 Moved to :	X :8250,Y :9000
+---------------
+time: 15	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 15	Unit id: 18	new health :650
+---------------
+time: 15	Unit_id: 19	 Attack 	Unit_id: 18 By Damage: 1000
+---------------
+time: 15	Unit_id :12 Moved to :	X :9100,Y :8500
+---------------
+time: 15	Unit_id :11 Moved to :	X :9200,Y :8500
+---------------
+GameOver, DefenderWintime: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :13 Moved to :	X :8860,Y :9140
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit id: 25	new health :700
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :13 Moved to :	X :8860,Y :9140
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit_id :28 Moved to :	X :7890,Y :8990
+---------------
+time: 3	Unit id: 26	new health :850
+---------------
+time: 3	Unit_id :27 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 3	Unit id: 25	new health :850
+---------------
+time: 3	Unit_id :26 Moved to :	X :7890,Y :9000
+---------------
+time: 3	Unit_id: 27	 Attack 	Unit_id: 25 By Damage: 300
+---------------
+time: 3	Unit_id :25 Moved to :	X :7890,Y :9010
+---------------
+time: 3	Unit id: 28	new health :850
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 3	Unit id: 26	new health :700
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 3	Unit_id: 25	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 4	Unit id: 20	new health :740
+---------------
+time: 4	Unit_id :28 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 4	Unit_id :27 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit id: 19	new health :650
+---------------
+time: 4	Unit_id :26 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 4	Unit_id :25 Moved to :	X :7920,Y :9000
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :28 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 26	new health :550
+---------------
+time: 5	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 5	Unit_id :27 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 28	new health :700
+---------------
+time: 5	Unit_id :26 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 5	Unit_id :25 Moved to :	X :7950,Y :9000
+---------------
+time: 5	Unit id: 20	new health :730
+---------------
+time: 5	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :28 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 26	new health :400
+---------------
+time: 6	Unit_id :27 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 28	 Attack 	Unit_id: 26 By Damage: 300
+---------------
+time: 6	Unit_id :26 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit id: 28	new health :550
+---------------
+time: 6	Unit_id :25 Moved to :	X :7980,Y :9000
+---------------
+time: 6	Unit_id: 26	 Attack 	Unit_id: 28 By Damage: 300
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit id: 19	new health :550
+---------------
+time: 6	Unit_id: 18	 Attack 	Unit_id: 19 By Damage: 1000
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit id: 20	new health :720
+---------------
+time: 7	Unit_id :28 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id: 8	 Attack 	Unit_id: 20 By Damage: 100
+---------------
+time: 7	Unit_id :27 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :26 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :25 Moved to :	X :8010,Y :9000
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :13 Moved to :	X :8860,Y :9140
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :13 Moved to :	X :8860,Y :9140
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 1	Unit_id :28 Moved to :	X :7830,Y :8930
+---------------
+time: 1	Unit_id :27 Moved to :	X :7830,Y :8980
+---------------
+time: 1	Unit_id :26 Moved to :	X :7830,Y :9020
+---------------
+time: 1	Unit_id :25 Moved to :	X :7830,Y :9070
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 1	Unit_id :20 Moved to :	X :8560,Y :8560
+---------------
+time: 1	Unit_id :21 Moved to :	X :8760,Y :8560
+---------------
+time: 1	Unit_id :22 Moved to :	X :8860,Y :8560
+---------------
+time: 1	Unit_id :13 Moved to :	X :8860,Y :9140
+---------------
+time: 1	Unit_id :18 Moved to :	X :8960,Y :9000
+---------------
+time: 1	Unit_id :14 Moved to :	X :8960,Y :9140
+---------------
+time: 2	Unit_id :28 Moved to :	X :7860,Y :8960
+---------------
+time: 2	Unit_id :27 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :26 Moved to :	X :7860,Y :9000
+---------------
+time: 2	Unit_id :25 Moved to :	X :7860,Y :9040
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 1	Unit_id :12 Moved to :	X :8260,Y :8500
+---------------
+time: 1	Unit_id :11 Moved to :	X :8360,Y :8500
+---------------
+time: 2	Unit_id :12 Moved to :	X :8320,Y :8500
+---------------
+time: 2	Unit_id :11 Moved to :	X :8420,Y :8500
+---------------
+time: 3	Unit_id :12 Moved to :	X :8380,Y :8500
+---------------
+time: 3	Unit_id :11 Moved to :	X :8480,Y :8500
+---------------
+time: 4	Unit_id :12 Moved to :	X :8440,Y :8500
+---------------
+time: 4	Unit_id :11 Moved to :	X :8540,Y :8500
+---------------
+time: 5	Unit_id :12 Moved to :	X :8500,Y :8500
+---------------
+time: 5	Unit_id :11 Moved to :	X :8600,Y :8500
+---------------
+time: 6	Unit_id :12 Moved to :	X :8560,Y :8500
+---------------
+time: 6	Unit_id :11 Moved to :	X :8660,Y :8500
+---------------
+time: 7	Unit_id :12 Moved to :	X :8620,Y :8500
+---------------
+time: 7	Unit_id :11 Moved to :	X :8720,Y :8500
+---------------
+time: 8	Unit_id :12 Moved to :	X :8680,Y :8500
+---------------
+time: 8	Unit id: 12	new health :650
+---------------
+time: 8	Unit_id :11 Moved to :	X :8780,Y :8500
+---------------
+time: 8	Unit_id: 11	 Attack 	Unit_id: 12 By Damage: 1000
+---------------
+time: 9	Unit_id :12 Moved to :	X :8740,Y :8500
+---------------
+time: 9	Unit_id :11 Moved to :	X :8840,Y :8500
+---------------
+time: 10	Unit_id :12 Moved to :	X :8800,Y :8500
+---------------
+time: 10	Unit id: 11	new health :650
+---------------
+time: 10	Unit_id :11 Moved to :	X :8900,Y :8500
+---------------
+time: 10	Unit_id: 12	 Attack 	Unit_id: 11 By Damage: 1000
+---------------
+time: 10	Unit id: 12	new health :550
+---------------
+time: 10	Unit_id: 11	 Attack 	Unit_id: 12 By Damage: 1000
+---------------
+time: 11	Unit_id :12 Moved to :	X :8860,Y :8500
+---------------
+time: 11	Unit_id :11 Moved to :	X :8960,Y :8500
+---------------
+time: 12	Unit_id :12 Moved to :	X :8920,Y :8500
+---------------
+time: 12	Unit_id :11 Moved to :	X :9020,Y :8500
+---------------
+time: 13	Unit_id :12 Moved to :	X :8980,Y :8500
+---------------
+time: 13	Unit_id :11 Moved to :	X :9080,Y :8500
+---------------
+time: 14	Unit_id :12 Moved to :	X :9040,Y :8500
+---------------
+time: 14	Unit_id :11 Moved to :	X :9140,Y :8500
+---------------
+time: 15	Unit_id :12 Moved to :	X :9100,Y :8500
+---------------
+time: 15	Unit_id :11 Moved to :	X :9200,Y :8500
+---------------
+time: 16	Unit_id :12 Moved to :	X :9160,Y :8500
+---------------
+time: 16	Unit_id :11 Moved to :	X :9260,Y :8500
+---------------
+time: 17	Unit_id :12 Moved to :	X :9220,Y :8500
+---------------
+time: 17	Unit_id :11 Moved to :	X :9320,Y :8500
+---------------
+time: 18	Unit id: 11	new health :550
+---------------
+time: 18	Unit_id :12 Moved to :	X :9280,Y :8500
+---------------
+time: 18	Unit_id: 12	 Attack 	Unit_id: 11 By Damage: 1000
+---------------
+time: 18	Unit_id :11 Moved to :	X :9380,Y :8500
+---------------
+time: 19	Unit_id :12 Moved to :	X :9340,Y :8500
+---------------
+time: 19	Unit_id :11 Moved to :	X :9440,Y :8500
+---------------
+time: 20	Unit_id :12 Moved to :	X :9400,Y :8500
+---------------
+time: 20	Unit id: 11	new health :450
+---------------
+time: 20	Unit_id :11 Moved to :	X :9500,Y :8500
+---------------
+time: 20	Unit_id: 12	 Attack 	Unit_id: 11 By Damage: 1000
+---------------
+time: 21	Unit_id :12 Moved to :	X :9460,Y :8500
+---------------
+time: 21	Unit_id :11 Moved to :	X :9500,Y :8560
+---------------
+time: 22	Unit_id :12 Moved to :	X :9520,Y :8500
+---------------
+time: 22	Unit id: 11	new health :350
+---------------
+time: 22	Unit_id :11 Moved to :	X :9500,Y :8620
+---------------
+time: 23	Unit_id :12 Moved to :	X :9580,Y :8500
+---------------
+time: 23	Unit_id :11 Moved to :	X :9500,Y :8680
+---------------
+time: 24	Unit_id :12 Moved to :	X :9640,Y :8500
+---------------
+time: 24	Unit_id :11 Moved to :	X :9500,Y :8740
+---------------
+time: 25	Unit_id :12 Moved to :	X :9700,Y :8500
+---------------
+time: 25	Unit_id :11 Moved to :	X :9500,Y :8800
+---------------
+time: 26	Unit_id :12 Moved to :	X :9700,Y :8560
+---------------
+time: 26	Unit_id :11 Moved to :	X :9500,Y :8860
+---------------
+time: 27	Unit_id :12 Moved to :	X :9700,Y :8620
+---------------
+time: 27	Unit_id :11 Moved to :	X :9500,Y :8920
+---------------
+time: 28	Unit_id :12 Moved to :	X :9700,Y :8680
+---------------
+time: 28	Unit_id :11 Moved to :	X :9500,Y :8980
+---------------
+time: 29	Unit_id :12 Moved to :	X :9700,Y :8740
+---------------
+time: 29	Unit_id :11 Moved to :	X :9500,Y :9040
+---------------
+time: 30	Unit_id :12 Moved to :	X :9700,Y :8800
+---------------
+time: 30	Unit_id :11 Moved to :	X :9500,Y :9100
+---------------
+time: 31	Unit_id :12 Moved to :	X :9700,Y :8860
+---------------
+time: 31	Unit_id :11 Moved to :	X :9500,Y :9160
+---------------
+time: 32	Unit_id :12 Moved to :	X :9700,Y :8920
+---------------
+time: 32	Unit_id :11 Moved to :	X :9500,Y :9220
+---------------
+time: 33	Unit_id :12 Moved to :	X :9700,Y :8980
+---------------
+time: 33	Unit_id :11 Moved to :	X :9500,Y :9280
+---------------
+time: 34	Unit_id :12 Moved to :	X :9700,Y :9040
+---------------
+time: 34	Unit_id :11 Moved to :	X :9500,Y :9340
+---------------
+time: 35	Unit_id :12 Moved to :	X :9700,Y :9100
+---------------
+time: 35	Unit_id :11 Moved to :	X :9500,Y :9400
+---------------
+time: 36	Unit_id :12 Moved to :	X :9700,Y :9160
+---------------
+time: 36	Unit_id :11 Moved to :	X :9500,Y :9460
+---------------
+time: 37	Unit_id :12 Moved to :	X :9700,Y :9220
+---------------
+time: 37	Unit_id :11 Moved to :	X :9500,Y :9520
+---------------
+time: 38	Unit_id :12 Moved to :	X :9700,Y :9280
+---------------
+time: 38	Unit_id :11 Moved to :	X :9500,Y :9580
+---------------
+time: 39	Unit_id :12 Moved to :	X :9700,Y :9340
+---------------
+time: 39	Unit_id :11 Moved to :	X :9500,Y :9640
+---------------
+time: 40	Unit_id :12 Moved to :	X :9700,Y :9400
+---------------
+time: 40	Unit_id :11 Moved to :	X :9500,Y :9700
+---------------
+time: 41	Unit_id :12 Moved to :	X :9700,Y :9460
+---------------
+time: 41	Unit_id :11 Moved to :	X :9440,Y :9700
+---------------
+time: 42	Unit_id :12 Moved to :	X :9700,Y :9520
+---------------
+time: 42	Unit_id :11 Moved to :	X :9380,Y :9700
+---------------
+time: 43	Unit_id :12 Moved to :	X :9700,Y :9580
+---------------
+time: 43	Unit_id :11 Moved to :	X :9320,Y :9700
+---------------
+time: 44	Unit_id :12 Moved to :	X :9700,Y :9640
+---------------
+time: 44	Unit_id :11 Moved to :	X :9260,Y :9700
+---------------
+time: 45	Unit_id :12 Moved to :	X :9700,Y :9700
+---------------
+time: 45	Unit_id :11 Moved to :	X :9200,Y :9700
+---------------
+time: 46	Unit_id :12 Moved to :	X :9700,Y :9760
+---------------
+time: 46	Unit_id :11 Moved to :	X :9140,Y :9700
+---------------
+time: 47	Unit_id :12 Moved to :	X :9700,Y :9820
+---------------
+time: 47	Unit_id :11 Moved to :	X :9080,Y :9700
+---------------
+time: 48	Unit_id :12 Moved to :	X :9700,Y :9880
+---------------
+time: 48	Unit_id :11 Moved to :	X :9020,Y :9700
+---------------
+time: 49	Unit_id :12 Moved to :	X :9700,Y :9940
+---------------
+time: 49	Unit_id :11 Moved to :	X :8960,Y :9700
+---------------
+time: 50	Unit_id :12 Moved to :	X :9700,Y :10000
+---------------
+time: 50	Unit_id :11 Moved to :	X :8900,Y :9700
+---------------

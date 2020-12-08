@@ -83,13 +83,16 @@ Thread updateRangeThread = new Thread();
         updateRangeQueue.clear();
         doMainThingQueue.clear();
         for(Unit unit: game.getAllUnits()){
+            System.out.println("Unit id: aaaaaaa " + unit.getId());
             if(unit.getName().equals("Main Base"))
                 continue;
 
             if(unit.getSpeed() != 0 )
             UpdateMapAsyncTask.addMethod(unit::Move);
 
-            UpdateRangeAsyncTask.addMethod(() -> unit.getTactic().SortMap(unit));
+            UpdateRangeAsyncTask.addMethod(() ->{
+                System.out.println(unit.getId());
+                unit.getTactic().SortMap(unit);});
 
         //Todo: here we can make damaging more real
             if(unit.getDamage() != 0 && unit.getTreeSetUnit().size() !=0 && unit.getDamaging().CanShot())
