@@ -1,5 +1,6 @@
 package com.destroyordefend.project.utility;
 
+import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Unit.Unit;
 
 
@@ -40,6 +41,7 @@ Thread updateRangeThread = new Thread();
 
                     current = System.currentTimeMillis() - current;
                     Thread.sleep(1000 - current);
+                    game.UpdateUnits();
                     reFill();
                 }else if(game.getGameStateName().equals("AttackerWin") || game.getGameStateName().equals("DefenderWin")){
                     Log.GameOver("GameOver, "  + game.getGameStateName());
@@ -79,19 +81,27 @@ Thread updateRangeThread = new Thread();
     }
 
     void reFill(){
+        /*for(Unit u : Game.getGame().getAllUnits()){
+           try {
+                System.out.println(u.getPosition() + " " + u.getMovement().getTruck().peek() + " " + u.getRole());
+
+            }catch (NullPointerException exception){
+                System.out.println(u.getPosition() + "  "  + u.getName()+ " " + u.getRole());
+            }
+
+        }*/
+        System.out.println("Base: " + Game.getGame().getBase().getValues().getHealth());
         updatePositionQueue.clear();
         updateRangeQueue.clear();
         doMainThingQueue.clear();
         for(Unit unit: game.getAllUnits()){
-            System.out.println("Unit id: aaaaaaa " + unit.getId());
-            if(unit.getName().equals("Main Base"))
+            if(unit.getName().equals("MAIN BASE"))
                 continue;
 
-            if(unit.getSpeed() != 0 )
-            UpdateMapAsyncTask.addMethod(unit::Move);
-
+            if(unit.getSpeed() != 0  && unit.getTreeSetUnit().size() == 0) {
+                UpdateMapAsyncTask.addMethod(unit::Move);
+            }
             UpdateRangeAsyncTask.addMethod(() ->{
-                System.out.println(unit.getId());
                 unit.getTactic().SortMap(unit);});
 
         //Todo: here we can make damaging more real

@@ -1,6 +1,8 @@
 package com.destroyordefend.project.Tactic;
 
 import com.destroyordefend.project.Core.PointComparator;
+import com.destroyordefend.project.Movement.AircraftMovement;
+import com.destroyordefend.project.Tactic.Comparators.AriDefenceComparator;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.Core.Point;
 
@@ -16,14 +18,39 @@ public interface Tactic {
         TreeSet<Unit> temp = new TreeSet<>((o1,o2) -> 1);
         Unit tempUnit = t.getNeighbourUnit("left");
         while( tempUnit != null && isInRange(t,tempUnit) ){
+            if(t.getRole().equals(tempUnit.getRole())){
+                tempUnit = tempUnit.getNeighbourUnit("left");
+                continue;
+            }
+          //  System.out.println("in range of "  + t.getId() +  "\t" + t.getName()+"  "   +  t.getRole() + " unit: " + tempUnit.getName()  + "   "  + tempUnit.getRole());
             temp.add(tempUnit);
+            System.out.println("not filtered ww : " + tempUnit.getName() + "  " + tempUnit.getId());
+
             tempUnit = tempUnit.getNeighbourUnit("left");
         }
         tempUnit = t.getNeighbourUnit("right");
         while( tempUnit != null && isInRange(t,tempUnit) ){
+            if(t.getRole().equals(tempUnit.getRole())){
+                tempUnit = tempUnit.getNeighbourUnit("right");
+                continue;
+            }
             temp.add(tempUnit);
+            System.out.println("not filtered ww : " + tempUnit.getName() + "  " + tempUnit.getId());
+
             tempUnit = tempUnit.getNeighbourUnit("right");
         }
+
+        /*if(t.getName().equalsIgnoreCase("Patriot Missile")){
+            TreeSet<Unit> p = new TreeSet<>(new AriDefenceComparator());
+            p.addAll(temp);
+            temp = p;
+
+        }else{
+            TreeSet<Unit> p = new TreeSet<>(new PointComparator());
+            p.addAll(temp);
+            temp = p;
+        }*/
+
         t.setTreeSetUnit(temp);
         /*
         //Todo: the up change in total

@@ -144,7 +144,7 @@
       "price": "200"
     },
     {
-      "type": "MAIN BASE",
+      "type": "Structure",
       "name": "MAIN BASE",
       "health": "10000",
       "armor": "0.00",

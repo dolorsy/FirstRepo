@@ -16,12 +16,12 @@ public class Main {
 //        GameTimer gameTimer= new GameTimer(10);
 //        gameTimer.start();
 
-
+/*
         try {
             SwingUtilities.invokeAndWait(() -> new ConsoleZoomUI().createComponents());
         } catch (InvocationTargetException e) {
             e.printStackTrace();
-        }
+        }*/
        Game game = Game.getGame();
         game.StartAnewGame();
     }

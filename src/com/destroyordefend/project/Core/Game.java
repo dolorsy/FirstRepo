@@ -69,6 +69,17 @@ Todo:: terrain need to add terrains
 
         autoInitGame();
         UpdateUnits();
+
+/*
+
+        for (Unit unit: allUnits){
+            System.out.println("curr id : " + unit.getId() + " " + unit.getPosition());
+//            System.out.println("left : " + unit.getNeighbourUnit("left").getId() +  unit.getNeighbourUnit("left").getPosition());
+            System.out.println("right : " + unit.getNeighbourUnit("right").getId() +  unit.getNeighbourUnit("right").getPosition());
+        }*/
+        for(Unit u: allUnits){
+            System.out.println(u);
+        }
         this.StartBattle();
 
     }
@@ -118,16 +129,18 @@ Todo:: terrain need to add terrains
         //this method to Update AllUnits
         allUnits = new TreeSet<>(new PointComparator());
 
+        allUnits.add(base);
         for (Player player : attackers.getTeamPlayers()) {
-            for (Unit unit : player.getArmy()) {
-                unit.setRole(player.getRole());
-                allUnits.add(unit);
-            }
+            System.out.println("sss" + player.getArmy().first().getPosition());
+            allUnits.addAll(player.getArmy());
+
         }
         for (Player player : defenders.getTeamPlayers()) {
             allUnits.addAll(player.getArmy());
         }
-        p(String.valueOf(allUnits.size()));
+        p("sizeee:" + String.valueOf(allUnits.size()));
+        for (Unit u : allUnits)
+            System.out.println(u);
         setNavigationForUnit();
     }
 
@@ -145,21 +158,26 @@ Todo:: terrain need to add terrains
             curr.setLeftUnit(left);
         }*/
         //TOdo :need to check
-        Unit left, right = null, cur;
+        Unit left , right = null, cur;
         if (allUnits.size() == 0)
             return;
         Iterator<Unit> unitIterator = allUnits.iterator();
         left = null;
         cur = unitIterator.next();
 
+
         do {
             if (unitIterator.hasNext())
                 right = unitIterator.next();
-
             cur.setNeighbourUnit("left", left);
             cur.setNeighbourUnit("right", right);
+
             left = cur;
             cur = right;
+//            System.out.println("curr id : " + cur.getId() + " " + cur.getPosition());
+//            System.out.println("left : " + cur.getNeighbourUnit("left").getId() +  cur.getNeighbourUnit("left").getPosition());
+//            System.out.println("right : " + cur.getNeighbourUnit("right").getId() +  cur.getNeighbourUnit("right").getPosition());
+//
 
             //  right = unitIterator.next();
         } while (unitIterator.hasNext());
@@ -243,6 +261,8 @@ Todo:: terrain need to add terrains
             GameState.setData(States.DefenderWin);
             setGameState(States.DefenderWin);
         }
+        System.out.println(GameState.getData());
+        System.exit(0);
 
     }
 
@@ -258,7 +278,7 @@ Todo:: terrain need to add terrains
     }
 
     private void autoInitGame() {
-
+        Unit.UnitValues values = new Unit.UnitValues();
         Player Defender = new Player();
         Defender.setRole(Player.TeamRole.Defender);
 
@@ -273,21 +293,24 @@ Todo:: terrain need to add terrains
 
         // Adding Pateriot
         Unit unitDefender = new Unit();
+
         base.setPosition(new Point(9000, 9000));
-        Unit.UnitValues values = Shop.getInstance().getUnitByName("Patriot Missile");
+        Defender.addArmy(base);
+        unitDefender.setValues(values);
+
+        values = Shop.getInstance().getUnitByName("Patriot Missile");
         unitDefender.setRole(Player.TeamRole.Defender);
         unitDefender.setPosition(new Point(9000, 9090));
         unitDefender.setValues(values);
         unitDefender.AcceptMovement(new FixedPosition());
         unitDefender.AcceptTactic(new RandomAttack());
-
         Defender.addArmy(unitDefender);
-        Defender.addArmy(base);
-
+/*
+//Todo: the following unit make a bug
         unitDefender = new Unit(unitDefender);
         unitDefender.setPosition(new Point(9000, 8910));
-
         Defender.addArmy(unitDefender);
+
 
         // Adding Pillbox
         unitDefender = new Unit(unitDefender);
@@ -347,18 +370,21 @@ Todo:: terrain need to add terrains
 
         Defender.addArmy(unitDefender);
 
-/*
+*/
 
         //adding Attacker
         //adding miraga
         unitDefender = new Unit(unitDefender);
+        unitDefender.setRole(Player.TeamRole.Attacker);
         unitDefender.setPosition(new Point(8800, 9200));
         values = Shop.getInstance().getUnitByName("Mirage tank");
         unitDefender.setValues(values);
+        unitDefender.AcceptTactic(new RandomAttack());
         unitDefender.AcceptMovement(new ToTarget(base));
 
         Attacker.addArmy(unitDefender);
-
+        System.out.println("");
+/*
         unitDefender = new Unit(unitDefender);
         unitDefender.setPosition(new Point(8900, 9200));
 
@@ -380,12 +406,12 @@ Todo:: terrain need to add terrains
         Attacker.addArmy(unitDefender);
 
         unitDefender = new Unit(unitDefender);
-        unitDefender.setPosition(new Point(8900, 8950));
+        unitDefender.setPosition(new Point(8900, 8500));
 
         Attacker.addArmy(unitDefender);
 
         unitDefender = new Unit(unitDefender);
-        unitDefender.setPosition(new Point(9000, 8950));
+        unitDefender.setPosition(new Point(9000, 8500));
 
         Attacker.addArmy(unitDefender);
 
@@ -441,24 +467,20 @@ Todo:: terrain need to add terrains
         Attacker.addArmy(unitDefender);
 
         unitDefender = new Unit(unitDefender);
-        unitDefender.setPosition(new Point(9100, 8950));
+        unitDefender.setPosition(new Point(9100, 8500));
 
         Attacker.addArmy(unitDefender);
 
         unitDefender = new Unit(unitDefender);
-        unitDefender.setPosition(new Point(9150, 8950));
+        unitDefender.setPosition(new Point(9150, 8500));
 
         Attacker.addArmy(unitDefender);
 
         //Adding
 
+
+
 */
-
-
-
-
-
-
 
         /*Unit defndUnit = new Unit();
         base.setPosition(new Point(30,0));

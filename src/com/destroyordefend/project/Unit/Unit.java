@@ -92,6 +92,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     }
 
     public void setTreeSetUnit(TreeSet<Unit> treeSetUnit) {
+        System.out.println(getId() + " " + treeSetUnit.size());
         this.treeSetUnit = treeSetUnit;
 
     }
@@ -126,7 +127,6 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
         }
 
-        System.out.println(getId());
         for(int i =0 ;i<values.currentSpeed;i++) {
             Point p = this.movement.GetNextPoint(this);
             if(p.equals(getPosition())){
@@ -161,9 +161,11 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
             this.setPosition(p);
             this.updateLeftAndRight();
         }
+        if(getRole().equals(Player.TeamRole.Attacker))
         Log.move(this);
 
     }
+
 
     public TreeSet<Unit> getTreeSetUnit() {
         return treeSetUnit;
@@ -203,7 +205,6 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     //Method MovementAble Class
     @Override
     public Unit AcceptMovement(Movement movement) {
-        System.out.println("Accept Movment id" + getId());
         this.movement = movement;
         return this;
     }
@@ -504,7 +505,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         }
         @Override
         public void DoDamage() {
-            if(treeSetUnit.size() ==0)
+            if(getTreeSetUnit().size() ==0)
                 return;
             //Todo: here a big mistake
             Unit.this.getTreeSetUnit().first().getDamaging().AcceptDamage(this.getDamage());
@@ -513,7 +514,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         }
         @Override
         public void AcceptDamage(int damage) {
-            int valueresulte = values.health - (int) (damage* getValues().armor);
+            int valueresulte = values.health - (int) (getValues().armor ==0 ?damage:damage* getValues().armor);
             if ((valueresulte) <= 0) {
 
                 values.health = 0;
@@ -523,7 +524,6 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
                 values.health = valueresulte;
                 Log.acceptDamage(Unit.this);
             }
-            p("Accept Damage id: " + id + " new Health: " + values.health);
         }
         @Override
         public void decrease() {
