@@ -1,5 +1,7 @@
 package com.destroyordefend.project.Core;
 
+import java.util.Objects;
+
 public class Point implements Comparable<Point> {
     private int x, y;
 
@@ -23,6 +25,8 @@ public class Point implements Comparable<Point> {
     }
 
     public void setPoint(Point n) {
+        if(n == null)
+            n = new Point(-100,-100);
         this.x = n.getX();
         this.y = n.getY();
     }
@@ -64,4 +68,8 @@ public class Point implements Comparable<Point> {
         return out;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getX(), getY());
+    }
 }

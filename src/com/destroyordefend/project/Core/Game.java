@@ -10,6 +10,7 @@ import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
 import com.destroyordefend.project.utility.LiveData;
+import com.destroyordefend.project.utility.PositionHelper;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -30,7 +31,7 @@ enum States {
 
 public class Game implements GameManger {
     LiveData<States> GameState = new LiveData<>(States.NotRunning);
-    public static Game game;
+    private static Game game;
     private Unit base;
     private TreeSet<Unit> allUnits = new TreeSet<>((v1, v2) -> 1);
     private TreeSet<Terrain> terrains = new TreeSet<>(new PointComparator());
@@ -47,6 +48,7 @@ public class Game implements GameManger {
         base.setRole(Player.TeamRole.Defender);
         base.setId(1);
         base.setPosition(new Point(9000, 9000));
+        PositionHelper.getInstance().setUnitPlace(base, base.getPosition());
         base.setTreeSetUnit(new TreeSet<>(new PointComparator()));
         allUnits.add(base);
     }
@@ -77,9 +79,12 @@ Todo:: terrain need to add terrains
 //            System.out.println("left : " + unit.getNeighbourUnit("left").getId() +  unit.getNeighbourUnit("left").getPosition());
             System.out.println("right : " + unit.getNeighbourUnit("right").getId() +  unit.getNeighbourUnit("right").getPosition());
         }*/
-        for(Unit u: allUnits){
+        /*for(Unit u: allUnits){
             System.out.println(u);
-        }
+        }*/
+        System.out.println(PositionHelper.getInstance());
+
+
         this.StartBattle();
 
     }
@@ -104,7 +109,8 @@ Todo:: terrain need to add terrains
     }
 
     private void StartBattle() {
-
+        for (Unit u:allUnits)
+            PositionHelper.getInstance().setUnitPlace(u, u.getPosition());
         setGameState(States.Running);
         gameTimer.start();
         p("Start Battle");
@@ -138,7 +144,7 @@ Todo:: terrain need to add terrains
         for (Player player : defenders.getTeamPlayers()) {
             allUnits.addAll(player.getArmy());
         }
-        p("sizeee:" + String.valueOf(allUnits.size()));
+        p("sizeee:" + allUnits.size());
         for (Unit u : allUnits)
             System.out.println(u);
         setNavigationForUnit();
@@ -156,7 +162,7 @@ Todo:: terrain need to add terrains
             left = curr;
             curr = allUnits.iterator().next();
             curr.setLeftUnit(left);
-        }*/
+        }
         //TOdo :need to check
         Unit left , right = null, cur;
         if (allUnits.size() == 0)
@@ -183,6 +189,11 @@ Todo:: terrain need to add terrains
         } while (unitIterator.hasNext());
         cur.setNeighbourUnit("left", left);
         cur.setNeighbourUnit("right", null);
+
+         */
+        for (Unit u:allUnits)
+            PositionHelper.getInstance().setUnitPlace(u, u.getPosition());
+        System.out.println(PositionHelper.getInstance());
     }
 
     public void setGameState(States gameState) {
@@ -288,27 +299,23 @@ Todo:: terrain need to add terrains
         attackers.addPlayer(Attacker);
         defenders.addPlayer(Defender);
 
-        //p.addArmy(defndUnit);
-        //p.addArmy(defndUnit);
-
         // Adding Pateriot
-        Unit unitDefender = new Unit();
-
-        base.setPosition(new Point(9000, 9000));
         Defender.addArmy(base);
+        Unit unitDefender = new Unit();
         unitDefender.setValues(values);
 
         values = Shop.getInstance().getUnitByName("Patriot Missile");
         unitDefender.setRole(Player.TeamRole.Defender);
-        unitDefender.setPosition(new Point(9000, 9090));
+        unitDefender.setPosition(new Point(9000, 9310));
+        PositionHelper.getInstance().setUnitPlace(unitDefender, unitDefender.getPosition());
         unitDefender.setValues(values);
         unitDefender.AcceptMovement(new FixedPosition());
         unitDefender.AcceptTactic(new RandomAttack());
         Defender.addArmy(unitDefender);
-/*
+
 //Todo: the following unit make a bug
         unitDefender = new Unit(unitDefender);
-        unitDefender.setPosition(new Point(9000, 8910));
+        unitDefender.setPosition(new Point(9000, 8900));
         Defender.addArmy(unitDefender);
 
 
@@ -370,13 +377,13 @@ Todo:: terrain need to add terrains
 
         Defender.addArmy(unitDefender);
 
-*/
+
 
         //adding Attacker
         //adding miraga
         unitDefender = new Unit(unitDefender);
         unitDefender.setRole(Player.TeamRole.Attacker);
-        unitDefender.setPosition(new Point(8800, 9200));
+        unitDefender.setPosition(new Point(8800, 9600));
         values = Shop.getInstance().getUnitByName("Mirage tank");
         unitDefender.setValues(values);
         unitDefender.AcceptTactic(new RandomAttack());
@@ -384,7 +391,7 @@ Todo:: terrain need to add terrains
 
         Attacker.addArmy(unitDefender);
         System.out.println("");
-/*
+
         unitDefender = new Unit(unitDefender);
         unitDefender.setPosition(new Point(8900, 9200));
 
@@ -480,13 +487,12 @@ Todo:: terrain need to add terrains
 
 
 
-*/
 
-        /*Unit defndUnit = new Unit();
-        base.setPosition(new Point(30,0));
+
+        Unit defndUnit = new Unit();
         Unit.UnitValues valuess = Shop.getInstance().getUnitByName("Prism Tower");
         defndUnit.setRole(Player.TeamRole.Defender);
-        defndUnit.setPosition(new Point(25, 35));
+        defndUnit.setPosition(new Point(505, 35));
         defndUnit.setValues(valuess);
         defndUnit.AcceptMovement(new FixedPosition());
         defndUnit.AcceptTactic(new RandomAttack());
@@ -498,7 +504,7 @@ Todo:: terrain need to add terrains
         defenders.addPlayer(p);
         Unit attackUnit = new Unit();
 
-        Unit.UnitValues values = Shop.getInstance().getUnitByName("Mirage tank");
+        values = Shop.getInstance().getUnitByName("Mirage tank");
         attackUnit.setRole(Player.TeamRole.Attacker);
         attackUnit.setPosition(new Point(20, 20));
         attackUnit.setValues(values);
@@ -509,7 +515,7 @@ Todo:: terrain need to add terrains
         attacker.setRole(Player.TeamRole.Attacker);
         attacker.addArmy(attackUnit);
 
-        attackers.addPlayer(attacker);*/
+        attackers.addPlayer(attacker);
     }
 
     public PlayerIterator playerIterator() {

@@ -1,16 +1,8 @@
 package com.destroyordefend.project.Tactic;
 
-import com.destroyordefend.project.Core.PointComparator;
-import com.destroyordefend.project.Movement.AircraftMovement;
-import com.destroyordefend.project.Tactic.Comparators.AriDefenceComparator;
 import com.destroyordefend.project.Unit.Unit;
-import com.destroyordefend.project.Core.Point;
 
-import java.util.Map;
 import java.util.TreeSet;
-
-import static com.destroyordefend.project.Core.Game.game;
-import static com.destroyordefend.project.Main.p;
 
 public interface Tactic {
     static void updateRange(Unit t){

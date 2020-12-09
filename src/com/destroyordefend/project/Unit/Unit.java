@@ -13,10 +13,10 @@ import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+import java.util.Objects;
 import java.util.TreeSet;
 
-import static com.destroyordefend.project.Core.Game.game;
+import static com.destroyordefend.project.Core.Game.getGame;
 import static com.destroyordefend.project.Main.p;
 
 public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
@@ -33,6 +33,18 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     private Plan plan;
     private HashMap<Plan,Integer> plans = new HashMap<Plan, Integer>() ;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Unit)) return false;
+        Unit unit = (Unit) o;
+        return getId() == unit.getId() && getMovement().equals(unit.getMovement()) && getTreeSetUnit().equals(unit.getTreeSetUnit()) && point.equals(unit.point) && getRole() == unit.getRole() && getValues().equals(unit.getValues()) && getTactic().equals(unit.getTactic()) && getDamaging().equals(unit.getDamaging()) && leftAndRight.equals(unit.leftAndRight) && plan.equals(unit.plan) && plans.equals(unit.plans);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getMovement(), getTreeSetUnit(), point, getRole(), getValues(), getTactic(), getDamaging(), leftAndRight, plan, plans);
+    }
 
     public Unit() {
        id = IdGenerator.generate(this);
@@ -259,8 +271,8 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     }
 
     void onDestroy() {
-        game.DeleteUnit(this);
-        game.UpdateState();
+        getGame().DeleteUnit(this);
+        getGame().UpdateState();
     }
 
     @Override

@@ -8,7 +8,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import static com.destroyordefend.project.Core.Game.game;
 
 public class Log extends ConsoleZoomingFilter{
     private static final File logFile = new File("logFile.txt");

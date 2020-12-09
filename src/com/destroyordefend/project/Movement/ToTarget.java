@@ -4,6 +4,7 @@ import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Barrier;
 import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.utility.PositionHelper;
 
 import java.util.Stack;
 
@@ -50,7 +51,8 @@ public class ToTarget implements Movement {
         Barrier barrier = Movement.canSetUnitPlace(n,unit);
         if(barrier != null){
             if(barrier.getName().equals("river")) {
-                unit.setPosition(n);
+                //unit.setPosition(n);
+                PositionHelper.getInstance().setUnitPlace(unit,n);
                 return true;
             }
             Point[] corners = {barrier.getDownLeftCorner(),barrier.getDownRightCorner(),barrier.getUpRightCorner(),barrier.getUpLeftCorner()};
@@ -126,8 +128,8 @@ public class ToTarget implements Movement {
             track.push(corners[nextp]);
             track.push(corners[min]);
         }
-        //Todo: Should Update n here? n = makeAnewPoint(unit); ???? no it should be in unit.move();
-        unit.setPosition(n);
+        //unit.setPosition(n);
+        PositionHelper.getInstance().setUnitPlace(unit,n);
         return false;
     }
 

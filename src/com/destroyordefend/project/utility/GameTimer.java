@@ -3,10 +3,9 @@ package com.destroyordefend.project.utility;
 import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Unit.Unit;
 
-
 import java.util.Observable;
 import java.util.Observer;
-import static com.destroyordefend.project.Core.Game.game;
+
 import static com.destroyordefend.project.Core.Game.getGame;
 import static com.destroyordefend.project.utility.MainMethodAsyncTask.doMainThingQueue;
 import static com.destroyordefend.project.utility.UpdateMapAsyncTask.updatePositionQueue;
@@ -28,7 +27,7 @@ Thread updateRangeThread = new Thread();
                 //Todo:May Be You need Exception Handling
                 //Todo: We should invoke All Players UpdateArmy
 
-                if(game.getGameStateName().equals("Running")) {
+                if(getGame().getGameStateName().equals("Running")) {
                     long current = System.currentTimeMillis();
 
 
@@ -41,10 +40,10 @@ Thread updateRangeThread = new Thread();
 
                     current = System.currentTimeMillis() - current;
                     Thread.sleep(1000 - current);
-                    game.UpdateUnits();
+                    //getGame().UpdateUnits();
                     reFill();
-                }else if(game.getGameStateName().equals("AttackerWin") || game.getGameStateName().equals("DefenderWin")){
-                    Log.GameOver("GameOver, "  + game.getGameStateName());
+                }else if(getGame().getGameStateName().equals("AttackerWin") || getGame().getGameStateName().equals("DefenderWin")){
+                    Log.GameOver("GameOver, "  + getGame().getGameStateName());
                     this.interrupt();
                     break;
                 }else{
@@ -68,8 +67,8 @@ Thread updateRangeThread = new Thread();
 
     }
     private void GoodEnd(){
-        game.setGameState("DefenderWin");
-        System.out.println("Times up " + game.getGameStateName());
+        getGame().setGameState("DefenderWin");
+        System.out.println("Times up " + getGame().getGameStateName());
 
     }
     public boolean onEnd(){
@@ -94,7 +93,7 @@ Thread updateRangeThread = new Thread();
         updatePositionQueue.clear();
         updateRangeQueue.clear();
         doMainThingQueue.clear();
-        for(Unit unit: game.getAllUnits()){
+        for(Unit unit: getGame().getAllUnits()){
             if(unit.getName().equals("MAIN BASE"))
                 continue;
 

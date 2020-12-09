@@ -1,13 +1,12 @@
 package com.destroyordefend.project.Movement;
 
+import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Unit;
 
-import java.util.PriorityQueue;
-import java.util.Queue;
 import java.util.Stack;
 
-import static com.destroyordefend.project.Core.Game.game;
+import static com.destroyordefend.project.Core.Game.getGame;
 
 public class AircraftMovement implements Movement {
     private Stack<Point> track = new Stack<>();
@@ -17,7 +16,7 @@ public class AircraftMovement implements Movement {
 
     public AircraftMovement(Point airport){
         track.add(airport);
-        track.add(game.getBase().getPosition());
+        track.add(Game.getGame().getBase().getPosition());
         this.airport = airport;
     }
 
@@ -28,7 +27,7 @@ public class AircraftMovement implements Movement {
 
     public void updateTrack(){
         track.add(airport);
-        track.add(game.getBase().getPosition());
+        track.add(getGame().getBase().getPosition());
     }
 
     @Override

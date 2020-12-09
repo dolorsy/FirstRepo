@@ -4,50 +4,47 @@ package com.destroyordefend.project.Movement;
 import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Barrier;
+import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.utility.PositionHelper;
 import org.json.simple.JSONObject;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Stack;
-
-import static com.destroyordefend.project.Core.Game.game;
 
 public interface Movement {
 
     static Movement getSuitableMovment(JSONObject movement) {
-        switch (String.valueOf(movement.get("movement")) ){
-            case"FixedPatrol":
+        switch (String.valueOf(movement.get("movement"))) {
+            case "FixedPatrol":
                 return new FixedPatrol(Integer.parseInt((String) movement.get("stepSize")));
-            case"ToTarget":
+            case "ToTarget":
                 return new ToTarget(Game.getGame().getBase());
-            case"AircraftMovement":
-                return new AircraftMovement(new Point(Integer.parseInt((String)movement.get("airportX")),Integer.parseInt((String)movement.get("airportY"))));
+            case "AircraftMovement":
+                return new AircraftMovement(new Point(Integer.parseInt((String) movement.get("airportX")), Integer.parseInt((String) movement.get("airportY"))));
             default:
                 return new FixedPosition();
 
         }
     }
 
-     void addTarget(Point p,Unit u);
-        Point GetNextPoint(Unit unit);
+    void addTarget(Point p, Unit u);
+
+    Point GetNextPoint(Unit unit);
+
     public Stack<Point> getTruck();
+
+
     static Barrier canSetUnitPlace(Point point, Unit unit) {
-        Unit temp = new Unit(unit);
-        temp.setPosition(point);
-        if (temp.isSharedWith(temp.getNeighbourUnit("left")))
-            return temp.getNeighbourUnit("left");
-        else if (temp.isSharedWith(temp.getNeighbourUnit("right")))
-            return temp.getNeighbourUnit("right");
-        else {
-            //Todo: need to change // we should check left/right/up down shouldn't we?
-            for (Barrier u : game.getTerrains()) {
-                if ((u.isSharedWith(temp)) /*&& !u.getPosition().equals(temp.getPosition())*/) {
-                    return u;
-                }
+        Point cur = unit.getPosition();
+        unit.setPosition(point);
+        for (Terrain t :Game.getGame().getTerrains()){
+            if (t.isSharedWith(unit)){
+                unit.setPosition(cur);
+                return t;
             }
-            return null;
+
         }
+        return PositionHelper.getInstance().canSetAt(unit, point);
     }
 
     static Point straightMove(Point src, Point dis) {
@@ -68,28 +65,28 @@ public interface Movement {
         return true;
     }
 
-     static boolean setNext(Unit unit,Point n){
+    static boolean setNext(Unit unit, Point n) {
 
         // Point n = Movement.straightMove(unit.getPosition(),track.peek());
-        Barrier barrier = Movement.canSetUnitPlace(n,unit);
-        if(barrier != null){
-            if(barrier.getName().equals("river")) {
-                unit.setPosition(n);
+        Barrier barrier = Movement.canSetUnitPlace(n, unit);
+        if (barrier != null) {
+            if (barrier.getName().equals("river")) {
+                PositionHelper.getInstance().setUnitPlace(unit, n);
                 return true;
             }
-            Point[] corners = {barrier.getDownLeftCorner(),barrier.getDownRightCorner(),barrier.getUpRightCorner(),barrier.getUpLeftCorner()};
+            Point[] corners = {barrier.getDownLeftCorner(), barrier.getDownRightCorner(), barrier.getUpRightCorner(), barrier.getUpLeftCorner()};
             int min = 0;
-            int nextp = 1 ;
+            int nextp = 1;
             double curDist = unit.getPosition().distance(corners[0]);
             for (int i = 0; i < 4; i++) {
                 double curAns = (unit.getPosition().distance(corners[i]));
-                if (curAns < curDist ) {
+                if (curAns < curDist) {
                     min = i;
-                    if(corners[i].getX() > unit.getRight())
+                    if (corners[i].getX() > unit.getRight())
                         nextp = 3;
-                    else if(corners[i].getX() < unit.getLeft())
+                    else if (corners[i].getX() < unit.getLeft())
                         nextp = 4;
-                    else if(corners[i].getY() < unit.getDown())
+                    else if (corners[i].getY() < unit.getDown())
                         nextp = 2;
                     else
                         nextp = 1;
@@ -98,27 +95,27 @@ public interface Movement {
                 }
             }
             switch (min) {
-                case 0 : {
+                case 0: {
                     corners[min].setX(corners[min].getX() - unit.getRadius());
                     corners[min].setY(corners[min].getY() - unit.getRadius());
                     break;
                 }
-                case 1 : {
+                case 1: {
                     corners[min].setX(corners[min].getX() + unit.getRadius());
                     corners[min].setY(corners[min].getY() - unit.getRadius());
                     break;
                 }
-                case 2 : {
+                case 2: {
                     corners[min].setX(corners[min].getX() + unit.getRadius());
                     corners[min].setY(corners[min].getY() + unit.getRadius());
                     break;
                 }
-                case 3 : {
+                case 3: {
                     corners[min].setX(corners[min].getX() - unit.getRadius());
                     corners[min].setY(corners[min].getY() + unit.getRadius());
                     break;
                 }
-                default :
+                default:
                     throw new IllegalStateException("Unexpected value: " + min);
             }
 
@@ -128,22 +125,22 @@ public interface Movement {
                     corners[nextp].setY(corners[nextp].getY() - unit.getRadius());
                     break;
                 }
-                case 1 : {
+                case 1: {
                     corners[nextp].setX(corners[nextp].getX() + unit.getRadius());
                     corners[nextp].setY(corners[nextp].getY() - unit.getRadius());
                     break;
                 }
-                case 2 : {
+                case 2: {
                     corners[nextp].setX(corners[nextp].getX() + unit.getRadius());
                     corners[nextp].setY(corners[nextp].getY() + unit.getRadius());
                     break;
                 }
-                case 3 : {
+                case 3: {
                     corners[nextp].setX(corners[nextp].getX() - unit.getRadius());
                     corners[nextp].setY(corners[nextp].getY() + unit.getRadius());
                     break;
                 }
-                default :
+                default:
                     throw new IllegalStateException("Unexpected value: " + min);
             }
 
@@ -151,10 +148,12 @@ public interface Movement {
             unit.getMovement().getTruck().push(corners[min]);
         }
         //Todo: Should Update n here? n = makeAnewPoint(unit); ???? no it should be in unit.move();
-        unit.setPosition(n);
+        PositionHelper.getInstance().setUnitPlace(unit, n);
         return false;
     }
+
     Point getTarget();
+
     @Override
-     String toString();
+    String toString();
 }

@@ -37,11 +37,11 @@ public interface Barrier {
     }
 
     default int getUp() {
-        return getPosition().getY() + this.getRadius();
+        return getPosition().getY() - this.getRadius();
     }
 
     default int getDown() {
-        return getPosition().getY() - this.getRadius();
+        return getPosition().getY() + this.getRadius();
     }
 
     default Point getDownRightCorner() {
