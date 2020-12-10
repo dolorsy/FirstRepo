@@ -34,7 +34,8 @@ public class Game implements GameManger {
     private Unit base;
     private TreeSet<Unit> allUnits = new TreeSet<>((v1, v2) -> 1);
     private TreeSet<Terrain> terrains = new TreeSet<>(new PointComparator());
-    private Team attackers, defenders;
+    private Team attackers;
+    private Team defenders;
     int attackerNumber, defenderNumber;
     GameTimer gameTimer;
 

@@ -82,15 +82,16 @@ public interface Movement {
         Barrier barrier = Movement.canSetUnitPlace(n, unit);
         if (barrier == null || barrier.is("river")) {
             PositionHelper.getInstance().setUnitPlace(unit, n);
+            System.out.println(unit.getPosition());
             return barrier != null;
         }
         System.out.println("gomu gomu noo");
 
         Point[] corners = {
-                new Point(barrier.getLeft() - unit.getRadius(), barrier.getDown() + unit.getRadius()),
-                new Point(barrier.getRight() + unit.getRadius(), barrier.getDown() + unit.getRadius()),
-                new Point(barrier.getLeft() - unit.getRadius(), barrier.getUp() - unit.getRadius()),
-                new Point(barrier.getRight() + unit.getRadius(), barrier.getUp() - unit.getRadius())
+                new Point(barrier.getLeft() - unit.getRadius()-1, barrier.getDown() + unit.getRadius()+1),
+                new Point(barrier.getRight() + unit.getRadius()+1, barrier.getDown() + unit.getRadius()+1),
+                new Point(barrier.getLeft() - unit.getRadius()-1, barrier.getUp() - unit.getRadius()-1),
+                new Point(barrier.getRight() + unit.getRadius()+1, barrier.getUp() - unit.getRadius()-1)
         };
         Point target = unit.getMovement().getTarget();
         Point closer = corners[getCloserTo(target, corners)];
