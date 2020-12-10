@@ -24,8 +24,8 @@ public interface Barrier {
         );
     }
 
-    default boolean is(String type) {
-        return getName().equals(type);
+    default boolean is(String name) {
+        return getName().equals(name);
     }
 
     default int getLeft() {

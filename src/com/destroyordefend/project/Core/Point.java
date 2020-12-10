@@ -1,7 +1,5 @@
 package com.destroyordefend.project.Core;
 
-import java.util.Objects;
-
 public class Point implements Comparable<Point> {
     private int x, y;
 
@@ -66,10 +64,5 @@ public class Point implements Comparable<Point> {
         if (out == 0)
             out = Integer.compare(y, o.y);
         return out;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getX(), getY());
     }
 }
