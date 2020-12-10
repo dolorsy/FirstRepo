@@ -50,7 +50,9 @@ public class Log extends ConsoleZoomingFilter{
                 "\tUnit_id :" + unit.getId() +
                 " Moved to :"+
                 "\tX :" + unit.getPosition().getX()+
-                ",Y :" + unit.getPosition().getY() + "\n"  + "---------------" + "\n",logFile);
+                ",Y :" + unit.getPosition().getY() + "\n"  + "---------------" + "\n"+
+                "target is"+unit.getMovement().getTarget()+"\n"
+                +unit.getMovement().getTruck().size(),logFile);
     }
 
     public static void doDamage(Unit unit_One ,Unit unit_Two){

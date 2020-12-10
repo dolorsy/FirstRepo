@@ -36,9 +36,7 @@ public interface Barrier {
         return getPosition().getX() + this.getRadius();
     }
 
-    default int getUp() {
-        return getPosition().getY() - this.getRadius();
-    }
+    default int getUp() { return getPosition().getY() - this.getRadius(); }
 
     default int getDown() {
         return getPosition().getY() + this.getRadius();

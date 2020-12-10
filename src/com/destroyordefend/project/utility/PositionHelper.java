@@ -26,34 +26,26 @@ public class PositionHelper {
     }
 
     public Unit canSetAt(Unit u, Point newPoint) {
+        edit(u,remove);
         Point current = u.getPosition();
         u.setPosition(newPoint);
-        Unit unit = eidt(u, search);
+        Unit result = edit(u, search);
         u.setPosition(current);
-        return unit;
+        edit(u,add);
+        return result;
     }
 
     public void setUnitPlace(Unit unit, Point newPoint) {
-       // System.out.println("called set unit place");
-        Unit i = canSetAt(unit, newPoint);
-
-        if (i != null) {
-            if(! i.equals(unit)) {
-                System.out.println(allPoints.size());
-                throw new RuntimeException("set with shared point " + i.getId() + i.getName()+" " + i.getPosition() + " " + unit.getId() + unit.getName()+" " + unit.getPosition());
-            }
-        }
         removeUnitAllocatedPosition(unit);
         unit.setPosition(newPoint);
-        eidt(unit, add);
+        edit(unit, add);
     }
 
     private void removeUnitAllocatedPosition(Unit unit) {
-        eidt(unit, remove);
+        edit(unit, remove);
     }
 
-
-    private Unit eidt(Unit unit, final int swich) {
+    private Unit edit(Unit unit, final int swich) {
         Unit out = null;
         int left = unit.getLeft();
         int right = unit.getRight();
@@ -67,21 +59,24 @@ public class PositionHelper {
             for (int y = up; y <= down; y++) {
                 Point temp = new Point(x,y);
                 if (swich == add) {
+                    if(allPoints.get(temp)!=null)
+                        throw new RuntimeException("shared place"
+                                +allPoints.get(temp).getName()+" "+allPoints.get(temp).getPosition()+unit.getId()+" "+unit.getPosition());
                     allPoints.put(temp, unit);
                     //System.out.println("added done" + unit.getId());
                 } else if (swich == remove) {
-                    allPoints.put(temp, null);
+                    allPoints.remove(temp);
                 } else {
                     out = allPoints.get(temp);
                     //System.out.println(temp+"this is b " + out);
-                    if (out != null) {
-                        //System.out.println("hello break");
-                        break;
+                    if (out != null && out.getId() != unit.getId() && out.is(unit.getName())) {
+                        System.out.println("hello break"+out.getId()+" "+unit.getId());
+                        return out;
                     }
                 }
             }
         }
-        return out;
+        return null;
     }
 
     @Override

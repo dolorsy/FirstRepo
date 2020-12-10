@@ -22,10 +22,6 @@ public class FixedPosition implements Movement {
         return null;
     }
 
-    @Override
-    public boolean SetNextPoint(Unit unit) {
-        return false;
-    }
 
     @Override
     public Point getTarget() {

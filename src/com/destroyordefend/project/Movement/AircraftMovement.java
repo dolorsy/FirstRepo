@@ -50,11 +50,6 @@ public class AircraftMovement implements Movement {
         return track;
     }
 
-    @Override
-    public boolean SetNextPoint(Unit unit) {
-
-        return false;
-    }
 
     @Override
     public Point getTarget() {

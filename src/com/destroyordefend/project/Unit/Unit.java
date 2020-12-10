@@ -8,6 +8,7 @@ import com.destroyordefend.project.Tactic.Plan;
 import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.utility.IdGenerator;
 import com.destroyordefend.project.utility.Log;
+import com.destroyordefend.project.utility.PositionHelper;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -170,7 +171,8 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
                 values.currentSpeed = values.speed ;
                 continue;
             }*/
-            this.setPosition(p);
+            PositionHelper.getInstance().setUnitPlace(this,p);
+            //this.setPosition(p);
             this.updateLeftAndRight();
         }
         if(getRole().equals(Player.TeamRole.Attacker))
