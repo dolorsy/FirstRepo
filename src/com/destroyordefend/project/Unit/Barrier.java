@@ -17,8 +17,8 @@ public interface Barrier {
         if (getPosition() == null || b == null || b.getPosition() == null)
             return false;
         return !(
-                this.getUp() <= b.getDown() ||
-                        this.getDown() >= b.getUp() ||
+                this.getUp() >= b.getDown() ||
+                        this.getDown() <= b.getUp() ||
                         this.getRight() <= b.getLeft() ||
                         this.getLeft() >= b.getRight()
         );

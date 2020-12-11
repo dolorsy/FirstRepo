@@ -23188,4 +23188,406 @@ target is(100,100)
 1time: 3	Unit_id :2 Moved to :	X :175,Y :175
 ---------------
 target is(100,100)
+1time: 1	Unit_id :2 Moved to :	X :100,Y :9940
+---------------
+target is(100,100)
+1time: 2	Unit_id :2 Moved to :	X :100,Y :9880
+---------------
+target is(100,100)
+1time: 3	Unit_id :2 Moved to :	X :100,Y :9820
+---------------
+target is(100,100)
+1time: 4	Unit_id :2 Moved to :	X :100,Y :9760
+---------------
+target is(100,100)
+1time: 5	Unit_id :2 Moved to :	X :100,Y :9700
+---------------
+target is(100,100)
+1time: 6	Unit_id :2 Moved to :	X :100,Y :9640
+---------------
+target is(100,100)
+1time: 7	Unit_id :2 Moved to :	X :100,Y :9580
+---------------
+target is(100,100)
+1time: 8	Unit_id :2 Moved to :	X :100,Y :9520
+---------------
+target is(100,100)
+1time: 9	Unit_id :2 Moved to :	X :100,Y :9460
+---------------
+target is(100,100)
+1time: 10	Unit_id :2 Moved to :	X :100,Y :9400
+---------------
+target is(100,100)
+1time: 11	Unit_id :2 Moved to :	X :100,Y :9340
+---------------
+target is(100,100)
+1time: 1	Unit_id :2 Moved to :	X :100,Y :9940
+---------------
+target is(100,100)
+1time: 2	Unit_id :2 Moved to :	X :100,Y :9880
+---------------
+target is(100,100)
+1time: 3	Unit_id :2 Moved to :	X :100,Y :9820
+---------------
+target is(100,100)
+1time: 4	Unit_id :2 Moved to :	X :100,Y :9760
+---------------
+target is(100,100)
+1time: 5	Unit_id :2 Moved to :	X :100,Y :9700
+---------------
+target is(100,100)
+1time: 6	Unit_id :2 Moved to :	X :100,Y :9640
+---------------
+target is(100,100)
+1time: 7	Unit_id :2 Moved to :	X :100,Y :9580
+---------------
+target is(100,100)
+1time: 8	Unit_id :2 Moved to :	X :100,Y :9520
+---------------
+target is(100,100)
+1time: 9	Unit_id :2 Moved to :	X :100,Y :9460
+---------------
+target is(100,100)
+1time: 10	Unit_id :2 Moved to :	X :100,Y :9400
+---------------
+target is(100,100)
+1time: 11	Unit_id :2 Moved to :	X :100,Y :9340
+---------------
+target is(100,100)
+1time: 12	Unit_id :2 Moved to :	X :100,Y :9280
+---------------
+target is(100,100)
+1time: 13	Unit_id :2 Moved to :	X :100,Y :9220
+---------------
+target is(100,100)
+1time: 14	Unit_id :2 Moved to :	X :100,Y :9160
+---------------
+target is(100,100)
+1time: 15	Unit_id :2 Moved to :	X :100,Y :9100
+---------------
+target is(100,100)
+1time: 16	Unit_id :2 Moved to :	X :100,Y :9040
+---------------
+target is(100,100)
+1time: 17	Unit_id :2 Moved to :	X :100,Y :8980
+---------------
+target is(100,100)
+1time: 18	Unit_id :2 Moved to :	X :100,Y :8920
+---------------
+target is(100,100)
+1time: 19	Unit_id :2 Moved to :	X :100,Y :8860
+---------------
+target is(100,100)
+1time: 20	Unit_id :2 Moved to :	X :100,Y :8800
+---------------
+target is(100,100)
+1time: 21	Unit_id :2 Moved to :	X :100,Y :8740
+---------------
+target is(100,100)
+1time: 22	Unit_id :2 Moved to :	X :100,Y :8680
+---------------
+target is(100,100)
+1time: 23	Unit_id :2 Moved to :	X :100,Y :8620
+---------------
+target is(100,100)
+1time: 24	Unit_id :2 Moved to :	X :100,Y :8560
+---------------
+target is(100,100)
+1time: 25	Unit_id :2 Moved to :	X :100,Y :8500
+---------------
+target is(100,100)
+1time: 26	Unit_id :2 Moved to :	X :100,Y :8440
+---------------
+target is(100,100)
+1time: 27	Unit_id :2 Moved to :	X :100,Y :8380
+---------------
+target is(100,100)
+1time: 28	Unit_id :2 Moved to :	X :100,Y :8320
+---------------
+target is(100,100)
+1time: 29	Unit_id :2 Moved to :	X :100,Y :8260
+---------------
+target is(100,100)
+1time: 30	Unit_id :2 Moved to :	X :100,Y :8200
+---------------
+target is(100,100)
+1time: 31	Unit_id :2 Moved to :	X :100,Y :8140
+---------------
+target is(100,100)
+1time: 32	Unit_id :2 Moved to :	X :100,Y :8080
+---------------
+target is(100,100)
+1time: 33	Unit_id :2 Moved to :	X :100,Y :8020
+---------------
+target is(100,100)
+1time: 34	Unit_id :2 Moved to :	X :100,Y :7960
+---------------
+target is(100,100)
+1time: 35	Unit_id :2 Moved to :	X :100,Y :7900
+---------------
+target is(100,100)
+1time: 36	Unit_id :2 Moved to :	X :100,Y :7840
+---------------
+target is(100,100)
+1time: 37	Unit_id :2 Moved to :	X :100,Y :7780
+---------------
+target is(100,100)
+1time: 38	Unit_id :2 Moved to :	X :100,Y :7720
+---------------
+target is(100,100)
+1time: 39	Unit_id :2 Moved to :	X :100,Y :7660
+---------------
+target is(100,100)
+1time: 40	Unit_id :2 Moved to :	X :100,Y :7600
+---------------
+target is(100,100)
+1time: 41	Unit_id :2 Moved to :	X :100,Y :7540
+---------------
+target is(100,100)
+1time: 42	Unit_id :2 Moved to :	X :100,Y :7480
+---------------
+target is(100,100)
+1time: 43	Unit_id :2 Moved to :	X :100,Y :7420
+---------------
+target is(100,100)
+1time: 44	Unit_id :2 Moved to :	X :100,Y :7360
+---------------
+target is(100,100)
+1time: 45	Unit_id :2 Moved to :	X :100,Y :7300
+---------------
+target is(100,100)
+1time: 46	Unit_id :2 Moved to :	X :100,Y :7240
+---------------
+target is(100,100)
+1time: 47	Unit_id :2 Moved to :	X :100,Y :7180
+---------------
+target is(100,100)
+1time: 48	Unit_id :2 Moved to :	X :100,Y :7120
+---------------
+target is(100,100)
+1time: 49	Unit_id :2 Moved to :	X :100,Y :7060
+---------------
+target is(100,100)
+1time: 50	Unit_id :2 Moved to :	X :100,Y :7000
+---------------
+target is(100,100)
+1time: 1	Unit_id :2 Moved to :	X :100,Y :9940
+---------------
+target is(100,100)
+1time: 2	Unit_id :2 Moved to :	X :100,Y :9880
+---------------
+target is(100,100)
+1time: 3	Unit_id :2 Moved to :	X :100,Y :9820
+---------------
+target is(100,100)
+1time: 4	Unit_id :2 Moved to :	X :100,Y :9760
+---------------
+target is(100,100)
+1time: 5	Unit_id :2 Moved to :	X :100,Y :9700
+---------------
+target is(100,100)
+1time: 6	Unit_id :2 Moved to :	X :100,Y :9640
+---------------
+target is(100,100)
+1time: 7	Unit_id :2 Moved to :	X :100,Y :9580
+---------------
+target is(100,100)
+1time: 8	Unit_id :2 Moved to :	X :100,Y :9520
+---------------
+target is(100,100)
+1time: 9	Unit_id :2 Moved to :	X :100,Y :9460
+---------------
+target is(100,100)
+1time: 10	Unit_id :2 Moved to :	X :100,Y :9400
+---------------
+target is(100,100)
+1time: 11	Unit_id :2 Moved to :	X :100,Y :9340
+---------------
+target is(100,100)
+1time: 12	Unit_id :2 Moved to :	X :100,Y :9280
+---------------
+target is(100,100)
+1time: 13	Unit_id :2 Moved to :	X :100,Y :9220
+---------------
+target is(100,100)
+1time: 14	Unit_id :2 Moved to :	X :100,Y :9160
+---------------
+target is(100,100)
+1time: 15	Unit_id :2 Moved to :	X :100,Y :9100
+---------------
+target is(100,100)
+1time: 16	Unit_id :2 Moved to :	X :100,Y :9040
+---------------
+target is(100,100)
+1time: 17	Unit_id :2 Moved to :	X :100,Y :8980
+---------------
+target is(100,100)
+1time: 18	Unit_id :2 Moved to :	X :100,Y :8920
+---------------
+target is(100,100)
+1time: 19	Unit_id :2 Moved to :	X :100,Y :8860
+---------------
+target is(100,100)
+1time: 20	Unit_id :2 Moved to :	X :100,Y :8800
+---------------
+target is(100,100)
+1time: 21	Unit_id :2 Moved to :	X :100,Y :8740
+---------------
+target is(100,100)
+1time: 22	Unit_id :2 Moved to :	X :100,Y :8680
+---------------
+target is(100,100)
+1time: 23	Unit_id :2 Moved to :	X :100,Y :8620
+---------------
+target is(100,100)
+1time: 24	Unit_id :2 Moved to :	X :100,Y :8560
+---------------
+target is(100,100)
+1time: 25	Unit_id :2 Moved to :	X :100,Y :8500
+---------------
+target is(100,100)
+1time: 1	Unit_id :2 Moved to :	X :100,Y :9940
+---------------
+target is(100,100)
+1time: 2	Unit_id :2 Moved to :	X :100,Y :9880
+---------------
+target is(100,100)
+1time: 3	Unit_id :2 Moved to :	X :100,Y :9820
+---------------
+target is(100,100)
+1time: 4	Unit_id :2 Moved to :	X :100,Y :9760
+---------------
+target is(100,100)
+1time: 5	Unit_id :2 Moved to :	X :100,Y :9700
+---------------
+target is(100,100)
+1time: 6	Unit_id :2 Moved to :	X :100,Y :9640
+---------------
+target is(100,100)
+1time: 7	Unit_id :2 Moved to :	X :100,Y :9580
+---------------
+target is(100,100)
+1time: 8	Unit_id :2 Moved to :	X :100,Y :9520
+---------------
+target is(100,100)
+1time: 9	Unit_id :2 Moved to :	X :100,Y :9460
+---------------
+target is(100,100)
+1time: 10	Unit_id :2 Moved to :	X :100,Y :9400
+---------------
+target is(100,100)
+1time: 11	Unit_id :2 Moved to :	X :100,Y :9340
+---------------
+target is(100,100)
+1time: 12	Unit_id :2 Moved to :	X :100,Y :9280
+---------------
+target is(100,100)
+1time: 13	Unit_id :2 Moved to :	X :100,Y :9220
+---------------
+target is(100,100)
+1time: 14	Unit_id :2 Moved to :	X :100,Y :9160
+---------------
+target is(100,100)
+1time: 15	Unit_id :2 Moved to :	X :86,Y :9116
+---------------
+target is(-16,9116)
+3time: 16	Unit_id :2 Moved to :	X :26,Y :9116
+---------------
+target is(-16,9116)
+3time: 17	Unit_id :2 Moved to :	X :-16,Y :9098
+---------------
+target is(-16,8884)
+2time: 18	Unit_id :2 Moved to :	X :-16,Y :9038
+---------------
+target is(-16,8884)
+2time: 19	Unit_id :2 Moved to :	X :-16,Y :8978
+---------------
+target is(-16,8884)
+2time: 20	Unit_id :2 Moved to :	X :-16,Y :8918
+---------------
+target is(-16,8884)
+2time: 21	Unit_id :2 Moved to :	X :10,Y :8858
+---------------
+target is(100,100)
+1time: 22	Unit_id :2 Moved to :	X :70,Y :8798
+---------------
+target is(100,100)
+1time: 23	Unit_id :2 Moved to :	X :100,Y :8738
+---------------
+target is(100,100)
+1time: 24	Unit_id :2 Moved to :	X :100,Y :8678
+---------------
+target is(100,100)
+1time: 25	Unit_id :2 Moved to :	X :100,Y :8618
+---------------
+target is(100,100)
+1time: 26	Unit_id :2 Moved to :	X :100,Y :8558
+---------------
+target is(100,100)
+1time: 27	Unit_id :2 Moved to :	X :100,Y :8498
+---------------
+target is(100,100)
+1time: 28	Unit_id :2 Moved to :	X :100,Y :8438
+---------------
+target is(100,100)
+1time: 29	Unit_id :2 Moved to :	X :100,Y :8378
+---------------
+target is(100,100)
+1time: 30	Unit_id :2 Moved to :	X :100,Y :8318
+---------------
+target is(100,100)
+1time: 31	Unit_id :2 Moved to :	X :100,Y :8258
+---------------
+target is(100,100)
+1time: 32	Unit_id :2 Moved to :	X :100,Y :8198
+---------------
+target is(100,100)
+1time: 33	Unit_id :2 Moved to :	X :100,Y :8138
+---------------
+target is(100,100)
+1time: 34	Unit_id :2 Moved to :	X :100,Y :8078
+---------------
+target is(100,100)
+1time: 35	Unit_id :2 Moved to :	X :100,Y :8018
+---------------
+target is(100,100)
+1time: 36	Unit_id :2 Moved to :	X :100,Y :7958
+---------------
+target is(100,100)
+1time: 37	Unit_id :2 Moved to :	X :100,Y :7898
+---------------
+target is(100,100)
+1time: 38	Unit_id :2 Moved to :	X :100,Y :7838
+---------------
+target is(100,100)
+1time: 39	Unit_id :2 Moved to :	X :100,Y :7778
+---------------
+target is(100,100)
+1time: 40	Unit_id :2 Moved to :	X :100,Y :7718
+---------------
+target is(100,100)
+1time: 41	Unit_id :2 Moved to :	X :100,Y :7658
+---------------
+target is(100,100)
+1time: 42	Unit_id :2 Moved to :	X :100,Y :7598
+---------------
+target is(100,100)
+1time: 43	Unit_id :2 Moved to :	X :100,Y :7538
+---------------
+target is(100,100)
+1time: 44	Unit_id :2 Moved to :	X :100,Y :7478
+---------------
+target is(100,100)
+1time: 45	Unit_id :2 Moved to :	X :100,Y :7418
+---------------
+target is(100,100)
+1time: 46	Unit_id :2 Moved to :	X :100,Y :7358
+---------------
+target is(100,100)
+1time: 47	Unit_id :2 Moved to :	X :100,Y :7298
+---------------
+target is(100,100)
+1time: 48	Unit_id :2 Moved to :	X :100,Y :7238
+---------------
+target is(100,100)
 1
