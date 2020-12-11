@@ -12,10 +12,7 @@ public class FixedPosition implements Movement {
 
     }
 
-    @Override
-    public void addTarget(Point p, Unit u) {
 
-    }
 
     @Override
     public Point GetNextPoint(Unit unit) {

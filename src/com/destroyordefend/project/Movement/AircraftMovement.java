@@ -31,14 +31,10 @@ public class AircraftMovement implements Movement {
         Point p = this.GetNextPoint(unit);
         unit.setPosition(p);
 
-
         Log.move(unit);
     }
 
-    @Override
-    public void addTarget(Point p, Unit u) {
 
-    }
     public void GoToAirPort(){
         track.pop();
     }

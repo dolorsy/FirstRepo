@@ -2,10 +2,8 @@ package com.destroyordefend.project.Movement;
 
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Unit;
-import com.destroyordefend.project.utility.Log;
 
 import java.util.LinkedList;
-import java.util.PriorityQueue;
 import java.util.Stack;
 
 /**
@@ -36,7 +34,7 @@ public class FixedPatrol implements Movement {
         track.push(FixedTrack.get(3));
     }
 
-    @Override
+    /*@Override
     public void StartMove(Unit unit) {
         unit.getTactic().SortMap(unit);
         if (unit.getTreeSetUnit().size() != 0) {
@@ -44,30 +42,20 @@ public class FixedPatrol implements Movement {
             System.out.println("\n\n\n");
             return;
         }
-
         Point p = unit.getMovement().GetNextPoint(unit);
         if(p.equals(unit.getPosition())){
             return;
         }
         boolean f = Movement.setNext(unit,p);
-
         if(f){
             unit.getValues().setCurrentSpeed(unit.getSpeed()/2);
-
-
         }else{
-            unit.getValues().setCurrentSpeed(unit.getSpeed()); ;
-
+            unit.getValues().setCurrentSpeed(unit.getSpeed());
         }
-
-
         Log.move(unit);
     }
+*/
 
-    @Override
-    public void addTarget(Point p, Unit u) {
-
-    }
 
     @Override
     public Point GetNextPoint(Unit unit) {

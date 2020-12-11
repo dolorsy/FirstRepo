@@ -71,7 +71,7 @@ public class Unit implements TacticAble, MovementAble, Barrier {
     }
 
     public String getType(){
-        return values.Type;
+        return values.type;
     }
     public Damaging getDamaging() {
         if (damaging == null)
@@ -127,9 +127,9 @@ public class Unit implements TacticAble, MovementAble, Barrier {
 
     public void Move(){
         System.out.println(getName()  + " Here " + getMovement().getClass().getName().equals(FixedPosition.class.getName()));
-        if(getMovement().getClass().getName().equals(FixedPosition.class.getName()))
+      //  if(getMovement().getClass().getName().equals(FixedPosition.class.getName()))
             this.tactic.SortMap(this);
-
+/*
         if(this.plans.size() != 0 ) {
             if (this.plan.isInPlace(this)){
                 this.plans.put(plan,this.plans.get(plan)-1);
@@ -137,8 +137,18 @@ public class Unit implements TacticAble, MovementAble, Barrier {
             }
 
         }
-
-
+*/
+    if(plan != null){
+        try {
+            boolean wait = plan.applyTo(this);
+            if (wait) {
+                System.out.println("waiting");
+                return;
+            }
+        }catch (Exception e){
+            plan = null;
+        }
+    }
         for(int i =0 ;i<values.currentSpeed;i++) {
             Runnable method = () -> movement.StartMove(Unit.this);
             UpdateMapAsyncTask.addMethod(method);
@@ -237,13 +247,22 @@ public class Unit implements TacticAble, MovementAble, Barrier {
 
     @Override
     public void addTarget(Point point) {
-        this.movement.addTarget(point,this);
+        Movement.addTarget(point,this);
     }
 
     @Override
-    public Unit AcceptPlan(Plan plan) {
-        this.plans.put(plan,plan.getTime());
+    public Unit acceptPlan(Plan plan) {
         this.plan = plan;
+        if(plan!= null)
+            plan.addUnits(this);
+        /*
+        this.plans.put(plan,plan.getTime());
+        plan.addToPlan(this);
+        this.plan = plan;
+         */
+
+
+
         return this;
     }
 
@@ -291,10 +310,9 @@ public class Unit implements TacticAble, MovementAble, Barrier {
 
 
     public void UpdateRange() {
-        Tactic.updateRange(this);
+        Tactic.updateRange(this);//should removed because this is invoked at sortMap
         this.tactic.SortMap(this);
         p("Update Range id: " + id + "new Range " + treeSetUnit);
-        //Todo::Make sure the call by referance
     }
     @Override
     public String getName() {
@@ -324,12 +342,12 @@ public class Unit implements TacticAble, MovementAble, Barrier {
         int speed;
         ArrayList<String> sortMap;
         int price;
-        String Type;
+        String type;
         int currentSpeed=0;//11
 
         public UnitValues(String name, String Type,int health, double armor, int damage, int range, double shot_speed, int radius, int speed, ArrayList<String> SortMap, int price) {
             this.name = name;
-            this.Type = Type;
+            this.type = Type;
             this.health = health;
             this.armor = armor;
             this.damage = damage;
@@ -344,7 +362,7 @@ public class Unit implements TacticAble, MovementAble, Barrier {
 
         //Todo: for Debuging
         public void setType(String type) {
-            Type = type;
+            this.type = type;
         }
 
         public  UnitValues(){
@@ -358,7 +376,7 @@ public class Unit implements TacticAble, MovementAble, Barrier {
         public UnitValues(UnitValues unitValues) {
             this(
                     unitValues.name,
-                    unitValues.Type,
+                    unitValues.type,
                     unitValues.health,
                     unitValues.armor,
                     unitValues.damage,
@@ -372,7 +390,7 @@ public class Unit implements TacticAble, MovementAble, Barrier {
 
         public UnitValues(JSONObject unit) {
             name = (String) unit.get("name");
-            Type = (String) unit.get("type");
+            type = (String) unit.get("type");
 
             health = Integer.parseInt((String) unit.get("health"));
             armor = Double.parseDouble((String) unit.get("armor"));
@@ -439,7 +457,7 @@ public class Unit implements TacticAble, MovementAble, Barrier {
         }
 
         public String getType() {
-            return Type;
+            return type;
         }
 
         public int getCurrentSpeed() {

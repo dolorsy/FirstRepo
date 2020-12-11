@@ -6,20 +6,51 @@ import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Barrier;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.utility.Log;
 import com.destroyordefend.project.utility.PositionHelper;
-import org.json.simple.JSONObject;
 
 import java.util.Stack;
 
 public interface Movement {
 
 
-    void StartMove(Unit unit);
-    void addTarget(Point p, Unit u);
+    default void StartMove(Unit unit) {
+        unit.getTactic().SortMap(unit);
+        if (unit.getTreeSetUnit().size() != 0) {
+            System.out.println("Size: " + unit.getTreeSetUnit().size());
+            System.out.println("\n\n\n");
+            return;
+        }
+        Point p = unit.getMovement().GetNextPoint(unit);
+        if(p.equals(unit.getPosition())){
+            return;
+        }
+        boolean f = Movement.setNext(unit,p);
+        if(f){
+            unit.getValues().setCurrentSpeed(unit.getSpeed()/2);
+        }else{
+            unit.getValues().setCurrentSpeed(unit.getSpeed());
+        }
+        Log.move(unit);
+    }
 
     Point GetNextPoint(Unit unit);
 
     Stack<Point> getTruck();
+
+    Point getTarget();
+
+    @Override
+    String toString();
+
+    static void addTarget(Point p, Unit u){
+        u.getMovement().getTruck().clear();
+        if(u.getRole().name().equals("Attacker"))
+            u.getMovement().getTruck().push(Game.getGame().getBase().getPosition());
+        u.getMovement().getTruck().push(p);
+    };
+
+
 
 
     static Barrier canSetUnitPlace(Point point, Unit unit) {
@@ -175,11 +206,6 @@ public interface Movement {
         //PositionHelper.getInstance().setUnitPlace(unit, n);
         return false;
     }
-
-    Point getTarget();
-
-    @Override
-    String toString();
 
      static int getCloserTo(Point target, Point[] points) {
         int index = -1;

@@ -1,23 +1,15 @@
 package com.destroyordefend.project.Core;
 
-import com.destroyordefend.project.Movement.AircraftMovement;
 import com.destroyordefend.project.Movement.FixedPosition;
-import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Movement.ToTarget;
-import com.destroyordefend.project.Tactic.AirAttack;
-import com.destroyordefend.project.Tactic.LowestHealthAttack;
+import com.destroyordefend.project.Tactic.Plan;
 import com.destroyordefend.project.Tactic.RandomAttack;
-import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.GameTimer;
 import com.destroyordefend.project.utility.LiveData;
 import com.destroyordefend.project.utility.PositionHelper;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
-import java.io.FileReader;
 import java.util.Iterator;
 import java.util.TreeSet;
 
@@ -305,7 +297,12 @@ public class Game implements GameManger {
 
         Unit unit = new Unit();
         unit.setValues(Shop.getInstance().getUnitByName("TeslaTank"));
-        unit.setPosition(new Point(1000,800));
+        Plan p =new Plan();
+        p.addCommands(p.new Wait(5),
+                p.new ChangeTarget(new Point(4000,4000)),
+                p.new Wait(5));
+        unit.setPosition(new Point(3500,3500));
+        unit.acceptPlan(p);
         unit.AcceptMovement(new ToTarget(base));
         unit.setRole(Player.TeamRole.Attacker);
         unit.AcceptTactic(new RandomAttack());

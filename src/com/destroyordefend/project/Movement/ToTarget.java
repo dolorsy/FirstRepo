@@ -1,9 +1,7 @@
 package com.destroyordefend.project.Movement;
 
-import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Unit;
-import com.destroyordefend.project.utility.Log;
 
 import java.util.Stack;
 
@@ -14,7 +12,7 @@ public class ToTarget implements Movement {
     public ToTarget(Unit target) {
         track.push(target.getPosition());
     }
-
+/*
     @Override
     public void StartMove(Unit unit) {
         unit.getTactic().SortMap(unit);
@@ -23,33 +21,21 @@ public class ToTarget implements Movement {
             System.out.println("\n\n\n");
             return;
         }
-
         Point p = unit.getMovement().GetNextPoint(unit);
         if(p.equals(unit.getPosition())){
             return;
         }
         boolean f = Movement.setNext(unit,p);
-
         if(f){
             unit.getValues().setCurrentSpeed(unit.getSpeed()/2);
-
-
         }else{
-            unit.getValues().setCurrentSpeed(unit.getSpeed()); ;
-
+            unit.getValues().setCurrentSpeed(unit.getSpeed());
         }
-
-
         Log.move(unit);
 
     }
+*/
 
-    public void addTarget(Point p, Unit u){
-        track.clear();
-        if(u.getRole().name().equals("Attacker"))
-            track.push(Game.getGame().getBase().getPosition());
-        track.push(p);
-    }
 
     @Override
     public Point GetNextPoint(Unit unit) {
@@ -59,6 +45,7 @@ public class ToTarget implements Movement {
         if(unit.getPosition().equals(track.peek()) && !track.empty()){
             System.out.println("\n\n\n" + unit.getPosition() + "   " + track.peek());
             track.pop();
+
         }
         if(track.empty())
             return unit.getPosition();

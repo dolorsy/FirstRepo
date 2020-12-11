@@ -1,12 +1,8 @@
 package com.destroyordefend.project.Tactic;
 
-import com.destroyordefend.project.Core.PointComparator;
-import com.destroyordefend.project.Tactic.Comparators.AriDefenceComparator;
 import com.destroyordefend.project.Unit.Unit;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.TreeSet;
 
 public class RandomAttack implements Tactic {
@@ -17,12 +13,10 @@ public class RandomAttack implements Tactic {
         System.out.println("name: " + unit.getName()+ " ss: " + unit.getTreeSetUnit().size());
 
         TreeSet<Unit> temp = Tactic.updateRange(unit);
-        ArrayList<String> types  ;
-        types = unit.getSortMap();
+        ArrayList<String> types = unit.getSortMap();
 
         TreeSet<Unit> filtered = new TreeSet<>((v1,v2)->1);
         for (String type : types) {
-
             for (Unit u : temp) {
 
                 if (u.getType().equals(type)) {

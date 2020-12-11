@@ -8,6 +8,6 @@ import com.destroyordefend.project.Tactic.Plan;
 public interface MovementAble {
     MovementAble AcceptMovement(Movement movement);
     void addTarget(Point point);
-    MovementAble AcceptPlan(Plan plan);
+    MovementAble acceptPlan(Plan plan);
 
 }
