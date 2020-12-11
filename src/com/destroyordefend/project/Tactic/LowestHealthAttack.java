@@ -12,11 +12,10 @@ public class LowestHealthAttack implements Tactic {
     public void SortMap(Unit unit) {
         System.out.println(">>>>>>>>>>>>>>>>>>>\n\n");
         System.out.println("name: " + unit.getName()+ " ss: " + unit.getTreeSetUnit().size());
-        Tactic.updateRange(unit);
+        TreeSet<Unit> temp = Tactic.updateRange(unit);
         List<String> types = unit.getSortMap();
 
         HealthComparator healthComparator = new HealthComparator();
-        TreeSet<Unit> temp  = unit.getTreeSetUnit();
         TreeSet<Unit> filtered = new TreeSet<Unit>(healthComparator);
         for (String type : types) {
             for (Unit u : temp) {

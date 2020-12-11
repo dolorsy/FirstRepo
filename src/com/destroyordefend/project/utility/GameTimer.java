@@ -95,7 +95,8 @@ Thread updateRangeThread = new Thread();
 
 
         //Todo: here we can make damaging more real
-            if( unit.getDamaging().CanShot() && !unit.getName().equals("Black Eagle"))
+            if( unit.getDamaging().CanShot()>0 && !unit.getName().equals("Black Eagle"))
+                for(int i =0;i<unit.getDamaging().CanShot();i++)
             MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());
         }
         System.out.println(updatePositionQueue.size());

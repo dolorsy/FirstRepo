@@ -50,7 +50,7 @@ public class Game implements GameManger {
         base = new Unit(Shop.getInstance().getBaseValues());
         base.setRole(Player.TeamRole.Defender);
         base.setId(1);
-        base.setPosition(new Point(100, 100));
+        base.setPosition(new Point(1000, 1000));
         base.AcceptMovement(new FixedPosition());
         if(PositionHelper.getInstance().canSetAt(base,base.getPosition())!=null)
             throw new RuntimeException("base cannot set");
@@ -68,7 +68,7 @@ public class Game implements GameManger {
 
 
 //Todo:: terrain need to add terrains
-        Terrain t = new Terrain(new Point(100, 9000), 0, "vally");
+        Terrain t = new Terrain(new Point(1020, 900), 0, 50,"vally");
         terrains.add(t);
         gameTimer = new GameTimer(50);
         GameState.addObserver(gameTimer);
@@ -304,21 +304,23 @@ public class Game implements GameManger {
         Defender.addArmy(base);
 
         Unit unit = new Unit();
-        unit.setValues(Shop.getInstance().getUnitByName("Black Eagle"));
-        unit.setPosition(new Point(100,1000));
-        unit.AcceptMovement(new AircraftMovement(new Point(100,1000)));
-        unit.setRole(Player.TeamRole.Attacker);
-        unit.AcceptTactic(new AirAttack());
-        Attacker.addArmy(unit);
-/*
-        unit = new Unit();
         unit.setValues(Shop.getInstance().getUnitByName("TeslaTank"));
-        unit.setPosition(new Point(110,9500));
+        unit.setPosition(new Point(1000,800));
+        unit.AcceptMovement(new ToTarget(base));
+        unit.setRole(Player.TeamRole.Attacker);
+        unit.AcceptTactic(new RandomAttack());
+        Attacker.addArmy(unit);
+
+        /*
+        unit = new Unit();
+        unit.setValues(Shop.getInstance().getUnitByName("Patriot Missile"));
+        unit.setPosition(new Point(499,500));
         unit.AcceptMovement(new FixedPosition());
         unit.AcceptTactic(new LowestHealthAttack());
         unit.setRole(Player.TeamRole.Defender);
         Defender.addArmy(unit);
-        */
+
+         */
 
     }
 
