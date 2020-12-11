@@ -8,6 +8,11 @@ import java.util.Stack;
 public class FixedPosition implements Movement {
 
     @Override
+    public void StartMove(Unit unit) {
+
+    }
+
+    @Override
     public void addTarget(Point p, Unit u) {
 
     }

@@ -1,8 +1,10 @@
 package com.destroyordefend.project.Core;
 
+import com.destroyordefend.project.Movement.AircraftMovement;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Movement.ToTarget;
+import com.destroyordefend.project.Tactic.AirAttack;
 import com.destroyordefend.project.Tactic.LowestHealthAttack;
 import com.destroyordefend.project.Tactic.RandomAttack;
 import com.destroyordefend.project.Tactic.Tactic;
@@ -221,6 +223,7 @@ public class Game implements GameManger {
     }
 
     public void CreateTeamsStage() {
+        /*
         String path = "src\\com\\destroyordefend\\project\\Teams.json";
         TreeSet<Unit> al = new TreeSet<>();
         JSONParser jsonParser = new JSONParser();
@@ -256,6 +259,8 @@ public class Game implements GameManger {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        */
+
     }
 
     PlayerIterator temp = null;
@@ -286,15 +291,11 @@ public class Game implements GameManger {
         System.out.println("Sized " + allUnits.size());
         allUnits.removeIf(unit1 -> unit.getId() == unit1.getId());
         System.out.println("Sized " + allUnits.size());
-
-
-
     }
 
     private void autoInitGame() {
         Player Defender = new Player();
         Defender.setRole(Player.TeamRole.Defender);
-
         Player Attacker = new Player();
         Attacker.setRole(Player.TeamRole.Attacker);
 
@@ -303,13 +304,13 @@ public class Game implements GameManger {
         Defender.addArmy(base);
 
         Unit unit = new Unit();
-        unit.setValues(Shop.getInstance().getUnitByName("Mirage tank"));
-        unit.setPosition(new Point(100,10000));
-        unit.AcceptMovement(new ToTarget(base));
+        unit.setValues(Shop.getInstance().getUnitByName("Black Eagle"));
+        unit.setPosition(new Point(100,1000));
+        unit.AcceptMovement(new AircraftMovement(new Point(100,1000)));
         unit.setRole(Player.TeamRole.Attacker);
-        unit.AcceptTactic(new RandomAttack());
+        unit.AcceptTactic(new AirAttack());
         Attacker.addArmy(unit);
-
+/*
         unit = new Unit();
         unit.setValues(Shop.getInstance().getUnitByName("TeslaTank"));
         unit.setPosition(new Point(110,9500));
@@ -317,6 +318,7 @@ public class Game implements GameManger {
         unit.AcceptTactic(new LowestHealthAttack());
         unit.setRole(Player.TeamRole.Defender);
         Defender.addArmy(unit);
+        */
 
     }
 

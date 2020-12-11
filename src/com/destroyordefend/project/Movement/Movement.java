@@ -13,20 +13,8 @@ import java.util.Stack;
 
 public interface Movement {
 
-    static Movement getSuitableMovment(JSONObject movement) {
-        switch (String.valueOf(movement.get("movement"))) {
-            case "FixedPatrol":
-                return new FixedPatrol(Integer.parseInt((String) movement.get("stepSize")));
-            case "ToTarget":
-                return new ToTarget(Game.getGame().getBase());
-            case "AircraftMovement":
-                return new AircraftMovement(new Point(Integer.parseInt((String) movement.get("airportX")), Integer.parseInt((String) movement.get("airportY"))));
-            default:
-                return new FixedPosition();
 
-        }
-    }
-
+    void StartMove(Unit unit);
     void addTarget(Point p, Unit u);
 
     Point GetNextPoint(Unit unit);

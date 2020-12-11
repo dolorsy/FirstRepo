@@ -3,6 +3,7 @@ package com.destroyordefend.project.Movement;
 import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.utility.Log;
 
 import java.util.Stack;
 
@@ -14,7 +15,36 @@ public class ToTarget implements Movement {
         track.push(target.getPosition());
     }
 
-    public void addTarget(Point p,Unit u){
+    @Override
+    public void StartMove(Unit unit) {
+        unit.getTactic().SortMap(unit);
+        if (unit.getTreeSetUnit().size() != 0) {
+            System.out.println("Size: " + unit.getTreeSetUnit().size());
+            System.out.println("\n\n\n");
+            return;
+        }
+
+        Point p = unit.getMovement().GetNextPoint(unit);
+        if(p.equals(unit.getPosition())){
+            return;
+        }
+        boolean f = Movement.setNext(unit,p);
+
+        if(f){
+            unit.getValues().setCurrentSpeed(unit.getSpeed()/2);
+
+
+        }else{
+            unit.getValues().setCurrentSpeed(unit.getSpeed()); ;
+
+        }
+
+
+        Log.move(unit);
+
+    }
+
+    public void addTarget(Point p, Unit u){
         track.clear();
         if(u.getRole().name().equals("Attacker"))
             track.push(Game.getGame().getBase().getPosition());

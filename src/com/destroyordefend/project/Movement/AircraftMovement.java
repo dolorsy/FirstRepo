@@ -3,6 +3,7 @@ package com.destroyordefend.project.Movement;
 import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.utility.Log;
 
 import java.util.Stack;
 
@@ -20,23 +21,31 @@ public class AircraftMovement implements Movement {
         this.airport = airport;
     }
 
-    public AircraftMovement() {
-        //Todo:: A big Mistake
-        airport = new Point(50,50);
-    }
-
     public void updateTrack(){
         track.add(airport);
         track.add(getGame().getBase().getPosition());
     }
 
     @Override
+    public void StartMove(Unit unit) {
+        Point p = this.GetNextPoint(unit);
+        unit.setPosition(p);
+
+
+        Log.move(unit);
+    }
+
+    @Override
     public void addTarget(Point p, Unit u) {
 
+    }
+    public void GoToAirPort(){
+        track.pop();
     }
 
     @Override
     public Point GetNextPoint(Unit unit) {
+        unit.getTactic().SortMap(unit);
         if(track.peek().equals(unit.getPosition()))
             track.pop();
         if( track.empty())

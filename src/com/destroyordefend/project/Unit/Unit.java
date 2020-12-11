@@ -148,25 +148,25 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
 
         for(int i =0 ;i<values.currentSpeed;i++) {
-            UpdateMapAsyncTask.addMethod(this::StartMove);
+            Runnable method = () -> movement.StartMove(Unit.this);
+            UpdateMapAsyncTask.addMethod(method);
 
         }
 
     }
-    public void StartMove() {
-        this.tactic.SortMap(this);
+    public void StartMove(Unit unit) {
+        unit.tactic.SortMap(unit);
         if (getTreeSetUnit().size() != 0) {
             System.out.println("Size: " + getTreeSetUnit().size());
             System.out.println("\n\n\n");
             return;
-
         }
 
-            Point p = this.movement.GetNextPoint(this);
+            Point p = unit.movement.GetNextPoint(unit);
             if(p.equals(getPosition())){
                 return;
             }
-            boolean f = Movement.setNext(this,p);
+            boolean f = Movement.setNext(unit,p);
 
            if(f){
                values.currentSpeed = values.speed / 2;
@@ -212,6 +212,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     public UnitValues getValues() {
         return values;
     }
+
 
     @Override
     public Point getPosition() {
@@ -386,7 +387,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         ArrayList<String> sortMap;
         int price;
         String Type;
-        int currentSpeed;//11
+        int currentSpeed=0;//11
 
         public UnitValues(String name, String Type,int health, double armor, int damage, int range, double shot_speed, int radius, int speed, ArrayList<String> SortMap, int price) {
             this.name = name;
@@ -411,6 +412,11 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         public  UnitValues(){
 
         }
+
+        public void setCurrentSpeed(int currentSpeed) {
+            this.currentSpeed = currentSpeed;
+        }
+
         public UnitValues(UnitValues unitValues) {
             this(
                     unitValues.name,
