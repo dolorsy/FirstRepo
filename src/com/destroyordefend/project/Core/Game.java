@@ -3,6 +3,7 @@ package com.destroyordefend.project.Core;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Movement.ToTarget;
+import com.destroyordefend.project.Tactic.LowestHealthAttack;
 import com.destroyordefend.project.Tactic.RandomAttack;
 import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.Unit.Terrain;
@@ -65,7 +66,7 @@ public class Game implements GameManger {
 
 
 //Todo:: terrain need to add terrains
-        Terrain t = new Terrain(new Point(200, 200), 0, "vally");
+        Terrain t = new Terrain(new Point(100, 9000), 0, "vally");
         terrains.add(t);
         gameTimer = new GameTimer(50);
         GameState.addObserver(gameTimer);
@@ -282,7 +283,11 @@ public class Game implements GameManger {
                 attackers :
                 defenders).removeUnit(unit);
 
-        allUnits.remove(unit);
+        System.out.println("Sized " + allUnits.size());
+        allUnits.removeIf(unit1 -> unit.getId() == unit1.getId());
+        System.out.println("Sized " + allUnits.size());
+
+
 
     }
 
@@ -299,11 +304,19 @@ public class Game implements GameManger {
 
         Unit unit = new Unit();
         unit.setValues(Shop.getInstance().getUnitByName("Mirage tank"));
-        unit.setPosition(new Point(300,300));
+        unit.setPosition(new Point(100,10000));
         unit.AcceptMovement(new ToTarget(base));
         unit.setRole(Player.TeamRole.Attacker);
         unit.AcceptTactic(new RandomAttack());
         Attacker.addArmy(unit);
+
+        unit = new Unit();
+        unit.setValues(Shop.getInstance().getUnitByName("TeslaTank"));
+        unit.setPosition(new Point(110,9500));
+        unit.AcceptMovement(new FixedPosition());
+        unit.AcceptTactic(new LowestHealthAttack());
+        unit.setRole(Player.TeamRole.Defender);
+        Defender.addArmy(unit);
 
     }
 

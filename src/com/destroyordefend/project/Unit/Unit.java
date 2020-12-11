@@ -3,11 +3,14 @@ package com.destroyordefend.project.Unit;
 import com.destroyordefend.project.Core.Player;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Core.PointComparator;
+import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Plan;
 import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.utility.IdGenerator;
 import com.destroyordefend.project.utility.Log;
+import com.destroyordefend.project.utility.UpdateMapAsyncTask;
+import com.destroyordefend.project.utility.UpdateRangeAsyncTask;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -129,7 +132,11 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         return movement;
     }
 
-    public void Move() {
+
+    public void Move(){
+        System.out.println(getName()  + " Here " + getMovement().getClass().getName().equals(FixedPosition.class.getName()));
+        if(getMovement().getClass().getName().equals(FixedPosition.class.getName()))
+            this.tactic.SortMap(this);
 
         if(this.plans.size() != 0 ) {
             if (this.plan.isInPlace(this)){
@@ -139,17 +146,25 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
         }
 
-        for(int i =0 ;i<values.currentSpeed;i++) {
-            this.tactic.SortMap(this);
-            if(getTreeSetUnit().size()!=0){
-                System.out.println("Size: " + getTreeSetUnit().size());
-                System.out.println("\n\n\n");
-                continue;
 
-            }
+        for(int i =0 ;i<values.currentSpeed;i++) {
+            UpdateMapAsyncTask.addMethod(this::StartMove);
+
+        }
+
+    }
+    public void StartMove() {
+        this.tactic.SortMap(this);
+        if (getTreeSetUnit().size() != 0) {
+            System.out.println("Size: " + getTreeSetUnit().size());
+            System.out.println("\n\n\n");
+            return;
+
+        }
+
             Point p = this.movement.GetNextPoint(this);
             if(p.equals(getPosition())){
-                continue;
+                return;
             }
             boolean f = Movement.setNext(this,p);
 
@@ -180,7 +195,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
           //  PositionHelper.getInstance().setUnitPlace(this,p);
             //this.setPosition(p);
          //   this.updateLeftAndRight();
-        }
+
         Log.move(this);
 
     }
@@ -506,13 +521,14 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     }
 
     public class Damaging implements Damage {
-        double accumulator = 0;
+        double accumulator = 1.0;
 
         public boolean CanShot() {
+            System.out.println("Acc " + accumulator);
             if(accumulator>=1.0)
                 return true;
             else{
-                accumulator+=1/getShot_speed();
+                accumulator+=1.0/getShot_speed();
                 return false;
             }
 
@@ -524,15 +540,19 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         }
         @Override
         public void DoDamage() {
+            System.out.println("Damage " + getName() + " " + getTreeSetUnit().size() );
             if(getTreeSetUnit().size() ==0)
                 return;
             //Todo: here a big mistake
             Unit.this.getTreeSetUnit().first().getDamaging().AcceptDamage(this.getDamage());
             Log.doDamage(Unit.this,Unit.this.getTreeSetUnit().first());
+            System.out.println("Ac" + accumulator);
             accumulator-=1.0;
+            System.out.println("Ac" + accumulator);
         }
         @Override
         public void AcceptDamage(int damage) {
+
             int valueresulte = values.health - (int) (getValues().armor ==0 ?damage:damage* getValues().armor);
             if ((valueresulte) <= 0) {
 

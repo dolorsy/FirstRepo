@@ -22,9 +22,7 @@ public class RandomAttack implements Tactic {
 
         TreeSet<Unit> filtered = new TreeSet<>((v1,v2)->1);
         for (String type : types) {
-            System.out.println(type);
             for (Unit u : unit.getTreeSetUnit()) {
-                System.out.println(u.getType());
                 if (u.getType().equals(type)) {
                     System.out.println("added in: " + u.getName()  + " " + u.getId());
                     filtered.add(u);

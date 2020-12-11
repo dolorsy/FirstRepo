@@ -24,9 +24,11 @@ public class Team {
 
     public void removeUnit(Unit unit) {
         for (Player p : teamPlayers) {
+
             p.getArmy().removeIf(unit1 -> unit.getId() == unit.getId());
 
         }
+        System.out.println("Realy Remove" );
     }
 
     public boolean isAlive() {

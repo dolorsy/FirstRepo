@@ -3,6 +3,8 @@ package com.destroyordefend.project.utility;
 import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Unit.Unit;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -35,8 +37,9 @@ Thread updateRangeThread = new Thread();
              updatePositionsThread.start();
              /*updateRangeThread = new Thread(UpdateRangeAsyncTask::invokeUpdateRange);
              updateRangeThread.start();
+             */
              updateMainThread = new Thread(MainMethodAsyncTask::invokeMainMethods);
-                    updateMainThread.start();*/
+                    updateMainThread.start();
 
                     current = System.currentTimeMillis() - current;
                     Thread.sleep(1000 - current);
@@ -80,16 +83,7 @@ Thread updateRangeThread = new Thread();
     }
 
     void reFill(){
-        /*for(Unit u : Game.getGame().getAllUnits()){
-           try {
-                System.out.println(u.getPosition() + " " + u.getMovement().getTruck().peek() + " " + u.getRole());
 
-            }catch (NullPointerException exception){
-                System.out.println(u.getPosition() + "  "  + u.getName()+ " " + u.getRole());
-            }
-
-        }*/
-        System.out.println("Base: " + Game.getGame().getBase().getValues().getHealth());
         updatePositionQueue.clear();
         updateRangeQueue.clear();
         doMainThingQueue.clear();
@@ -97,16 +91,16 @@ Thread updateRangeThread = new Thread();
             if(unit.getName().equals("MAIN BASE"))
                 continue;
 
-            if(unit.getSpeed() != 0  && unit.getTreeSetUnit().size() == 0) {
-                UpdateMapAsyncTask.addMethod(unit::Move);
-            }
-            UpdateRangeAsyncTask.addMethod(() ->{
-                unit.getTactic().SortMap(unit);});
+            unit.Move();
+
 
         //Todo: here we can make damaging more real
-            if(unit.getDamage() != 0 && unit.getTreeSetUnit().size() !=0 && unit.getDamaging().CanShot())
+            if( unit.getDamaging().CanShot())
             MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());
         }
+        System.out.println(updatePositionQueue.size());
+        Collections.shuffle(updatePositionQueue);
+
     }
 
 
