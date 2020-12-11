@@ -10,19 +10,17 @@ import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.utility.IdGenerator;
 import com.destroyordefend.project.utility.Log;
 import com.destroyordefend.project.utility.UpdateMapAsyncTask;
-import com.destroyordefend.project.utility.UpdateRangeAsyncTask;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Core.Game.getGame;
 import static com.destroyordefend.project.Main.p;
 
-public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
+public class Unit implements TacticAble, MovementAble, Barrier {
 
     private  int id;
     private Movement movement;
@@ -32,7 +30,6 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
     private UnitValues values;
     private Tactic tactic;
     private Damaging damaging;
-    private HashMap<String, Unit> leftAndRight = new HashMap<>();
     private Plan plan;
     private HashMap<Plan,Integer> plans = new HashMap<Plan, Integer>() ;
 
@@ -41,12 +38,7 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         if (this == o) return true;
         if (!(o instanceof Unit)) return false;
         Unit unit = (Unit) o;
-        return getId() == unit.getId() && getMovement().equals(unit.getMovement()) && getTreeSetUnit().equals(unit.getTreeSetUnit()) && point.equals(unit.point) && getRole() == unit.getRole() && getValues().equals(unit.getValues()) && getTactic().equals(unit.getTactic()) && getDamaging().equals(unit.getDamaging()) && leftAndRight.equals(unit.leftAndRight) && plan.equals(unit.plan) && plans.equals(unit.plans);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getMovement(), getTreeSetUnit(), point, getRole(), getValues(), getTactic(), getDamaging(), leftAndRight, plan, plans);
+        return getId() == unit.getId() && getMovement().equals(unit.getMovement()) && getTreeSetUnit().equals(unit.getTreeSetUnit()) && point.equals(unit.point) && getRole() == unit.getRole() && getValues().equals(unit.getValues()) && getTactic().equals(unit.getTactic()) && getDamaging().equals(unit.getDamaging()) && plan.equals(unit.plan) && plans.equals(unit.plans);
     }
 
     public Unit() {
@@ -173,7 +165,6 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
 
            }else{
                values.currentSpeed = values.speed ;
-
            }
 
 
@@ -298,59 +289,6 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         getGame().UpdateState();
     }
 
-    @Override
-    public Unit getNeighbourUnit(String side){return leftAndRight.get(side);}
-    @Override
-    public void setNeighbourUnit(String side,Unit unit) {
-        leftAndRight.put(side, unit);
-    }
-
-    @Override
-    public void updateLeftAndRight() {
-        //Todo: need to check;
-        if (needSwapWithLeft()) {
-            swapWithLeft();
-        } else if (needSwapWithRight()) {
-            swapWithRight();
-        }
-    }
-
-    @Override
-    public boolean needSwapWithLeft() {
-        //Todo: need to check;
-
-        return getNeighbourUnit("left") != null &&(( getLeft() == getNeighbourUnit("left").getRight() && getDown() < getNeighbourUnit("left").getUp()) ||
-                this.getLeft() < getNeighbourUnit("left").getRight());
-    }
-
-    @Override
-    public boolean needSwapWithRight() {
-        //Todo: need to check;
-
-        return getNeighbourUnit("right") != null &&( (getRight() == getNeighbourUnit("right").getLeft() && getUp() < getNeighbourUnit("right").getDown()) ||
-                getRight() > getNeighbourUnit("right").getLeft());
-    }
-
-    @Override
-    public void swapWithLeft() {
-        //Todo: need to check;
-
-        Unit temp = getNeighbourUnit("left");
-        setNeighbourUnit("left",getNeighbourUnit("left").getNeighbourUnit("left"));
-        temp.setNeighbourUnit("right",getNeighbourUnit("right"));
-        setNeighbourUnit("right",temp);
-        temp.setNeighbourUnit("left",this);
-    }
-
-    @Override
-    public void swapWithRight() {
-        //Todo: need to check;
-        Unit temp = getNeighbourUnit("right");
-        setNeighbourUnit("right",getNeighbourUnit("right").getNeighbourUnit("right"));
-        temp.setNeighbourUnit("left",getNeighbourUnit("left"));
-        setNeighbourUnit("left",temp);
-        temp.setNeighbourUnit("right",this);
-    }
 
     public void UpdateRange() {
         Tactic.updateRange(this);
