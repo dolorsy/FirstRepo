@@ -33,10 +33,10 @@ Thread updateRangeThread = new Thread();
 
             updatePositionsThread = new Thread(UpdateMapAsyncTask::invokeUpdatePosition);
              updatePositionsThread.start();
-             updateRangeThread = new Thread(UpdateRangeAsyncTask::invokeUpdateRange);
+             /*updateRangeThread = new Thread(UpdateRangeAsyncTask::invokeUpdateRange);
              updateRangeThread.start();
              updateMainThread = new Thread(MainMethodAsyncTask::invokeMainMethods);
-                    updateMainThread.start();
+                    updateMainThread.start();*/
 
                     current = System.currentTimeMillis() - current;
                     Thread.sleep(1000 - current);

@@ -1,5 +1,6 @@
 package com.destroyordefend.project.Tactic;
 
+import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Unit.Unit;
 
 import java.util.TreeSet;
@@ -8,6 +9,13 @@ public interface Tactic {
     static void updateRange(Unit t){
 
         TreeSet<Unit> temp = new TreeSet<>((o1,o2) -> 1);
+        if(t.getPosition().getX() < 180)
+            System.out.println("d");
+        for(Unit unit: Game.getGame().getAllUnits()){
+            if(isInRange(t,unit) && !t.equals(unit))
+                temp.add(unit);
+        }
+        /*
         Unit tempUnit = t.getNeighbourUnit("left");
         while( tempUnit != null && isInRange(t,tempUnit) ){
             if(t.getRole().equals(tempUnit.getRole())){
@@ -61,10 +69,23 @@ public interface Tactic {
     }
     static boolean isInRange(Unit radar,Unit target){
 
+/*
+        System.out.println("Bitch" + radar.getPosition().equals(target.getPosition()));
+        System.out.println(target.getLeft());
+        System.out.println(target.getRight());
+        System.out.println(target.getDown());
+        System.out.println(target.getUp());
+
+        System.out.println(radar.getRight() + radar.getRange());
+        System.out.println(radar.getLeft() - radar.getRange());
+        System.out.println(radar.getUp() - radar.getRange());
+        System.out.println(radar.getDown() + radar.getRange());
+*/
+
         return !(target != null && ((target.getLeft() > radar.getRight() + radar.getRange() ||
                 target.getRight() < radar.getLeft() - radar.getRange() || radar.getPosition().equals(target.getPosition())) ||
-                target.getDown() > radar.getUp() + radar.getRange() ||
-                        target.getUp() < radar.getDown() - radar.getRange()));
+                target.getDown() < radar.getUp() - radar.getRange() ||
+                        target.getUp() > radar.getDown() + radar.getRange()));
     }
 
     static Tactic getSuitableTactic(String tactic) {

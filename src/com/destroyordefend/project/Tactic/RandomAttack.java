@@ -14,7 +14,8 @@ public class RandomAttack implements Tactic {
     @Override
     public void SortMap( Unit unit) {
         System.out.println(">>>>>>>>>>>>>>>>>>>\n\n");
-        System.out.println("name: " + unit.getName());
+        System.out.println("name: " + unit.getName()+ " ss: " + unit.getTreeSetUnit().size());
+
         Tactic.updateRange(unit);
         ArrayList<String> types  ;
         types = unit.getSortMap();

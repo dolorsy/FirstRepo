@@ -140,6 +140,13 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
         }
 
         for(int i =0 ;i<values.currentSpeed;i++) {
+            this.tactic.SortMap(this);
+            if(getTreeSetUnit().size()!=0){
+                System.out.println("Size: " + getTreeSetUnit().size());
+                System.out.println("\n\n\n");
+                continue;
+
+            }
             Point p = this.movement.GetNextPoint(this);
             if(p.equals(getPosition())){
                 continue;
@@ -172,9 +179,8 @@ public class Unit implements TacticAble, MovementAble, Barrier, UnitSetHelper {
             }*/
           //  PositionHelper.getInstance().setUnitPlace(this,p);
             //this.setPosition(p);
-            this.updateLeftAndRight();
+         //   this.updateLeftAndRight();
         }
-        if(getRole().equals(Player.TeamRole.Attacker))
         Log.move(this);
 
     }
