@@ -6,15 +6,15 @@ import com.destroyordefend.project.Unit.Unit;
 import java.util.TreeSet;
 
 public interface Tactic {
-    static void updateRange(Unit t){
+    static TreeSet<Unit> updateRange(Unit t){
 
         TreeSet<Unit> temp = new TreeSet<>((o1,o2) -> 1);
-        if(t.getPosition().getX() < 180)
-            System.out.println("d");
+
         for(Unit unit: Game.getGame().getAllUnits()){
             if(isInRange(t,unit) && !t.equals(unit))
                 temp.add(unit);
         }
+        t.setTreeSetUnit(temp);
         /*
         Unit tempUnit = t.getNeighbourUnit("left");
         while( tempUnit != null && isInRange(t,tempUnit) ){
@@ -51,7 +51,7 @@ public interface Tactic {
             temp = p;
         }*/
 
-        t.setTreeSetUnit(temp);
+        return temp;
         /*
         //Todo: the up change in total
         p("Update Range :" + t.getId() + " all : " + t.getTreeSetUnit().size());

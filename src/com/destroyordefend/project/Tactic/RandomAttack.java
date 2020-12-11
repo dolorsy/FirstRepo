@@ -16,13 +16,15 @@ public class RandomAttack implements Tactic {
         System.out.println(">>>>>>>>>>>>>>>>>>>\n\n");
         System.out.println("name: " + unit.getName()+ " ss: " + unit.getTreeSetUnit().size());
 
-        Tactic.updateRange(unit);
+        TreeSet<Unit> temp = Tactic.updateRange(unit);
         ArrayList<String> types  ;
         types = unit.getSortMap();
 
         TreeSet<Unit> filtered = new TreeSet<>((v1,v2)->1);
         for (String type : types) {
-            for (Unit u : unit.getTreeSetUnit()) {
+
+            for (Unit u : temp) {
+
                 if (u.getType().equals(type)) {
                     System.out.println("added in: " + u.getName()  + " " + u.getId());
                     filtered.add(u);
@@ -31,8 +33,6 @@ public class RandomAttack implements Tactic {
         }
         System.out.println("Not Filtered id:  " + unit.getId() + "  " + unit.getTreeSetUnit().size());
         System.out.println("Filtered " + filtered.size()+ " " + unit.getId());
-        TreeSet<Unit> temp = new TreeSet<>(new PointComparator());
-        temp.addAll(filtered);
         unit.setTreeSetUnit(filtered);
         System.out.println(">>>>>>>>>>>>>>>>>>>\n\n");
 

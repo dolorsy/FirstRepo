@@ -465,15 +465,15 @@ public class Unit implements TacticAble, MovementAble, Barrier {
     }
 
     public class Damaging implements Damage {
-        double accumulator = 1.0;
+        double accumulator = getShot_speed();
 
-        public boolean CanShot() {
+        public int CanShot() {
             System.out.println("Acc " + accumulator);
             if(accumulator>=1.0)
-                return true;
+                return ((int) accumulator);
             else{
                 accumulator+=1.0/getShot_speed();
-                return false;
+                return 0;
             }
 
         }
@@ -488,6 +488,7 @@ public class Unit implements TacticAble, MovementAble, Barrier {
             if(getTreeSetUnit().size() ==0)
                 return;
             //Todo: here a big mistake
+            System.out.println("After " + getId() + "  "  + getName());
             Unit.this.getTreeSetUnit().first().getDamaging().AcceptDamage(this.getDamage());
             Log.doDamage(Unit.this,Unit.this.getTreeSetUnit().first());
             System.out.println("Ac" + accumulator);
