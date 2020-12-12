@@ -86,14 +86,14 @@ public class Unit implements TacticAble, Movable, Barrier , Planable {
     public String toString() {
         return "Unit{" +
                 "id=" + id + "\n" +
-              //  ", movement=" + movement + "\n" +
+                ", movement=" + movement + "\n" +
               //  ", treeSetUnit=" + treeSetUnit + "\n" +
                 ", point=" + point + "\n" +
                 ", role=" + role + "\n" +
-             //   ", values=" + values + "\n" +
-             //   ", tactic=" + tactic + "\n" +
-            //    ", damaging=" + damaging + "\n" +
-             //   ", SortMap=" + values.sortMap + "\n" +
+                ", values=" + values + "\n" +
+                ", tactic=" + tactic + "\n" +
+                ", damaging=" + damaging + "\n" +
+                ", SortMap=" + values.sortMap + "\n" +
                 '}';
     }
 

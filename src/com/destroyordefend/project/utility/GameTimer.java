@@ -43,8 +43,7 @@ Thread updateRangeThread = new Thread();
                     //getGame().UpdateUnits();
                     reFill();
                 }else if(getGame().getGameStateName().equals("AttackerWin") || getGame().getGameStateName().equals("DefenderWin")){
-                    Log.GameOver("GameOver, "  + getGame().getGameStateName());
-                   // this.interrupt();
+                    this.interrupt();
                     break;
                 }else{
                     currentSecond--;
@@ -67,8 +66,8 @@ Thread updateRangeThread = new Thread();
 
     }
     private void GoodEnd(){
-        getGame().setGameState("DefenderWin");
-        System.out.println("Times up " + getGame().getGameStateName());
+        //getGame().setGameState("DefenderWin");
+        Log.GameOver("GameOver, "  + getGame().getGameStateName());
 
     }
     public boolean onEnd(){
