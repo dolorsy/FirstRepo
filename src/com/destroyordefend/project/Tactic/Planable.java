@@ -16,4 +16,10 @@ public interface Planable extends Movable {
             return false;
         return getPlan().isWait(this);
     }
+
+    default int waitingSeconds(){
+        if(!isWait())
+            return 0;
+        return getPlan().getWaitingSecondsTo(this);
+    }
 }

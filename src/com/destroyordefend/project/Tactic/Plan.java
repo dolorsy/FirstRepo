@@ -58,6 +58,14 @@ public class Plan {
        return (command instanceof Wait);
     }
 
+    public int getWaitingSecondsTo(Planable planable){
+        int cur = Game.getGame().getGameTimer().getCurrentSecond();
+        int start = cur;
+        try {
+            start = startSeconds.get(planable.getId());
+        }catch (Exception e){}
+        return cur-start+1;
+    }
     public interface Command {
         void applyTo(Planable unit);
     }
@@ -68,18 +76,19 @@ public class Plan {
         public Wait(int waitingTime) {
             if (waitingTime <= 0)
                 throw new RuntimeException("invalid waiting time" + waitingTime);
+            System.out.println("hello waiting time"+ waitingTime);
             this.waitingTime = waitingTime;
         }
 
         @Override
-        public void applyTo(Planable unit) {
+        public void applyTo(Planable planable) {
             int curTime = Game.getGame().getGameTimer().getCurrentSecond();
-            int index = unit.getId();
+            int index = planable.getId();
             if (!startSeconds.containsKey(index))
                 startSeconds.put(index,curTime);
-            if (curTime - startSeconds.get(index) == waitingTime) {
+            if (curTime - startSeconds.get(index) == waitingTime-1) {
                 startSeconds.remove(index);
-                getNextCommandTo(unit);
+                getNextCommandTo(planable);
             }
         }
     }
@@ -93,22 +102,22 @@ public class Plan {
         }
 
         @Override
-        public void applyTo(Planable unit) {
-            Stack<Point> unitTargets = unit.getMovement().getTruck();
-            if (unitTargets.contains(target) && isSet)
+        public void applyTo(Planable planable) {
+            Stack<Point> planableTargets = planable.getMovement().getTruck();
+            if (planableTargets.contains(target) && isSet)
                 return;
             if (isSet) {
-                getNextCommandTo(unit);
+                getNextCommandTo(planable);
             } else {
-                Movement.addTarget(target, unit);
+                Movement.addTarget(target, planable);
                 isSet = true;
             }
         }
     }
     /*
 
-     public void addToPlan(Unit unit){
-            commands.add(unit);
+     public void addToPlan(planable planable){
+            commands.add(planable);
         }
         public void startPlane(){
             applyPlan();
@@ -121,20 +130,20 @@ public class Plan {
             Point currentCenter = centerPoint;
             for(int i = 0; i<= commands.size()/8; i++){
             for (int j = 0;j<9;j++){
-                Unit unit = commands.get(j);
-                unit.addTarget(new Point(centerPoint.getX() + unit.getRadius()*2*allVectors[j].getX(),
-                        centerPoint.getY()+ unit.getRadius()*2*allVectors[j].getY()));
-                unitsPoints.put(unit.getId(),unit.getMovement().getTarget());
+                planable planable = commands.get(j);
+                planable.addTarget(new Point(centerPoint.getX() + planable.getRadius()*2*allVectors[j].getX(),
+                        centerPoint.getY()+ planable.getRadius()*2*allVectors[j].getY()));
+                planablesPoints.put(planable.getId(),planable.getMovement().getTarget());
             }
             currentCenter = new Point(currentCenter.getX()+100*allVectors[i+1].getX(),currentCenter.getY() + 100*allVectors[i+1].getY());
             }
 
-            //Todo:: Here we should Decide the best Point around CenterPoint to place the Unit There
-            //Todo:: make sure the unit tactic is ToTarget (The Target is this Point)
+            //Todo:: Here we should Decide the best Point around CenterPoint to place the planable There
+            //Todo:: make sure the planable tactic is ToTarget (The Target is this Point)
         }
 
-        public boolean isInPlace(Unit unit){
-            return unit.getPosition().equals(unitsPoints.get(unit.getId()));
+        public boolean isInPlace(planable planable){
+            return planable.getPosition().equals(planablesPoints.get(planable.getId()));
         }
 
         public Integer getTime() {

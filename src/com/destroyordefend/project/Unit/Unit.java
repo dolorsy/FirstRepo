@@ -126,11 +126,15 @@ public class Unit implements TacticAble, Movable, Barrier , Planable {
         return plan;
     }
 
-    public void Move(){
+    public void move(){
        // System.out.println(getName()  + " Here " + getMovement().getClass().getName().equals(FixedPosition.class.getName()));
       //  if(getMovement().getClass().getName().equals(FixedPosition.class.getName()))
        //     this.tactic.SortMap(this); it will be invoked at startMove()
-
+        if(isWait()){
+            Log.wait(this);
+            applyPlane();
+            return;
+        }
         for(int i =0 ;i<values.currentSpeed;i++) {
             Runnable method = () -> movement.StartMove(Unit.this);
             UpdateMapAsyncTask.addMethod(method);

@@ -45,8 +45,10 @@ public class ToTarget implements Movement {
         if(unit.getPlan() != null) {
             unit.applyPlane();
         }
-        if(unit.isWait())
+        if(unit.isWait()) {
+            //Log.wait(unit);
             return unit.getPosition();
+        }
         if(!track.empty() && unit.getPosition().equals(track.peek())){
             //System.out.println("\n\n\n" + unit.getPosition() + "   " + track.peek());
             track.pop();

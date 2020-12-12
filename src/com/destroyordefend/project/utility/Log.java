@@ -14,7 +14,8 @@ public class Log extends ConsoleZoomingFilter {
     private static final boolean fMove = true,
             fdoDamage = true,
             fAcceptDamage = true,
-            fOnDestroy = true;
+            fOnDestroy = true,
+            fWait = true;
 
     private static void createFile(File file) {
         if (!logFile.exists()) {
@@ -59,7 +60,17 @@ public class Log extends ConsoleZoomingFilter {
                 "target is" + unit.getMovement().getTarget() + "\n"
                 + unit.getMovement().getTruck().size(), logFile);
     }
+    public static void wait(Unit unit){
+        if (!fWait)
+            return;
 
+        writeFile("time: " + Game.getGame().getGameTimer().getCurrentSecond() +
+                "\tUnit_id :" + unit.getId() +
+                " wait for :" +
+                  unit.waitingSeconds() +
+                 "\n" + "---------------" + "\n"
+                 , logFile);
+    }
     public static void doDamage(Unit unit_One, Unit unit_Two) {
         if (!fdoDamage)
             return;

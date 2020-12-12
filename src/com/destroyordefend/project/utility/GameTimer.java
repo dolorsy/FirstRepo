@@ -89,14 +89,14 @@ Thread updateRangeThread = new Thread();
             if(unit.getName().equals("MAIN BASE"))
                 continue;
 
-            unit.Move();
+            unit.move();
 
         //Todo: here we can make damaging more real
             if( unit.getDamaging().CanShot()>0 && !unit.getName().equals("Black Eagle"))
                 for(int i =0;i<unit.getDamaging().CanShot();i++)
             MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());
         }
-        System.out.println(updatePositionQueue.size());
+        //System.out.println(updatePositionQueue.size());
         Collections.shuffle(updatePositionQueue);
 
     }
