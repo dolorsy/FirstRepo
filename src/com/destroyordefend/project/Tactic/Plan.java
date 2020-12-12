@@ -1,5 +1,6 @@
 package com.destroyordefend.project.Tactic;
 
+import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Unit.Unit;
@@ -9,12 +10,12 @@ import java.util.*;
 public class Plan {
     final private ArrayList<Command> commands;
     final private Map<Integer, Integer> unitPC;
-    private final Map<Integer, Integer> waitingTimes;
+    private final Map<Integer, Integer> startSeconds;
 
     public Plan() {
         commands = new ArrayList<>();
         unitPC = new Hashtable<>();
-        waitingTimes = new Hashtable<>();
+        startSeconds = new Hashtable<>();
     }
 
     public void addUnits(Unit... units) {
@@ -27,27 +28,38 @@ public class Plan {
         Collections.addAll(this.commands, commands);
     }
 
-    public boolean applyTo(Unit unit) {
+    public boolean applyTo(Planable unit) {
         int index = unitPC.get(unit.getId());
         Command command = commands.get(index);
         command.applyTo(unit);
         return command instanceof Wait;
     }
 
-    public void getNextCommandTo(Unit unit) {
+    public void getNextCommandTo(Planable unit) {
         int id = unit.getId();
         if (!unitPC.containsKey(id))
             throw new RuntimeException("this id: " + id + " is not at this plan");
         int pc = unitPC.get(id);
-        if (pc >= commands.size())//remove plan
-            unit.acceptPlan(null);
-        else
+        try {
             unitPC.replace(id, pc + 1);
+            if(unitPC.get(id)>= commands.size())
+                throw new IndexOutOfBoundsException();
+        }catch (IndexOutOfBoundsException e){
+            unit.acceptPlan(null);
+        }
 
     }
 
+    public boolean isWait(Planable unit) {
+        int index = unit.getId();
+        if (!unitPC.containsKey(index))
+            throw new RuntimeException("unit "+unit.getId()+" is not in this plan ");
+       Command command = commands.get(unitPC.get(index));
+       return (command instanceof Wait);
+    }
+
     public interface Command {
-        void applyTo(Unit unit);
+        void applyTo(Planable unit);
     }
 
     public class Wait implements Command {
@@ -60,17 +72,13 @@ public class Plan {
         }
 
         @Override
-        public void applyTo(Unit unit) {
+        public void applyTo(Planable unit) {
+            int curTime = Game.getGame().getGameTimer().getCurrentSecond();
             int index = unit.getId();
-            int waitingTime;
-            if (waitingTimes.containsKey(index)) {
-                waitingTime = waitingTimes.get(index) - 1;
-            }
-            else
-                waitingTimes.put(index,waitingTime = this.waitingTime);
-            waitingTimes.replace(index, waitingTime - 1);
-            if (waitingTimes.get(index) == 0) {
-                waitingTimes.remove(index);
+            if (!startSeconds.containsKey(index))
+                startSeconds.put(index,curTime);
+            if (curTime - startSeconds.get(index) == waitingTime) {
+                startSeconds.remove(index);
                 getNextCommandTo(unit);
             }
         }
@@ -85,14 +93,14 @@ public class Plan {
         }
 
         @Override
-        public void applyTo(Unit unit) {
+        public void applyTo(Planable unit) {
             Stack<Point> unitTargets = unit.getMovement().getTruck();
             if (unitTargets.contains(target) && isSet)
                 return;
-            if(isSet){
+            if (isSet) {
                 getNextCommandTo(unit);
-            }else{
-                Movement.addTarget(target,unit);
+            } else {
+                Movement.addTarget(target, unit);
                 isSet = true;
             }
         }

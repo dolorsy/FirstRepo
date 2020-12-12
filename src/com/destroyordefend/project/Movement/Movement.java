@@ -4,6 +4,7 @@ package com.destroyordefend.project.Movement;
 import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Barrier;
+import com.destroyordefend.project.Unit.MovementAble;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.Log;
@@ -43,10 +44,14 @@ public interface Movement {
     @Override
     String toString();
 
-    static void addTarget(Point p, Unit u){
-        u.getMovement().getTruck().clear();
-        if(u.getRole().name().equals("Attacker"))
-            u.getMovement().getTruck().push(Game.getGame().getBase().getPosition());
+    static void addTarget(Point p, MovementAble u){
+        if(!(u.getMovement() instanceof ToTarget))
+            throw new RuntimeException("add target to none toTarget movement");
+        //u.getMovement().getTruck().clear();
+        while(u.getMovement().getTruck().size()!=1)
+            u.getMovement().getTruck().pop();
+        /*if(u.getRole().name().equals("Attacker"))
+            u.getMovement().getTruck().push(Game.getGame().getBase().getPosition());*/
         u.getMovement().getTruck().push(p);
     };
 

@@ -9,7 +9,7 @@ public class FixedPosition implements Movement {
 
     @Override
     public void StartMove(Unit unit) {
-
+        unit.getTactic().SortMap(unit);
     }
 
 

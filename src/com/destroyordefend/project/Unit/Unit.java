@@ -6,6 +6,7 @@ import com.destroyordefend.project.Core.PointComparator;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Plan;
+import com.destroyordefend.project.Tactic.Planable;
 import com.destroyordefend.project.Tactic.Tactic;
 import com.destroyordefend.project.utility.IdGenerator;
 import com.destroyordefend.project.utility.Log;
@@ -14,13 +15,12 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.TreeSet;
 
 import static com.destroyordefend.project.Core.Game.getGame;
 import static com.destroyordefend.project.Main.p;
 
-public class Unit implements TacticAble, MovementAble, Barrier {
+public class Unit implements TacticAble, MovementAble, Barrier , Planable {
 
     private  int id;
     private Movement movement;
@@ -31,14 +31,13 @@ public class Unit implements TacticAble, MovementAble, Barrier {
     private Tactic tactic;
     private Damaging damaging;
     private Plan plan;
-    private HashMap<Plan,Integer> plans = new HashMap<Plan, Integer>() ;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Unit)) return false;
         Unit unit = (Unit) o;
-        return getId() == unit.getId() && getMovement().equals(unit.getMovement()) && getTreeSetUnit().equals(unit.getTreeSetUnit()) && point.equals(unit.point) && getRole() == unit.getRole() && getValues().equals(unit.getValues()) && getTactic().equals(unit.getTactic()) && getDamaging().equals(unit.getDamaging()) && plan.equals(unit.plan) && plans.equals(unit.plans);
+        return getId() == unit.getId() && getName().equals(unit.getName());
     }
 
     public Unit() {
@@ -124,31 +123,15 @@ public class Unit implements TacticAble, MovementAble, Barrier {
         return movement;
     }
 
+    public Plan getPlan() {
+        return plan;
+    }
 
     public void Move(){
         System.out.println(getName()  + " Here " + getMovement().getClass().getName().equals(FixedPosition.class.getName()));
       //  if(getMovement().getClass().getName().equals(FixedPosition.class.getName()))
-            this.tactic.SortMap(this);
-/*
-        if(this.plans.size() != 0 ) {
-            if (this.plan.isInPlace(this)){
-                this.plans.put(plan,this.plans.get(plan)-1);
-                return;
-            }
+       //     this.tactic.SortMap(this); it will be invoked at startMove()
 
-        }
-*/
-    if(plan != null){
-        try {
-            boolean wait = plan.applyTo(this);
-            if (wait) {
-                System.out.println("waiting");
-                return;
-            }
-        }catch (Exception e){
-            plan = null;
-        }
-    }
         for(int i =0 ;i<values.currentSpeed;i++) {
             Runnable method = () -> movement.StartMove(Unit.this);
             UpdateMapAsyncTask.addMethod(method);
@@ -156,6 +139,7 @@ public class Unit implements TacticAble, MovementAble, Barrier {
         }
 
     }
+    /*
     public void StartMove(Unit unit) {
         unit.tactic.SortMap(unit);
         if (getTreeSetUnit().size() != 0) {
@@ -192,7 +176,7 @@ public class Unit implements TacticAble, MovementAble, Barrier {
             }else{
                 values.currentSpeed = values.speed ;
                 continue;
-            }*/
+            }
           //  PositionHelper.getInstance().setUnitPlace(this,p);
             //this.setPosition(p);
          //   this.updateLeftAndRight();
@@ -201,7 +185,7 @@ public class Unit implements TacticAble, MovementAble, Barrier {
 
     }
 
-
+*/
     public TreeSet<Unit> getTreeSetUnit() {
         return treeSetUnit;
     }
@@ -251,7 +235,7 @@ public class Unit implements TacticAble, MovementAble, Barrier {
     }
 
     @Override
-    public Unit acceptPlan(Plan plan) {
+    public Planable acceptPlan(Plan plan) {
         this.plan = plan;
         if(plan!= null)
             plan.addUnits(this);

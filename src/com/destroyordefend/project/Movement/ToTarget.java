@@ -42,15 +42,18 @@ public class ToTarget implements Movement {
         if(track.size() == 0){
             System.out.println(unit.getName()+" "+unit.getId()+" has no targets");
         }
-        if(unit.getPosition().equals(track.peek()) && !track.empty()){
+        if(unit.getPlan() != null) {
+            unit.applyPlane();
+        }
+        if(unit.isWait())
+            return unit.getPosition();
+        if(!track.empty() && unit.getPosition().equals(track.peek())){
             System.out.println("\n\n\n" + unit.getPosition() + "   " + track.peek());
             track.pop();
-
         }
         if(track.empty())
             return unit.getPosition();
-        Point p =Movement.straightMove(unit.getPosition(),track.peek());
-        return p;
+       return Movement.straightMove(unit.getPosition(),track.peek());
     }
 
 
@@ -257,4 +260,4 @@ public class ToTarget implements Movement {
     }
 }
 
-* */
+ */
