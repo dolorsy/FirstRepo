@@ -485,8 +485,8 @@ public class Unit implements TacticAble, Movable, Barrier , Planable {
         public void doDamage() {
             if(getTreeSetUnit().size() ==0)
                 return;
-            Unit.this.getTreeSetUnit().first().getDamaging().acceptDamage(this.getDamage());
             Log.doDamage(Unit.this,Unit.this.getTreeSetUnit().first());
+            Unit.this.getTreeSetUnit().first().getDamaging().acceptDamage(this.getDamage());
             decrease();
         }
         @Override

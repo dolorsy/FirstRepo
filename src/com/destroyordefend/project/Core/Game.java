@@ -269,7 +269,7 @@ public class Game implements GameManger {
             setGameState(States.DefenderWin);
         }
         System.out.println(GameState.getData());
-        System.exit(0);
+      //  System.exit(0);
 
     }
 
