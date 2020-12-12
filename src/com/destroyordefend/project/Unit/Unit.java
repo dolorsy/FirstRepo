@@ -3,7 +3,6 @@ package com.destroyordefend.project.Unit;
 import com.destroyordefend.project.Core.Player;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Core.PointComparator;
-import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Plan;
 import com.destroyordefend.project.Tactic.Planable;
@@ -20,7 +19,7 @@ import java.util.TreeSet;
 import static com.destroyordefend.project.Core.Game.getGame;
 import static com.destroyordefend.project.Main.p;
 
-public class Unit implements TacticAble, MovementAble, Barrier , Planable {
+public class Unit implements TacticAble, Movable, Barrier , Planable {
 
     private  int id;
     private Movement movement;
@@ -98,7 +97,7 @@ public class Unit implements TacticAble, MovementAble, Barrier , Planable {
     }
 
     public void setTreeSetUnit(TreeSet<Unit> treeSetUnit) {
-        System.out.println(getId() + " " + treeSetUnit.size());
+        //System.out.println(getId() + " " + treeSetUnit.size());
         this.treeSetUnit = treeSetUnit;
 
     }
@@ -128,7 +127,7 @@ public class Unit implements TacticAble, MovementAble, Barrier , Planable {
     }
 
     public void Move(){
-        System.out.println(getName()  + " Here " + getMovement().getClass().getName().equals(FixedPosition.class.getName()));
+       // System.out.println(getName()  + " Here " + getMovement().getClass().getName().equals(FixedPosition.class.getName()));
       //  if(getMovement().getClass().getName().equals(FixedPosition.class.getName()))
        //     this.tactic.SortMap(this); it will be invoked at startMove()
 
@@ -216,15 +215,15 @@ public class Unit implements TacticAble, MovementAble, Barrier , Planable {
 
     //Method TacticAble Class
     @Override
-    public Unit AcceptTactic(Tactic tactic) {
+    public Unit acceptTactic(Tactic tactic) {
         p("Accept Tactic");
         this.tactic = tactic;
         return this;
     }
 
-    //Method MovementAble Class
+    //Method Movable Class
     @Override
-    public Unit AcceptMovement(Movement movement) {
+    public Unit acceptMovement(Movement movement) {
         this.movement = movement;
         return this;
     }
@@ -239,14 +238,6 @@ public class Unit implements TacticAble, MovementAble, Barrier , Planable {
         this.plan = plan;
         if(plan!= null)
             plan.addUnits(this);
-        /*
-        this.plans.put(plan,plan.getTime());
-        plan.addToPlan(this);
-        this.plan = plan;
-         */
-
-
-
         return this;
     }
 
@@ -470,14 +461,13 @@ public class Unit implements TacticAble, MovementAble, Barrier , Planable {
         double accumulator = getShot_speed();
 
         public int CanShot() {
-            System.out.println("Acc " + accumulator);
+            //System.out.println("Acc " + accumulator);
             if(accumulator>=1.0)
                 return ((int) accumulator);
             else{
                 accumulator+=1.0/getShot_speed();
                 return 0;
             }
-
         }
 
         @Override
@@ -486,28 +476,21 @@ public class Unit implements TacticAble, MovementAble, Barrier , Planable {
         }
         @Override
         public void DoDamage() {
-            System.out.println("Damage " + getName() + " " + getTreeSetUnit().size() );
             if(getTreeSetUnit().size() ==0)
                 return;
-            //Todo: here a big mistake
-            System.out.println("After " + getId() + "  "  + getName());
             Unit.this.getTreeSetUnit().first().getDamaging().AcceptDamage(this.getDamage());
             Log.doDamage(Unit.this,Unit.this.getTreeSetUnit().first());
-            System.out.println("Ac" + accumulator);
-            accumulator-=1.0;
-            System.out.println("Ac" + accumulator);
+            decrease();
         }
         @Override
         public void AcceptDamage(int damage) {
-
-            int valueresulte = values.health - (int) (getValues().armor ==0 ?damage:damage* getValues().armor);
-            if ((valueresulte) <= 0) {
-
+            int totalDamage = damage- (int)Math.round(getValues().armor*damage);
+            values.health = values.health - totalDamage;
+            if ((values.health) <= 0) {
                 values.health = 0;
                 Log.onDestroy(Unit.this);
                 onDestroy();
             } else {
-                values.health = valueresulte;
                 Log.acceptDamage(Unit.this);
             }
         }

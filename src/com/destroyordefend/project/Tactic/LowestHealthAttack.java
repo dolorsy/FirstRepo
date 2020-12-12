@@ -10,8 +10,8 @@ public class LowestHealthAttack implements Tactic {
 
     @Override
     public void SortMap(Unit unit) {
-        System.out.println(">>>>>>>>>>>>>>>>>>>\n\n");
-        System.out.println("name: " + unit.getName()+ " ss: " + unit.getTreeSetUnit().size());
+        //System.out.println(">>>>>>>>>>>>>>>>>>>\n\n");
+        //System.out.println("name: " + unit.getName()+ " ss: " + unit.getTreeSetUnit().size());
         TreeSet<Unit> temp = Tactic.updateRange(unit);
         List<String> types = unit.getSortMap();
 
@@ -20,17 +20,17 @@ public class LowestHealthAttack implements Tactic {
         for (String type : types) {
             for (Unit u : temp) {
                 if (u.getType().equals(type)) {
-                    System.out.println("added in: " + u.getName()  + " " + u.getId());
+          //          System.out.println("added in: " + u.getName()  + " " + u.getId());
 
                     filtered.add(u);
                 }
             }
         }
 
-        System.out.println("Not Filtered id:  " + unit.getId() + "  " + unit.getTreeSetUnit().size());
-        System.out.println("Filtered " + filtered.size()+ " " + unit.getId());
+        //System.out.println("Not Filtered id:  " + unit.getId() + "  " + unit.getTreeSetUnit().size());
+        //System.out.println("Filtered " + filtered.size()+ " " + unit.getId());
         unit.setTreeSetUnit(filtered);
-        System.out.println(">>>>>>>>>>>>>>>>>>>\n\n");
+        //System.out.println(">>>>>>>>>>>>>>>>>>>\n\n");
 
     }
 

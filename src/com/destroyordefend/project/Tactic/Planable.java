@@ -1,8 +1,8 @@
 package com.destroyordefend.project.Tactic;
 
-import com.destroyordefend.project.Unit.MovementAble;
+import com.destroyordefend.project.Unit.Movable;
 
-public interface Planable extends MovementAble {
+public interface Planable extends Movable {
     Plan getPlan();
     int getId();
     Planable acceptPlan(Plan plan);

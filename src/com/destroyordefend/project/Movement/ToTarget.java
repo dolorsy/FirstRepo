@@ -40,7 +40,7 @@ public class ToTarget implements Movement {
     @Override
     public Point GetNextPoint(Unit unit) {
         if(track.size() == 0){
-            System.out.println(unit.getName()+" "+unit.getId()+" has no targets");
+            //System.out.println(unit.getName()+" "+unit.getId()+" has no targets");
         }
         if(unit.getPlan() != null) {
             unit.applyPlane();
@@ -48,7 +48,7 @@ public class ToTarget implements Movement {
         if(unit.isWait())
             return unit.getPosition();
         if(!track.empty() && unit.getPosition().equals(track.peek())){
-            System.out.println("\n\n\n" + unit.getPosition() + "   " + track.peek());
+            //System.out.println("\n\n\n" + unit.getPosition() + "   " + track.peek());
             track.pop();
         }
         if(track.empty())

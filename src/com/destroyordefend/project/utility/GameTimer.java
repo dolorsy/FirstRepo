@@ -1,9 +1,7 @@
 package com.destroyordefend.project.utility;
 
-import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Unit.Unit;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Observable;
 import java.util.Observer;
@@ -71,7 +69,7 @@ Thread updateRangeThread = new Thread();
     }
     private void GoodEnd(){
         getGame().setGameState("DefenderWin");
-        System.out.println("Times up " + getGame().getGameStateName());
+        //System.out.println("Times up " + getGame().getGameStateName());
 
     }
     public boolean onEnd(){
@@ -92,7 +90,6 @@ Thread updateRangeThread = new Thread();
                 continue;
 
             unit.Move();
-
 
         //Todo: here we can make damaging more real
             if( unit.getDamaging().CanShot()>0 && !unit.getName().equals("Black Eagle"))

@@ -4,7 +4,7 @@ package com.destroyordefend.project.Movement;
 import com.destroyordefend.project.Core.Game;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Barrier;
-import com.destroyordefend.project.Unit.MovementAble;
+import com.destroyordefend.project.Unit.Movable;
 import com.destroyordefend.project.Unit.Terrain;
 import com.destroyordefend.project.Unit.Unit;
 import com.destroyordefend.project.utility.Log;
@@ -18,8 +18,8 @@ public interface Movement {
     default void StartMove(Unit unit) {
         unit.getTactic().SortMap(unit);
         if (unit.getTreeSetUnit().size() != 0) {
-            System.out.println("Size: " + unit.getTreeSetUnit().size());
-            System.out.println("\n\n\n");
+            //System.out.println("Size: " + unit.getTreeSetUnit().size());
+            //System.out.println("\n\n\n");
             return;
         }
         Point p = unit.getMovement().GetNextPoint(unit);
@@ -44,7 +44,7 @@ public interface Movement {
     @Override
     String toString();
 
-    static void addTarget(Point p, MovementAble u){
+    static void addTarget(Point p, Movable u){
         if(!(u.getMovement() instanceof ToTarget))
             throw new RuntimeException("add target to none toTarget movement");
         //u.getMovement().getTruck().clear();
@@ -106,10 +106,10 @@ public interface Movement {
         Barrier barrier = Movement.canSetUnitPlace(n, unit);
         if (barrier == null || barrier.is("river")) {
             PositionHelper.getInstance().setUnitPlace(unit, n);
-            System.out.println(unit.getPosition());
+            //System.out.println(unit.getPosition());
             return barrier != null;
         }
-        System.out.println("gomu gomu noo");
+        //System.out.println("gomu gomu noo");
 
         Point[] corners = {
                 new Point(barrier.getLeft() - unit.getRadius()-1, barrier.getDown() + unit.getRadius()+1),

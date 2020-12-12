@@ -43,7 +43,7 @@ public class Game implements GameManger {
         base.setRole(Player.TeamRole.Defender);
         base.setId(1);
         base.setPosition(new Point(1000, 1000));
-        base.AcceptMovement(new FixedPosition());
+        base.acceptMovement(new FixedPosition());
         if(PositionHelper.getInstance().canSetAt(base,base.getPosition())!=null)
             throw new RuntimeException("base cannot set");
         PositionHelper.getInstance().setUnitPlace(base, base.getPosition());
@@ -129,15 +129,13 @@ public class Game implements GameManger {
         allUnits = new TreeSet<>(new PointComparator());
 
         for (Player player : attackers.getTeamPlayers()) {
-            System.out.println("sss" + player.getArmy().first().getPosition());
+            //System.out.println("sss" + player.getArmy().first().getPosition());
             allUnits.addAll(player.getArmy());
         }
         for (Player player : defenders.getTeamPlayers()) {
             allUnits.addAll(player.getArmy());
         }
-        p("sizeee:" + allUnits.size());
-        for (Unit u : allUnits)
-            System.out.println(u);
+        //p("sizeee:" + allUnits.size());
         setNavigationForUnit();
     }
 
@@ -268,7 +266,7 @@ public class Game implements GameManger {
             GameState.setData(States.DefenderWin);
             setGameState(States.DefenderWin);
         }
-        System.out.println(GameState.getData());
+        //System.out.println(GameState.getData());
         System.exit(0);
 
     }
@@ -280,9 +278,9 @@ public class Game implements GameManger {
                 attackers :
                 defenders).removeUnit(unit);
 
-        System.out.println("Sized " + allUnits.size());
+        //System.out.println("Sized " + allUnits.size());
         allUnits.removeIf(unit1 -> unit.getId() == unit1.getId());
-        System.out.println("Sized " + allUnits.size());
+        //System.out.println("Sized " + allUnits.size());
     }
 
     private void autoInitGame() {
@@ -303,9 +301,9 @@ public class Game implements GameManger {
                 p.new Wait(5));
         unit.setPosition(new Point(3500,3500));
         unit.acceptPlan(p);
-        unit.AcceptMovement(new ToTarget(base));
+        unit.acceptMovement(new ToTarget(base));
         unit.setRole(Player.TeamRole.Attacker);
-        unit.AcceptTactic(new RandomAttack());
+        unit.acceptTactic(new RandomAttack());
         Attacker.addArmy(unit);
 
         /*
