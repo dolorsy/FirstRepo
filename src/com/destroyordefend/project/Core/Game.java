@@ -286,7 +286,7 @@ public class Game implements GameManger {
     }
 
     private void autoInitGame() {
-        Player Defender = new Player();
+       Player Defender = new Player();
         Defender.setRole(Player.TeamRole.Defender);
         Player Attacker = new Player();
         Attacker.setRole(Player.TeamRole.Attacker);
@@ -294,9 +294,9 @@ public class Game implements GameManger {
         attackers.addPlayer(Attacker);
         defenders.addPlayer(Defender);
         Defender.addArmy(base);
-
+/*
         Unit unit = new Unit();
-        unit.setValues(Shop.getInstance().getUnitByName("TeslaTank"));
+        unit.setValues(Shop.getInstance().getUnitByName("Mirage tank"));
         unit.setPosition(new Point(1000,300));
         unit.acceptMovement(new ToTarget(base));
         unit.setRole(Player.TeamRole.Attacker);
@@ -304,7 +304,7 @@ public class Game implements GameManger {
         Attacker.addArmy(unit);
 
 
-        /*Unit unit = new Unit();
+        Unit unit = new Unit();
         unit.setValues(Shop.getInstance().getUnitByName("TeslaTank"));
         Plan p =new Plan();
         p.addCommands(p.new Wait(5),
@@ -346,7 +346,31 @@ public class Game implements GameManger {
 
 
 
+        Unit unit = new Unit();
+        unit.setValues(Shop.getInstance().getUnitByName("Prism Tower"));
+       /* Plan p = new Plan();
+        p.addCommands(p.new Wait(5),
+                p.new ChangeTarget(new Point(2000, 2000)),
+                p.new Wait(5));
+        unit.acceptPlan(p);*/
+        unit.setPosition(new Point(2000, 2000));
+        unit.acceptMovement(new FixedPosition());
+        unit.setRole(Player.TeamRole.Defender);
+        unit.acceptTactic(new RandomAttack());
+        Defender.addArmy(unit);
 
+        Unit unit1 = new Unit();
+        unit1.setValues(Shop.getInstance().getUnitByName("Mirage tank"));
+        Plan p1 = new Plan();
+        /*p1.addCommands(p1.new Wait(1),
+                p1.new ChangeTarget(new Point(2000, 2000)),
+                p1.new Wait(5));
+        unit1.acceptPlan(p1);*/
+        unit1.setPosition(new Point(2070, 2070));
+        unit1.acceptMovement(new ToTarget(base));
+        unit1.setRole(Player.TeamRole.Attacker);
+        unit1.acceptTactic(new RandomAttack());
+        Attacker.addArmy(unit1);
 
 
 

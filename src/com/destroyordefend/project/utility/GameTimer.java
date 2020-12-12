@@ -2,7 +2,6 @@ package com.destroyordefend.project.utility;
 
 import com.destroyordefend.project.Unit.Unit;
 
-import java.util.Collections;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -69,7 +68,7 @@ Thread updateRangeThread = new Thread();
     }
     private void GoodEnd(){
         getGame().setGameState("DefenderWin");
-        //System.out.println("Times up " + getGame().getGameStateName());
+        System.out.println("Times up " + getGame().getGameStateName());
 
     }
     public boolean onEnd(){
@@ -97,7 +96,7 @@ Thread updateRangeThread = new Thread();
             MainMethodAsyncTask.addMethod(() ->unit.getDamaging().doDamage());
         }
         //System.out.println(updatePositionQueue.size());
-        Collections.shuffle(updatePositionQueue);
+        //Collections.shuffle(updatePositionQueue);
 
     }
 

@@ -288,8 +288,8 @@ public class Unit implements TacticAble, Movable, Barrier , Planable {
     }
 
 
-    public void UpdateRange() {
-        Tactic.updateRange(this);//should removed because this is invoked at sortMap
+    public void updateRange() {
+        //Tactic.updateRange(this);//should removed because this is invoked at sortMap
         this.tactic.SortMap(this);
         p("Update Range id: " + id + "new Range " + treeSetUnit);
     }

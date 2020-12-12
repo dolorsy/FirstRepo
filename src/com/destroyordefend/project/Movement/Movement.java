@@ -16,8 +16,9 @@ public interface Movement {
 
 
     default void StartMove(Unit unit) {
-        unit.getTactic().SortMap(unit);
+        unit.updateRange();
         if (unit.getTreeSetUnit().size() != 0) {
+
             //System.out.println("Size: " + unit.getTreeSetUnit().size());
             //System.out.println("\n\n\n");
             return;
