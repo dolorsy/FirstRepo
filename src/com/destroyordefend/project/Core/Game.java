@@ -65,7 +65,7 @@ public class Game implements GameManger {
 //Todo:: terrain need to add terrains
         // Terrain t = new Terrain(new Point(1020, 900), 0, 50,"vally");
         //terrains.add(t);
-        gameTimer = new GameTimer(50);
+        gameTimer = new GameTimer(200);
         GameState.addObserver(gameTimer);
         // CreateTeamsStage();
 
@@ -315,7 +315,8 @@ public class Game implements GameManger {
         Defender.addArmy(unitAttakar);
 
     }*/
-private void autoInitGame() {
+    //test 2
+/*private void autoInitGame() {
     Player Defender = new Player();
     Defender.setRole(Player.TeamRole.Defender);
     Player Attacker = new Player();
@@ -370,8 +371,69 @@ private void autoInitGame() {
 
 
 
-}
+}*/
+private void autoInitGame() {
+    Player Defender = new Player();
+    Defender.setRole(Player.TeamRole.Defender);
+    Player Attacker = new Player();
+    Attacker.setRole(Player.TeamRole.Attacker);
 
+    attackers.addPlayer(Attacker);
+    defenders.addPlayer(Defender);
+    Defender.addArmy(base);
+
+    Unit unit1 = new Unit();
+    unit1.setValues(Shop.getInstance().getUnitByName("Grand Cannon"));
+    unit1.setPosition(new Point(2400, 1800));
+    unit1.acceptMovement(new FixedPosition());
+    unit1.acceptTactic(new RandomAttack());
+    unit1.setRole(Player.TeamRole.Defender);
+    Defender.addArmy(unit1);
+
+
+    Unit unit2 = new Unit();
+    unit2.setValues(Shop.getInstance().getUnitByName("Tank destroyer"));
+    unit2.setPosition(new Point(1500, 1500));
+    unit2.acceptMovement(new FixedPatrol(1000));
+    unit2.acceptTactic(new RandomAttack());
+    unit2.setRole(Player.TeamRole.Defender);
+    Defender.addArmy(unit2);
+
+    Unit unit3 = new Unit();
+    unit3.setValues(Shop.getInstance().getUnitByName("Patriot Missile"));
+    unit3.setPosition(new Point(1700, 2200));
+    unit3.acceptMovement(new FixedPosition());
+    unit3.acceptTactic(new RandomAttack());
+    unit3.setRole(Player.TeamRole.Defender);
+    Defender.addArmy(unit3);
+
+    //attaker
+
+    Unit unit4 = new Unit();
+    unit4.setValues(Shop.getInstance().getUnitByName( "Mirage tank"));
+    unit4.setPosition(new Point(3000, 3000));
+    unit4.acceptMovement(new ToTarget(base));
+    unit4.acceptTactic(new RandomAttack());
+    unit4.setRole(Player.TeamRole.Attacker);
+    Plan p = new Plan();
+    p.addCommands(p.new Wait(3),
+            p.new ChangeTarget(new Point(1700, 2200)),
+            p.new Wait(3));
+    unit4.acceptPlan(p);
+    Attacker.addArmy(unit4);
+
+
+    Unit unit5 = new Unit();
+    unit5.setValues(Shop.getInstance().getUnitByName("Prism tank"));
+    unit5.setPosition(new Point(1000, 1000));
+    unit5.acceptMovement(new ToTarget(base));
+    unit5.acceptTactic(new LowestHealthAttack());
+    unit5.setRole(Player.TeamRole.Attacker);
+    Attacker.addArmy(unit5);
+
+
+
+}
     public PlayerIterator playerIterator() {
         if (temp == null)
             return temp = new PlayerIterator();
