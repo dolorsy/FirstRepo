@@ -45,7 +45,7 @@ Thread updateRangeThread = new Thread();
                     reFill();
                 }else if(getGame().getGameStateName().equals("AttackerWin") || getGame().getGameStateName().equals("DefenderWin")){
                     Log.GameOver("GameOver, "  + getGame().getGameStateName());
-                    this.interrupt();
+                   // this.interrupt();
                     break;
                 }else{
                     currentSecond--;
@@ -92,9 +92,9 @@ Thread updateRangeThread = new Thread();
             unit.move();
 
         //Todo: here we can make damaging more real
-            if( unit.getDamaging().CanShot()>0 && !unit.getName().equals("Black Eagle"))
-                for(int i =0;i<unit.getDamaging().CanShot();i++)
-            MainMethodAsyncTask.addMethod(() ->unit.getDamaging().DoDamage());
+            if( unit.getDamaging().canShot()>0 && !unit.getName().equals("Black Eagle"))
+                for(int i = 0; i<unit.getDamaging().canShot(); i++)
+            MainMethodAsyncTask.addMethod(() ->unit.getDamaging().doDamage());
         }
         //System.out.println(updatePositionQueue.size());
         Collections.shuffle(updatePositionQueue);

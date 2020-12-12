@@ -9,7 +9,7 @@ public class AirAttack implements Tactic{
         //System.out.println("Condition "  + Tactic.isInRange(unit,Game.getGame().getBase()));
         if(Tactic.isInRange(unit,Game.getGame().getBase())){
             unit.getTreeSetUnit().add(Game.getGame().getBase());
-            Game.getGame().getBase().getDamaging().AcceptDamage(unit.getDamage());
+            Game.getGame().getBase().getDamaging().acceptDamage(unit.getDamage());
             unit.getMovement().getTruck().pop();
         }
         else{

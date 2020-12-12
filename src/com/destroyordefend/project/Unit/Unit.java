@@ -464,13 +464,16 @@ public class Unit implements TacticAble, Movable, Barrier , Planable {
     public class Damaging implements Damage {
         double accumulator = getShot_speed();
 
-        public int CanShot() {
-            //System.out.println("Acc " + accumulator);
-            if(accumulator>=1.0)
-                return ((int) accumulator);
-            else{
-                accumulator+=1.0/getShot_speed();
-                return 0;
+        public int canShot() {
+            System.out.println("Acc " + accumulator);
+            if (accumulator >= 1.0) {
+                accumulator += 1.0 / getShot_speed();
+                accumulator-=(int)accumulator;
+                return (int) ((int)accumulator +(int) 1.0/getShot_speed());
+            }
+            else {
+                accumulator += 1.0 / getShot_speed();
+                return (int)(1.0 / getShot_speed());
             }
         }
 
@@ -479,15 +482,15 @@ public class Unit implements TacticAble, Movable, Barrier , Planable {
             return values.damage;
         }
         @Override
-        public void DoDamage() {
+        public void doDamage() {
             if(getTreeSetUnit().size() ==0)
                 return;
-            Unit.this.getTreeSetUnit().first().getDamaging().AcceptDamage(this.getDamage());
+            Unit.this.getTreeSetUnit().first().getDamaging().acceptDamage(this.getDamage());
             Log.doDamage(Unit.this,Unit.this.getTreeSetUnit().first());
             decrease();
         }
         @Override
-        public void AcceptDamage(int damage) {
+        public void acceptDamage(int damage) {
             int totalDamage = damage- (int)Math.round(getValues().armor*damage);
             values.health = values.health - totalDamage;
             if ((values.health) <= 0) {

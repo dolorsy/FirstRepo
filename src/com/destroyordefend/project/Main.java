@@ -1,10 +1,6 @@
 package com.destroyordefend.project;
 
 import com.destroyordefend.project.Core.Game;
-import com.destroyordefend.project.utility.ConsoleZoomUI;
-
-import javax.swing.*;
-import java.lang.reflect.InvocationTargetException;
 
 public class Main {
 
