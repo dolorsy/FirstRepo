@@ -1,7 +1,9 @@
 package com.destroyordefend.project.Core;
 
+import com.destroyordefend.project.Movement.FixedPatrol;
 import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.ToTarget;
+import com.destroyordefend.project.Tactic.LowestHealthAttack;
 import com.destroyordefend.project.Tactic.Plan;
 import com.destroyordefend.project.Tactic.RandomAttack;
 import com.destroyordefend.project.Unit.Terrain;
@@ -45,7 +47,7 @@ public class Game implements GameManger {
         base.setId(1);
         base.setPosition(new Point(2000, 2000));
         base.acceptMovement(new FixedPosition());
-        if(PositionHelper.getInstance().canSetAt(base,base.getPosition())!=null)
+        if (PositionHelper.getInstance().canSetAt(base, base.getPosition()) != null)
             throw new RuntimeException("base cannot set");
         PositionHelper.getInstance().setUnitPlace(base, base.getPosition());
         base.setTreeSetUnit(new TreeSet<>(new PointComparator()));
@@ -61,7 +63,7 @@ public class Game implements GameManger {
 
 
 //Todo:: terrain need to add terrains
-       // Terrain t = new Terrain(new Point(1020, 900), 0, 50,"vally");
+        // Terrain t = new Terrain(new Point(1020, 900), 0, 50,"vally");
         //terrains.add(t);
         gameTimer = new GameTimer(50);
         GameState.addObserver(gameTimer);
@@ -73,7 +75,7 @@ public class Game implements GameManger {
 /*
 
         for (Unit unit: allUnits){
-            System.out.println("curr id : " + unit.getId() + " " + unit.getPosition());
+            ٍٍSystem.out.println("curr id : " + unit.getId() + " " + unit.getPosition());
 //            System.out.println("left : " + unit.getNeighbourUnit("left").getId() +  unit.getNeighbourUnit("left").getPosition());
             System.out.println("right : " + unit.getNeighbourUnit("right").getId() +  unit.getNeighbourUnit("right").getPosition());
         }*/
@@ -181,10 +183,10 @@ public class Game implements GameManger {
         cur.setNeighbourUnit("right", null);
 
          */
-        for (Unit u : allUnits){
+        for (Unit u : allUnits) {
             System.out.println(u);
-            if(PositionHelper.getInstance().canSetAt(u,u.getPosition())!=null)
-                throw new RuntimeException(u.getName()+" "+u.getPosition()+" cannot set");
+            if (PositionHelper.getInstance().canSetAt(u, u.getPosition()) != null)
+                throw new RuntimeException(u.getName() + " " + u.getPosition() + " cannot set");
             PositionHelper.getInstance().setUnitPlace(u, u.getPosition());
         }
     }
@@ -269,7 +271,7 @@ public class Game implements GameManger {
             setGameState(States.DefenderWin);
         }
         System.out.println(GameState.getData());
-      //  System.exit(0);
+        //  System.exit(0);
 
     }
 
@@ -280,13 +282,13 @@ public class Game implements GameManger {
                 attackers :
                 defenders).removeUnit(unit);
 
-        System.out.println("Sized " + allUnits.size());
+        //System.out.println("Sized " + allUnits.size());
         allUnits.removeIf(unit1 -> unit.getId() == unit1.getId());
         //System.out.println("Sized " + allUnits.size());
     }
-
-    private void autoInitGame() {
-       Player Defender = new Player();
+//test 1
+   /* private void autoInitGame() {
+        Player Defender = new Player();
         Defender.setRole(Player.TeamRole.Defender);
         Player Attacker = new Player();
         Attacker.setRole(Player.TeamRole.Attacker);
@@ -295,24 +297,80 @@ public class Game implements GameManger {
         defenders.addPlayer(Defender);
         Defender.addArmy(base);
 
-        Unit unit1 =new Unit();
+        Unit unit1 = new Unit();
         unit1.setValues(Shop.getInstance().getUnitByName("Prism Tower"));
-        unit1.setPosition(new Point(2100,2100));
+        unit1.setPosition(new Point(2100, 2100));
         unit1.acceptMovement(new FixedPosition());
         unit1.acceptTactic(new RandomAttack());
         unit1.setRole(Player.TeamRole.Defender);
         Defender.addArmy(unit1);
 
 
-        Unit unitAttakar =new Unit();
+        Unit unitAttakar = new Unit();
         unitAttakar.setValues(Shop.getInstance().getUnitByName("Mirage tank"));
-        unitAttakar.setPosition(new Point(2100,4000));
+        unitAttakar.setPosition(new Point(2100, 4000));
         unitAttakar.acceptMovement(new ToTarget(base));
         unitAttakar.acceptTactic(new RandomAttack());
         unitAttakar.setRole(Player.TeamRole.Attacker);
         Defender.addArmy(unitAttakar);
 
-    }
+    }*/
+private void autoInitGame() {
+    Player Defender = new Player();
+    Defender.setRole(Player.TeamRole.Defender);
+    Player Attacker = new Player();
+    Attacker.setRole(Player.TeamRole.Attacker);
+
+    attackers.addPlayer(Attacker);
+    defenders.addPlayer(Defender);
+    Defender.addArmy(base);
+
+    Unit unit1 = new Unit();
+    unit1.setValues(Shop.getInstance().getUnitByName("Grand Cannon"));
+    unit1.setPosition(new Point(1600, 2100));
+    unit1.acceptMovement(new FixedPosition());
+    unit1.acceptTactic(new RandomAttack());
+    unit1.setRole(Player.TeamRole.Defender);
+    Defender.addArmy(unit1);
+
+
+    Unit unit2 = new Unit();
+    unit2.setValues(Shop.getInstance().getUnitByName("TeslaTank"));
+    unit2.setPosition(new Point(2600, 3000));
+    unit2.acceptMovement(new FixedPatrol(200));
+    unit2.acceptTactic(new RandomAttack());
+    unit2.setRole(Player.TeamRole.Defender);
+    Defender.addArmy(unit2);
+
+    Unit unit3 = new Unit();
+    unit3.setValues(Shop.getInstance().getUnitByName("Prism Tower"));
+    unit3.setPosition(new Point(2000, 1000));
+    unit3.acceptMovement(new FixedPosition());
+    unit3.acceptTactic(new RandomAttack());
+    unit3.setRole(Player.TeamRole.Defender);
+    Defender.addArmy(unit3);
+
+    //attaker
+
+    Unit unit4 = new Unit();
+    unit4.setValues(Shop.getInstance().getUnitByName("Grizzly Tank"));
+    unit4.setPosition(new Point(3000, 2000));
+    unit4.acceptMovement(new ToTarget(base));
+    unit4.acceptTactic(new RandomAttack());
+    unit4.setRole(Player.TeamRole.Attacker);
+    Attacker.addArmy(unit4);
+
+    Unit unit5 = new Unit();
+    unit5.setValues(Shop.getInstance().getUnitByName("TeslaTank"));
+    unit5.setPosition(new Point(3000, 2500));
+    unit5.acceptMovement(new ToTarget(base));
+    unit5.acceptTactic(new LowestHealthAttack());
+    unit5.setRole(Player.TeamRole.Attacker);
+    Attacker.addArmy(unit5);
+
+
+
+}
 
     public PlayerIterator playerIterator() {
         if (temp == null)
