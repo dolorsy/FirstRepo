@@ -43,7 +43,7 @@ public class Game implements GameManger {
         base.setValues(Shop.getInstance().getBaseValues());
         base.setRole(Player.TeamRole.Defender);
         base.setId(1);
-        base.setPosition(new Point(1200, 1100));
+        base.setPosition(new Point(2000, 2000));
         base.acceptMovement(new FixedPosition());
         if(PositionHelper.getInstance().canSetAt(base,base.getPosition())!=null)
             throw new RuntimeException("base cannot set");
@@ -294,130 +294,23 @@ public class Game implements GameManger {
         attackers.addPlayer(Attacker);
         defenders.addPlayer(Defender);
         Defender.addArmy(base);
-/*
-        Unit unit = new Unit();
-        unit.setValues(Shop.getInstance().getUnitByName("Mirage tank"));
-        unit.setPosition(new Point(1000,300));
-        unit.acceptMovement(new ToTarget(base));
-        unit.setRole(Player.TeamRole.Attacker);
-        unit.acceptTactic(new RandomAttack());
-        Attacker.addArmy(unit);
 
-
-        Unit unit = new Unit();
-        unit.setValues(Shop.getInstance().getUnitByName("TeslaTank"));
-        Plan p =new Plan();
-        p.addCommands(p.new Wait(5),
-                p.new ChangeTarget(new Point(4000,4000)),
-                p.new Wait(5));
-        unit.setPosition(new Point(3500,3500));
-        unit.acceptPlan(p);
-        unit.acceptMovement(new ToTarget(base));
-        unit.setRole(Player.TeamRole.Attacker);
-        unit.acceptTactic(new RandomAttack());
-        Attacker.addArmy(unit);*/
-
-
-        /*Unit unit = new Unit();
-        unit.setValues(Shop.getInstance().getUnitByName("Prism Tower"));
-        Plan p = new Plan();
-        p.addCommands(p.new Wait(5),
-                p.new ChangeTarget(new Point(2000, 2000)),
-                p.new Wait(5));
-        unit.acceptPlan(p);
-        unit.setPosition(new Point(1000, 1000));
-        unit.acceptMovement(new FixedPosition());
-        unit.setRole(Player.TeamRole.Defender);
-        unit.acceptTactic(new RandomAttack());
-        Defender.addArmy(unit);
-
-        Unit unit1 = new Unit();
-        unit1.setValues(Shop.getInstance().getUnitByName("Mirage tank"));
-        Plan p1 = new Plan();
-        p1.addCommands(p1.new Wait(1),
-                p1.new ChangeTarget(new Point(1200, 400)),
-                p1.new Wait(5));
-        unit1.acceptPlan(p1);
-        unit1.setPosition(new Point(1200, 400));
-        unit1.acceptMovement(new ToTarget(base));
-        unit1.setRole(Player.TeamRole.Attacker);
+        Unit unit1 =new Unit();
+        unit1.setValues(Shop.getInstance().getUnitByName("Prism Tower"));
+        unit1.setPosition(new Point(2100,2100));
+        unit1.acceptMovement(new FixedPosition());
         unit1.acceptTactic(new RandomAttack());
-        Attacker.addArmy(unit1);*/
+        unit1.setRole(Player.TeamRole.Defender);
+        Defender.addArmy(unit1);
 
 
-
-        Unit unit = new Unit();
-        unit.setValues(Shop.getInstance().getUnitByName("Prism Tower"));
-       /* Plan p = new Plan();
-        p.addCommands(p.new Wait(5),
-                p.new ChangeTarget(new Point(2000, 2000)),
-                p.new Wait(5));
-        unit.acceptPlan(p);*/
-        unit.setPosition(new Point(2000, 2000));
-        unit.acceptMovement(new FixedPosition());
-        unit.setRole(Player.TeamRole.Defender);
-        unit.acceptTactic(new RandomAttack());
-        Defender.addArmy(unit);
-
-        Unit unit1 = new Unit();
-        unit1.setValues(Shop.getInstance().getUnitByName("Mirage tank"));
-        Plan p1 = new Plan();
-        /*p1.addCommands(p1.new Wait(1),
-                p1.new ChangeTarget(new Point(2000, 2000)),
-                p1.new Wait(5));
-        unit1.acceptPlan(p1);*/
-        unit1.setPosition(new Point(2070, 2070));
-        unit1.acceptMovement(new ToTarget(base));
-        unit1.setRole(Player.TeamRole.Attacker);
-        unit1.acceptTactic(new RandomAttack());
-        Attacker.addArmy(unit1);
-
-
-
-
-
-
-
-
-
-
-
-       /* Unit unit = new Unit();
-        unit.setValues(Shop.getInstance().getUnitByName("Prism Tower"));
-        Plan p = new Plan();
-        p.addCommands(p.new Wait(5),
-                p.new ChangeTarget(new Point(2000, 2000)),
-                p.new Wait(5));
-        unit.acceptPlan(p);
-        unit.setPosition(new Point(1000, 1000));
-        unit.acceptMovement(new FixedPosition());
-        unit.setRole(Player.TeamRole.Defender);
-        unit.acceptTactic(new RandomAttack());
-        Defender.addArmy(unit);
-
-        Unit unit1 = new Unit();
-        unit1.setValues(Shop.getInstance().getUnitByName("Mirage tank"));
-        Plan p1 = new Plan();
-       p1.addCommands(p1.new Wait(1),
-                p1.new ChangeTarget(new Point(2000, 2000)),
-                p1.new Wait(5));
-        unit1.acceptPlan(p1);
-        unit1.setPosition(new Point(1050, 1050));
-        unit1.acceptMovement(new ToTarget(base));
-        unit1.setRole(Player.TeamRole.Attacker);
-        unit1.acceptTactic(new RandomAttack());
-        Attacker.addArmy(unit1);*/
-
-        /*
-        unit = new Unit();
-        unit.setValues(Shop.getInstance().getUnitByName("Patriot Missile"));
-        unit.setPosition(new Point(499,500));
-        unit.AcceptMovement(new FixedPosition());
-        unit.AcceptTactic(new LowestHealthAttack());
-        unit.setRole(Player.TeamRole.Defender);
-        Defender.addArmy(unit);
-
-         */
+        Unit unitAttakar =new Unit();
+        unitAttakar.setValues(Shop.getInstance().getUnitByName("Mirage tank"));
+        unitAttakar.setPosition(new Point(2100,4000));
+        unitAttakar.acceptMovement(new ToTarget(base));
+        unitAttakar.acceptTactic(new RandomAttack());
+        unitAttakar.setRole(Player.TeamRole.Attacker);
+        Defender.addArmy(unitAttakar);
 
     }
 

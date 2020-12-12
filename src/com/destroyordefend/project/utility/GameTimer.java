@@ -55,7 +55,7 @@ Thread updateRangeThread = new Thread();
             }
 
         }
-
+        if(currentSecond == RoundLength)
         GoodEnd();
        // executorService.shutdown();
 

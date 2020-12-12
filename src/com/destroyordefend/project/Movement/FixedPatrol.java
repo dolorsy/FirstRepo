@@ -2,6 +2,7 @@ package com.destroyordefend.project.Movement;
 
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Unit.Unit;
+import com.destroyordefend.project.utility.Log;
 
 import java.util.LinkedList;
 import java.util.Stack;
@@ -34,7 +35,7 @@ public class FixedPatrol implements Movement {
         track.push(FixedTrack.get(3));
     }
 
-    /*@Override
+   /* @Override
     public void StartMove(Unit unit) {
         unit.getTactic().SortMap(unit);
         if (unit.getTreeSetUnit().size() != 0) {
