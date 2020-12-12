@@ -3,6 +3,7 @@ package com.destroyordefend.project.Unit;
 import com.destroyordefend.project.Core.Player;
 import com.destroyordefend.project.Core.Point;
 import com.destroyordefend.project.Core.PointComparator;
+import com.destroyordefend.project.Movement.FixedPosition;
 import com.destroyordefend.project.Movement.Movement;
 import com.destroyordefend.project.Tactic.Plan;
 import com.destroyordefend.project.Tactic.Planable;
@@ -85,14 +86,14 @@ public class Unit implements TacticAble, Movable, Barrier , Planable {
     public String toString() {
         return "Unit{" +
                 "id=" + id + "\n" +
-                ", movement=" + movement + "\n" +
-                ", treeSetUnit=" + treeSetUnit + "\n" +
+              //  ", movement=" + movement + "\n" +
+              //  ", treeSetUnit=" + treeSetUnit + "\n" +
                 ", point=" + point + "\n" +
                 ", role=" + role + "\n" +
-                ", values=" + values + "\n" +
-                ", tactic=" + tactic + "\n" +
-                ", damaging=" + damaging + "\n" +
-                ", SortMap=" + values.sortMap + "\n" +
+             //   ", values=" + values + "\n" +
+             //   ", tactic=" + tactic + "\n" +
+            //    ", damaging=" + damaging + "\n" +
+             //   ", SortMap=" + values.sortMap + "\n" +
                 '}';
     }
 
@@ -128,13 +129,15 @@ public class Unit implements TacticAble, Movable, Barrier , Planable {
 
     public void move(){
        // System.out.println(getName()  + " Here " + getMovement().getClass().getName().equals(FixedPosition.class.getName()));
-      //  if(getMovement().getClass().getName().equals(FixedPosition.class.getName()))
-       //     this.tactic.SortMap(this); it will be invoked at startMove()
+       if(getMovement().getClass().getName().equals(FixedPosition.class.getName()))
+           this.tactic.SortMap(this);
         if(isWait()){
             Log.wait(this);
             applyPlane();
             return;
         }
+
+
         for(int i =0 ;i<values.currentSpeed;i++) {
             Runnable method = () -> movement.StartMove(Unit.this);
             UpdateMapAsyncTask.addMethod(method);
