@@ -28,7 +28,7 @@ public class Team {
             p.getArmy().removeIf(unit1 -> unit.getId() == unit.getId());
 
         }
-        System.out.println("Realy Remove" );
+        //System.out.println("Realy Remove" );
     }
 
     public boolean isAlive() {
